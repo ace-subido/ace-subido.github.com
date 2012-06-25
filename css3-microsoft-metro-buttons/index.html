@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./css/msft-metro-buttons.css" type="text/css"  media="screen" />
     <link rel="stylesheet" href="./css/index-styles.css" type="text/css"  media="screen" />
     <script src="./js/m-dropdown.js"></script>
-    <script src="./js/m-radio.js"></script>
+    
     <!-- prettyify -->
     <link rel="stylesheet" href="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.css"> 
     <script src="http://google-code-prettify.googlecode.com/svn/trunk/src/prettify.js"></script>
@@ -351,7 +351,8 @@
           in which selecting one button deselects the others. Add the 
           <code>toggle-buttons</code> class to your <code>button-group</code> 
           div to accomplish this. To set the currently selected button, use the 
-          <code>checked</code> class.
+          <code>checked</code> class. Note: Make sure you put the <code>&lt;script src="{file path to m-radio.js}">&lt;/script></code> script call near
+          the closing <code>body</code> tag.
         </p>
         
         <div class="example">
@@ -472,6 +473,6 @@
     </div>
     
 </div>
-
+<script src="./js/m-radio.js"></script>
 </body>
 </html>
