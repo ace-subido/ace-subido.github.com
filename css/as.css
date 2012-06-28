@@ -3,7 +3,7 @@
 	display: none;
 	background: rgba(0, 0, 0, 0.85);		
 	width: 100%;	
-	z-index: -1;	
+	z-index: 1;	
 	color: #ffffff;
 	overflow: hidden;	
 	position: relative;
