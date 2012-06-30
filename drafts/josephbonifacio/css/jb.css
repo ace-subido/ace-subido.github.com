@@ -213,15 +213,15 @@
 	padding-left: 6px;
 	padding-right: 6px;
 	margin-top: 40px;
-	border-top: 3px solid #51A351;	
+	border-top: 3px solid #FFE32A;	
 	word-wrap:break-word;
 	padding-bottom: 5px;
 	background-color: #444444;	
 	color: #ffffff;
 	text-align: center;
-	-webkit-box-shadow: 0 1px 8px #51A351;	
-	-moz-box-shadow: 0 1px 8px #51A351;	
-	box-shadow: 0 1px 8px #51A351;	
+	-webkit-box-shadow: 0 1px 8px #444444;	
+	-moz-box-shadow: 0 1px 8px #444444;	
+	box-shadow: 0 1px 8px #444444;	
 }
 .sharedetails > h3,
 .widgetdetails > h3 {
