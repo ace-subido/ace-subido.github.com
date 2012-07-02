@@ -46,24 +46,39 @@
 	-ms-transition: all 500ms ease-in-out;
 }
 .project{
-	border-bottom: 4px solid #333333;
-	background-color: #eeeeee;
-	padding: 20px;
+	border-top: 3px solid #333333;
+	background-color: #eeeeee;	
 	height: 300px;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	overflow: hidden;
 }
-.project:hover{
-	border-bottom: 4px solid #333333;
-	background-color: #f5f5f5;	
-	padding: 20px;
-	height: 300px;
-	margin-top: 20px;
-	margin-bottom: 20px;
+.project > a {
+	display: block;
+	width: 100%;
+	height: 100%;
 	overflow: hidden;
+	text-decoration: none;
+	color: inherit;
 }
-.open-as{
+.project h3,
+.project p {	
+	margin: 10px;
+}
+.project::after {
+	content: '';
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 0;
+	height: 0;
+	border-top: 50px solid transparent;
+	border-left: 50px solid transparent;
+	border-right: 50px solid #0080B0;
+	pointer-events: none;
+}
+
+.open-as {
 	opacity: 1;
 	color: #333 !important;
 	text-decoration: underline;	
