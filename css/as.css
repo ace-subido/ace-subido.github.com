@@ -47,11 +47,14 @@
 }
 .project{
 	border-top: 3px solid #333333;
-	background-color: #eeeeee;	
+	background-color: #dddddd;	
 	height: 300px;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	overflow: hidden;
+}
+.project:hover{
+	background-color: #f1f1f1;	
 }
 .project > a {
 	display: block;
@@ -64,18 +67,6 @@
 .project h3,
 .project p {	
 	margin: 10px;
-}
-.project::after {
-	content: '';
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	width: 0;
-	height: 0;
-	border-top: 50px solid transparent;
-	border-left: 50px solid transparent;
-	border-right: 50px solid #0080B0;
-	pointer-events: none;
 }
 
 .open-as {
