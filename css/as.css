@@ -46,15 +46,19 @@
 	-ms-transition: all 500ms ease-in-out;
 }
 .project{
-	border-top: 3px solid #333333;
-	background-color: #dddddd;	
-	height: 300px;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	text-shadow: #ffffff 0 1px 0;
+	border: 1px solid #eeeeee;
+	background-color: #ffffff;	
+	min-height: 300px;
 	margin-top: 20px;
 	margin-bottom: 20px;
 	overflow: hidden;
 }
 .project:hover{
-	background-color: #f1f1f1;	
+	background-color: #eeeeee;	
 }
 .project > a {
 	display: block;
@@ -66,7 +70,7 @@
 }
 .project h3,
 .project p {	
-	margin: 10px;
+	margin: 20px;
 }
 
 .open-as {
@@ -80,7 +84,7 @@
 	width: 100%;
 	background: url("http://static.tumblr.com/bzbttye/qAZm5vegl/furley_bg.png");
 	height: 50px;
-	font-size: 12px;
+	font-size: 14px;
 	-webkit-box-shadow:  inset 0 2px 3px rgba(0,0,0,.1);
 	-moz-box-shadow:  inset 0 2px 3px rgba(0,0,0,.1);
 	box-shadow: inset 0 2px 3px rgba(0,0,0,.1);
