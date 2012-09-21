@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -6,146 +6,167 @@
     <meta charset='utf-8' />    
     <meta name="description" content="Hello, I am Ace Subido  : I love God. I enjoy designing and building software." />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/bootstrap.css" type="text/css">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="./css/bootstrap-responsive.min.css" type="text/css">
     <link rel="stylesheet" href="./css/as.css" type="text/css">
 	
     <style type="text/css">
-    	body{
-			padding-top: 50px;
-		}
+    	
     </style>   
 </head>
 <body>
-	<div class="navbar navbar-fixed-top">
-        <div class="navbar-inner">					
-            <div class="container">	
-                <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </a>                
-                <div class="nav-collapse">                 	  	        					        		
-                    <ul class="nav pull-right">                     
-                        <li class><b class="headericons icongithub"></b><a href="http://github.com/ace-subido">View me on Github</a></li>
-                    </ul>	                      			        	
-                </div>
-            </div>	    
-        </div>					
-    </div>	   
+     
     <div class="hero-unit">    
     	<div class="container">
         	<div class="row">	        
-                <div class="span10">
+                <div class="span12">
                     <h1>Hello, I am Ace Subido</h1>
-                    <p>I <u><b>enjoy</b></u> designing and building software.</b><b class="headericons iconbuild"></b></p>                             
-                </div>
-                <div class="span2">
-                    <p><b class="headericons iconabout"></b><a id="toggle-aboutdrop">About</a><br />
-                    <b class="headericons iconcontact"></b><a id="toggle-contactdrop">Contact</a><br/>
-                    <b class="headericons iconblog"></b><a href="http://acesubido.com">Blog</a><br />
-                    </p>
-                </div>
-            </div>
+                    <p>I <u><b>enjoy</b></u> designing and building software. <b class="headericons iconbuild"></b></p>                             
+                    <nav class="links">                        
+                        <a id="toggle-aboutdrop">About</a> 
+                        <span class="mid-dot">&middot;</span>
+                        <a id="toggle-contactdrop">Contact</a>
+                        <span class="mid-dot">&middot;</span>
+                        <a href="http://acesubido.com">Blog</a>
+                    </nav>
+                    <nav class="links">
+                        <a href="http://github.com/ace-subido"><b class="headericons icongithub"></b> View me on Github</a>
+                    </nav>
+                </div>               
+            </div>          
+        </div>      
       	</div>
-    </div>
+    </div>   
     <div id="aboutdrop" class="megadrop">		    				
         <div class='container'>	
-            <div class="row">
-            	<div class="span10">
-                	<h3>Who are you? </h3>	
-                    <hr class="quarter-line">	
-						<p>Call me 'Ace', I love Jesus.
-                        I love my family. I love my fiance.
-                        I believe Jesus is the center of everything that's orchestrated in my life, 
-                        and He has placed in me a desire and passion for these things to glorify Him.
-                        I'm a software developer from the Philippines, I work on .NET applications as my day job. 
-                        I just love software design and development and all the crazy things that go with it.
-                        In this patch of space, I will list down and share things I've been working on in my spare time.
-                        </p>
-                                  
+            <div class="row">                
+                <h3>Who are you? </h3>	
+               <div class="offset3 span6">  
+                    <hr class="dark-line" />
+                </div>
+            	<div class="offset2 span8">        
+                    <a class="close pull-right" id="close-aboutdrop">&times;</a>	          
+					<p>Call me 'Ace', I love Jesus.
+                    I love my family. I love my fiance.
+                    I believe Jesus is the center of everything that's orchestrated in my life, 
+                    and He has placed in me a desire and passion for these things to glorify Him.
+                    I'm a software developer from the Philippines, I work on .NET applications as my day job. 
+                    I just love software design and development and all the crazy things that go with it.
+                    </p>                                                   
                 </div>            	
-                <div class="span2">
-                	<a class="close pull-right" id="close-aboutdrop">&times;</a>	
-                </div>	
             </div>
         </div>
     </div>
  	<div id="contactdrop" class="megadrop">		    				
         <div class='container'>	
-            <div class="row">
-            	<div class="span10">
-                	<h3>Get in touch</h3>
-                    <hr class="quarter-line">	
-						<p>Send me an email at <a class="ease-in">ace@acesubido.com</a> <b class="headericons iconemail"></b>or follow me on twitter <b class="headericons icontwitter"></b>(<a href="http://www.twitter.com/acesubido" class="ease-in">@acesubido</a>) </p>
+            <div class="row">                
+                <h3>Get in touch</h3>
+                <div class="offset3 span6">  
+                    <hr class="dark-line" />
+                </div>
+            	<div class="offset2 span8">                            
+                    <p><a class="close" id="close-contactdrop">&times;</a></p>
+			        <p>Send me an email at <a class="ease-in">ace@acesubido.com</a> 
+                    <b class="headericons iconemail"></b>or follow me on twitter <b class="headericons icontwitter"></b>(<a href="http://www.twitter.com/acesubido" class="ease-in">@acesubido</a>) </p>                   
                 </div>            
-                <div class="span2">
-                	<a class="close pull-right" id="close-contactdrop">&times;</a>	
-                </div>	
             </div>
         </div>
-    </div>
-      
-    <div class='container' id="content">	
+    </div>      
+    <div class="container content">
    		<div class="row">
-        	<div class="span8">            	
-                   
-                        <p>						
-						I used to code at the front-end. Then I worked back-ends.
-                        For sometime I also dealt with servers, databases and creating software as services.
-                        Had a season of leading agile development teams.
-                        I enjoy designing and building software from start to finish.
-                        Here are some of the stuff I've worked and working on:
-                        </p>
-                      
-                
-                	 <hr class="half-line">              
+        	<div class="offset2 span8">            
+                <p>						
+			        I used to code at the front-end. Then I worked back-ends.
+                    For sometime I also dealt with servers, databases and creating software as services.
+                    Had a season of leading agile development teams.
+                    I enjoy designing and building software from start to finish. Heres some of the stuff I've worked on outside my 8 to 5 job :)
+                </p>               
             </div>
-            
-        </div>        
-        <div class="row">	
-        	 <div class="span4 project ease-in">    
-                   
-            	<a href="https://github.com/ace-subido/Mango"> 
-                <img src="./img/mango.png"/>      	          												
-                <h3>Mango </h3>                      
-               	<p> A simple MongoDB data-access tool written in C#. It's a single-file wrapper for the MongoDB C# driver. (September 2012)
-				</p>                                      
-              	</a>                                                                   
-        	</div>		        	
-            <div class="span4 project ease-in">    
-                   
-            	<a href="http://ace-subido.github.com/css3-microsoft-metro-buttons"> 
-                <img src="./img/cmmb.png"/>      	          												
-                <h3>CSS3 Microsoft Metro Buttons </h3>                      
-               	<p> A very small, simple and clean CSS3 library to deal with my problem in getting metro-styled buttons. (Mid 2012)
-				</p>                                      
-              	</a>                                                                   
-        	</div>		
-            <div class="span4 project ease-in">           
-            	<a href="http://www.outsource-network.com">  	     
-                <img src="./img/o-net.png"/>     												
-                <h3>Outsource Network</h3>                      
-               	<p> Converted PSD files into working HTML and CSS (Early 2012)
-				</p>                                      
-              	</a>                                                                   
-        	</div>	            		           				
+        </div>
+        <div class="row">
+            <div class="offset3 span6">  
+                <hr class="red-line" />
+            </div>
+        </div>
+        <div class="row">	            
+            <ul class="thumbnails">
+                <li class="span3 ease-in drop-shadow">
+                    <div class="thumbnail">
+                        <a href="https://github.com/ace-subido/Mango"> 
+                            <img src="./img/mango.png"/> 
+                        </a>
+                        <div class="caption">
+                            <p class="stack">                               
+                                <i class="icon-font"></i> C# <a class="mid-dot">&middot;</a> 
+                                <i class="icon-leaf"></i> MongoDB                                                            
+                            </p>	     
+                                  
+                            <a href="https://github.com/ace-subido/Mango"><h5>Mango </h5></a>             	           
+                            <p>
+                                A simple MongoDB data-access tool written in C#. 
+                                It's a single-file wrapper for the MongoDB C# driver. 
+                            </p>                             
+                        </div>                     
+                    </div>
+                </li>
+        	    <li class="span3 ease-in drop-shadow">
+                     <div class="thumbnail">
+                        <a href="http://ace-subido.github.com/css3-microsoft-metro-buttons"> 
+                            <img src="./img/cmmb.png"/>  
+                        </a> 
+                        <div class="caption">   
+                            <p class="stack">
+                                <i class="icon-font"></i> HTML <span class="mid-dot">&middot;</span> 
+                                JS <span class="mid-dot">&middot;</span> 
+                                CSS
+                            </p>   
+                           
+                            <a href="http://ace-subido.github.com/css3-microsoft-metro-buttons"> 
+                                <h5>CSS3 MicrosoftMetro Buttons </h5>                    
+                            </a>
+               	            <p> 
+                                A very small, and simple CSS3 library to deal with my problem in 
+                                getting metro-styled buttons.
+				            </p>                                     
+                        </div>
+
+                    </div>
+                </li>  	
+                <li class="span3 ease-in drop-shadow">
+                     <div class="thumbnail">
+                        <a href="http://www.outsource-network.com">  
+                            <img src="./img/o-net.png"/>     		
+                        </a>    
+                        <div class="caption">
+                            <p class="stack">
+                                <i class="icon-font"></i> HTML <span class="mid-dot">&middot;</span> 
+                                JS <span class="mid-dot">&middot;</span> 
+                                CSS
+                            </p>                          
+                            <a href="http://www.outsource-network.com">  
+                                <h5>'Outsource Network' site</h5>                   
+                            </a>                                     
+               	            <p> 
+                                Converted PSD files into working HTML and CSS
+				            </p>              
+                        </div>	                        
+                    </div>
+                </li> 	
+            </ul>                		           				
         </div>    
-    </div>	
-    
-    <div class="container">      
-    </div>
+    </div>	   
    
     <div class="footer">	
     	<div class="container">		
-           <div class="row">
-           	<div class="span12">
-           <p class="pull-right">Designed by acesubido © 2012</p>
-           </div>
+            <div class="row">
+                <div class="span12">
+                    <p>designed by acesubido © 2012</p>
+                </div>
            </div>
         </div>
     </div>			
-    <script src='./js/jquery-1.7.2.js'></script> 
-    <script src='./js/bootstrap.js'></script> 
+    <script src='./js/jquery-1.8.0.min.js'></script> 
+    <script src='./js/bootstrap.min.js'></script> 
     <script src='./js/as.js'></script> 
     
    
