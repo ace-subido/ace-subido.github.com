@@ -9,11 +9,6 @@ body
     border-top: 5px solid #D84A38;
 }
 
-.span12
-{
-    margin-left: 0px;
-}
-
 p {
 	font-size: 14px;
 	line-height: 23px;
@@ -133,10 +128,16 @@ h5
 
 
 .red-line {
-	margin: 40px 0;
+	margin: 20px 0;
 	border: 0;	
 	border-top: 1px solid #D84A38;	
 	border-bottom: 1px solid #ffffff;
+}
+
+.thumbnails
+{
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 .thumbnails > li
