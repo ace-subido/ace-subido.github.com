@@ -136,8 +136,7 @@ h5
 
 .thumbnails
 {
-	margin-top: 20px;
-	margin-bottom: 20px;
+	margin: 10px 0;	
 }
 
 .thumbnails > li
@@ -147,7 +146,7 @@ h5
 
 .thumbnails .thumbnail
 {   
-    min-height: 350px;
+    min-height: 250px;
     -webkit-border-radius: 0;
 	-moz-border-radius: 0;
     border-radius: 0;    
@@ -269,10 +268,6 @@ h5
     {
         min-height: 0px !important;
     }
-    
-    img
-    {
-        width: 100%;
-    }
+   
     
 }
