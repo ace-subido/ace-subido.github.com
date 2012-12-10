@@ -76,19 +76,6 @@ h2
     font-weight: lighter;
 }
 
-#popover
-{
-    cursor: pointer;
-}
-
-.tooltip
-{
-    font-family: 'GentiumBookBasicRegular', 'Times New Roman', 'Georgia', Serif;
-    font-style:normal;
-    font-size: 12px;
-    line-height: 23px;    
-}
-
 #dots a 
 {
     pointer: none;
@@ -109,6 +96,7 @@ h2
 
 #dots 
 {
+    -webkit-padding-start: 0px;
     margin-top: 10px;
     opacity: 0;    
     margin-bottom: 40px;

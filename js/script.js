@@ -1,7 +1,4 @@
 $(document).ready(function () {
-    $('#popover').tooltip();
-    /* **** some super fancy animations? **** */  
-
     $('h1').delay(200).animate({
         'opacity': '1',
         'margin-top': '+=10px'
