@@ -115,7 +115,7 @@ html {
 p, li
 {
     line-height: 23px;
-    color: #8d8d8d;
+    color: #515151;
 }
 
 a
@@ -219,7 +219,8 @@ hr.hard
 {    
     margin-top: 4px;
     display:block;
-    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .content-section h4
@@ -379,6 +380,12 @@ img.header-img
     margin: 20px 0;
 }
 
+.marketing img
+{
+    display: block;
+    margin: 0 auto;
+}
+
 ul.site-menu,
 .sidebar ul,
 ul.calendar-list {    
@@ -429,7 +436,6 @@ ul.site-menu li img
 {
     text-transform:uppercase;
 }
-
 
 #slides #nav {
     text-align: center;
