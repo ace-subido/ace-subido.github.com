@@ -210,18 +210,17 @@ hr.hard
 }
 
 .content-section .span2
-{    
-    padding-right: 7px;
+{       
     padding-bottom: 7px;
     margin-left: 7px;
 }
 
 .content-section .span2 img
 {    
-    margin-top: 4px;
-    display:block;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 4px;    
+    display: block;    
 }
 
 .content-section h4
@@ -551,10 +550,17 @@ h5.team-section
         padding-right: 20px;    
         margin-left: -20px;
         margin-right: -20px;
+    }   
+    
+    .content-section .span2
+    {               
+        padding-right: 8px;    
     }
     
     .content
     {
         margin-left: 0px;
     }
+    
+    
 }
