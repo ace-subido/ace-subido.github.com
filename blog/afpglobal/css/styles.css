@@ -129,6 +129,13 @@ ul {
     margin: 0 0 0 0;
 }
 
+
+.general-content ul
+{
+    margin: 0 0 10px 25px;
+}
+
+
 a:hover,
 a:active,
 a.active
