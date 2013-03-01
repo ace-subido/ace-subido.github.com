@@ -574,6 +574,12 @@ h5.team-section
 
 @media (max-width: 767px)
 {
+    
+    #slides #nav {     
+        top: 10px;
+        left: 10px;
+    }
+
     .blog-block
     {
         width: 100%;
