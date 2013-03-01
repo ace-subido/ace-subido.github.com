@@ -150,6 +150,26 @@ a.thumbnail:hover {
     box-shadow: none;
 }
 
+.thumbnails>li:first-child {
+    margin-left: 0px;
+}
+
+.thumbnail
+{
+    padding: 0px;
+    border: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition: none;
+    -moz-transition: none;
+    -o-transition: none;
+    transition: none;
+    -webkit-border-radius: none;
+    -moz-border-radius: none;
+    border-radius: none;
+}
+
 a:hover,
 a:active,
 a.active
