@@ -129,10 +129,13 @@ ul {
     margin: 0 0 0 0;
 }
 
-
 .general-content ul
 {
     margin: 0 0 10px 25px;
+}
+blockquote
+{
+    font-style:italic;
 }
 
 
@@ -140,6 +143,7 @@ a:hover,
 a:active,
 a.active
 {
+    
     text-decoration: none;
     color: #8e8e8e;
 }
