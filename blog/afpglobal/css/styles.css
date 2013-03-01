@@ -124,7 +124,8 @@ a
     cursor: pointer;
 }
 
-ul {
+ul 
+{
     padding: 0;
     margin: 0 0 0 0;
 }
@@ -138,6 +139,16 @@ blockquote
     font-style:italic;
 }
 
+ul.thumbnails
+{
+    margin: 0 0 0 0;
+}
+
+a.thumbnail:hover {    
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
 
 a:hover,
 a:active,
