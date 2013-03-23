@@ -135,13 +135,14 @@ p.contact-point
     
 }
 
-.restaurant-hours
+.card-well
 {
+    border-top: 2px solid #2f061c;
     width:330px;    
     border-bottom: 1px solid #ffffff;
     background-color: #ffffff;
     background: url('../img/lightpaperfibers.png');
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
 }
 
