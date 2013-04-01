@@ -135,9 +135,12 @@ p.contact-point
     
 }
 
+.content {
+    margin-top: 30px;
+}
+
 .card-well
-{
-    border-top: 2px solid #2f061c;
+{    
     width:330px;    
     border-bottom: 1px solid #ffffff;
     background-color: #ffffff;
