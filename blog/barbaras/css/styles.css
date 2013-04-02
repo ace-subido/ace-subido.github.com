@@ -139,6 +139,11 @@ p.contact-point
     margin-top: 30px;
 }
 
+.content img {
+    margin: 20px auto;
+    display: block;
+}
+
 .card-well
 {    
     width:330px;    
