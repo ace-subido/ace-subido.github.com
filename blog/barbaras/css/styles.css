@@ -53,8 +53,8 @@ h6.center {
 .header {
   margin-bottom: 15px;
 }
-.header h4 {
-  margin: 0;
+.header h3 {
+  margin: -5px 0 0 0;
 }
 .menu {
   text-align: center;
