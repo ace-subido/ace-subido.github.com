@@ -1,0 +1,171 @@
+.header {
+    margin-bottom: 15px;
+
+    h4 {
+    	margin: 0;
+    }
+}
+
+.menu {
+    text-align: center;    
+    position: relative;
+    a {
+	    font-family: @baseFontFamily;
+	    font-weight: bold;
+	    font-size: @baseFontSize + 4;
+	    line-height: 32px;
+	    margin: 0 20px;
+	    padding: 10px 12px;
+	    color: @textColor;
+	    cursor: pointer;	    
+
+	    &:hover {
+	    	text-decoration: none;
+	    	background-color: @lightBackgroundColor;
+	    	.border-radius(4px);
+	    }
+	}
+
+	.dropdown {
+		display: inline;
+
+		&.open {
+			.dropdown-toggle{				
+		    	background-color: @lightBackgroundColor;
+		    	.border-radius(4px);
+			}
+		}
+
+		b.caret {
+			margin-top: 13px;
+		}
+		ul li a {
+			text-align: left;
+			margin: 10px 10px 10px auto;
+
+			&:hover {
+				color: @textColor;
+				background-color: none;
+				background-image: none;
+				background: none;
+				text-decoration: underline;
+			}
+		}
+
+		.dropdown-menu {
+			top: 30px;
+			left: 18px;		
+		}
+	}
+}
+
+
+.footer {
+    padding: 20px 0;    
+
+    p {
+	    color: @muteTextColor;
+	    font-size: @baseFontSize - 2;
+	    line-height: 20px;
+	}
+	.footer-links {
+	    margin-bottom: 10px;
+	    a {
+		    margin: 0 10px;
+		}
+	}
+}
+
+.boxed {
+    border-left: 1px solid @textColor;
+    border-right: 1px solid @textColor;
+    background: #ffffff;
+    padding: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.7);
+}
+
+img {
+	&.head-logo {
+	    display: block; 
+	    margin: 0px auto;
+	}
+
+	&.home-shots {
+	    margin: 15px 0px 10px 0px;
+	    padding-bottom: 20px;
+	    background: url('../img/thumb-shadow.png') bottom center no-repeat;
+	}
+
+}
+
+.row {
+	&.marketing {
+	    border-top: 1px solid @lightBorderColor;
+	    border-bottom: 1px solid lighten(@lightBorderColor, 10%);
+	    .box-shadow(inset 0 0 10px darken(@textColor, 30%));	    
+	    padding: 80px 30px;
+	    background: url('../assets/4.jpg') no-repeat center;       
+	    margin: 20px -20px 40px -20px;
+	}
+}
+
+
+.hero-marketing {
+	border-top: 1px solid @textColor;
+    border-bottom: 1px solid #ffffff;
+    background-color: #ffffff;
+    background: url('../img/lightpaperfibers.png');
+    font-family: @baseFontFamily;
+    box-shadow: 0 2px 25px rgba(0, 0, 0, 0.7);
+    padding: 20px;
+
+	p {        
+	    margin-top: 20px;
+	}
+} 
+
+.content {
+    margin-top: 30px;
+    img {
+	    margin: 20px auto;
+	    display: block;
+	}
+}
+
+.action {
+    margin-top: 15px;    
+    text-align: center;
+     .btn {
+	    padding: 6px 20px 6px;
+	    line-height: 22px;
+	    border-radius: 8px;
+	    margin-bottom: 5px;
+	    strong {
+		    display: block;
+		    font-size: @baseFontSize + 4;
+		    font-weight: 400;
+		}
+	}
+}
+
+.header-shadow {    
+    margin: 10px 0;
+    height: 10px;
+    background: url('../img/line-drop-shadow.png') no-repeat center top;
+    border-top: 1px solid darken(@lightBackgroundColor, 2%);
+}
+
+p.contact-point {
+    margin-top: 75px;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.card-well {    
+    width:330px;    
+    border-bottom: 1px solid #ffffff;
+    background-color: #ffffff;
+    background: url('../img/lightpaperfibers.png');
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}

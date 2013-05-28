@@ -4,7 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Barbara's</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />     
-    <link rel="stylesheet" href="./css/bootstrap.css" type="text/css" />       
+    <link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css" />       
     <link rel="stylesheet" href="./css/styles.css" type="text/css" />   
 </head>
 <body>
@@ -25,12 +25,41 @@
         <div class="row">
             <div class="span12">
                 <div class="header-shadow">&nbsp;</div>
-                <div class="menu">
+                <div class="menu">                    
                     <a href="./index.html">Home</a>
-                    <a href="./dining.html">Dining</a>
-                    <a href="./services.html">Restaurant Services</a>
+                    <div class="dropdown">
+                      <a class="dropdown-toggle" id="restaurant" role="button" data-toggle="dropdown" data-target="#">
+                        The Restaurant 
+                        <b class="caret"></b>                       
+                      </a>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="restaurant">
+                        <li><a href="./restaurant.html">Main Restaurant</a></li>
+                        <li><a href="./coffeeshop.html">The Coffee Shop</a></li>
+                        <li><a href="./kultura.html">Kultura Filipina</a></li>
+                      </ul>
+                    </div>
+                    <div class="dropdown">
+                      <a class="dropdown-toggle" id="dining" role="button" data-toggle="dropdown" data-target="#">
+                        Dining
+                        <b class="caret"></b>                       
+                      </a>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="dining">
+                        <li><a href="./buffet.html">Buffet Menu</a></li>
+                        <li><a href="./coffeeshop.html">Ala Carte Menu</a></li>
+                      </ul>
+                    </div>                                                                   
+                    <a href="./services.html">Catering and Events</a>               
                     <a href="./about.html">About</a>
-                    <a href="./contact.html">Contact</a>
+                    <div class="dropdown">
+                      <a class="dropdown-toggle" id="dining" role="button" data-toggle="dropdown" data-target="#">
+                        Contact Us
+                        <b class="caret"></b>                       
+                      </a>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="dining">
+                        <li><a href="./contact.html">Contact Details</a></li>
+                        <li><a href="./location.html">Map and Directions</a></li>
+                      </ul>
+                    </div>      
                 </div>
             </div>            
         </div>
@@ -46,6 +75,12 @@
                             ambience have been providing guests an experiece set apart
                             from ordinary modern day restaurants since 1972.                            
                         </p>
+                         <div class="action">
+                            <a href="#" class="btn btn-primary">
+                                <strong>Contact Barbara's</strong>
+                                For inquiries and reservations
+                            </a>                
+                        </div>
                     </div>                
                 </div>
             </div>
@@ -96,12 +131,7 @@
                 <p class="text-center">
                     <strong>Open entire week, 9AM - 7PM.</strong>
                 </p>
-                <div class="action">
-                    <a href="" class="btn btn-primary">
-                        <strong>Contact Barbara's</strong>
-                        For inquiries and reservations
-                    </a>                
-                </div>
+               
                 
                 
             </div>
@@ -110,11 +140,16 @@
             <div class="span12 text-center"> 
             <hr />              
                 <div class="footer-links">
-                    <a href="#">Home</a>
-                    <a href="#">Dining</a>
-                    <a href="#">Restaurant and Services</a>
-                    <a href="#">About</a>
-                    <a href="#">Contact</a>
+                    <a href="./index.html">Home</a>
+                    <a href="./restaurant.html">Main Restaurant</a>
+                    <a href="./coffeeshop.html">The Coffee Shop</a>
+                    <a href="./kultura.html">Kultura Filipina</a>
+                    <a href="./buffet.html">Buffet Menu</a><br/>
+                    <a href="./coffeeshop.html">Ala Carte Menu</a>
+                    <a href="./services.html">Catering and Events</a>               
+                    <a href="./about.html">About</a>
+                    <a href="./contact.html">Contact Details</a>
+                    <a href="./location.html">Map and Directions</a>
                 </div>
                 <p>
                     Barbara's Heritage Restaurant <br /> Plaza San Luis Complex, Intramuros Manila
@@ -124,6 +159,8 @@
                 </p>                
             </div>
         </div>
-    </div>      
+    </div>    
+    <script src="./js/jquery-1.9.0.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
 </body>
 </html>
