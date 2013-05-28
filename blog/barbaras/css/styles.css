@@ -142,18 +142,18 @@ img.home-shots {
   box-shadow: inset 0 0 10px black;
   padding: 80px 30px;
   background: url('../assets/4.jpg') no-repeat center;
-  margin: 20px -20px 40px -20px;
+  margin: 20px -20px 20px -20px;
 }
 .hero-marketing {
   border-top: 1px solid #333333;
   border-bottom: 1px solid white;
   background-color: white;
   background: url('../img/lightpaperfibers.png');
-  font-family: "DroidSerifRegular", "Georgia", serif;
   box-shadow: 0 2px 25px rgba(0, 0, 0, 0.7);
   padding: 20px;
 }
 .hero-marketing p {
+  font-family: "DroidSerifRegular", "Georgia", serif;
   margin-top: 20px;
 }
 .content {
@@ -186,8 +186,7 @@ img.home-shots {
   background: url('../img/line-drop-shadow.png') no-repeat center top;
   border-top: 1px solid #e9e9e9;
 }
-p.contact-point {
-  margin-top: 75px;
+p.small-print {
   font-size: 12px;
   line-height: 20px;
 }
@@ -196,7 +195,7 @@ p.contact-point {
   border-bottom: 1px solid white;
   background-color: white;
   background: url('../img/lightpaperfibers.png');
-  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
   padding: 20px;
 }
 body {

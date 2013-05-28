@@ -9,43 +9,56 @@
 </head>
 <body>
     <div class="container boxed">
-        <div class="row header">
+       <div class="row header">          
             <div class="offset4 span4">
                 <img src="./assets/barbaras-logo.jpg" class="head-logo" />
                 <h4 class="text-center">Heritage Restaurant</h4>       
-            </div>
-            <div class="offset1 span3">                
-                <p class="contact-point">
+            </div>            
+            <div class="offset1 span3">            
+                <p class="small-print">
                     <strong>Barbara's Heritage Restaurant</strong><br />
                     Plaza San Luis Complex, Intramuros Manila<br />
                     527-4086 / 527-3893 / 788-3356 / 527-4090
-                </p>                    
+                </p>    
+                <p class="small-print">
+                    <strong>Restaurant Hours</strong>: Open entire week<br/>                    
+                    11AM - 2PM : Lunch Buffet<br />
+                    6:30PM - 9PM : Dinner Buffet<br />
+                </p>                
             </div>            
         </div>
         <div class="row">
             <div class="span12">
                 <div class="header-shadow">&nbsp;</div>
-                <div class="menu">
-                    <div class="menu">
-                    <a href="./index.html">
-                        Home
-                    </a>
-                    <a href="./dining.html">
-                        The Restaurant
-                    </a>
-                    <a href="./services.html">
-                        Buffet and Menu
-                    </a>
-                    <a href="./about.html">
-                        About
-                    </a>
-                    <a href="./contact.html">
-                        Location
-                    </a>
+                <div class="menu">                    
+                    <a href="./index.html">Home</a>
+                    <div class="dropdown">
+                      <a class="dropdown-toggle" id="restaurant" role="button" data-toggle="dropdown" data-target="#">
+                        The Restaurant 
+                        <b class="caret"></b>                       
+                      </a>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="restaurant">
+                        <li><a href="./restaurant.html">Main Restaurant</a></li>
+                        <li><a href="./coffeeshop.html">The Coffee Shop</a></li>
+                        <li><a href="./kultura.html">Kultura Filipina</a></li>
+                      </ul>
+                    </div>
+                    <div class="dropdown">
+                      <a class="dropdown-toggle" id="dining" role="button" data-toggle="dropdown" data-target="#">
+                        Dining
+                        <b class="caret"></b>                       
+                      </a>
+                      <ul class="dropdown-menu" role="menu" aria-labelledby="dining">
+                        <li><a href="./buffet.html">Buffet Menu</a></li>
+                        <li><a href="./coffeeshop.html">Ala Carte Menu</a></li>
+                      </ul>
+                    </div>                                                                   
+                    <a href="./services.html">Catering and Events</a>               
+                    <a href="./about.html">About</a>
+                    <a href="./contact.html">Contact Us</a>                    
                 </div>
-                </div>
-            </div>
-        </div>      
+            </div>            
+        </div>   
         <div class="content row">
             <div class="offset1 span10">                
                 <div class="row">
@@ -72,11 +85,15 @@
             <div class="span12 text-center"> 
             <hr />              
                 <div class="footer-links">
-                    <a href="#">Home</a>
-                    <a href="#">Dining</a>
-                    <a href="#">Restaurant and Services</a>
-                    <a href="#">About</a>
-                    <a href="#">Contact</a>
+                    <a href="./index.html">Home</a>
+                    <a href="./restaurant.html">Main Restaurant</a>
+                    <a href="./coffeeshop.html">The Coffee Shop</a>
+                    <a href="./kultura.html">Kultura Filipina</a>
+                    <a href="./buffet.html">Buffet Menu</a><br/>
+                    <a href="./coffeeshop.html">Ala Carte Menu</a>
+                    <a href="./services.html">Catering and Events</a>               
+                    <a href="./about.html">About</a>
+                    <a href="./contact.html">Contact Us</a>
                 </div>
                 <p>
                     Barbara's Heritage Restaurant <br /> Plaza San Luis Complex, Intramuros Manila
@@ -86,6 +103,8 @@
                 </p>                
             </div>
         </div>
-    </div>      
+    </div>  
+    <script src="./js/jquery-1.9.0.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>    
 </body>
 </html>
