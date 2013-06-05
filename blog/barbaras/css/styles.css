@@ -141,12 +141,10 @@ img.home-shots {
   -moz-box-shadow: inset 0 0 10px black;
   box-shadow: inset 0 0 10px black;
   padding: 80px 30px;
-  background: url('../assets/4.jpg') no-repeat center;
+  background: url('../newassets/bar3.jpg') no-repeat center;
   margin: 20px -20px 20px -20px;
 }
 .hero-marketing {
-  border-top: 1px solid #333333;
-  border-bottom: 1px solid white;
   background-color: white;
   background: url('../img/lightpaperfibers.png');
   box-shadow: 0 2px 25px rgba(0, 0, 0, 0.7);
