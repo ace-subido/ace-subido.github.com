@@ -1,0 +1,22 @@
+---
+layout: post
+title: Chef on a Windows Workstation
+date: '2013-09-10T13:57:00+08:00'
+tags:
+- work
+tumblr_url: http://acesubido.com/post/60824723608/chef-on-a-windows-workstation
+---
+<p>Setting up an admin workstation for Chef on Windows might be a little daunting for people starting out on Chef and for those who are not comfortable with the command line. This snippet is a useful little batch file we use at work.</p>
+
+<p>First, install the Omnibus Installer for Chef-Client then create a batch file with this script:</p>
+
+<pre><code>@echo off
+
+set PATH=C:\opscode\chef\embedded\bin;C:\opscode\chef\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0;
+
+cmd
+</code></pre>
+
+<p>This creates a command prompt with a clean PATH that only contains <em>knife</em>, <em>gem</em> and other goodies.</p>
+
+<p>Another heads up: When doing <em>knife configure -i</em> for the first time on Windows, you&rsquo;ll be asked for file paths on your admin.pem and other stuff. Use double back-slashes instead of a normal slash</p>

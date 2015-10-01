@@ -1,0 +1,42 @@
+---
+layout: post
+title: Development Workflow with Vagrant
+date: '2014-05-04T10:21:00+08:00'
+tags:
+- work
+tumblr_url: http://acesubido.com/post/84675726247/development-workflow-with-vagrant
+---
+<p>Whenever any developer creates software within a certain level of complexity, it requires a certain environment required for the application. 
+If you were building a certain Rails app that had Resque on it, you&rsquo;ll need to install Redis on computer, if it&rsquo;s using MySQL or a certain flavor of an SQL database, you&rsquo;d also need to install it. If it has environment files or other 3rd party software needed to run (i.e. ImageMagick, etc.) you&rsquo;ll also need to install those.</p>
+
+<p>In the long run, your host computer becomes this chaotic hotbed of a development environment you build your apps in. This becomes a pain point for most of the time during application development.</p>
+
+<p>Problems rise up whenever you need to get other developers on board with the project. So you&rsquo;ll have to set up the same type of environment you&rsquo;ve set up.</p>
+
+<p>Another problem is fixing bugs found in Production/Staging environments. Deployed from development code and development data, you have no idea whats going to happen when your software is deployed into a Production/Staging environment.</p>
+
+<p>There are many other edge cases we can think of that involves development environments.</p>
+
+<blockquote>
+  <p>&ldquo;It works on my machine&rdquo;</p>
+</blockquote>
+
+<p>This tends to be a thing developers would say. tldr; Vagrant is a good tool for this painful part of the development workflow.</p>
+
+<p><strong>Vagrant</strong></p>
+
+<p>Where I work (AELOGICA) we use this basic <a href="https://gist.github.com/ace-subido/a37bc268c96ad9e8d619" target="_blank">Vagrantfile</a> for developing applications privately in our own computers.</p>
+
+<p>Whenever I do <strong>vagrant up</strong> this basic configuration for a vagrant VM makes my project folder accessible inside that VM. I could do <code>bundle install</code> inside the VM, run ansible playbooks/chef scripts to set the VM up as a development/staging/production environment.</p>
+
+<p>Other developers or devops involved in the project can effectively get the same environment, without messing up their host computer by installing tons of software to recreate a certain environment. It&rsquo;s knowledge transfer of a project at its finest.</p>
+
+<p>Used in this context, Vagrant is a great tool for creating consistent and stable development environments. It helps lessen the &lsquo;works on my machine&rsquo; theory, when solving problems with the code.</p>
+
+<p>Everyone doesn&rsquo;t need to necessarily do the same workflow for everyone, Vagrant is just a tool at the end of the day.</p>
+
+<p>As Mitchell Hashimoto, creator of Vagrant, would say:</p>
+
+<blockquote>
+  <p>Of course, it isn’t necessary to follow each and every principle of the Tao of Vagrant to use Vagrant. Vagrant is a general purpose tool and can be molded into your environment as you see fit. But it is important to see and understand the larger vision behind Vagrant.</p>
+</blockquote>
