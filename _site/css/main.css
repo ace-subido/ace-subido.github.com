@@ -54,9 +54,9 @@ html {
 body {
   margin-bottom: 65px;
   font-size: 16px;
-  font-family: Georgia, Times, "Times New Roman", serif;
-  line-heigth: 1.6;
-  color: #333; }
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+  line-height: 1.6;
+  color: #555; }
 
 body, html {
   text-rendering: optimizeLegibility;
@@ -71,7 +71,10 @@ a {
   text-decoration: none;
   color: #0074D9; }
   a:hover {
-    color: #0059a6; }
+    color: #0059a6;
+    -webkit-transition: color 200ms ease-in-out;
+    -moz-transition: color 200ms ease-in-out;
+    transition: color 200ms ease-in-out; }
 
 p {
   margin-bottom: 1rem; }
@@ -100,7 +103,7 @@ code {
 
 pre {
   display: block;
-  padding: 10px 15px;
+  padding: 15px;
   margin: 0 0 1rem;
   font-size: 90%;
   line-height: 1.5;
@@ -115,10 +118,39 @@ pre code {
   padding: 0;
   font-size: inherit;
   color: inherit;
-  background-color: transparent; }
+  background-color: transparent;
+  border-radius: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  color: #555;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  margin-top: 0.2rem;
+  text-rendering: optimizeLegibility; }
+
+h1 {
+  font-size: 1.88889rem; }
+
+h2 {
+  font-size: 1.5rem; }
+
+h3 {
+  font-size: 1.22222rem; }
+
+h4, h5, h6 {
+  font-size: 1rem; }
+
+img {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem; }
 
 .container {
-  max-width: 900px;
+  max-width: 740px;
   margin-left: auto;
   margin-right: auto;
   margin-left: 40px;
@@ -127,22 +159,6 @@ pre code {
     clear: both;
     content: "";
     display: table; }
-
-section {
-  float: left;
-  display: block;
-  margin-right: 2.5641%;
-  width: 79.48718%; }
-  section:last-child {
-    margin-right: 0; }
-
-.site-footer {
-  float: left;
-  display: block;
-  margin-right: 2.5641%;
-  width: 79.48718%; }
-  .site-footer:last-child {
-    margin-right: 0; }
 
 .site-footer {
   position: absolute;
@@ -174,21 +190,37 @@ section {
 
 .site-title {
   font-size: 30px;
-  color: #333; }
-  .site-title:hover {
-    color: #1a1a1a; }
+  font-family: "Monaco", "Consolas", "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+  color: #555; }
+  .site-title:hover, .site-title:active, .site-title:focus {
+    color: #3c3c3c; }
 
 .post-list {
   margin-bottom: 2rem;
   list-style-type: none;
   padding-left: 0; }
-  .post-list > li {
-    margin-bottom: 1rem; }
-  .post-list .post-link {
-    display: block;
-    font-size: 18px; }
-  .post-list .post-meta {
-    color: #555; }
+
+.post-excerpt {
+  margin-bottom: 5rem; }
+  .post-excerpt .post-meta {
+    margin-bottom: 0.5rem; }
+    .post-excerpt .post-meta .post-link {
+      display: block;
+      color: #555; }
+      .post-excerpt .post-meta .post-link:hover, .post-excerpt .post-meta .post-link:active, .post-excerpt .post-meta .post-link:focus {
+        color: #2f2f2f; }
+
+.post-date {
+  color: #888;
+  font-size: 14px; }
+
+.post-title {
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.post-content {
+  margin-top: 2rem;
+  margin-bottom: 2rem; }
 
 .pagination {
   margin: 0;
@@ -200,3 +232,6 @@ section {
     padding-left: 5px; }
   .pagination > li:first-child {
     padding-left: 0; }
+
+.page-title {
+  font-size: 32px; }

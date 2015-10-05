@@ -4,10 +4,3 @@
   margin-right: auto;
 }
 
-section {
-  @include span-columns(8);
-}
-
-.site-footer {
-  @include span-columns(8);
-}

@@ -4,3 +4,4 @@ gem 'jekyll'
 
 gem 'bourbon'
 gem 'neat'
+gem 'github-pages'
