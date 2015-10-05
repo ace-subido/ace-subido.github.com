@@ -1,0 +1,47 @@
+---
+layout: post
+title: 'Angular JS: Bootstrap 3.0 Alerts'
+date: '2013-10-25T18:57:00+08:00'
+tags:
+- work
+tumblr_url: http://acesubido.com/post/65035477875/angular-js-bootstrap-30-alerts
+---
+<p><strong>Problem</strong></p>
+
+<p>Show a single Bootstrap Alert for any action. No need for multiple stacked alerts, just one bootstrap alert.</p>
+
+<p><strong>Solution</strong></p>
+
+<p>I found the Angular UI for Bootstrap Alerts having too much features for this problem. Unless I&rsquo;m dealing with multiple notifications, then Bootstrap alerts aren&rsquo;t probably the best since they&rsquo;re very obtrusive (changes the layout drastically), I&rsquo;ll probably use some unobtrusive notification scheme.</p>
+
+<p>Here&rsquo;s a dirty workaround:</p>
+
+<p><strong>js</strong></p>
+
+<pre><code>$scope.mainAlert = {
+  isShown: false
+};
+
+function showAlert(alertType, message) {
+  $scope.mainAlert.message = message;
+  $scope.mainAlert.isShown = true;
+  $scope.mainAlert.alertType = alertType;
+}   
+
+$scope.closeAlert = function() {        
+  $scope.mainAlert.isShown = false;
+};
+
+var message = 'hi';
+var alertClass = 'alert-danger'
+
+showAlert(alertClass, message);    
+</code></pre>
+
+<p><strong>view</strong></p>
+
+<pre><code>&lt;div class="alert {{mainAlert.alertType}}" ng-show="mainAlert.isShown"&gt;
+  &lt;button type="button" class="close" ng-click="closeAlert()" aria-hidden="true"&gt;&amp;times;&lt;/button&gt;
+  {{mainAlert.message}}
+&lt;/div&gt;
+</code></pre>

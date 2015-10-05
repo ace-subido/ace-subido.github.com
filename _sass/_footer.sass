@@ -1,0 +1,21 @@
+.site-footer
+  position: absolute
+  bottom: 0
+  width: 100%
+  padding: 20px 40px
+  color: #999
+
+  a
+    color: #999
+
+    &:hover,
+    &:active,
+    &:focus
+      color: #444
+
+.footer-links-list
+  @include inline-list()
+
+  > li:first-child
+    padding-left: 0
+    padding-right: 0

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Simple DevOps: Managing multiple ssh keys in a single computer</title>
+  <meta name="description" content="Sometimes you might be using 2 seperate accounts for a specific service in the internet. Say for example you have two github/heroku/bitbucket accounts, you&r...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://acesubido.com/2013/06/23/simple-devops-managing-multiple-ssh-keys-in-a.html">
+  <link rel="alternate" type="application/rss+xml" title="acesubido" href="http://acesubido.com/feed.xml" />
+</head>
+
+  <!-- google pretty print -->
+
+  <body>
+    <div class="container">
+      <header class="site-header">
+  <a class="site-title" href="/">acesubido</a>
+</header>
+
+      <section>
+        <header>
+          <h1 class="post-title">Simple DevOps: Managing multiple ssh keys in a single computer</h1>
+          <p class="post-date">Jun 23, 2013</p>
+        </header>
+        <article class="post-content">
+          <p>Sometimes you might be using 2 seperate accounts for a specific service in the internet. Say for example you have two github/heroku/bitbucket accounts, you&rsquo;d want to use ssh keys in order for you to easily push to your repositories and work with those services. But using one ssh key for those accounts is not allowed by these service due to a security measure.</p>
+
+<p>For you to get around this, you can create multiple ssh keys in your machine and add them to your terminal session.</p>
+
+<p><strong>Generating another ssh-key</strong></p>
+
+<pre><code> ssh-keygen -t rsa -f ~/.ssh/id_rsa_work -C "Keyword stuff label"
+</code></pre>
+
+<p>This command will generate a id_rsa_work key for you, to add this on top of your usual ssh key just run:</p>
+
+<pre><code>exec ssh-agent bash
+
+ssh-add ~/.ssh/id_rsa_work
+</code></pre>
+
+<p>Now you&rsquo;re using two ssh keys in a single session :)</p>
+
+        </article>
+      </section>
+    </div>
+
+    <footer class="site-footer">
+  <nav class="footer-links">
+    <ul class="footer-links-list">
+      <li>
+        <a href="/">acesubido</a>
+        &mdash;
+      </li>
+      <li>
+        <a href="/about">about/contact</a>
+      </li>
+      <li>
+        <a href="/feed.xml">subscribe via rss</a>
+      </li>
+      <li>
+        <a href="http://github.com/ace-subido">github</a>
+      </li>
+      <li>
+        <a href="http://codepen.io/ace-subido">codepen</a>
+      </li>
+    </ul>
+  </nav>
+</footer>
+
+
+  </body>
+
+</html>

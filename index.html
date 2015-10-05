@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+  <div class="post-list">
+    {% for post in paginator.posts %}
+      <article class="post-excerpt">
+        <div class="post-meta">
+          <h2 class="post-title"><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+          <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+        </div>
+        {{ post.excerpt }}
+        <a href="{{ post.url | prepend: site.baseurl }}">Read more &raquo;</a>
+
+      </article>
+    {% endfor %}
+  </div>
+
+  <ul class="pagination">
+    {% if paginator.previous_page %}
+      <li>
+        <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+      </li>
+    {% else %}
+      <li>
+        <span class="previous">Previous</span>
+      </li>
+    {% endif %}
+      <li>&middot;</li>
+      <li>
+        <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+      </li>
+      <li>&middot;</li>
+    {% if paginator.next_page %}
+      <li>
+        <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+      </li>
+    {% else %}
+      <li>
+        <span class="next ">Next</span>
+      </li>
+    {% endif %}
+  </div>
+

@@ -1,0 +1,38 @@
+.post-list
+  margin-bottom: 2rem
+  list-style-type: none
+  padding-left: 0
+
+.post-excerpt
+  margin-bottom: 5rem
+
+  .post-meta
+    margin-bottom: 0.5rem
+
+    .post-link
+      display: block
+      color: $text-color
+
+      &:hover,
+      &:active,
+      &:focus
+        color: darken($text-color, 15%)
+
+.post-date
+  color: #888
+  font-size: 14px
+
+.post-title
+  margin-top: 0
+  margin-bottom: 0
+
+.post-content
+  margin-top: 2rem
+  margin-bottom: 2rem
+
+.pagination
+  @include inline-list()
+
+  > li:first-child
+    padding-left: 0
+

@@ -1,0 +1,25 @@
+---
+layout: post
+title: 'Simple DevOps: Managing multiple ssh keys in a single computer'
+date: '2013-06-23T13:11:00+08:00'
+tags:
+- work
+tumblr_url: http://acesubido.com/post/53651747907/simple-devops-managing-multiple-ssh-keys-in-a
+---
+<p>Sometimes you might be using 2 seperate accounts for a specific service in the internet. Say for example you have two github/heroku/bitbucket accounts, you&rsquo;d want to use ssh keys in order for you to easily push to your repositories and work with those services. But using one ssh key for those accounts is not allowed by these service due to a security measure.</p>
+
+<p>For you to get around this, you can create multiple ssh keys in your machine and add them to your terminal session.</p>
+
+<p><strong>Generating another ssh-key</strong></p>
+
+<pre><code> ssh-keygen -t rsa -f ~/.ssh/id_rsa_work -C "Keyword stuff label"
+</code></pre>
+
+<p>This command will generate a id_rsa_work key for you, to add this on top of your usual ssh key just run:</p>
+
+<pre><code>exec ssh-agent bash
+
+ssh-add ~/.ssh/id_rsa_work
+</code></pre>
+
+<p>Now you&rsquo;re using two ssh keys in a single session :)</p>

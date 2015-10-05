@@ -1,0 +1,24 @@
+---
+layout: post
+title: Speeding up Rails Views and Design Decisions
+date: '2014-10-30T21:05:00+08:00'
+tags:
+- work
+tumblr_url: http://acesubido.com/post/101335977902/speeding-up-rails-views-and-design-decisions
+---
+<p>At work, we recently encountered 2 very slow pages, both of them revolved around loading a list of accounts in HAML (around +2000). One page was loading them into a table and using jQuery DataTables to turn the table into an interactive interface. The other page was loading those accounts in a select tag and using Select2 to make them easily searchable.</p>
+
+<p>Early on, when they were loaded by AJAX. It was premature optimised since it was only loading 200-300 accounts, so we decided to render it in HAML. But now, it became a bit of a problem when the app got bigger:</p>
+
+<ul><li>Users, about 80 of them, started complaining when all of them accessed these pages. </li>
+<li>Pages loaded at an average of 7-8 seconds, at worst some waited for 15 seconds.</li>
+<li>Server-side wise, ActiveRecord pulls these records under 100ms, so improvements needed to happen on the browser-side. </li>
+<li>By the way, these were easily pinpointed by NewRelic and Airbrake :)</li>
+<li>The asset pipeline has already minified and served the assets as single files (css/js).</li>
+</ul><p>Some action steps:</p>
+
+<ol><li>Use AJAX and pull down the data, set the cache to true, serve the page up first, process and load the DOM later from the data pulled down by AJAX.</li>
+<li>Enable GZip Compression in your web server.</li>
+<li>Cache-header, expire them in the far future.</li>
+<li>Use <code>stale?</code>, use E-Tag headers (304 Not Modified), it lessens stress at server-side.</li>
+</ol><p>Safe to say, we brought it down to a page load of 1-2 seconds tops, and we can still improve on that by refactoring and re-strategising.</p>
