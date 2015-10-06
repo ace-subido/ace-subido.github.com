@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
   <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,29 +8,26 @@
   <title>NHibernate Simple Patterns: Self-Referencing Nested Comments</title>
   <meta name="description" content="Consider the need to display a group of comments the way Disqus displays them. We&rsquo;d have to have a Comment class that looks kind of like this:">
 
-  <link rel="stylesheet" href="http://ace-subido.github.io/css/main.css">
-  <link rel="canonical" href="http://acesubido.comhttp://ace-subido.github.io/2012/11/27/nhibernate-simple-patterns-self-referencing.html">
-  <link rel="alternate" type="application/rss+xml" title="acesubido" href="http://acesubido.comhttp://ace-subido.github.io/feed.xml" />
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://acesubido.com/2012/11/27/nhibernate-simple-patterns-self-referencing.html">
+  <link rel="alternate" type="application/rss+xml" title="acesubido" href="/feed.xml" />
 </head>
 
-  <!-- google pretty print -->
-  <link rel="stylesheet" href="http://ace-subido.github.io/css/google-prettify-sunburst.css">
-  <script type="text/javascript" src="http://ace-subido.github.io/javascript/google-prettify.js"></script>
-  <script type="text/javascript" src="http://ace-subido.github.io/javascript/site-prettify.js"></script>
-
   <body>
+
     <div class="container">
       <header class="site-header">
-  <a class="site-title" href="http://ace-subido.github.io/">acesubido</a>
+  <a class="site-title" href="/">acesubido</a>
 </header>
 
       <section>
-        <header>
-          <h1 class="post-title">NHibernate Simple Patterns: Self-Referencing Nested Comments</h1>
-          <p class="post-date">Nov 27, 2012</p>
-        </header>
-        <article class="post-content">
-          <p>Consider the need to display a group of comments the way <strong>Disqus</strong> displays them. We&rsquo;d have to have a <code>Comment</code> class that looks kind of like this:</p>
+        <section>
+  <header>
+    <h1 class="post-title">NHibernate Simple Patterns: Self-Referencing Nested Comments</h1>
+    <p class="post-date">Nov 27, 2012</p>
+  </header>
+  <article class="post-content">
+    <p>Consider the need to display a group of comments the way <strong>Disqus</strong> displays them. We&rsquo;d have to have a <code>Comment</code> class that looks kind of like this:</p>
 
 <pre><code>public class Comment
 {
@@ -117,7 +113,9 @@ foreach (Comment comment in comments)
 
 <p>Just fix the margins and styles to create the nested effect. This simply renders all your comments recursively until everything is displayed.</p>
 
-        </article>
+  </article>
+</section>
+
       </section>
     </div>
 
@@ -125,14 +123,14 @@ foreach (Comment comment in comments)
   <nav class="footer-links">
     <ul class="footer-links-list">
       <li>
-        <a href="http://ace-subido.github.io/">acesubido</a>
+        <a href="/">acesubido</a>
         &mdash;
       </li>
       <li>
-        <a href="http://ace-subido.github.io/about">about/contact</a>
+        <a href="/about">about/contact</a>
       </li>
       <li>
-        <a href="http://ace-subido.github.io/feed.xml">subscribe via rss</a>
+        <a href="/feed.xml">subscribe via rss</a>
       </li>
       <li>
         <a href="http://github.com/ace-subido">github</a>
@@ -144,7 +142,7 @@ foreach (Comment comment in comments)
   </nav>
 </footer>
 
-<script type="text/javascript" src="http://ace-subido.github.io/javascript/google-analytics.js"></script>
+<script type="text/javascript" src="/javascript/google-analytics.js"></script>
 
   </body>
 
