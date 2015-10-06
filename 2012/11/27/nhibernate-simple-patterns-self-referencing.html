@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>NHibernate Simple Patterns: Self-Referencing Nested Comments</title>
+  <meta name="description" content="Consider the need to display a group of comments the way Disqus displays them. We&rsquo;d have to have a Comment class that looks kind of like this:">
+
+  <link rel="stylesheet" href="//css/main.css">
+  <link rel="canonical" href="http://acesubido.com//2012/11/27/nhibernate-simple-patterns-self-referencing.html">
+  <link rel="alternate" type="application/rss+xml" title="acesubido" href="http://acesubido.com//feed.xml" />
+</head>
+
+  <!-- google pretty print -->
+
+  <body>
+    <div class="container">
+      <header class="site-header">
+  <a class="site-title" href="//">acesubido</a>
+</header>
+
+      <section>
+        <header>
+          <h1 class="post-title">NHibernate Simple Patterns: Self-Referencing Nested Comments</h1>
+          <p class="post-date">Nov 27, 2012</p>
+        </header>
+        <article class="post-content">
+          <p>Consider the need to display a group of comments the way <strong>Disqus</strong> displays them. We&rsquo;d have to have a <code>Comment</code> class that looks kind of like this:</p>
+
+<pre><code>public class Comment
+{
+    public virtual int Id { get; set; }        
+    public virtual string Body { get; set; }
+    public virtual Post ParentPost { get; set; }
+    public virtual Comment ParentComment { get; set; }
+    public virtual IList&lt;Comment&gt; ChildComments { get; set; }
+    public virtual DateTime DateCreated { get; set; }
+    public virtual User Author { get; set; }
+}
+</code></pre>
+
+<p>Mapped with this <code>Classmap</code></p>
+
+<pre><code>public class CommentClassMap : ClassMap&lt;Comment&gt;
+{
+    public CommentClassMap()            
+    {
+        Table("Comments");
+        Id(x =&gt; x.Id).GeneratedBy.Native();
+        Map(x =&gt; x.Body);            
+        Map(x =&gt; x.DateCreated);
+        References(x =&gt; x.ParentComment)
+            .LazyLoad()
+            .Column("Comment_id");
+        HasMany&lt;Comment&gt;(x =&gt; x.ChildComments)
+            .LazyLoad()
+            .KeyColumn("Comment_id")
+            .Cascade.None();
+        References(x =&gt; x.ParentPost)
+            .LazyLoad();
+        References(x =&gt; x.Author);          
+    }
+}
+</code></pre>
+
+<p>Now the main purpose is, I’d need to get all the Comments and their respective sub-comments for a specific &lsquo;Post&rsquo;. Ayende, already describes an easy solution for this problem in this <a href="http://ayende.com/blog/4151/nhibernate-tips-tricks-efficiently-selecting-a-tree" target="_blank">article</a>. Here’s the code we can use to load the tree:</p>
+
+<pre><code>IList&lt;Comment&gt; comments = _session.CreateQuery(@"select c from Comment c " +
+    "left join fetch c.ChildComments cc " +                
+    "where c.ParentPost.Id = :Id")
+    .SetParameter("Id", id)
+    .SetResultTransformer(new DistinctRootEntityResultTransformer())                
+    .List&lt;Comment&gt;();
+</code></pre>
+
+<p>But this leaves one little problem: you’ll also be loading ChildComments that also have ChildComments at the same level as the Comments who have no ParentComment (Root Level Comments, 1st level Ancestors in the tree).</p>
+
+<p>We only want to display the root comments on which all other Child/Descendants from the Tree are effectively based upon. So we’d need to manipulate the comments object for a little bit:</p>
+
+<pre><code>List&lt;Comment&gt; commentsForDisplay = new List&lt;Comment&gt;();
+
+foreach (Comment comment in comments)
+{
+    if (comment.ParentComment == null)
+    {
+        commentsForDisplay.Add(comment);
+    }
+}
+</code></pre>
+
+<p>When you return the <code>commentsForDisplay</code> object, it loads the entire Comment Tree graph effectively, with all the ChildComments and their Descendants <em>only</em> being displayed with the proper <em>Root Ancestor</em>.</p>
+
+<p><strong>How do we display this in ASP.NET MVC with the Razor View Engine?</strong></p>
+
+<p>Consider using an inline <code>Helper</code> class in the view, or create a PartialView that accepts a list of comments as its Model:</p>
+
+<pre><code>@helper ShowCommentTree(IEnumerable&lt;CommentViewModel&gt; comments)
+ {
+     foreach (var item in comments)
+     {
+         @Html.Markdown(item.Body)
+         @Html.ActionLink("Reply", "ReplyToComment", new { @id = item.Id })       
+
+         if (item.ChildComments.Any())
+         {
+             @ShowCommentTree(item.ChildComments)
+         }
+     }
+ }
+</code></pre>
+
+<p>Just fix the margins and styles to create the nested effect. This simply renders all your comments recursively until everything is displayed.</p>
+
+        </article>
+      </section>
+    </div>
+
+    <footer class="site-footer">
+  <nav class="footer-links">
+    <ul class="footer-links-list">
+      <li>
+        <a href="//">acesubido</a>
+        &mdash;
+      </li>
+      <li>
+        <a href="//about">about/contact</a>
+      </li>
+      <li>
+        <a href="//feed.xml">subscribe via rss</a>
+      </li>
+      <li>
+        <a href="http://github.com/ace-subido">github</a>
+      </li>
+      <li>
+        <a href="http://codepen.io/ace-subido">codepen</a>
+      </li>
+    </ul>
+  </nav>
+</footer>
+
+
+  </body>
+
+</html>

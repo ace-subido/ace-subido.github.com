@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Responsive Centered Bootstrap Columns</title>
+  <meta name="description" content="I see this being repeated over-and-over again to create centered content with bootstrap columns:">
+
+  <link rel="stylesheet" href="//css/main.css">
+  <link rel="canonical" href="http://acesubido.com//2015/02/21/responsive-centered-bootstrap-columns.html">
+  <link rel="alternate" type="application/rss+xml" title="acesubido" href="http://acesubido.com//feed.xml" />
+</head>
+
+  <!-- google pretty print -->
+
+  <body>
+    <div class="container">
+      <header class="site-header">
+  <a class="site-title" href="//">acesubido</a>
+</header>
+
+      <section>
+        <header>
+          <h1 class="post-title">Responsive Centered Bootstrap Columns</h1>
+          <p class="post-date">Feb 21, 2015</p>
+        </header>
+        <article class="post-content">
+          <p>I see this being repeated over-and-over again to create centered content with bootstrap columns:</p>
+
+<pre><code> .container
+   .row
+     .col-md-offset-3.col-md-6
+       Centered Column
+</code></pre>
+
+<p>Leaving you only to work with even-numbered columns for perfectly centered content inside a bootstrap column:</p>
+
+<pre><code> .col-md-offset-2.col-md-8
+ .col-md-offset-3.col-md-6
+ .col-md-offset-4.col-md-4
+</code></pre>
+
+<p>Foundation has built-in centered columns, so here&rsquo;s a way to create centered bootstrap columns.</p>
+
+<pre><code> // SCSS
+ .col-center {
+   float: none;
+   margin-right: auto;
+   margin-left: auto;
+ }
+
+ // HAML
+ .container
+    .row
+       .col-md-5.col-center
+</code></pre>
+
+<p>To see this in action, just take a look <a href="http://codepen.io/ace-subido/pen/MYVNBv" target="_blank">here</a></p>
+
+<p>Sidenote: this works with Bootstrap 3.</p>
+
+        </article>
+      </section>
+    </div>
+
+    <footer class="site-footer">
+  <nav class="footer-links">
+    <ul class="footer-links-list">
+      <li>
+        <a href="//">acesubido</a>
+        &mdash;
+      </li>
+      <li>
+        <a href="//about">about/contact</a>
+      </li>
+      <li>
+        <a href="//feed.xml">subscribe via rss</a>
+      </li>
+      <li>
+        <a href="http://github.com/ace-subido">github</a>
+      </li>
+      <li>
+        <a href="http://codepen.io/ace-subido">codepen</a>
+      </li>
+    </ul>
+  </nav>
+</footer>
+
+
+  </body>
+
+</html>

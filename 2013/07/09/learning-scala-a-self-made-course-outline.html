@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Learning Scala: A self-made course outline</title>
+  <meta name="description" content="I&rsquo;m currently learning Scala, a functional programming language on top of the JVM.">
+
+  <link rel="stylesheet" href="//css/main.css">
+  <link rel="canonical" href="http://acesubido.com//2013/07/09/learning-scala-a-self-made-course-outline.html">
+  <link rel="alternate" type="application/rss+xml" title="acesubido" href="http://acesubido.com//feed.xml" />
+</head>
+
+  <!-- google pretty print -->
+
+  <body>
+    <div class="container">
+      <header class="site-header">
+  <a class="site-title" href="//">acesubido</a>
+</header>
+
+      <section>
+        <header>
+          <h1 class="post-title">Learning Scala: A self-made course outline</h1>
+          <p class="post-date">Jul 9, 2013</p>
+        </header>
+        <article class="post-content">
+          <p>I&rsquo;m currently learning Scala, a functional programming language on top of the JVM.</p>
+
+<p>I tend to teach things as I learn them: so here&rsquo;s my 45 minute routine I go through every other day</p>
+
+<ul><li>(Average) 25 minute video: 1 video with Coursera&rsquo;s Functional Programming Course by Martin Odersky (creator of the Scala Programming Language)</li>
+<li>20 minutes reading: 1 chapter reading Programming in Scala (ebook) by Martin Odersky, Lex Spoon and Bill Veeners. </li>
+</ul><p>Both materials are highly recommended in learning Scala. You can also go through <a href="http://twitter.github.io/scala_school/index.html" target="_blank">Twitter&rsquo;s Scala School</a> if you want to learn in a faster pace. Once you learn the language, it&rsquo;s easy to pick up Scala frameworks that help you build the things you need to build.</p>
+
+<p>By this rate anyone would grasp the fundamentals in 2 &frac12; months. It would be nice that you also try and build something with what you&rsquo;ve learned. I&rsquo;ve built <a href="https://github.com/ace-subido/aclys" target="_blank">Aclys</a>, it&rsquo;s a tiny in-memory NoSQL key/value store on top of Finagle. It&rsquo;s under 90 lines of code :)</p>
+
+<pre><code>package com.aclys.start
+
+import java.io._
+import java.net.InetSocketAddress
+import java.util.Properties
+
+import com.twitter.finagle.{Service, SimpleFilter}
+import org.jboss.netty.handler.codec.http._
+import org.jboss.netty.handler.codec.http.HttpVersion
+import org.jboss.netty.util.CharsetUtil.UTF_8
+import com.twitter.util.Future
+import java.net.InetSocketAddress
+import com.twitter.finagle.builder.{Server, ServerBuilder}
+import com.twitter.finagle.http.Http
+import scala.collection.JavaConversions._
+
+import com.twitter.util._
+import com.twitter.finagle.http._
+import com.twitter.finagle.http.path._
+import Method._
+import Status._
+
+class AclysService() extends Service[HttpRequest, HttpResponse] {
+  var data = Map[String, String]()
+
+  def apply(arg: HttpRequest) = Future {    
+    val request = Request(arg)
+    val key = request.getParam("key")   
+
+    (request.method) match {
+      case Get =&gt; get(key)       
+      case Post =&gt; post(key, request.contentString)        
+      case Delete =&gt; delete(key)
+      case _ =&gt; stdResp(NotFound)
+    }
+  }  
+
+  def get(key: String): HttpResponse = {   
+    if(data.contains(key)) stdResp(Ok, data(key))
+    else stdResp(NotFound)     
+  }
+
+  def post(key: String, value: String): HttpResponse = {    
+    if(!key.isEmpty) {
+      data += (key -&gt; value)
+      stdResp(Ok)      
+    } else stdResp(NotFound)
+  }
+
+  def delete(key: String): HttpResponse = {
+    if(data.contains(key)) {
+      data -= (key)
+      stdResp(Ok)
+    } else stdResp(NotFound)     
+  }
+
+  private def stdResp(status: HttpResponseStatus) = {
+    val resp = Response(HttpVersion.HTTP_1_1, status) 
+    resp    
+  }
+
+  private def stdResp(status: HttpResponseStatus, value: String): HttpResponse = {
+    val resp = stdResp(status)        
+    resp.contentType = MediaType.WwwForm
+    resp.contentString = value
+    resp
+  }
+}
+
+object Main {
+  def main(args: Array[String]) {
+    val conf = new Properties
+    conf.load(new FileInputStream("config.properties"))
+
+    val aclys: Service[HttpRequest, HttpResponse] = new AclysService
+
+    val server = ServerBuilder()
+      .codec(Http().maxRequestSize(new StorageUnit(Int.MaxValue)))
+      .bindTo(new InetSocketAddress(conf("server.port").toInt))
+      .name("aclys")
+      .build(aclys)
+  }  
+}
+</code></pre>
+
+<p>It&rsquo;s good to apply what you&rsquo;ve learned, supplemented by good reading, applying what you&rsquo;ve learned allows you to learn faster and deeper. So set up <a href="http://scala-ide.org/download/sdk.html" target="_blank">Scala-IDE for Eclipse</a>. This is a solid IDE that allows you to be instantly productive with Scala.</p>
+
+<p>Aside from it being extensively used at work, learning Scala helps me out a lot as a person in the software industry. As I&rsquo;m approaching 4 years of being in the industry managing teams, writing code in C# and/or improving UI/UX on software products, it seems like a great time to also level up my understanding in creating better solutions to several business or technology-related problems.</p>
+
+        </article>
+      </section>
+    </div>
+
+    <footer class="site-footer">
+  <nav class="footer-links">
+    <ul class="footer-links-list">
+      <li>
+        <a href="//">acesubido</a>
+        &mdash;
+      </li>
+      <li>
+        <a href="//about">about/contact</a>
+      </li>
+      <li>
+        <a href="//feed.xml">subscribe via rss</a>
+      </li>
+      <li>
+        <a href="http://github.com/ace-subido">github</a>
+      </li>
+      <li>
+        <a href="http://codepen.io/ace-subido">codepen</a>
+      </li>
+    </ul>
+  </nav>
+</footer>
+
+
+  </body>
+
+</html>

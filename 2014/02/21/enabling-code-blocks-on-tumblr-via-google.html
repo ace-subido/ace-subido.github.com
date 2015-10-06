@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Enabling Code Blocks on Tumblr via Google PrettyPrint</title>
+  <meta name="description" content="Grab the prettify.js and a prettify css style from the Google Code repository, stick them in your &lsquo;head&rsquo; tag">
+
+  <link rel="stylesheet" href="//css/main.css">
+  <link rel="canonical" href="http://acesubido.com//2014/02/21/enabling-code-blocks-on-tumblr-via-google.html">
+  <link rel="alternate" type="application/rss+xml" title="acesubido" href="http://acesubido.com//feed.xml" />
+</head>
+
+  <!-- google pretty print -->
+
+  <body>
+    <div class="container">
+      <header class="site-header">
+  <a class="site-title" href="//">acesubido</a>
+</header>
+
+      <section>
+        <header>
+          <h1 class="post-title">Enabling Code Blocks on Tumblr via Google PrettyPrint</h1>
+          <p class="post-date">Feb 21, 2014</p>
+        </header>
+        <article class="post-content">
+          <p>Grab the prettify.js and a prettify css style from the Google Code repository, stick them in your &lsquo;head&rsquo; tag</p>
+
+<pre><code>&lt;link rel="stylesheet" type="text/css" media="screen" href="https://google-code-prettify.googlecode.com/svn/trunk/styles/sunburst.css" /&gt;
+
+&lt;script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/prettify/188.0.0/prettify.js"&gt;&lt;/script&gt;
+</code></pre>
+
+<p>Grab jQuery and append prettyPrint on every <code>pre</code> element it can find on your blog, then call <code>prettyPrint()</code></p>
+
+<pre><code>&lt;script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"&gt;&lt;/script&gt;
+
+$(document).ready( function(){
+    $('code').parent('pre').addClass('prettyprint');
+    prettyPrint();
+});   
+</code></pre>
+
+<p>There you have it!</p>
+
+        </article>
+      </section>
+    </div>
+
+    <footer class="site-footer">
+  <nav class="footer-links">
+    <ul class="footer-links-list">
+      <li>
+        <a href="//">acesubido</a>
+        &mdash;
+      </li>
+      <li>
+        <a href="//about">about/contact</a>
+      </li>
+      <li>
+        <a href="//feed.xml">subscribe via rss</a>
+      </li>
+      <li>
+        <a href="http://github.com/ace-subido">github</a>
+      </li>
+      <li>
+        <a href="http://codepen.io/ace-subido">codepen</a>
+      </li>
+    </ul>
+  </nav>
+</footer>
+
+
+  </body>
+
+</html>

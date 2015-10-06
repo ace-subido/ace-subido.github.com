@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Angular JS: Bootstrap 3.0 Alerts</title>
+  <meta name="description" content="Problem">
+
+  <link rel="stylesheet" href="//css/main.css">
+  <link rel="canonical" href="http://acesubido.com//2013/10/25/angular-js-bootstrap-30-alerts.html">
+  <link rel="alternate" type="application/rss+xml" title="acesubido" href="http://acesubido.com//feed.xml" />
+</head>
+
+  <!-- google pretty print -->
+
+  <body>
+    <div class="container">
+      <header class="site-header">
+  <a class="site-title" href="//">acesubido</a>
+</header>
+
+      <section>
+        <header>
+          <h1 class="post-title">Angular JS: Bootstrap 3.0 Alerts</h1>
+          <p class="post-date">Oct 25, 2013</p>
+        </header>
+        <article class="post-content">
+          <p><strong>Problem</strong></p>
+
+<p>Show a single Bootstrap Alert for any action. No need for multiple stacked alerts, just one bootstrap alert.</p>
+
+<p><strong>Solution</strong></p>
+
+<p>I found the Angular UI for Bootstrap Alerts having too much features for this problem. Unless I&rsquo;m dealing with multiple notifications, then Bootstrap alerts aren&rsquo;t probably the best since they&rsquo;re very obtrusive (changes the layout drastically), I&rsquo;ll probably use some unobtrusive notification scheme.</p>
+
+<p>Here&rsquo;s a dirty workaround:</p>
+
+<p><strong>js</strong></p>
+
+<pre><code>$scope.mainAlert = {
+  isShown: false
+};
+
+function showAlert(alertType, message) {
+  $scope.mainAlert.message = message;
+  $scope.mainAlert.isShown = true;
+  $scope.mainAlert.alertType = alertType;
+}   
+
+$scope.closeAlert = function() {        
+  $scope.mainAlert.isShown = false;
+};
+
+var message = 'hi';
+var alertClass = 'alert-danger'
+
+showAlert(alertClass, message);    
+</code></pre>
+
+<p><strong>view</strong></p>
+
+<pre><code>&lt;div class="alert " ng-show="mainAlert.isShown"&gt;
+  &lt;button type="button" class="close" ng-click="closeAlert()" aria-hidden="true"&gt;&amp;times;&lt;/button&gt;
+  
+&lt;/div&gt;
+</code></pre>
+
+        </article>
+      </section>
+    </div>
+
+    <footer class="site-footer">
+  <nav class="footer-links">
+    <ul class="footer-links-list">
+      <li>
+        <a href="//">acesubido</a>
+        &mdash;
+      </li>
+      <li>
+        <a href="//about">about/contact</a>
+      </li>
+      <li>
+        <a href="//feed.xml">subscribe via rss</a>
+      </li>
+      <li>
+        <a href="http://github.com/ace-subido">github</a>
+      </li>
+      <li>
+        <a href="http://codepen.io/ace-subido">codepen</a>
+      </li>
+    </ul>
+  </nav>
+</footer>
+
+
+  </body>
+
+</html>
