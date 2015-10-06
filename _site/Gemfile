@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'jekyll', "2.4.0"
 
 gem 'bourbon', '4.1.1'
-gem 'neat'
+gem 'neat', '1.6.0'
 
 require 'json'
 require 'open-uri'
