@@ -10,3 +10,4 @@ paginate_path: "/page/:num/"
 # Build settings
 markdown: kramdown
 gems: [bourbon, neat]
+highlighter: pygments
