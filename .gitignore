@@ -8,5 +8,6 @@
 /.sass-cache
 /.cache
 
-.env
+/_site
+
 
