@@ -1,6 +1,6 @@
 # Site settings
 title: acesubido
-baseurl: "/" # the subpath of your site, e.g. /blog/
+baseurl: "http://ace-subido.github.io" # the subpath of your site, e.g. /blog/
 url: "http://acesubido.com" # the base hostname & protocol for your site
 twitter_username: acesubido
 github_username:  ace-subido
