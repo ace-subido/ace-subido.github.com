@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 gem 'jekyll', "2.4.0"
 
-gem 'bourbon'
+gem 'bourbon', '4.1.1'
 gem 'neat'
 
 require 'json'
