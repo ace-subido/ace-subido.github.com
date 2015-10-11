@@ -14,17 +14,37 @@
 </head>
 
   <body>
-
-    <div class="container">
-      <header class="site-header">
-  <a class="site-title" href="/">acesubido</a>
+    <header class="site-header">
+  <div class="site-title">
+    <a href="/">acesubido</a>
+  </div>
+  <div class="site-search">
+    <script>
+      (function() {
+        var cx = '007939635544132247645:xmfoofbdboa';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+            '//cse.google.com/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+      })();
+    </script>
+    <gcse:search></gcse:search>
+  </div>
 </header>
 
+    <div class="container">
       <section>
         <section>
   <header>
+    <span class="post-date">
+      May 14, 2014
+      
+      
+    </span>
     <h1 class="post-title">Rails: Developing Email-related features with rspec, email-spec and letter_opener</h1>
-    <p class="post-date">May 14, 2014</p>
   </header>
   <article class="post-content">
     <p>After years of being a developer, (.NET and Grails, now I&rsquo;m 3 months into Ruby-land), I always run into productivity problems when developing email-related features. Here&rsquo;s why:</p>
@@ -113,7 +133,6 @@ end
 
       </section>
     </div>
-
     <footer class="site-footer">
   <nav class="footer-links">
     <ul class="footer-links-list">

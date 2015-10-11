@@ -205,16 +205,41 @@ hr {
   border-right: none; }
 
 .site-header {
+  max-width: 740px;
+  margin-left: auto;
+  margin-right: auto;
   display: block;
   margin-top: 1rem;
-  margin-bottom: 1.5rem; }
+  margin-left: 40px;
+  margin-bottom: 3.5rem;
+  position: relative; }
+  .site-header::after {
+    clear: both;
+    content: "";
+    display: table; }
 
 .site-title {
-  font-size: 30px;
-  font-family: "Monaco", "Consolas", "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
-  color: #555; }
-  .site-title:hover, .site-title:active, .site-title:focus {
-    color: #3c3c3c; }
+  float: left;
+  display: block;
+  margin-right: 2.5641%;
+  width: 58.97436%; }
+  .site-title:last-child {
+    margin-right: 0; }
+  .site-title a {
+    font-size: 2rem;
+    color: #888888; }
+    .site-title a:hover, .site-title a:active, .site-title a:focus {
+      color: #3c3c3c; }
+
+.site-search {
+  position: absolute;
+  width: 300px;
+  top: 15px;
+  right: 0; }
+  .site-search .cse .gsc-control-cse,
+  .site-search .gsc-control-cse {
+    border: none;
+    padding: 0; }
 
 .post-list {
   margin-bottom: 2rem;
@@ -232,8 +257,7 @@ hr {
         color: #2f2f2f; }
 
 .post-date {
-  color: #888;
-  font-size: 14px; }
+  color: #959595; }
 
 .post-title {
   margin-top: 0;

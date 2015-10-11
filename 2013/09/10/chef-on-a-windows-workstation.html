@@ -14,17 +14,37 @@
 </head>
 
   <body>
-
-    <div class="container">
-      <header class="site-header">
-  <a class="site-title" href="/">acesubido</a>
+    <header class="site-header">
+  <div class="site-title">
+    <a href="/">acesubido</a>
+  </div>
+  <div class="site-search">
+    <script>
+      (function() {
+        var cx = '007939635544132247645:xmfoofbdboa';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+            '//cse.google.com/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+      })();
+    </script>
+    <gcse:search></gcse:search>
+  </div>
 </header>
 
+    <div class="container">
       <section>
         <section>
   <header>
+    <span class="post-date">
+      Sep 10, 2013
+      
+      
+    </span>
     <h1 class="post-title">Chef on a Windows Workstation</h1>
-    <p class="post-date">Sep 10, 2013</p>
   </header>
   <article class="post-content">
     <p>Setting up an admin workstation for Chef on Windows might be a little daunting for people starting out on Chef and for those who are not comfortable with the command line. This snippet is a useful little batch file we use at work.</p>
@@ -47,7 +67,6 @@ cmd
 
       </section>
     </div>
-
     <footer class="site-footer">
   <nav class="footer-links">
     <ul class="footer-links-list">
