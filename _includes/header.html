@@ -1,3 +1,20 @@
 <header class="site-header">
-  <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+  <div class="site-title">
+    <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+  </div>
+  <div class="site-search">
+    <script>
+      (function() {
+        var cx = '007939635544132247645:xmfoofbdboa';
+        var gcse = document.createElement('script');
+        gcse.type = 'text/javascript';
+        gcse.async = true;
+        gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+            '//cse.google.com/cse.js?cx=' + cx;
+        var s = document.getElementsByTagName('script')[0];
+        s.parentNode.insertBefore(gcse, s);
+      })();
+    </script>
+    <gcse:search></gcse:search>
+  </div>
 </header>

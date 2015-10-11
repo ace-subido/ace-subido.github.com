@@ -6,8 +6,8 @@ layout: default
     {% for post in paginator.posts %}
       <article class="post-excerpt">
         <div class="post-meta">
-          <h2 class="post-title"><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
           <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
+          <h2 class="post-title"><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
         </div>
         {{ post.excerpt }}
         <a href="{{ post.url | prepend: site.baseurl }}">Read more &raquo;</a>

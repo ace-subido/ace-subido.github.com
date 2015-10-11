@@ -1,15 +1,30 @@
 .site-header
+  @include outer-container
   display: block
   margin-top: 1rem
-  margin-bottom: 1.5rem
+  margin-left: 40px
+  margin-bottom: 3.5rem
+  position: relative
 
 .site-title
-  font-size: 30px
-  font-family: $monospaced-font-family
-  color: $text-color
+  @include span-columns(6)
+  a
+    font-size: 2rem
+    color: lighten($text-color, 20%)
 
-  &:hover,
-  &:active,
-  &:focus
-    color: darken($text-color, 10%)
+    &:hover,
+    &:active,
+    &:focus
+      color: darken($text-color, 10%)
+
+.site-search
+  position: absolute
+  width: 300px
+  top: 15px
+  right: 0
+
+  .cse .gsc-control-cse,
+  .gsc-control-cse
+    border: none
+    padding: 0
 
