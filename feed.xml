@@ -5,9 +5,81 @@
     <description></description>
     <link>http://acesubido.com/</link>
     <atom:link href="http://acesubido.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 11 Oct 2015 10:01:04 +0800</pubDate>
-    <lastBuildDate>Sun, 11 Oct 2015 10:01:04 +0800</lastBuildDate>
+    <pubDate>Sat, 24 Oct 2015 07:53:46 +0800</pubDate>
+    <lastBuildDate>Sat, 24 Oct 2015 07:53:46 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>What is a Real Time Analytics Platform?</title>
+        <description>&lt;p&gt;It’s been a few weeks/months since I’ve been plunged into this “Big Data” ecosystem, all I could sense was that
+“Big Data” is a marketing term for problems that require “Distributed Frameworks” as solutions, much like how “Cloud” is a marketing term for how “Remote Servers” are provisioned.&lt;/p&gt;
+
+&lt;p&gt;I’ve heard the word “Real Time Analytics Platform” thrown around a lot, but what does that really mean? What is that anyway? What is Real Time Analytics? And what is a Real Time Analytics Platform?&lt;/p&gt;
+
+&lt;p&gt;I think people forgot it’s meaning as time passes by, so let’s get down to what it really means.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Real Time Analytics&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Breakdown: Analytics is the discovery of meaningful patterns in data. Real Time adds “immediacy”. The combination of both means that “Real Time Analytics” is discovering meaningful patterns in data for something urgent:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Outage map for a utility company that is updated immediately&lt;/li&gt;
+  &lt;li&gt;Target push at customers on geofence detection for retail&lt;/li&gt;
+  &lt;li&gt;Fraud detection systems for finance&lt;/li&gt;
+  &lt;li&gt;Emergencies such as forest fires and emergency call recordings for government owned utilities&lt;/li&gt;
+  &lt;li&gt;Social program fraud detection for government agencies&lt;/li&gt;
+  &lt;li&gt;Log analysis for bad patterns in high-tech companies&lt;/li&gt;
+  &lt;li&gt;Anonymised usage patterns for telco’s (if they want to sell it as data or use for internal analytics)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;These are some example use cases that are urgent and require immediate attention. So it’s not just “capture, store, and display” (input and output), there’s something  else in between.&lt;/p&gt;
+
+&lt;p&gt;To create an environment where you can do “Real Time Analytics”, you’d need to safely work with 3 aspects of how your data flows into your system:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Input - an event happens (new sale, new customer, someone enters a geofence, etc.)&lt;/li&gt;
+  &lt;li&gt;Process and Store Input - capture the data of the event, and analyze the data without leveraging resources that are dedicated to operations&lt;/li&gt;
+  &lt;li&gt;Output - consume this data without disturbing operations (reports, dashboard, etc.)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The 2nd bullet is very important. It requires extensive use of background processes to achieve low-latency and high throughput to provide real time characteristics. In programming, we’ve all been taught to put really expensive operations behind another process/thread  (Resque/Sidekiq, micro-services architecture) instead of blocking everything until the operation is done.&lt;/p&gt;
+
+&lt;p&gt;Just like a normal controller class in a web app. It’s not that complex and handling this won’t be a problem.&lt;/p&gt;
+
+&lt;p&gt;But then again, let’s take for example, a typical megacorporation. They’d procured the usual .NET/Oracle/SAP stack (as much as possible, no cloud, they’re following some sort of security protocol).&lt;/p&gt;
+
+&lt;p&gt;To provide “Real Time Analytics”, usually they’d have a plethora of ETL Background Processes/Workers with Excel/DB integrations, per department, running on any number of servers, each having their own fault-tolerance and scaling strategies. If the data requirements change, they’d have to go through this set of intertwined systems and change each one of them, make sure they don’t crash and push the changes back to production.&lt;/p&gt;
+
+&lt;p&gt;A normal controller class won’t cut it anymore.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Real Time Analytics Platform&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;For our sample megacorporation, that current mosaic of stuff is their “Real Time Analytics Platform”&lt;/p&gt;
+
+&lt;p&gt;“Well, that set up will not help. It’s not real-time unless it happens instantly!” - just to sidetrack a little bit; this actually won’t happen. Many multi-department companies want to achieve that vague finish line called “Real Time Analytics” with a “Single Customer View” inside a room with a lot of screens displaying tons of dashboards. You got to define those things clearly first to get there.&lt;/p&gt;
+
+&lt;p&gt;Latency is as low as we can make it, but it’s not just the speed, it’s also the extensibility where you can easily change those set of intertwined systems based on requirements, which would probably change a lot during such a big undertaking. All departments should be together to work on this, or else it won’t work.&lt;/p&gt;
+
+&lt;p&gt;If there’s have a great team lying around; chances are, they’ll use bits and pieces of frameworks here and there instead of having a mosaic of stuff to help you get there.&lt;/p&gt;
+
+&lt;p&gt;If not, they’ll be reinventing a set of rules and guiding principles on code; how to scale, fault-tolerance, etc.&lt;/p&gt;
+
+&lt;p&gt;They’ll be reinventing a framework.&lt;/p&gt;
+
+&lt;p&gt;It’s hard enough to get great people to work with, but it’s harder if they’re working on this mosaic of apps that doesn’t have a solid framework. There are many good frameworks lying around, so learn the frameworks and leverage it.&lt;/p&gt;
+
+&lt;p&gt;To summarize, the frameworks that help blot out bullet point #2 are what people sell as “Real Time Analytics Platform”’s.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;PS: So, what’s a good one?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Personally, I won’t endorse anything. Acquiring something that would solve something complex without knowing what really needs to be done will end badly. Ask the tech team first, they’d probably know.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 24 Oct 2015 00:00:00 +0800</pubDate>
+        <link>http://acesubido.com/2015/10/24/what-is-a-real-time-analytics-platform.html</link>
+        <guid isPermaLink="true">http://acesubido.com/2015/10/24/what-is-a-real-time-analytics-platform.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>header navigation screenshot of a cryptocurrency</title>
@@ -230,19 +302,6 @@
         <pubDate>Fri, 28 Nov 2014 19:52:00 +0800</pubDate>
         <link>http://acesubido.com/2014/11/28/aliens-sentry-gun-ui.html</link>
         <guid isPermaLink="true">http://acesubido.com/2014/11/28/aliens-sentry-gun-ui.html</guid>
-        
-        <category>work</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>On building side projects</title>
-        <description>&lt;p&gt;Think of your scope. Now cut it in half. Halve it once more. There, start with that.&lt;/p&gt;
-</description>
-        <pubDate>Fri, 14 Nov 2014 08:12:52 +0800</pubDate>
-        <link>http://acesubido.com/2014/11/14/on-building-side-projects.html</link>
-        <guid isPermaLink="true">http://acesubido.com/2014/11/14/on-building-side-projects.html</guid>
         
         <category>work</category>
         
