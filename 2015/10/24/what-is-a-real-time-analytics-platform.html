@@ -78,9 +78,9 @@
   <li>Output - consume this data without disturbing operations (reports, dashboard, etc.)</li>
 </ul>
 
-<p>The 2nd bullet is very important. It requires extensive use of background processes to achieve low-latency and high throughput to provide real time characteristics. In programming, we’ve all been taught to put really expensive operations behind another process/thread  (Resque/Sidekiq, micro-services architecture) instead of blocking everything until the operation is done.</p>
+<p>The 2nd and 3rd bullet is very important. It requires extensive use of background processes to achieve low-latency and high throughput to provide real time characteristics. In programming, we’ve all been taught to put really expensive operations behind another process/thread  (Resque/Sidekiq, micro-services architecture) instead of blocking everything until the operation is done.</p>
 
-<p>Just like a normal controller class in a web app. It’s not that complex and handling this won’t be a problem.</p>
+<p>Just like a normal controller class in a web app, it’s not that complex and handling this won’t be a problem.</p>
 
 <p>But then again, let’s take for example, a typical megacorporation. They’d procured the usual .NET/Oracle/SAP stack (as much as possible, no cloud, they’re following some sort of security protocol).</p>
 
