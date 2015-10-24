@@ -5,8 +5,8 @@
     <description></description>
     <link>http://acesubido.com/</link>
     <atom:link href="http://acesubido.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 24 Oct 2015 08:04:57 +0800</pubDate>
-    <lastBuildDate>Sat, 24 Oct 2015 08:04:57 +0800</lastBuildDate>
+    <pubDate>Sat, 24 Oct 2015 13:49:54 +0800</pubDate>
+    <lastBuildDate>Sat, 24 Oct 2015 13:49:54 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -32,7 +32,7 @@
   &lt;li&gt;Anonymised usage patterns for telco’s (if they want to sell it as data or use for internal analytics)&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;These are some example use cases that are urgent and require immediate attention. So it’s not just “capture, store, and display” (input and output), there’s something  else in between.&lt;/p&gt;
+&lt;p&gt;These are some example use cases that are urgent and require immediate attention.&lt;/p&gt;
 
 &lt;p&gt;To create an environment where you can do “Real Time Analytics”, you’d need to safely work with 3 aspects of how your data flows into your system:&lt;/p&gt;
 
@@ -56,7 +56,7 @@
 
 &lt;p&gt;For our sample megacorporation, that current mosaic of stuff is their “Real Time Analytics Platform”&lt;/p&gt;
 
-&lt;p&gt;“Well, that set up will not help. It’s not real-time unless it happens instantly!” - just to sidetrack a little bit; this actually won’t happen. Many multi-department companies want to achieve that vague finish line called “Real Time Analytics” with a “Single Customer View” inside a room with a lot of screens displaying tons of dashboards. You got to define those things clearly first to get there.&lt;/p&gt;
+&lt;p&gt;“Well, that setup will not help. It’s not real-time unless it happens instantly!” - just to sidetrack a little bit; this actually won’t happen. Many multi-department companies want to achieve that vague finish line called “Real Time Analytics” with a “Single Customer View” inside a room with a lot of screens displaying tons of dashboards. You got to define those things clearly first to get there.&lt;/p&gt;
 
 &lt;p&gt;Latency is as low as we can make it, but it’s not just the speed, it’s also the extensibility where you can easily change those set of intertwined systems based on requirements, which would probably change a lot during such a big undertaking. All departments should be together to work on this, or else it won’t work.&lt;/p&gt;
 
