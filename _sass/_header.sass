@@ -1,30 +1,20 @@
 .site-header
-  @include outer-container
   display: block
-  margin-top: 1rem
-  margin-left: 40px
-  margin-bottom: 3.5rem
+  padding: 1rem 0
+  margin-bottom: 2rem
   position: relative
+  background-color: rgba(0, 0, 0, 0.6)
 
 .site-title
-  @include span-columns(6)
+  padding-left: 40px
+  font-family: $monospaced-font-family
+
   a
-    font-size: 2rem
-    color: lighten($text-color, 20%)
+    font-weight: 400
+    font-size: 1.25rem
+    color: #EEE
 
     &:hover,
     &:active,
     &:focus
-      color: darken($text-color, 10%)
-
-.site-search
-  position: absolute
-  width: 300px
-  top: 15px
-  right: 0
-
-  .cse .gsc-control-cse,
-  .gsc-control-cse
-    border: none
-    padding: 0
-
+      color: #FFF
