@@ -183,18 +183,6 @@ img {
     .site-footer a:hover, .site-footer a:active, .site-footer a:focus {
       color: #444; }
 
-.footer-links-list {
-  margin: 0;
-  padding-left: 0;
-  list-style: none; }
-  .footer-links-list > li {
-    display: inline-block;
-    padding-right: 5px;
-    padding-left: 5px; }
-  .footer-links-list > li:first-child {
-    padding-left: 0;
-    padding-right: 0; }
-
 hr {
   display: block;
   margin: 2rem auto;
@@ -208,18 +196,28 @@ hr {
   display: block;
   padding: 1rem 0;
   margin-bottom: 2rem;
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.6); }
+  position: relative; }
 
 .site-title {
   padding-left: 40px;
-  font-family: "Monaco", "Consolas", "Lucida Sans Typewriter", "Lucida Typewriter", monospace; }
+  color: #999; }
   .site-title a {
     font-weight: 400;
-    font-size: 1.25rem;
-    color: #EEE; }
+    color: #999; }
     .site-title a:hover, .site-title a:active, .site-title a:focus {
-      color: #FFF; }
+      color: #444; }
+
+.navigation-links-list {
+  margin: 0;
+  padding-left: 0;
+  list-style: none; }
+  .navigation-links-list > li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px; }
+  .navigation-links-list > li:first-child {
+    padding-left: 0;
+    padding-right: 0; }
 
 .post-list {
   margin-bottom: 2rem;
