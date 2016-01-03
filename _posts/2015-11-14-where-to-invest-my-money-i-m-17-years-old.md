@@ -16,7 +16,7 @@ I’ve put together a handy-dandy handbook/guide for you:
 3. Third, is the most important one, if you do this and #2, you can easily get #4: Change your mindset on the word "investment". Money is a device to exchange value, it is not a source of wealth, it will run out on you. So, technically, the best "investment" is putting more money on what currently earns you money: your skill. Buy a book from a famous designer, attend FFC, engage the design community and the market, spend more money/time experimenting and working on your own project, instead of doing something else. This mindset will increase how much you earn in amounts that you will not foresee.
 
    **Why should I do this?**
-   
+
    Think of a rich person, one who gained their riches from great skill. If you took away their "businesses", "investments" and "savings", they probably won't have a problem. Sure they'll get hurt badly, but they can recover from a bankruptcy. The reason is because they've invested highly in themselves and are highly skilled. With their skill, they've attained a good professional network and they can easily recover from brutal bankruptcies. Their "investments" (stocks/mutual funds/etc.) are just overflow, fruits, of their true investment: their skill.
 
    On the opposite, research about lottery winners who ironically got bankrupted. Take note: some of them even had "funds and investments".
@@ -36,22 +36,22 @@ I’ve put together a handy-dandy handbook/guide for you:
    In much simpler terms: Ever see a picture or a huge chart in the business/finance section of a media website or a newspaper? The one that says "Philippine Stock Exchange Composite Index"? An Index Fund tries to closely follow those numbers. In laymans terms: You give money to a company, say BPI. The company would have fund managers that pick and trade stocks which closely matches the companies in that huge chart. So, when you see that the "Philippine Stock Exchange Composite Index" went up by 2% in one month, you can safely assume that the money you placed in BPI went up at about 1.25%-1.5% for that month as well.
 
    **Ang daming mga iba pang funds diba? Why an Index Fund? Why not a mutual fund or treasury bills? Ano difference nila?**
-   
+
    I'll explain as simple as possible:
 
    - Treasury bills are government-based. You give the government money, they turn it into government projects which earns them money, which they use to pay you back with interest. T-bills as they call it are for the paranoid; they're ultra-safe. Unless the Senate voted to turn itself into a strip club and Malacanang is burning with gasoline, your money is safe from anything else in the world. Besides if it came to that, money might not be important anymore in the Philippines anyway; you'd have to rely on your skill to live or learn farming to feed yourself. However, with the safety, comes a huge cost (minimum is 200K on PNB, returns per year are very small, expect a 10-20 year return)
    - Mutual funds are a pool of money from different people: they hire a professional stock broker or fund manager which trades for them. Mutual funds have higher transaction fees than Index Funds. From a personal experience, only a few mutual funds/companies have beaten or come close to the Index, and the really good ones are pretty expensive and complicated to enter into.
-   
-   **So, again, why an Index Fund?** 
-   
+
+   **So, again, why an Index Fund?**
+
    A NYTimes article called the American-based "Vanguard Index Fund" as the "bread-and-butter index fund for the individual". Index Funds are a gateway to the stock market and opens up your mind about it. It's "the vanilla ice cream of finance". They have low transaction fees, they're easy to understand, doesn’t require much commitment and as "passive" as you make it. They're not as safe though, when a "market crash" happens, everyone gets pulled down, especially Index Funds. Don't worry; what goes down usually goes back up, people usually get great returns from Index funds when they hold them for 5 years.
-   
-   If you're not earning millions per year and just starting out on investments, this is your go to. 
-   
+
+   If you're not earning millions per year and just starting out on investments, this is your go to.
+
    BPI Express Online and BDO Online Banking integrates tightly with their index funds. You can easily top up and cash out straight from/to your bank account.
-      
+
    **On picking and trading stocks.**
-   
+
    It actively requires "skill". Picking and trading stocks is a skillset to be learned. You have to be up to date, and you need to pick your companies well and do your research on them. If you really want to improve on that skill, head over to COL Financial to get a grasp of things. It doesn't matter if COL is good/not-good based on the opinion of other people, what matters is you get started.
 
    Personally I don't advise this path, unless you really want to build a career as a really good trader. You’re already good at design, so don't lose focus.
