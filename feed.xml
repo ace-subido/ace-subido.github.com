@@ -5,19 +5,19 @@
     <description></description>
     <link>http://acesubido.com/</link>
     <atom:link href="http://acesubido.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 21 Jan 2016 00:25:32 +0800</pubDate>
-    <lastBuildDate>Thu, 21 Jan 2016 00:25:32 +0800</lastBuildDate>
+    <pubDate>Thu, 21 Jan 2016 00:38:33 +0800</pubDate>
+    <lastBuildDate>Thu, 21 Jan 2016 00:38:33 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>How can executives/business guys &#39;appreciate&#39; Big Data?</title>
         <description>&lt;p&gt;I get that question from some of my officemates. How can people appreciate “Big Data Technologies”. Is there a demo to make people appreciate “Big Data” or “Hadoop”? How can we sell “Data Lakes vs Data Warehouses”.&lt;/p&gt;
 
-&lt;p&gt;First, it’s hard to appreciate a piece of technology without knowing what pain it actually solves. Hadoop solves the pain of computing by presenting this conventional way of doing Distributed Computing. As I said before, “Big Data” is to “Distributed Computing and Storage” as to “Cloud” is “Remote Servers and Applications”.&lt;/p&gt;
+&lt;p&gt;First, it’s hard to appreciate a piece of technology without knowing what pain it actually solves. Hadoop solves the pain of computing by presenting this conventional way of doing Distributed Computing.&lt;/p&gt;
 
-&lt;p&gt;Second, the term “Big Data” is being passed around too much, it’s getting too abstracted. We need to get a little lower down the chain, closer to real things and tasks entailing “doing Big Data”. At current state of the software industry, there’s no piece of technology that magically translates your data into wonderful visualizations and actionable insights that’s instantly aligned to making you more money. It’s hard to appreciate such technology for technology’s sake.&lt;/p&gt;
+&lt;p&gt;Second, the term “Big Data” is being passed around too much, it’s getting too abstracted. We need to get a little lower down the chain, closer to real things and tasks entailing “doing Big Data”. As I said before, I feel that “Big Data” is a marketing term thrown for problems/solutions revolving around “Distributed Computing and Storage”, much like how “Cloud” is for “Remote Servers, Services and Applications”. At the tip of these solutions is something called Hadoop. Now, Hadoop is more of a framework, accompanied with a set of libraries to implement that framework. At the current state of the software industry, there’s no single piece of technology that magically translates your data into wonderful visualizations and actionable insights that’s instantly aligned to making your business more money.&lt;/p&gt;
 
-&lt;p&gt;We’re so impressed by “Big Data”, “IoT” and all these buzzwords revolving around technology. We forget that technology isn’t meant to replace humans and how we process information, but it was made to complement us:&lt;/p&gt;
+&lt;p&gt;People have been blinded by technology. We’re so impressed by “Big Data” and all these buzzwords revolving around technology. We forget that technology isn’t meant to replace humans and how we process information, but it was made to complement us:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;The other buzzword that epitomizes a bias toward substitution is “big data”. Today’s companies have an insatiable appetite for data, mistakenly believeing that more data always creates more value. But big data is usually dumb data. Computers can find patterns that elude humans, but they don’t know how to compare patterns from different sources or how to interpret complex behaviors. Actionable insights can only come from a human analyst (or the kind of generalized artifical intelligence that exists only in science fiction).&lt;/p&gt;
@@ -27,7 +27,9 @@
   &lt;p&gt;— Peter Thiel (Founder of Paypal and Palantir), from “Zero To One”&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Big Data technologies such as Hadoop, HBase, NiFi, Tableau and Spark are tools for Developers and Analysts to make their lives easier. That’s why it’s hard to sell them to business guys as some sort of “magic box”. There’s no “demo” where they can “appreciate it”.&lt;/p&gt;
+&lt;p&gt;Big Data technologies such as Hadoop, HBase, NiFi, Tableau and Spark are tools for Developers and Analysts to make their lives easier. It makes it easier for them to crunch numbers, transform data, and other stuff to make those charts and visualizations the business guys are looking for.&lt;/p&gt;
+
+&lt;p&gt;That’s why it’s hard to sell them to business guys as some sort of “magic box”. There’s no “demo” where they can instantly “appreciate it” without human intervention.&lt;/p&gt;
 
 &lt;p&gt;It’s like saying “How can executives/business guys ‘appreciate’ Ruby on Rails?”.&lt;/p&gt;
 
