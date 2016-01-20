@@ -1,16 +1,23 @@
 ---
 layout: post
-title: How can Executives 'appreciate' Big Data Technologies?
+title: "How can executives/business guys 'appreciate' Big Data?"
 ---
 
-I get that question from some of my officemates. How can people appreciate "Big Data". Is there a demo to make people appreciate "Big Data" or "Hadoop"? How can we sell "Data Lakes vs Data Warehouses".
+I get that question from some of my officemates. How can people appreciate "Big Data Technologies". Is there a demo to make people appreciate "Big Data" or "Hadoop"? How can we sell "Data Lakes vs Data Warehouses".
 
-### Value: Bottom-up approach
+First, it's hard to appreciate something without knowing what it actually is. First of all, there's no piece of technology that magically translates your data into wonderful visualizations that's instantly aligned to making you more money. It's hard to appreciate such technology for technology's sake. 
 
-You can't appreciate something without knowing it's value and what it actually is.  It's like saying "How can Executives appreciate PHP Lavarel?". 
+We're so impressed by "Big Data", "IoT" and all these buzzwords revolving around technology. We forget technology isn't meant to replace humans and how they process information, but it was made to complement us:
 
-It's hard to sell PHP Developers and Data Analysts need to appreciate.
+> The other buzzword that epitomizes a bias toward substitution is "big data". Today's companies have an insatiable appetite for data, mistakenly believeing that more data always creates more value. But big data is usually dumb data. Computers can find patterns that elude humans, but they don't know how to compare patterns from different sources or how to interpret complex behaviors. Actionable insights can only come from a human analyst (or the kind of generalized artifical intelligence that exists only in science fiction). 
+> We have let ourselves become enchanted by big data only because we exoticize technology. We're impressed with small feats accomplished by computers alone but we ignore achievements from complementarity because the human contribution makes them less uncanny. -- Peter Thiel (Founder of Paypal and Palantir), from "Zero To One"
 
-Demos with fancy charts, won't work on most businesses: "Hey, our current Oracle Database can do that. What's new?"
+Big Data technologies such as Hadoop, Zeppelin, Tableau and Spark are tools for Developers and Analysts. That's why it's hard to sell them to business guys as some sort of "magic box" where people can "appreciate it". It's not in that stage just yet.
 
-You have to hit the developers, the CTO, the technical team. Make a compelling demo that seemingly makes their lives easier.
+It's like saying "How can executives/business guys 'appreciate' Ruby on Rails?". 
+
+It's hard to sell that to them. 
+
+Demos with fancy charts, won't work on most business guys: "Hey, our current IT Team can do that with their databases and BI tools. What's new?"
+
+So, "how can executive/business guys 'appreciate' Big Data?". Take this with a grain of salt though, I'm not a biz dev guy: Sell it to their VP of Engineering, their developers, their technical team, leave it to them. Naturally it'll sell to the organization.
