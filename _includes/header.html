@@ -1,20 +1,21 @@
 <header class="site-header">
   <div class="site-title">
-    <a href="{{ site.baseurl }}/">{{ site.title }}</a>
-  </div>
-  <div class="site-search">
-    <!-- <script> -->
-    <!--   (function() { -->
-    <!--     var cx = '007939635544132247645:xmfoofbdboa'; -->
-    <!--     var gcse = document.createElement('script'); -->
-    <!--     gcse.type = 'text/javascript'; -->
-    <!--     gcse.async = true; -->
-    <!--     gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + -->
-    <!--         '//cse.google.com/cse.js?cx=' + cx; -->
-    <!--     var s = document.getElementsByTagName('script')[0]; -->
-    <!--     s.parentNode.insertBefore(gcse, s); -->
-    <!--   })(); -->
-    <!-- </script> -->
-    <!-- <gcse:search></gcse:search> -->
+    <nav class="footer-links">
+      <ul class="navigation-links-list">
+        <li>
+          {{ site.title }}
+          &mdash;
+        </li>
+        <li>
+          <a href="{{ site.baseurl }}/">posts</a>
+        </li>
+        <li>
+          <a href="{{ "/about" | prepend: site.baseurl }}">about/contact</a>
+        </li>
+        <li>
+          <a href="{{ "/feed.xml" | prepend: site.baseurl }}">subscribe via rss</a>
+        </li>
+      </ul>
+    </nav>
   </div>
 </header>

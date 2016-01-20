@@ -1,21 +1,18 @@
 <footer class="site-footer">
   <nav class="footer-links">
-    <ul class="footer-links-list">
+    <ul class="navigation-links-list">
       <li>
-        <a href="{{ site.baseurl }}/">{{ site.title }}</a>
+        {{ site.title }}
         &mdash;
+      </li>
+      <li>
+        <a href="{{ site.baseurl }}/">posts</a>
       </li>
       <li>
         <a href="{{ "/about" | prepend: site.baseurl }}">about/contact</a>
       </li>
       <li>
         <a href="{{ "/feed.xml" | prepend: site.baseurl }}">subscribe via rss</a>
-      </li>
-      <li>
-        <a href="http://github.com/ace-subido">github</a>
-      </li>
-      <li>
-        <a href="http://codepen.io/ace-subido">codepen</a>
       </li>
     </ul>
   </nav>

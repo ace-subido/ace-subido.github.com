@@ -21,8 +21,8 @@ Breakdown: Analytics is the discovery of meaningful patterns in data. Real Time 
 - Social program fraud detection for government agencies
 - Log analysis for bad patterns in high-tech companies
 - Anonymised usage patterns for telco’s (if they want to sell it as data or use for internal analytics)
- 
-These are some example use cases that are urgent and require immediate attention. So it's not just "capture, store, and display" (input and output), there's something  else in between.
+
+These are some example use cases that are urgent and require immediate attention.
 
 To create an environment where you can do "Real Time Analytics", you’d need to safely work with 3 aspects of how your data flows into your system:
 
@@ -38,21 +38,21 @@ But then again, let's take for example, a typical megacorporation. They'd procur
 
 To provide "Real Time Analytics", usually they’d have a plethora of ETL Background Processes/Workers with Excel/DB integrations, per department, running on any number of servers, each having their own fault-tolerance and scaling strategies. If the data requirements change, they’d have to go through this set of intertwined systems and change each one of them, make sure they don’t crash and push the changes back to production.
 
-A normal controller class won't cut it anymore. 
+A normal controller class won't cut it anymore.
 
 **Real Time Analytics Platform**
 
 For our sample megacorporation, that current mosaic of stuff is their "Real Time Analytics Platform"
 
-"Well, that set up will not help. It's not real-time unless it happens instantly!" - just to sidetrack a little bit; this actually won't happen. Many multi-department companies want to achieve that vague finish line called “Real Time Analytics” with a "Single Customer View" inside a room with a lot of screens displaying tons of dashboards. You got to define those things clearly first to get there.
+"Well, that setup will not help. It's not real-time unless it happens instantly!" - just to sidetrack a little bit; this actually won't happen. Many multi-department companies want to achieve that vague finish line called “Real Time Analytics” with a "Single Customer View" inside a room with a lot of screens displaying tons of dashboards. You got to define those things clearly first to get there.
 
 Latency is as low as we can make it, but it's not just the speed, it's also the extensibility where you can easily change those set of intertwined systems based on requirements, which would probably change a lot during such a big undertaking. All departments should be together to work on this, or else it won't work.
 
-If there's a great team at the megacorp; chances are, they’ll use bits and pieces of frameworks here and there instead of having a mosaic of stuff to help you get there. 
+If there's a great team at the megacorp; chances are, they’ll use bits and pieces of frameworks here and there instead of having a mosaic of stuff to help you get there.
 
-If not, they’ll be reinventing a set of rules and guiding principles on code; how to scale, fault-tolerance, etc. 
+If not, they’ll be reinventing a set of rules and guiding principles on code; how to scale, fault-tolerance, etc.
 
-They’ll be reinventing a framework. 
+They’ll be reinventing a framework.
 
 It’s hard enough to get great people to work with, but it’s harder if they’re working on this mosaic of apps that doesn’t have a solid framework. There are many good frameworks lying around, so learn the frameworks and leverage it.
 
