@@ -5,8 +5,8 @@
     <description></description>
     <link>http://acesubido.com/</link>
     <atom:link href="http://acesubido.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 21 Jan 2016 00:38:33 +0800</pubDate>
-    <lastBuildDate>Thu, 21 Jan 2016 00:38:33 +0800</lastBuildDate>
+    <pubDate>Thu, 21 Jan 2016 00:44:28 +0800</pubDate>
+    <lastBuildDate>Thu, 21 Jan 2016 00:44:28 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -35,9 +35,9 @@
 
 &lt;p&gt;It’s hard to sell that to them.&lt;/p&gt;
 
-&lt;p&gt;Demos with fancy charts, won’t work on most business guys: “Hey, our current IT Team can do that with their databases and BI tools. What’s new?”&lt;/p&gt;
+&lt;p&gt;Demos with fancy charts won’t work on most business guys: “Hey, our current IT Team can do that with their databases and BI tools. What’s new?”&lt;/p&gt;
 
-&lt;p&gt;So, “how can executive/business guys ‘appreciate’ Big Data?”. Take this with a grain of salt though, I’m not a biz dev guy: Sell it to their VP of Engineering, their developers, their technical team. Naturally they’ll sell it to the rest of the organization.&lt;/p&gt;
+&lt;p&gt;So, “how can executive/business guys ‘appreciate’ Big Data?”. Take this with a grain of salt though, I’m not a biz dev guy: Sell it to their VP of Engineering, their developers, their technical team. Naturally they’ll build great apps and dashboards on top of it. It’ll sell itself to the rest of the organization.&lt;/p&gt;
 
 &lt;p&gt;Disclaimer: My thoughts written here are not of my employers. These are solely my opinions and they’re not tied to what AGSX stands for.&lt;/p&gt;
 </description>
