@@ -3,11 +3,9 @@ layout: post
 title: My useful secret projects and business ideas
 ---
 
-### A little note for Developers
+_A little note:_ Developers are craftsmen. They build things for a living. As a side effect, they'll try to build a lot of things that they need or want for themselves. A handful, to an extent, dreams to run a business around what they've built. Most fail, not because they didn't have enough time or it didn't have enough features (trust me, we can build a lot of unwanted features). The main reason most fail is no one knows about the things they've built in the first place, and no one uses them, even themselves. 
 
-Developers are craftsmen. They build things for a living. As a side effect, they'll try to build a lot of things that they need or want for themselves. A handful, to an extent, dreams to run a business around what they've built. Most fail, not because they didn't have enough time or it didn't have enough features (trust me, we can build a lot of unwanted features). The main reason most fail is no one knows about the things they've built in the first place, and no one uses them, even themselves. 
-
-I know how most developers feel, because I'm a developer myself.
+I know how most developers feel, because I'm a developer myself. This is more of a note to myself.
 
 Developers tend to think of side projects as a way to "passive income". In reality, there's no such thing as "passive income" except for "investment funds". Instead of thinking about building a way to earn "passive income", just actually think about building a "business". Because it's the same thing in the end, as a developer, you just have more automation.
 
@@ -60,9 +58,13 @@ Status: Alpha. 100% working, [screenshots and code in my Github](github.com/ace-
 
 Templated Word/PDF Documents. Let your salesmen and biz dev guys keep selling instead of worrying about keeping a document formatted. You know that one document they keep copy-pasting and they just change certain words and items in it? And they keep resending it to someone? Quoteplate was envisioned to be integrated to e-signatures, inventory, tables and contacts to make that way way easier. 
 
+I worked on this with my friend Eric Wong.
+
 #### Coinjobs
 
 Job Board for the Cryptocurrency industry. Got in a little too late, since there were a lot of other job boards already popping around that time: coinality, bitgigs, bitcoinjobfair to name a few.
+
+I worked on this with my friend Ramon Tayag.
 
 Status: See it at http://www.coinjobs.link/ [Built it, contacted people, traction never came. It was a nice try. Code is still good to go.](http://acesubido.com/2015/09/25/header-navigation-screenshot-of-a-cryptocurrency.html)
 
@@ -90,11 +92,21 @@ Need to archive some data? We'll send you a hard drive, we'll pick it up and sto
 
 A simple bookmarking service that lets you make your own link aggregator out of your bookmarks. Save links into your own archive. They get scraped so even if the website goes down you have a personal copy of the web page. Organize them into reading lists. Share reading lists to your friends, family and officemates. Spotify for your bookmarks.
 
+Also worked on this with Eric.
+
 Status: Beta stage. Got 5 users to test it. Went into a revamp after feedback, halted it because I got busy with work.
 
 #### Game Knights
 
 Minimalistic leaderboards for those who host Game Nights. Snap a photo of the winner for that nights' game night, type in the game that he played, write a short description about how he won and how many points. Revenue model? Get game publishers to advertise. Provide "Pro accounts" for board game pubs and card game/hobby shops.
+
+#### yrsay
+
+Pay what you want for digital goods. Upload your song, art, software, ebook and get a link. Share that link with people, they'll pay you in Bitcoin and they get the download.
+
+Worked on this with Ramon Tayag as well.
+
+Status: Ramon got it up and running, I mostly did the design.
 
 #### Restaurant Reservations
 
