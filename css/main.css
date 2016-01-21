@@ -52,7 +52,7 @@ html {
   min-height: 100%; }
 
 body {
-  margin-bottom: 65px;
+  margin-bottom: 90px;
   font-size: 16px;
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
   line-height: 1.6;
@@ -164,8 +164,6 @@ img {
 .container {
   max-width: 740px;
   margin-left: auto;
-  margin-right: auto;
-  margin-left: 40px;
   margin-right: auto; }
   .container::after {
     clear: both;
@@ -177,10 +175,20 @@ img {
   bottom: 0;
   width: 100%;
   padding: 20px 40px;
+  border-top: 1px solid #EEE;
   color: #999; }
-  .site-footer a {
+
+.footer-links {
+  max-width: 740px;
+  margin-left: auto;
+  margin-right: auto; }
+  .footer-links::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .footer-links a {
     color: #999; }
-    .site-footer a:hover, .site-footer a:active, .site-footer a:focus {
+    .footer-links a:hover, .footer-links a:active, .footer-links a:focus {
       color: #444; }
 
 hr {
@@ -196,11 +204,18 @@ hr {
   display: block;
   padding: 1rem 0;
   margin-bottom: 2rem;
-  position: relative; }
+  position: relative;
+  border-bottom: 1px solid #EEE; }
 
 .site-title {
-  padding-left: 40px;
+  max-width: 740px;
+  margin-left: auto;
+  margin-right: auto;
   color: #999; }
+  .site-title::after {
+    clear: both;
+    content: "";
+    display: table; }
   .site-title a {
     font-weight: 400;
     color: #999; }
