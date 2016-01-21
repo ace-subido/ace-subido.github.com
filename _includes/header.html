@@ -1,21 +1,19 @@
 <header class="site-header">
   <div class="site-title">
-    <nav class="footer-links">
-      <ul class="navigation-links-list">
-        <li>
-          {{ site.title }}
-          &mdash;
-        </li>
-        <li>
-          <a href="{{ site.baseurl }}/">posts</a>
-        </li>
-        <li>
-          <a href="{{ "/about" | prepend: site.baseurl }}">about/contact</a>
-        </li>
-        <li>
-          <a href="{{ "/feed.xml" | prepend: site.baseurl }}">subscribe via rss</a>
-        </li>
-      </ul>
-    </nav>
+    <ul class="navigation-links-list">
+      <li>
+        {{ site.title }}
+        &mdash;
+      </li>
+      <li>
+        <a href="{{ site.baseurl }}/">posts</a>
+      </li>
+      <li>
+        <a href="{{ "/about" | prepend: site.baseurl }}">about/contact</a>
+      </li>
+      <li>
+        <a href="{{ "/feed.xml" | prepend: site.baseurl }}">subscribe via rss</a>
+      </li>
+    </ul>
   </div>
 </header>

@@ -13,3 +13,6 @@ Just keeping this short (since I really find it awkward to write a bio of myself
 
 I am on [Github](http://github.com/ace-subido) and [Codepen](http://codepen.io/ace-subido). You can reach me at hello@acesubido.com
 
+### Other Things In This Site
+
+- [My useful secret projects and business ideas](http://acesubido.com/2016/01/21/my-useful-secret-projects-and-business-ideas.html)
