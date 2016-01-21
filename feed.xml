@@ -5,15 +5,13 @@
     <description></description>
     <link>http://acesubido.com/</link>
     <atom:link href="http://acesubido.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 22 Jan 2016 00:09:35 +0800</pubDate>
-    <lastBuildDate>Fri, 22 Jan 2016 00:09:35 +0800</lastBuildDate>
+    <pubDate>Fri, 22 Jan 2016 00:19:31 +0800</pubDate>
+    <lastBuildDate>Fri, 22 Jan 2016 00:19:31 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>My useful secret projects and business ideas</title>
-        <description>&lt;h3 id=&quot;a-little-note-for-developers&quot;&gt;A little note for Developers&lt;/h3&gt;
-
-&lt;p&gt;Developers are craftsmen. They build things for a living. As a side effect, they’ll try to build a lot of things that they need or want for themselves. A handful, to an extent, dreams to run a business around what they’ve built. Most fail, not because they didn’t have enough time or it didn’t have enough features (trust me, we can build a lot of unwanted features). The main reason most fail is no one knows about the things they’ve built in the first place, and no one uses them, even themselves.&lt;/p&gt;
+        <description>&lt;p&gt;&lt;em&gt;A little note:&lt;/em&gt; Developers are craftsmen. They build things for a living. As a side effect, they’ll try to build a lot of things that they need or want for themselves. A handful, to an extent, dreams to run a business around what they’ve built. Most fail, not because they didn’t have enough time or it didn’t have enough features (trust me, we can build a lot of unwanted features). The main reason most fail is no one knows about the things they’ve built in the first place, and no one uses them, even themselves.&lt;/p&gt;
 
 &lt;p&gt;I know how most developers feel, because I’m a developer myself.&lt;/p&gt;
 
@@ -69,9 +67,13 @@
 
 &lt;p&gt;Templated Word/PDF Documents. Let your salesmen and biz dev guys keep selling instead of worrying about keeping a document formatted. You know that one document they keep copy-pasting and they just change certain words and items in it? And they keep resending it to someone? Quoteplate was envisioned to be integrated to e-signatures, inventory, tables and contacts to make that way way easier.&lt;/p&gt;
 
+&lt;p&gt;I worked on this with my friend Eric Wong.&lt;/p&gt;
+
 &lt;h4 id=&quot;coinjobs&quot;&gt;Coinjobs&lt;/h4&gt;
 
 &lt;p&gt;Job Board for the Cryptocurrency industry. Got in a little too late, since there were a lot of other job boards already popping around that time: coinality, bitgigs, bitcoinjobfair to name a few.&lt;/p&gt;
+
+&lt;p&gt;I worked on this with my friend Ramon Tayag.&lt;/p&gt;
 
 &lt;p&gt;Status: See it at http://www.coinjobs.link/ &lt;a href=&quot;http://acesubido.com/2015/09/25/header-navigation-screenshot-of-a-cryptocurrency.html&quot;&gt;Built it, contacted people, traction never came. It was a nice try. Code is still good to go.&lt;/a&gt;&lt;/p&gt;
 
@@ -99,11 +101,21 @@
 
 &lt;p&gt;A simple bookmarking service that lets you make your own link aggregator out of your bookmarks. Save links into your own archive. They get scraped so even if the website goes down you have a personal copy of the web page. Organize them into reading lists. Share reading lists to your friends, family and officemates. Spotify for your bookmarks.&lt;/p&gt;
 
+&lt;p&gt;Also worked on this with Eric.&lt;/p&gt;
+
 &lt;p&gt;Status: Beta stage. Got 5 users to test it. Went into a revamp after feedback, halted it because I got busy with work.&lt;/p&gt;
 
 &lt;h4 id=&quot;game-knights&quot;&gt;Game Knights&lt;/h4&gt;
 
 &lt;p&gt;Minimalistic leaderboards for those who host Game Nights. Snap a photo of the winner for that nights’ game night, type in the game that he played, write a short description about how he won and how many points. Revenue model? Get game publishers to advertise. Provide “Pro accounts” for board game pubs and card game/hobby shops.&lt;/p&gt;
+
+&lt;h4 id=&quot;yrsay&quot;&gt;yrsay&lt;/h4&gt;
+
+&lt;p&gt;Pay what you want for digital goods. Upload your song, art, software, ebook and get a link. Share that link with people, they’ll pay you in Bitcoin and they get the download.&lt;/p&gt;
+
+&lt;p&gt;Worked on this with Ramon Tayag as well.&lt;/p&gt;
+
+&lt;p&gt;Status: Ramon got it up and running, I mostly did the design.&lt;/p&gt;
 
 &lt;h4 id=&quot;restaurant-reservations&quot;&gt;Restaurant Reservations&lt;/h4&gt;
 
