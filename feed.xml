@@ -5,8 +5,8 @@
     <description></description>
     <link>http://acesubido.com/</link>
     <atom:link href="http://acesubido.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 22 Jan 2016 00:27:15 +0800</pubDate>
-    <lastBuildDate>Fri, 22 Jan 2016 00:27:15 +0800</lastBuildDate>
+    <pubDate>Fri, 22 Jan 2016 00:36:30 +0800</pubDate>
+    <lastBuildDate>Fri, 22 Jan 2016 00:36:30 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -37,7 +37,7 @@
 
 &lt;h4 id=&quot;endpointy&quot;&gt;Endpointy&lt;/h4&gt;
 
-&lt;p&gt;Static websites need to have some semblance of functionality . It gives you a POST endpoint for static websites, you can login and view your. Formkeep does a great job at this.&lt;/p&gt;
+&lt;p&gt;Static websites need to have some semblance of functionality where people can give their email, or fill up a form. Endpointy gives you a POST endpoint for each form in your static websites, you can login and view the things being submitted. Formkeep does a great job at this.&lt;/p&gt;
 
 &lt;p&gt;Status: around 60-ish% done for an MVP&lt;/p&gt;
 
