@@ -3,11 +3,15 @@ layout: post
 title: My useful secret projects and business ideas
 ---
 
+### A little note for Developers
+
 Developers are craftsmen. They build things for a living. As a side effect, they'll try to build a lot of things that they need or want for themselves. A handful, to an extent, dreams to run a business around what they've built. Most fail, not because they didn't have enough time or it didn't have enough features (trust me, we can build a lot of unwanted features). The main reason most fail is no one knows about the things they've built in the first place, and no one uses them, even themselves. 
 
 I know how most developers feel, because I'm a developer myself.
 
-Even then, developers tend to think of side projects as a way to "passive income". In reality, there's no such thing as "passive income" except for "mutual funds". Instead of thinking about "passive income", just actually think about building a "business".
+Developers tend to think of side projects as a way to "passive income". In reality, there's no such thing as "passive income" except for "investment funds". Instead of thinking about building a way to earn "passive income", just actually think about building a "business". Because it's the same thing in the end, as a developer, you just have more automation.
+
+--- 
 
 > "Useful secret projects and business ideas"
 
@@ -95,6 +99,12 @@ Minimalistic leaderboards for those who host Game Nights. Snap a photo of the wi
 #### Restaurant Reservations
 
 Ticketbase/AirBNB for Restaurants (in terms of UI/UX). Instead of selling tickets, it takes reservations for restaurants. 
+
+#### Cyclonesign
+
+Like [Stormpulse](http://stormpulse.com) and [Riskpulse](http://riskpulse.com), but bringing it in the Philippines. The Philippines gets hit with over 20 storms per year, we lose a lot of money because of this. Enables companies to be at the same level of proactiveness as PAGASA and government agencies. Plot out your physical assets and routes in the Philippines using a map, set alerts for wind levels and temperature, person in-charge/cargo drivers gets SMS warnings when something reaches the threshold. B2B model.
+
+Status: I developed large parts of this for a long time. Indexed and scraped a truckload of data from various international and national government weather sites. Wasn't a fan of private API's, government data for storms were more accurate.
 
 ----
 
