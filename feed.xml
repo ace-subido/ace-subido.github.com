@@ -5,17 +5,21 @@
     <description></description>
     <link>http://acesubido.com/</link>
     <atom:link href="http://acesubido.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 21 Jan 2016 23:58:14 +0800</pubDate>
-    <lastBuildDate>Thu, 21 Jan 2016 23:58:14 +0800</lastBuildDate>
+    <pubDate>Fri, 22 Jan 2016 00:09:35 +0800</pubDate>
+    <lastBuildDate>Fri, 22 Jan 2016 00:09:35 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
         <title>My useful secret projects and business ideas</title>
-        <description>&lt;p&gt;Developers are craftsmen. They build things for a living. As a side effect, they’ll try to build a lot of things that they need or want for themselves. A handful, to an extent, dreams to run a business around what they’ve built. Most fail, not because they didn’t have enough time or it didn’t have enough features (trust me, we can build a lot of unwanted features). The main reason most fail is no one knows about the things they’ve built in the first place, and no one uses them, even themselves.&lt;/p&gt;
+        <description>&lt;h3 id=&quot;a-little-note-for-developers&quot;&gt;A little note for Developers&lt;/h3&gt;
+
+&lt;p&gt;Developers are craftsmen. They build things for a living. As a side effect, they’ll try to build a lot of things that they need or want for themselves. A handful, to an extent, dreams to run a business around what they’ve built. Most fail, not because they didn’t have enough time or it didn’t have enough features (trust me, we can build a lot of unwanted features). The main reason most fail is no one knows about the things they’ve built in the first place, and no one uses them, even themselves.&lt;/p&gt;
 
 &lt;p&gt;I know how most developers feel, because I’m a developer myself.&lt;/p&gt;
 
-&lt;p&gt;Even then, developers tend to think of side projects as a way to “passive income”. In reality, there’s no such thing as “passive income” except for “mutual funds”. Instead of thinking about “passive income”, just actually think about building a “business”.&lt;/p&gt;
+&lt;p&gt;Developers tend to think of side projects as a way to “passive income”. In reality, there’s no such thing as “passive income” except for “investment funds”. Instead of thinking about building a way to earn “passive income”, just actually think about building a “business”. Because it’s the same thing in the end, as a developer, you just have more automation.&lt;/p&gt;
+
+&lt;hr /&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;“Useful secret projects and business ideas”&lt;/p&gt;
@@ -104,6 +108,12 @@
 &lt;h4 id=&quot;restaurant-reservations&quot;&gt;Restaurant Reservations&lt;/h4&gt;
 
 &lt;p&gt;Ticketbase/AirBNB for Restaurants (in terms of UI/UX). Instead of selling tickets, it takes reservations for restaurants.&lt;/p&gt;
+
+&lt;h4 id=&quot;cyclonesign&quot;&gt;Cyclonesign&lt;/h4&gt;
+
+&lt;p&gt;Like &lt;a href=&quot;http://stormpulse.com&quot;&gt;Stormpulse&lt;/a&gt; and &lt;a href=&quot;http://riskpulse.com&quot;&gt;Riskpulse&lt;/a&gt;, but bringing it in the Philippines. The Philippines gets hit with over 20 storms per year, we lose a lot of money because of this. Enables companies to be at the same level of proactiveness as PAGASA and government agencies. Plot out your physical assets and routes in the Philippines using a map, set alerts for wind levels and temperature, person in-charge/cargo drivers gets SMS warnings when something reaches the threshold. B2B model.&lt;/p&gt;
+
+&lt;p&gt;Status: I developed large parts of this for a long time. Indexed and scraped a truckload of data from various international and national government weather sites. Wasn’t a fan of private API’s, government data for storms were more accurate.&lt;/p&gt;
 
 &lt;hr /&gt;
 
