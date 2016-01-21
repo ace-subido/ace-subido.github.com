@@ -28,7 +28,7 @@ Just message me directly if any of you guys would desperately need any of these.
 
 #### Endpointy 
 
-Static websites need to have some semblance of functionality . It gives you a POST endpoint for static websites, you can login and view your. Formkeep does a great job at this.
+Static websites need to have some semblance of functionality where people can give their email, or fill up a form. Endpointy gives you a POST endpoint for each form in your static websites, you can login and view the things being submitted. Formkeep does a great job at this.
 
 Status: around 60-ish% done for an MVP
 
