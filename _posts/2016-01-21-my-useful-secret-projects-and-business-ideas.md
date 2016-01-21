@@ -13,7 +13,8 @@ Even then, developers tend to think of side projects as a way to "passive income
 
 This is a paradox. Obviously, business ideas aren't useful since they're only ideas, secret projects aren't useful when no one's using it. Moreover, these little apps and sideprojects will never be "finished", because "finished" is a vague finish line unless someone uses it. Even then, it's not "finished" if someone uses it.
 
-I've decided to turn a new leaf this year, [and](http://grahamwahlberg.com/business-ideas/) [being](https://sivers.org/ws) [inspired](https://github.com/captn3m0/ideas) [by](https://github.com/samsquire/ideas) [these](http://paulgraham.com/ideas.html) [guys]. So, I'll just open my ideas and projects up for everyone.
+
+I've decided to turn a new leaf this year. I had this in my 'drafts', but I'll publish it. [Being](https://sivers.org/ws) [inspired](https://github.com/captn3m0/ideas) [by](https://github.com/samsquire/ideas) [these](http://paulgraham.com/ideas.html) [guys](http://grahamwahlberg.com/business-ideas/), I've decided to open them all up for everyone.
 
 These ideas and projects were born out of my personal frustrations and dreams that have been born after being in the software industry for 5+ years.
 
