@@ -20,7 +20,7 @@ I've decided to turn a new leaf this year. I had this in my 'drafts', but I'll p
 
 These ideas and projects were born out of my personal frustrations and dreams that have been born after being in the software industry for 5+ years.
 
-Just message me directly if any of you guys would desperately need any of these, but honestly, most of them would already probably be done. Even then, if you're interested in using some of the stuff that's already made; we can talk it out so that I can set it up for you.
+Just message me directly if any of you guys would desperately need any of these. If you're interested in using some of the stuff that's already made; we can talk it out so that I can set it up for you. Honestly, most of them have been done by other people/companies. I'll link some of the ones that I know under each idea/project. 
 
 ----
 
@@ -102,9 +102,7 @@ Minimalistic leaderboards for those who host Game Nights. Snap a photo of the wi
 
 #### yrsay
 
-Pay what you want for digital goods. Upload your song, art, software, ebook and get a link. Share that link with people, they'll pay you in Bitcoin and they get the download.
-
-Worked on this with Ramon Tayag as well.
+Pay what you want for digital goods. Upload your song, art, software, ebook and get a link. Share that link with people, they'll pay you in Bitcoin and they get the download. Close alternatives are: Gumroad and Plasso.co. Worked on this with Ramon Tayag as well.
 
 Status: Ramon got it up and running, I mostly did the design.
 
