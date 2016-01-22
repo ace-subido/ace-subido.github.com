@@ -5,8 +5,8 @@
     <description></description>
     <link>http://acesubido.com/</link>
     <atom:link href="http://acesubido.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 22 Jan 2016 08:24:25 +0800</pubDate>
-    <lastBuildDate>Fri, 22 Jan 2016 08:24:25 +0800</lastBuildDate>
+    <pubDate>Fri, 22 Jan 2016 08:28:39 +0800</pubDate>
+    <lastBuildDate>Fri, 22 Jan 2016 08:28:39 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -130,6 +130,10 @@
 &lt;h4 id=&quot;report-for-tasks-done-self-hosted-idonethishttpsidonethiscom&quot;&gt;Report For Tasks Done: Self-hosted &lt;a href=&quot;https://idonethis.com/&quot;&gt;iDoneThis&lt;/a&gt;&lt;/h4&gt;
 
 &lt;p&gt;Simple Team Performance Management in contrast of Project Management. Twitter/Dribbble like experience asking you about what you worked and what you accomplished on. You can only post once a day. Automatically builds a view of what your entire team has accomplished during a project using these tweets. Celebrate small wins and keep morale up. You can also get what you’ve accomplished during your tenure.&lt;/p&gt;
+
+&lt;h4 id=&quot;minutes-of-the-meeting-markup&quot;&gt;Minutes of the Meeting markup&lt;/h4&gt;
+
+&lt;p&gt;I’m in the environment where I sometimes get to be faced with clients. I want to have a markup similar as Markdown, but specifically targetting the minutes of the meeting. More attention to the meeting, less attention to writing it all down and formatting it. Write Frontmatter, write it in a specified format, enter something in your command line, and it gets sent to all the contacts in the Frontmatter. Complete with actionable items and main highlights of the meeting.&lt;/p&gt;
 
 &lt;hr /&gt;
 
