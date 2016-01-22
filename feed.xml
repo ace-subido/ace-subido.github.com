@@ -5,8 +5,8 @@
     <description></description>
     <link>http://acesubido.com/</link>
     <atom:link href="http://acesubido.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 22 Jan 2016 08:28:39 +0800</pubDate>
-    <lastBuildDate>Fri, 22 Jan 2016 08:28:39 +0800</lastBuildDate>
+    <pubDate>Fri, 22 Jan 2016 10:29:14 +0800</pubDate>
+    <lastBuildDate>Fri, 22 Jan 2016 10:29:14 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
     
       <item>
@@ -63,7 +63,7 @@
 
 &lt;p&gt;A really small accounting system; an income and expense ledger. Write down income and expense entries like tweeting. It’s a very simple way to keep track of your incomes and expenses. Good for quickly jotting down income and expense entries without thinking excel sheet cell computations and following formats.&lt;/p&gt;
 
-&lt;p&gt;Status: Beta. 100% working, &lt;a href=&quot;github.com/ace-subido/pouchnote&quot;&gt;screenshots and code in my Github&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Status: Beta. 100% working, &lt;a href=&quot;http://github.com/ace-subido/pouchnote&quot;&gt;screenshots and code in my Github&lt;/a&gt;.&lt;/p&gt;
 
 &lt;h4 id=&quot;quoteplate&quot;&gt;Quoteplate&lt;/h4&gt;
 
