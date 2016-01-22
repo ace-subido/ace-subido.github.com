@@ -54,7 +54,7 @@ Status: [Code is in here](https://github.com/ace-subido/aclys)
 
 A really small accounting system; an income and expense ledger. Write down income and expense entries like tweeting. It's a very simple way to keep track of your incomes and expenses. Good for quickly jotting down income and expense entries without thinking excel sheet cell computations and following formats. 
 
-Status: Beta. 100% working, [screenshots and code in my Github](github.com/ace-subido/pouchnote).
+Status: Beta. 100% working, [screenshots and code in my Github](http://github.com/ace-subido/pouchnote).
 
 #### Quoteplate
 
