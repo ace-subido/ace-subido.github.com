@@ -7,7 +7,9 @@ _A little note:_ Developers are craftsmen. They build things for a living. As a 
 
 I know how most developers feel, because I'm a developer myself. This is more of a note to myself.
 
-Developers tend to think of side projects as a way to "passive income". In reality, there's no such thing as "passive income" except for "investment funds". Instead of thinking about building a way to earn "passive income", just actually think about building a "business". Because it's the same thing in the end, as a developer, you just have more automation.
+Developers tend to think of side projects as a way to "passive income". In reality, there's no such thing as true "passive income" except for "investment funds". At some point you really have to email people, build relationships, go to a bank and sign some stuff. [It's actual work. Instead of thinking about building a way to earn "passive income", reset your mind and think about building a "business"](http://paulgraham.com/ds.html). It'll end up as a "business" if you move forward with your side project. As a developer, the difference is that you just have more automation.
+
+I have more notes to myself about this topic, but this isn't the blog post to talk about it.
 
 --- 
 
@@ -34,9 +36,9 @@ Status: around 60-ish% done for an MVP
 
 #### Softshelf
 
-Your very own internal app store. For companies that sell software and documents as products. A client portal where your can upload the artifact/release and your clients can download it from there. It also contains links to issue trackers, and other related stuff to the product.
+Your very own internal app store with an API for integrations in CI/git servers. Self-hosted. For companies that sell software and documents as products. A client portal where you can upload the artifact/release and your clients can download it from there. It also contains links to issue trackers, and other related stuff to the product.
 
-Status: Just started, but halted it right now.
+Status: Need this for work, started it but on halt right now.
 
 #### Aclys
 
@@ -52,21 +54,17 @@ Status: [Code is in here](https://github.com/ace-subido/aclys)
 
 A really small accounting system; an income and expense ledger. Write down income and expense entries like tweeting. It's a very simple way to keep track of your incomes and expenses. Good for quickly jotting down income and expense entries without thinking excel sheet cell computations and following formats. 
 
-Status: Alpha. 100% working, [screenshots and code in my Github](github.com/ace-subido/pouchnote).
+Status: Beta. 100% working, [screenshots and code in my Github](github.com/ace-subido/pouchnote).
 
 #### Quoteplate
 
-Templated Word/PDF Documents. Let your salesmen and biz dev guys keep selling instead of worrying about keeping a document formatted. You know that one document they keep copy-pasting and they just change certain words and items in it? And they keep resending it to someone? Quoteplate was envisioned to be integrated to e-signatures, inventory, tables and contacts to make that way way easier. 
-
-I worked on this with my friend Eric Wong.
+Templated Word/PDF Documents. Let your salesmen and biz dev guys keep selling instead of worrying about keeping a document formatted. You know that one document they keep copy-pasting and they just change certain words and items in it? And they keep resending it to someone? Quoteplate was envisioned to be integrated to e-signatures, inventory, tables and contacts to make that way way easier. I worked on this with my friend Eric Wong.
 
 #### Coinjobs
 
-Job Board for the Cryptocurrency industry. Got in a little too late, since there were a lot of other job boards already popping around that time: coinality, bitgigs, bitcoinjobfair to name a few.
+Job Board for the Cryptocurrency industry. Got in a little too late, since there were a lot of other job boards already popping around that time: coinality, bitgigs, bitcoinjobfair to name a few. I worked on this with my friend Ramon Tayag.
 
-I worked on this with my friend Ramon Tayag.
-
-Status: See it at http://www.coinjobs.link/ [Built it, contacted people, traction never came. It was a nice try. Code is still good to go.](http://acesubido.com/2015/09/25/header-navigation-screenshot-of-a-cryptocurrency.html)
+Status: [coinjobs.link](http://coinjobs.link). [Built it, contacted people and companies, traction never came. It was a nice try. Code is still good to go.](http://acesubido.com/2015/09/25/header-navigation-screenshot-of-a-cryptocurrency.html)
 
 ----
 
@@ -74,15 +72,17 @@ Status: See it at http://www.coinjobs.link/ [Built it, contacted people, tractio
 
 #### Filemailup
 
-Open up your email account, and make an email, attach your files, and send your email to up@save.filemailup.com.
+Snapchat for files. Open up your email account, and make an email, attach your files, and send your email to up@save.filemailup.com.
 
 You would get an email reply from Filemailup with a link to a web page where you can get and share your files to people. If you wrote something in the subject and wrote something in the email, that would be displayed too. After 24 hours, that page gets deleted, because frankly you won’t need it anymore if you’re sending it by email anyway.
 
-Status: [Beta stage. 100% working, code in Bitbucket, got 8 users, but barely had any activity.](http://acesubido.com/2013/11/03/filemailup-share-files-from-your-email.html)
+Status: [Done in 2013. Beta stage. 100% working, code in Bitbucket, got 8 users, but barely had any activity.](http://acesubido.com/2013/11/03/filemailup-share-files-from-your-email.html)
 
 #### Managed Data Storage for Photographers, Videographers and etc.
 
-Need to archive some data? We'll send you a hard drive, we'll pick it up and store it for you. Access thumbnails, and other short snippets of the data (metadata) via cloud. Need to download a lot of your stuff? We'll ship you back a hard drive within the day. Internet is bad in the Philippines. Either upload or set up your own NAS and manage your drives. We'll handle the latter option.
+Need to archive some data? We'll send you a hard drive, fill it with stuff and we'll pick it up and store it for you. Access thumbnails, and other short snippets of the data (metadata) via cloud. Need to download a lot of your stuff? We'll ship you back a hard drive within the day. Internet is bad in the Philippines. Either upload or set up your own NAS and manage your drives. We'll handle the latter option.
+
+Sometimes a person handing you a hard drive has better bandwidth and latency than sending it over the wire. 
 
 ----
 
@@ -90,25 +90,23 @@ Need to archive some data? We'll send you a hard drive, we'll pick it up and sto
 
 #### Balikan
 
-A simple bookmarking service that lets you make your own link aggregator out of your bookmarks. Save links into your own archive. They get scraped so even if the website goes down you have a personal copy of the web page. Organize them into reading lists. Share reading lists to your friends, family and officemates. Spotify for your bookmarks.
-
-Also worked on this with Eric.
+A simple bookmarking service that lets you make your own link aggregator out of your bookmarks. Save links into your own archive. They get scraped so even if the website goes down you have a personal copy of the web page. Organize them into reading lists. Share reading lists to your friends, family and officemates. Spotify for your bookmarks. Also worked on this with Eric.
 
 Status: Beta stage. Got 5 users to test it. Went into a revamp after feedback, halted it because I got busy with work.
 
 #### Game Knights
 
-Minimalistic leaderboards for those who host Game Nights. Snap a photo of the winner for that nights' game night, type in the game that he played, write a short description about how he won and how many points. Revenue model? Get game publishers to advertise. Provide "Pro accounts" for board game pubs and card game/hobby shops.
+Minimalistic leaderboards for those who host Game Nights. Snap a photo of the winner for that nights' game night, type in the game that he played, write a short description about how he won and how many points. Revenue model? Get game publishers to advertise. Provide "Pro accounts" for board game pubs and card game/hobby shops such as Ludo, Neutral Grounds and the like.
 
 #### yrsay
 
 Pay what you want for digital goods. Upload your song, art, software, ebook and get a link. Share that link with people, they'll pay you in Bitcoin and they get the download. Close alternatives are: Gumroad and Plasso.co. Worked on this with Ramon Tayag as well.
 
-Status: Ramon got it up and running, I mostly did the design.
+Status: Ramon got it up and running, I mostly did the design. I'll try to get this running to provide screenshots.
 
-#### Restaurant Reservations
+#### Simple Restaurant Reservations
 
-Ticketbase/AirBNB for Restaurants (in terms of UI/UX). Instead of selling tickets, it takes reservations for restaurants. 
+Ticketbase for Restaurants (in terms of UI/UX). Instead of selling tickets, it takes reservations for restaurants. 
 
 #### Cyclonesign
 
@@ -120,9 +118,13 @@ Status: I developed large parts of this for a long time. Indexed and scraped a t
 
 ### Productivity
 
-#### Tasks Done: Self-hosted [iDoneThis](https://idonethis.com/)
+#### Report For Tasks Done: Self-hosted [iDoneThis](https://idonethis.com/)
 
-Performance Management in contrast of Project Management. Twitter/Dribbble like experience asking you about what you worked and what you accomplished on. You can only post once a day. Automatically builds a view of what your entire team has accomplished during a project using these tweets. Celebrate small wins and keep morale up. You can also get what you've accomplished during your tenure. 
+Simple Team Performance Management in contrast of Project Management. Twitter/Dribbble like experience asking you about what you worked and what you accomplished on. You can only post once a day. Automatically builds a view of what your entire team has accomplished during a project using these tweets. Celebrate small wins and keep morale up. You can also get what you've accomplished during your tenure. 
+
+#### Minutes of the Meeting markup
+
+I'm in the environment where I sometimes get to be faced with clients. I want to have a markup similar as Markdown, but specifically targetting the minutes of the meeting. More attention to the meeting, less attention to writing it all down and formatting it. Write Frontmatter, write it in a specified format, enter something in your command line, and it gets sent to all the contacts in the Frontmatter. Complete with actionable items and main highlights of the meeting.
 
 ----
 
@@ -152,6 +154,6 @@ Here are some good reads:
 4. "It's a disease to think that a great idea is 90 percent of the work. The problem with that is that there's just a tremendous amount of craftsmanship in between a great idea and a great product" - Steve Jobs
 5. Facebook, Google+, MySpace, Friendster, Orkut all had the same idea. But execution and design is what matters.
 6. [it's been two years now, and nobody has stolen any of the ideas. It could just be that my ideas suck, but I suspect that the worry of people stealing ideas is nothing to worry about for any of us](https://news.ycombinator.com/item?id=10942823)
-7. To be honest, each one of these ideas takes about 5-10 years of passion to perfectly execute it, even then it's either it passes or evolves into something totally different. I only have one lifetime and I won't have time to take on every one of these things.
+7. To be honest, each one of these ideas takes about 5-10 years work on it and make it fruitful. At which point, either it stays true to the original idea throughout or evolves into something totally different. I only have one lifetime and I won't have time to take on every one of these things.
 
 Besides the idea of "stealing" is a "pessimists" view. Viewing this in an optimistic perspective, I may actually get in contact with people who definitely need someone to technically implement any of these ideas.
