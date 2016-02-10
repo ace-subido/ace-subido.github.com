@@ -46,7 +46,11 @@ An experimental attempt to make the smallest in-memory key-value database. A tin
 
 Status: [Code is in here](https://github.com/ace-subido/aclys)
 
----- 
+#### FastScrum
+
+At the end of each day/week, receive an email with 3 questions: 1) What did you finish yesterday? 2) What are you going to do today? 3) Anything blocking you from moving forward? You reply and people can see your reply in an in-app dashboard.
+
+----
 
 ### Finance
 
