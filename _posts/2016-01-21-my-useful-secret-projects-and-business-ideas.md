@@ -54,7 +54,7 @@ Status: [Code is in here](https://github.com/ace-subido/aclys)
 
 A really small accounting system; an income and expense ledger. Write down income and expense entries like tweeting. It's a very simple way to keep track of your incomes and expenses. Good for quickly jotting down income and expense entries without thinking excel sheet cell computations and following formats. 
 
-Status: Beta. 100% working, [screenshots and code in my Github](github.com/ace-subido/pouchnote).
+Status: Beta. 100% working, [screenshots and code in my Github](http://github.com/ace-subido/pouchnote).
 
 #### Quoteplate
 
@@ -154,6 +154,6 @@ Here are some good reads:
 4. "It's a disease to think that a great idea is 90 percent of the work. The problem with that is that there's just a tremendous amount of craftsmanship in between a great idea and a great product" - Steve Jobs
 5. Facebook, Google+, MySpace, Friendster, Orkut all had the same idea. But execution and design is what matters.
 6. [it's been two years now, and nobody has stolen any of the ideas. It could just be that my ideas suck, but I suspect that the worry of people stealing ideas is nothing to worry about for any of us](https://news.ycombinator.com/item?id=10942823)
-7. To be honest, each one of these ideas takes about 5-10 years work on it and make it fruitful. At which point, either it stays true to the original idea throughout or evolves into something totally different. I only have one lifetime and I won't have time to take on every one of these things.
+7. To be honest, each one of these ideas takes about 5-10 years to work on it and make it fruitful. At which point, either it stays true to the original idea throughout or evolves into something totally different. I only have one lifetime and I won't have time to take on every one of these things.
 
 Besides the idea of "stealing" is a "pessimists" view. Viewing this in an optimistic perspective, I may actually get in contact with people who definitely need someone to technically implement any of these ideas.

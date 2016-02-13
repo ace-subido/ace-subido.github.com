@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Setting up a local repository for HDP and Ubuntu
+title: Setting up a Hadoop Cluster without internet
 ---
 
-We needed to do this since our testing environment had production data. Security requirements dictate that the nodes have no internet at all, and the only place that had internet was a Step Server where we can setup a local repository. 
+We needed to do this since our testing environment had some very very important data. Security requirements dictate that the nodes have no internet at all, and the only place that had internet was a Step Server where we can setup a local repository. 
 
-We had Ubuntu 14.04.3 as our operating system. Most of the examples in the Hortonworks Documentation touch lightly on Ubuntu. So here we go, 4 things:
+We had Ubuntu 14.04 as our operating system. The examples in setting up a local repository in the Hortonworks Documentation touch lightly on Ubuntu. Here's what we'll need:
 
 1. Ambari Tarball - you can grab this in public-repo.hortonworks.com
 2. HDP/HDP-utils Tarball - you can also grab this 
