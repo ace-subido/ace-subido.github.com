@@ -5,9 +5,57 @@
     <description></description>
     <link>http://acesubido.com/</link>
     <atom:link href="http://acesubido.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 28 Mar 2016 23:22:31 +0800</pubDate>
-    <lastBuildDate>Mon, 28 Mar 2016 23:22:31 +0800</lastBuildDate>
+    <pubDate>Tue, 03 May 2016 00:02:38 +0800</pubDate>
+    <lastBuildDate>Tue, 03 May 2016 00:02:38 +0800</lastBuildDate>
     <generator>Jekyll v2.5.3</generator>
+    
+      <item>
+        <title>Election Revelation Everyone Needs A Savior</title>
+        <description>&lt;p&gt;The past few weeks had me realizing one thing: everyone needs a savior.&lt;/p&gt;
+
+&lt;h2 id=&quot;israelites&quot;&gt;Israelites&lt;/h2&gt;
+
+&lt;p&gt;If you look closely, in the Bible, the Israelites went through a bunch of phases in their history as a nation 1) where they had leaders and 2) where they didn’t have leaders.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Old Testament depicts a nation not having a leader, transitioning to having Moses and Joshua as a leader, then having a bunch of Judges, getting King Saul, King David and King Solomon&lt;/li&gt;
+  &lt;li&gt;Psalms sing about a relationship with God&lt;/li&gt;
+  &lt;li&gt;Majority of the Old Testament depicts being under rule of invaders&lt;/li&gt;
+  &lt;li&gt;New Testament depicts a society they all wanted a king that would release them from the Romans, instead they get Jesus&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Despite having a king, no king, prophets, or no prophets there was a common theme: once their hearts turned away from God it lead to ruin, shame and exile.&lt;/p&gt;
+
+&lt;h2 id=&quot;better-citizens&quot;&gt;Better citizens&lt;/h2&gt;
+
+&lt;p&gt;You see it in social media and the news across the country: the cries of change and the cries for rescue. The Filipinos and the Israelites of the Bible share a common thing: we want a savior, we want change, we want rescue, and we thought if we get a better king/president it would fix everything.&lt;/p&gt;
+
+&lt;p&gt;But it won’t.&lt;/p&gt;
+
+&lt;p&gt;Let me get straight to the point: The Philippines doesn’t need a better president. It needs better citizens. No matter how good your president is, if your heart isn’t aligned with God, then the things you value are skewed.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;You will objectify women&lt;/li&gt;
+  &lt;li&gt;You will do shortcuts (fixers, not falling in line properly, spitting on the ground, throwing trash everywhere)&lt;/li&gt;
+  &lt;li&gt;You will be selfish&lt;/li&gt;
+  &lt;li&gt;You will be easily bought&lt;/li&gt;
+  &lt;li&gt;You will curse your fellow man&lt;/li&gt;
+  &lt;li&gt;You will envy&lt;/li&gt;
+  &lt;li&gt;You will murder&lt;/li&gt;
+  &lt;li&gt;You will steal&lt;/li&gt;
+  &lt;li&gt;You will not respect God’s creation&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;The list goes on. The saying “change is coming” is true, but it can come tomorrow, or right now; because change should come from within you.&lt;/p&gt;
+
+&lt;p&gt;Regardless of who wins in the coming elections, the president does not hold your future, God does.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 03 May 2016 00:00:00 +0800</pubDate>
+        <link>http://acesubido.com/2016/05/03/election-revelation-everyone-needs-a-savior.html</link>
+        <guid isPermaLink="true">http://acesubido.com/2016/05/03/election-revelation-everyone-needs-a-savior.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>My useful secret projects and business ideas</title>
@@ -467,51 +515,6 @@ What’s the best way para ma-save ko ang money ko at hindi ako bili ng bili ng 
         <pubDate>Sat, 28 Feb 2015 12:49:57 +0800</pubDate>
         <link>http://acesubido.com/2015/02/28/what-is-your-stack.html</link>
         <guid isPermaLink="true">http://acesubido.com/2015/02/28/what-is-your-stack.html</guid>
-        
-        <category>work</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Responsive Centered Bootstrap Columns</title>
-        <description>&lt;p&gt;I see this being repeated over-and-over again to create centered content with bootstrap columns:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; .container
-   .row
-     .col-md-offset-3.col-md-6
-       Centered Column
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Leaving you only to work with even-numbered columns for perfectly centered content inside a bootstrap column:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; .col-md-offset-2.col-md-8
- .col-md-offset-3.col-md-6
- .col-md-offset-4.col-md-4
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Foundation has built-in centered columns, so here&amp;rsquo;s a way to create centered bootstrap columns.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; // SCSS
- .col-center {
-   float: none;
-   margin-right: auto;
-   margin-left: auto;
- }
-
- // HAML
- .container
-    .row
-       .col-md-5.col-center
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;To see this in action, just take a look &lt;a href=&quot;http://codepen.io/ace-subido/pen/MYVNBv&quot; target=&quot;_blank&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Sidenote: this works with Bootstrap 3.&lt;/p&gt;
-</description>
-        <pubDate>Sat, 21 Feb 2015 12:28:00 +0800</pubDate>
-        <link>http://acesubido.com/2015/02/21/responsive-centered-bootstrap-columns.html</link>
-        <guid isPermaLink="true">http://acesubido.com/2015/02/21/responsive-centered-bootstrap-columns.html</guid>
         
         <category>work</category>
         
