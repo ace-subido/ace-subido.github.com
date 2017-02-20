@@ -3,6 +3,8 @@ layout: post
 title: Where to invest my money? I'm 17 years old ....
 ---
 
+A 17-year old asked the Philippine subreddit the following question:
+
 > I'm 17 years old (turning 18 on August, 2016), i'm still studying college (my 1st year) and at the same time, doing freelance designing. I earn 20-30k php per month sa designs ko. So far so good naman, kayang i-balance ang study at freelance work.
 Been doing this since 2012, thanks to my designs, i was able to buy things i want and i need. Now comes a point na halos ok na ko sa mga meron ako, and iniisip ko kung paano ko ma-save ang pera ko. Wala naman ako alam sa mga investments/stocks/etc dahil ang course ko ay Multimedia Arts. Tried searching online about sa stock market but i dont think i have the knowledge para pasukin yun.
 What's the best way para ma-save ko ang money ko at hindi ako bili ng bili ng mga not-so-important stuff? I don't want to be broke when i grow up, so i want to save these money :)
