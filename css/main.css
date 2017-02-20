@@ -127,8 +127,8 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
   font-weight: bold;
   line-height: 1.4;
-  margin-bottom: 0.5em;
-  margin-top: 0.2em;
+  margin-bottom: 0.8em;
+  margin-top: 0.5em;
   text-rendering: optimizeLegibility; }
 
 h1 {
@@ -178,21 +178,19 @@ img {
   bottom: 0;
   width: 100%;
   padding: 20px 40px;
-  border-top: 1px solid #EEE;
-  color: #999; }
+  border-top: 1px solid #EEE; }
 
 .footer-links {
   max-width: 740px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  color: #555; }
   .footer-links::after {
     clear: both;
     content: "";
     display: table; }
   .footer-links a {
-    color: #999; }
-    .footer-links a:hover, .footer-links a:active, .footer-links a:focus {
-      color: #444; }
+    font-weight: 400; }
 
 hr {
   display: block;
@@ -202,6 +200,10 @@ hr {
   border-bottom: none;
   border-left: none;
   border-right: none; }
+  hr.divider {
+    width: 100%;
+    margin: 3rem auto;
+    border-top: 1px solid #EEE; }
 
 .site-header {
   display: block;
@@ -214,16 +216,13 @@ hr {
   max-width: 740px;
   margin-left: auto;
   margin-right: auto;
-  color: #999; }
+  color: #555; }
   .site-title::after {
     clear: both;
     content: "";
     display: table; }
   .site-title a {
-    font-weight: 400;
-    color: #999; }
-    .site-title a:hover, .site-title a:active, .site-title a:focus {
-      color: #444; }
+    font-weight: 400; }
 
 .navigation-links-list {
   margin: 0;
@@ -243,21 +242,17 @@ hr {
   padding-left: 0; }
 
 .post-excerpt {
-  margin-bottom: 5rem; }
+  margin: 2.5rem 0; }
   .post-excerpt .post-meta {
-    margin-bottom: 0.5rem; }
+    margin: 0.5rem 0; }
     .post-excerpt .post-meta .post-link {
       display: block;
       color: #555; }
       .post-excerpt .post-meta .post-link:hover, .post-excerpt .post-meta .post-link:active, .post-excerpt .post-meta .post-link:focus {
-        color: #2f2f2f; }
+        color: #0074D9; }
 
 .post-date {
   color: #959595; }
-
-.post-title {
-  margin-top: 0;
-  margin-bottom: 0; }
 
 .post-content {
   margin-top: 2rem;
@@ -276,3 +271,9 @@ hr {
 
 .page-title {
   font-size: 32px; }
+
+.post-full header {
+  margin: 5rem 0 4rem;
+  text-align: center; }
+.post-full .post-title {
+  margin-bottom: 1em; }

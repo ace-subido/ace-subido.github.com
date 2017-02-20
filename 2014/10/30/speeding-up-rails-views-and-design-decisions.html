@@ -36,15 +36,16 @@
 
     <div class="container">
       <section>
-        <section>
+        <section class="post-full">
   <header>
+    <h1 class="post-title">Speeding up Rails Views and Design Decisions</h1>
     <span class="post-date">
       Oct 30, 2014
       
       
     </span>
-    <h1 class="post-title">Speeding up Rails Views and Design Decisions</h1>
   </header>
+  <hr class="divider"/>
   <article class="post-content">
     <p>At work, we recently encountered 2 very slow pages, both of them revolved around loading a list of accounts in HAML (around +2000). One page was loading them into a table and using jQuery DataTables to turn the table into an interactive interface. The other page was loading those accounts in a select tag and using Select2 to make them easily searchable.</p>
 
