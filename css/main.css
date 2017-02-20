@@ -202,13 +202,13 @@ hr {
   border-right: none; }
   hr.divider {
     width: 100%;
-    margin: 3rem auto;
+    margin: 4rem auto;
     border-top: 1px solid #EEE; }
 
 .site-header {
   display: block;
   padding: 1rem 0;
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
   position: relative;
   border-bottom: 1px solid #EEE; }
 
@@ -239,10 +239,11 @@ hr {
 .post-list {
   margin-bottom: 2rem;
   list-style-type: none;
-  padding-left: 0; }
+  padding-left: 0;
+  display: block; }
 
 .post-excerpt {
-  margin: 2.5rem 0; }
+  margin: 0; }
   .post-excerpt .post-meta {
     margin: 0.5rem 0; }
     .post-excerpt .post-meta .post-link {
@@ -273,7 +274,6 @@ hr {
   font-size: 32px; }
 
 .post-full header {
-  margin: 5rem 0 4rem;
   text-align: center; }
 .post-full .post-title {
   margin-bottom: 1em; }
