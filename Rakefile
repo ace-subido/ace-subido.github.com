@@ -79,4 +79,3 @@ task :publish => [:not_dirty, :prepare_git_remote_in_build_dir, :sync, :build] d
   end
 end
 
-
