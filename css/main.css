@@ -161,7 +161,7 @@ img {
   max-width: 768px;
   margin: 0 auto;
   display: block;
-  margin-bottom: 10rem; }
+  margin-bottom: 12rem; }
   .container::after {
     clear: both;
     content: "";
