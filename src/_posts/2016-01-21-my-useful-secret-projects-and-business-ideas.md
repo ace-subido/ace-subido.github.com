@@ -3,7 +3,7 @@ layout: post
 title: My useful secret projects and business ideas
 ---
 
-_A little note:_ Developers are craftsmen. They build things for a living. As a side effect, they'll try to build a lot of things that they need or want for themselves. A handful, to an extent, dreams to run a business around what they've built. Most fail, not because they didn't have enough time or it didn't have enough features (trust me, we can build a lot of unwanted features). The main reason most fail is no one knows about the things they've built in the first place, and no one uses them, even themselves. 
+_A little note:_ Developers are craftsmen. They build things for a living. As a side effect, they'll try to build a lot of things that they need or want for themselves. A handful, to an extent, dreams to run a business around what they've built. Most fail, not because they didn't have enough time or it didn't have enough features (trust me, we can build a lot of unwanted features). The main reason most fail is no one knows about the things they've built in the first place, and no one uses them, even themselves.
 
 I know how most developers feel, because I'm a developer myself. This is more of a note to myself.
 
@@ -11,7 +11,7 @@ Developers tend to think of side projects as a way to "passive income". In reali
 
 I have more notes to myself about this topic, but this isn't the blog post to talk about it.
 
---- 
+---
 
 > "Useful secret projects and business ideas"
 
@@ -22,13 +22,13 @@ I've decided to turn a new leaf this year. I had this in my 'drafts', but I'll p
 
 These ideas and projects were born out of my personal frustrations and dreams that have been born after being in the software industry for 5+ years.
 
-Just message me directly if any of you guys would desperately need any of these. If you're interested in using some of the stuff that's already made; we can talk it out so that I can set it up for you. Honestly, most of them have been done by other people/companies. I'll link some of the ones that I know under each idea/project. 
+Just message me directly if any of you guys would desperately need any of these. If you're interested in using some of the stuff that's already made; we can talk it out so that I can set it up for you. Honestly, most of them have been done by other people/companies. I'll link some of the ones that I know under each idea/project.
 
 ----
 
 ### Developers Tools/Applications
 
-#### Endpointy 
+#### Endpointy
 
 Static websites need to have some semblance of functionality where people can give their email, or fill up a form. Endpointy gives you a POST endpoint for each form in your static websites, you can login and view the things being submitted. Formkeep does a great job at this.
 
@@ -46,13 +46,13 @@ An experimental attempt to make the smallest in-memory key-value database. A tin
 
 Status: [Code is in here](https://github.com/ace-subido/aclys)
 
----- 
+----
 
 ### Finance
 
 #### Pouchnote
 
-A really small accounting system; an income and expense ledger. Write down income and expense entries like tweeting. It's a very simple way to keep track of your incomes and expenses. Good for quickly jotting down income and expense entries without thinking excel sheet cell computations and following formats. 
+A really small accounting system; an income and expense ledger. Write down income and expense entries like tweeting. It's a very simple way to keep track of your incomes and expenses. Good for quickly jotting down income and expense entries without thinking excel sheet cell computations and following formats.
 
 Status: Beta. 100% working, [screenshots and code in my Github](http://github.com/ace-subido/pouchnote).
 
@@ -65,6 +65,12 @@ Templated Word/PDF Documents. Let your salesmen and biz dev guys keep selling in
 Job Board for the Cryptocurrency industry. Got in a little too late, since there were a lot of other job boards already popping around that time: coinality, bitgigs, bitcoinjobfair to name a few. I worked on this with my friend Ramon Tayag.
 
 Status: [coinjobs.link](http://coinjobs.link). [Built it, contacted people and companies, traction never came. It was a nice try. Code is still good to go.](http://acesubido.com/2015/09/25/header-navigation-screenshot-of-a-cryptocurrency.html)
+
+#### Philippine Mutual Funds API
+
+Singular API endpoint for Philippine Mutual Funds, scrape data from public websites and sell them.
+
+Status: In the backburner
 
 ----
 
@@ -82,7 +88,7 @@ Status: [Done in 2013. Beta stage. 100% working, code in Bitbucket, got 8 users,
 
 Need to archive some data? We'll send you a hard drive, fill it with stuff and we'll pick it up and store it for you. Access thumbnails, and other short snippets of the data (metadata) via cloud. Need to download a lot of your stuff? We'll ship you back a hard drive within the day. Internet is bad in the Philippines. Either upload or set up your own NAS and manage your drives. We'll handle the latter option.
 
-Sometimes a person handing you a hard drive has better bandwidth and latency than sending it over the wire. 
+Sometimes a person handing you a hard drive has better bandwidth and latency than sending it over the wire.
 
 ----
 
@@ -106,7 +112,7 @@ Status: Ramon got it up and running, I mostly did the design. I'll try to get th
 
 #### Simple Restaurant Reservations
 
-Ticketbase for Restaurants (in terms of UI/UX). Instead of selling tickets, it takes reservations for restaurants. 
+Ticketbase for Restaurants (in terms of UI/UX). Instead of selling tickets, it takes reservations for restaurants.
 
 #### Cyclonesign
 
@@ -120,7 +126,7 @@ Status: I developed large parts of this for a long time. Indexed and scraped a t
 
 #### Report For Tasks Done: Self-hosted [iDoneThis](https://idonethis.com/)
 
-Simple Team Performance Management in contrast of Project Management. Twitter/Dribbble like experience asking you about what you worked and what you accomplished on. You can only post once a day. Automatically builds a view of what your entire team has accomplished during a project using these tweets. Celebrate small wins and keep morale up. You can also get what you've accomplished during your tenure. 
+Simple Team Performance Management in contrast of Project Management. Twitter/Dribbble like experience asking you about what you worked and what you accomplished on. You can only post once a day. Automatically builds a view of what your entire team has accomplished during a project using these tweets. Celebrate small wins and keep morale up. You can also get what you've accomplished during your tenure.
 
 #### Minutes of the Meeting markup
 
@@ -132,7 +138,7 @@ I'm in the environment where I sometimes get to be faced with clients. I want to
 
 #### Uber for House Services
 
-Have a plumbing problem? Snap a photo, make a few descriptions, select "Plumbing Service", Service providers try to bid on it. It's essentially a mobile application where you can easily get services for your home. Fortunately gawin.ph is a prime example of this, and I'm excited to try them out. 
+Have a plumbing problem? Snap a photo, make a few descriptions, select "Plumbing Service", Service providers try to bid on it. It's essentially a mobile application where you can easily get services for your home. Fortunately gawin.ph is a prime example of this, and I'm excited to try them out.
 
 #### Creative Services Friends
 
