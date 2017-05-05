@@ -9,6 +9,7 @@
 .site-title {
   @include grid-container;
   color: $text-color;
+  @include site-column;
 
   a {
     font-weight: 400;
