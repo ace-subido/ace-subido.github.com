@@ -68,7 +68,7 @@ Status: [coinjobs.link](http://coinjobs.link). [Built it, contacted people and c
 
 #### Philippine Mutual Funds API
 
-Singular API endpoint for Philippine Mutual Funds, scrape data from public websites and sell them.
+I always wanted to compare Philippine Mutual Funds and categorize them easily. I thought of building an API endpoint for Philippine Mutual Funds, scrape data from public websites and make them available in an API.
 
 Status: In the backburner
 
