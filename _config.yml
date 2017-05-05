@@ -6,6 +6,8 @@ twitter_username: acesubido
 github_username:  ace-subido
 paginate: 10
 paginate_path: "/page/:num/"
+source: "src/"
+destination: "_site/"
 
 # Build settings
 markdown: kramdown
