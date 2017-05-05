@@ -1,0 +1,17 @@
+.site-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 20px 40px;
+  border-top: 1px solid #EEE;
+}
+
+.footer-links {
+  @include grid-container;
+  color: $text-color;
+
+  a {
+    font-weight: 400;
+  }
+}
+

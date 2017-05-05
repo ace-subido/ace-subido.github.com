@@ -8,6 +8,8 @@ paginate: 10
 paginate_path: "/page/:num/"
 source: "src/"
 destination: "_site/"
+plugins_dir: "src/_plugins"
+gems: [jekyll-paginate, jekyll-compose]
 
 # Build settings
 markdown: kramdown
