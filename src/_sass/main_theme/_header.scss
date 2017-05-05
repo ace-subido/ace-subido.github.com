@@ -1,0 +1,25 @@
+.site-header {
+  display: block;
+  padding: 1rem 0;
+  margin-bottom: 4rem;
+  position: relative;
+  border-bottom: 1px solid #EEE;
+}
+
+.site-title {
+  @include grid-container;
+  color: $text-color;
+
+  a {
+    font-weight: 400;
+  }
+
+  .navigation-links-list {
+    @include inline-list;
+
+    > li:first-child {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+} 
