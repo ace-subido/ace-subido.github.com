@@ -1,10 +1,10 @@
 @mixin inline-list() {
   margin: 0;
   padding-left: 0;
-  list-style: none;
 
   > li {
     padding-left: 0;
+    list-style-type: none;
 
     @media only screen and (min-width: 480px){
       display: inline-block;

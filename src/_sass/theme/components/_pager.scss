@@ -1,5 +1,12 @@
 .pagination {
-  @include inline-list();
+  margin: 3rem 0;
+  padding-left: 0;
+
+  > li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0 0.25rem;
+  }
 
   > li:first-child {
     padding-left: 0;

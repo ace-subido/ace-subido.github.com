@@ -6,6 +6,7 @@ a {
 
   &:hover {
     color: darken($brand-primary, 10%);
+    border-bottom: 1px solid darken($brand-primary, 10%);
   }
 }
 

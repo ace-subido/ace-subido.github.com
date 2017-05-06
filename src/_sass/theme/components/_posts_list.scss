@@ -3,14 +3,20 @@
     display: block;
     color: $brand-primary;
     border-bottom: none;
+
+    &:hover {
+      color: darken($brand-primary, 10%);
+    }
   }
+
   .post-list-item {
     padding: 3rem 0;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid #ddd;
 
     &:first-child {
       padding-top: 0;
     }
+
     p:last-child {
       margin-bottom: 0;
     }
