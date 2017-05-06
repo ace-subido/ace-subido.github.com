@@ -69,7 +69,8 @@ a {
   border-bottom: 1px solid #0074D9;
   transition: color 200ms ease-in-out; }
   a:hover {
-    color: #0059a6; }
+    color: #0059a6;
+    border-bottom: 1px solid #0059a6; }
 
 p {
   display: block;
@@ -203,10 +204,10 @@ hr {
     font-weight: 400; }
   .footer-links .navigation-links-list {
     margin: 0;
-    padding-left: 0;
-    list-style: none; }
+    padding-left: 0; }
     .footer-links .navigation-links-list > li {
-      padding-left: 0; }
+      padding-left: 0;
+      list-style-type: none; }
       @media only screen and (min-width: 480px) {
         .footer-links .navigation-links-list > li {
           display: inline-block;
@@ -236,10 +237,10 @@ hr {
     font-weight: 400; }
   .site-title .navigation-links-list {
     margin: 0;
-    padding-left: 0;
-    list-style: none; }
+    padding-left: 0; }
     .site-title .navigation-links-list > li {
-      padding-left: 0; }
+      padding-left: 0;
+      list-style-type: none; }
       @media only screen and (min-width: 480px) {
         .site-title .navigation-links-list > li {
           display: inline-block;
@@ -252,9 +253,11 @@ hr {
   display: block;
   color: #0074D9;
   border-bottom: none; }
+  .posts-list .post-link:hover {
+    color: #0059a6; }
 .posts-list .post-list-item {
   padding: 3rem 0;
-  border-bottom: 1px solid #eee; }
+  border-bottom: 1px solid #ddd; }
   .posts-list .post-list-item:first-child {
     padding-top: 0; }
   .posts-list .post-list-item p:last-child {
@@ -269,14 +272,11 @@ hr {
   border-top: 1px solid #EEE; }
 
 .pagination {
-  margin: 0;
-  padding-left: 0;
-  list-style: none; }
+  margin: 3rem 0;
+  padding-left: 0; }
   .pagination > li {
-    padding-left: 0; }
-    @media only screen and (min-width: 480px) {
-      .pagination > li {
-        display: inline-block;
-        padding: 0 0.5rem; } }
+    list-style-type: none;
+    display: inline-block;
+    padding: 0 0.25rem; }
   .pagination > li:first-child {
     padding-left: 0; }
