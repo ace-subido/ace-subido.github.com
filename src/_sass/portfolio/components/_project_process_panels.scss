@@ -1,0 +1,10 @@
+.container {
+  @include grid-container;
+  @include site-column;
+  margin-bottom: 12rem;
+
+  @media only screen and (min-width: 480px) {
+    margin-bottom: 6rem;
+  }
+}
+

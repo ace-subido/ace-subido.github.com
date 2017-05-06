@@ -1,0 +1,15 @@
+.hero {
+  @include clearfix;
+}
+
+.hero-container {
+  @include grid-container;
+
+  .header-image {
+  }
+
+  .header-hero {
+    margin: 5rem;
+    @include grid-push(6);
+  }
+}
