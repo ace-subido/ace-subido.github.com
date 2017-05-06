@@ -1,0 +1,25 @@
+body {
+  color: $text-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  font-smooth: always;
+  min-height: 100vh;
+  min-width: 320px;
+  font-feature-settings: "kern", "liga", "pnum";
+  text-rendering: optimizeLegibility;
+
+  @media only screen and (min-width: 480px) {
+    font-size: 1rem;
+  }
+}
+
+html {
+  position: relative;
+  box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+

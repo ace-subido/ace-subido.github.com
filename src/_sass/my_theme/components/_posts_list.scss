@@ -1,0 +1,13 @@
+.posts-list {
+  .post-link {
+    display: block;
+    color: $brand-primary;
+    border-bottom: none;
+  }
+
+}
+
+.post-date {
+  color: lighten($text-color, 25%);
+}
+

@@ -1,0 +1,22 @@
+.post-link {
+  display: block;
+  color: $brand-primary;
+  border-bottom: none;
+}
+
+.post-date {
+  color: lighten($text-color, 25%);
+}
+
+.post-content {
+  margin-top: 2rem;
+}
+
+.pagination {
+  @include inline-list();
+
+  > li:first-child {
+    padding-left: 0;
+  }
+}
+

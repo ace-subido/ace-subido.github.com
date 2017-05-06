@@ -1,0 +1,8 @@
+.pagination {
+  @include inline-list();
+
+  > li:first-child {
+    padding-left: 0;
+  }
+}
+

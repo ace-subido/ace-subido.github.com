@@ -4,16 +4,16 @@ layout: null
 
 @import "bourbon";
 @import "neat";
-@import "main_theme/variables";
+@import "my_theme/base/variables";
 @import "main_theme/mixins";
 @import "main_theme/reset";
-@import "main_theme/body";
-@import "main_theme/typography";
+@import "my_theme/base/base";
+@import "my_theme/base/typography";
 @import "main_theme/images";
 @import "main_theme/layout";
 @import "main_theme/footer";
 @import "main_theme/hr";
-@import "main_theme/header";
-@import "main_theme/posts";
-@import "main_theme/page";
+@import "my_theme/components/header_navigation";
+@import "my_theme/components/posts_list";
 @import "main_theme/post";
+@import "my_theme/components/pager";

@@ -2,18 +2,14 @@
 layout: default
 ---
 
-  <div class="post-list">
+  <div class="posts-list">
     {% for post in paginator.posts %}
-      <article class="post-excerpt">
-        <div class="post-meta">
-          <h2 class="post-title"><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-        </div>
-        <div class="post-excerpt-body">
-          {{ post.excerpt }}
-        </div>
-        <div class="post-meta">
+      <article>
+        <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
+        <p>
           <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-        </div>
+        </p>
+        {{ post.excerpt }}
       </article>
       <hr class="divider"/>
     {% endfor %}
