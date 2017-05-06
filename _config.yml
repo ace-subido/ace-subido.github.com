@@ -9,7 +9,7 @@ paginate_path: "/page/:num/"
 source: "src/"
 destination: "_site/"
 plugins_dir: "src/_plugins"
-gems: [jekyll-paginate, jekyll-compose]
+gems: [jekyll-paginate, jekyll-compose, jekyll-haml]
 
 # Build settings
 markdown: kramdown
