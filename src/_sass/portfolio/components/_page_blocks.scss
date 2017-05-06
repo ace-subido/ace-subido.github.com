@@ -27,3 +27,6 @@
   }
 }
 
+.page-block-container {
+  @include grid-container;
+}
