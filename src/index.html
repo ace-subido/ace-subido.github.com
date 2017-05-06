@@ -4,14 +4,13 @@ layout: default
 
   <div class="posts-list">
     {% for post in paginator.posts %}
-      <article>
+      <article class="post-list-item">
         <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
         <p>
           <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
         </p>
         {{ post.excerpt }}
       </article>
-      <hr class="divider"/>
     {% endfor %}
   </div>
 

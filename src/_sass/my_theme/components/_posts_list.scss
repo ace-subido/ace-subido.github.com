@@ -4,7 +4,17 @@
     color: $brand-primary;
     border-bottom: none;
   }
+  .post-list-item {
+    padding: 3rem 0;
+    border-bottom: 1px solid #eee;
 
+    &:first-child {
+      padding-top: 0;
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .post-date {

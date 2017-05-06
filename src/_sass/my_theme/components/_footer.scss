@@ -1,0 +1,28 @@
+.site-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 1rem 0;
+  border-top: 1px solid #EEE;
+}
+
+.footer-links {
+  @include grid-container;
+  @include site-column;
+
+  color: $text-color;
+
+  a {
+    font-weight: 400;
+  }
+
+  .navigation-links-list {
+    @include inline-list;
+
+    > li:first-child {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
