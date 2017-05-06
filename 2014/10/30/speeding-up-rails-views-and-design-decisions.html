@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://acesubido.com/2014/10/30/speeding-up-rails-views-and-design-decisions.html">
   <link rel="alternate" type="application/rss+xml" title="acesubido" href="/feed.xml" />
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico""/>
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
 </head>
 
   <body>
@@ -38,15 +38,15 @@
     <div class="container">
       <section class="post-full">
   <header>
-    <h1 class="post-title">Speeding up Rails Views and Design Decisions</h1>
+    <h1>Speeding up Rails Views and Design Decisions</h1>
     <span class="post-date">
       Oct 30, 2014
       
       
     </span>
   </header>
-  <hr class="divider"/>
-  <article class="post-content">
+  <hr class="post-divider"/>
+  <article>
     <p>At work, we recently encountered 2 very slow pages, both of them revolved around loading a list of accounts in HAML (around +2000). One page was loading them into a table and using jQuery DataTables to turn the table into an interactive interface. The other page was loading those accounts in a select tag and using Select2 to make them easily searchable.</p>
 
 <p>Early on, when they were loaded by AJAX. It was premature optimised since it was only loading 200-300 accounts, so we decided to render it in HAML. But now, it became a bit of a problem when the app got bigger:</p>
