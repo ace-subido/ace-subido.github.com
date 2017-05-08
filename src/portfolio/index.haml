@@ -3,38 +3,44 @@ layout: portfolio
 ---
 
 .hero
-  .hero-container
-    .header-image
-    .header-hero
+  .header-image
+  .hero-text
+    .hero-text-container
       %h1
         Hi, my name is Ace and I'm a software developer.
 
-      %p.lead
+      %p
         I have been in the software engineering industry for 7 years.
         Leading software teams and working with multiple departments in designing,
         developing and scaling maintainable, documented and testable software.
-        Currently with Bloom Solutions as a Software Engineer.
-        Previously as:
-        %ul
-          %li Solutions Architect at Amihan, designing solutions and providing technical direction for the Big Data practice.
-          %li Senior Software Engineer at Orchestrack, AELogica and CSSLivePOS.
-        %a{href: "github.com/ace-subido"}
-          I build open-source software and contribute to it.
+      %p
+        %a{href: "https://github.com/ace-subido"} I build open-source software and contribute to it.
         Website design and other user interface experiments found here:
-        %a{href: "codepen.io/ace-subido"}
-          codepen.io/ace-subido
-        %a{href: "wrapbootstrap.com/user/acesubido"}
-          wrapbootstrap.com/user/acesubido
+        %a{href: "https://codepen.io/ace-subido"} codepen.io/ace-subido
+        and at
+        %a{href: "https://wrapbootstrap.com/user/acesubido"} wrapbootstrap.com/user/acesubido
 
 .page-block
-  .case-study
+  .page-block-container
     %h2 Case Studies and Past Projects
     These are a few of the things that I've worked on for companies and for other people.
-  .case-study
-  .case-study
+    .case-study
+      %h4
+      %span.project-type
+      %p
+      %img{src: "{{ '/img/portfolio/ ' | prepend: site.baseurl }}"}
+    .case-study
+      %h4
+      %span.project-type
+      %p
+      %img{src: "{{ '/img/portfolio/ ' | prepend: site.baseurl }}"}
+    .case-study
+      %h4
+      %span.project-type
+      %p
+      %img{src: "{{ '/img/portfolio/ ' | prepend: site.baseurl }}"}
 
-
-.page-block
+.page-block.-dark-block
   .page-block-container
     .service-item
       .service-title

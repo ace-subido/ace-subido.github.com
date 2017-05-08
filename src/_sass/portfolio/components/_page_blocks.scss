@@ -3,18 +3,9 @@
   border-bottom: 1px solid #EEE;
 
   // Variants
-  &.-dark {
-    background-color: $brand-dark;
-    color: white;
-  }
-
-  &.-red {
-    background-color: $brand-red;
-    color: white;
-  }
-
+  &.-dark,
+  &.-red,
   &.-blue {
-    background-color: $brand-blue;
     color: white;
 
     a {
@@ -25,8 +16,18 @@
       }
     }
   }
+  &.-dark { background-color: $brand-dark; }
+  &.-red { background-color: $brand-red; }
+  &.-blue { background-color: $brand-blue; }
 }
 
 .page-block-container {
   @include grid-container;
+  @include block-padding;
+  margin: 0 auto;
+  display: block;
+
+  @media only screen and (min-width: 480px) {
+    max-width: 768px;
+  }
 }

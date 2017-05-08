@@ -1,28 +1,19 @@
 .hero {
-  @include clearfix;
+  @include grid-container;
+  width: 100%;
 }
 
-.hero-container {
-  @include grid-container;
+.header-image {
+  @include grid-column(2, $header-grid);
+}
 
-  .header-image {
+.hero-text {
+  background: $brand-blue;
+  color: white;
+  @include grid-column(3, $header-grid);
 
-  }
-
-  .header-hero {
-    padding: 3rem;
-    background: $brand-blue;
-    color: white;
-
-    @media only screen and (min-width: 768px){
-      padding: 3rem;
-      @include grid-push(4);
-    }
-
-    @media only screen and (min-width: 480px){
-      padding: 5rem;
-      @include grid-push(5);
-    }
+  .hero-text-container {
+    @include block-padding;
 
     a {
       color: darken(white, 5%);

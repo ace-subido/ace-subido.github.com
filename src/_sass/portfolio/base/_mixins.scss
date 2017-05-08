@@ -1,0 +1,16 @@
+@mixin block-padding() {
+  padding: 3rem;
+
+  @media only screen and (min-width: 768px){
+    padding: 3rem;
+  }
+
+  @media only screen and (min-width: 480px){
+    padding: 5rem;
+  }
+}
+
+$header-grid: (
+  columns: 5,
+  gutter: 0px,
+);
