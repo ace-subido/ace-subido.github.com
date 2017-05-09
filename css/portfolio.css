@@ -168,114 +168,72 @@ hr {
   border-left: none;
   border-right: none; }
 
-.container {
-  padding: 0 1rem;
-  max-width: 700px;
-  margin: 0 auto;
-  display: block;
-  margin-bottom: 12rem; }
-  .container::after {
-    clear: both;
-    content: "";
-    display: block; }
-  @media only screen and (min-width: 480px) {
-    .container {
-      margin-bottom: 6rem; } }
-
-.site-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  padding: 1rem 0;
-  border-top: 1px solid #EEE; }
-
-.footer-links {
-  padding: 0 1rem;
-  max-width: 700px;
-  margin: 0 auto;
-  display: block;
-  color: #555; }
-  .footer-links::after {
-    clear: both;
-    content: "";
-    display: block; }
-  .footer-links a {
-    font-weight: 400; }
-  .footer-links .navigation-links-list {
-    margin: 0;
-    padding-left: 0; }
-    .footer-links .navigation-links-list > li {
-      padding-left: 0;
-      list-style-type: none; }
-      @media only screen and (min-width: 480px) {
-        .footer-links .navigation-links-list > li {
-          display: inline-block;
-          padding: 0 0.5rem; } }
-    .footer-links .navigation-links-list > li:first-child {
-      padding-left: 0;
-      padding-right: 0; }
-
-.site-header {
-  display: block;
-  padding: 1rem 0;
-  margin-bottom: 4rem;
-  position: relative;
+.page-block {
   border-bottom: 1px solid #EEE; }
+  .page-block::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .page-block.-dark, .page-block.-red, .page-block.-blue {
+    color: white; }
+    .page-block.-dark a, .page-block.-red a, .page-block.-blue a {
+      color: white; }
+      .page-block.-dark a:hover, .page-block.-red a:hover, .page-block.-blue a:hover {
+        color: #e6e6e6; }
+  .page-block.-dark {
+    background-color: #444; }
+  .page-block.-red {
+    background-color: #D84A38; }
+  .page-block.-blue {
+    background-color: #0074D9; }
 
-.site-title {
-  color: #555;
-  padding: 0 1rem;
-  max-width: 700px;
+.page-block-container {
+  padding: 3rem;
   margin: 0 auto;
   display: block; }
-  .site-title::after {
+  .page-block-container::after {
     clear: both;
     content: "";
     display: block; }
-  .site-title a {
-    font-weight: 400; }
-  .site-title .navigation-links-list {
-    margin: 0;
-    padding-left: 0; }
-    .site-title .navigation-links-list > li {
-      padding-left: 0;
-      list-style-type: none; }
-      @media only screen and (min-width: 480px) {
-        .site-title .navigation-links-list > li {
-          display: inline-block;
-          padding: 0 0.5rem; } }
-    .site-title .navigation-links-list > li:first-child {
-      padding-left: 0;
-      padding-right: 0; }
+  @media only screen and (min-width: 768px) {
+    .page-block-container {
+      padding: 3rem; } }
+  @media only screen and (min-width: 480px) {
+    .page-block-container {
+      padding: 5rem; } }
+  @media only screen and (min-width: 480px) {
+    .page-block-container {
+      max-width: 768px; } }
 
-.posts-list .post-link {
-  display: block;
-  color: #0074D9;
-  border-bottom: none; }
-  .posts-list .post-link:hover {
-    color: #0059a6; }
-.posts-list .post-list-item {
-  padding: 3rem 0;
-  border-bottom: 1px solid #ddd; }
-  .posts-list .post-list-item:first-child {
-    padding-top: 0; }
-  .posts-list .post-list-item p:last-child {
-    margin-bottom: 0; }
+.hero {
+  width: 100%; }
+  .hero::after {
+    clear: both;
+    content: "";
+    display: block; }
 
-.post-date {
-  color: #959595; }
+.header-image {
+  width: calc(40%);
+  float: left;
+  margin-left: 0px; }
 
-.post-full .post-divider {
-  width: 100%;
-  margin: 2rem auto;
-  border-top: 1px solid #EEE; }
-
-.pagination {
-  margin: 3rem 0;
-  padding-left: 0; }
-  .pagination > li {
-    list-style-type: none;
-    display: inline-block;
-    padding: 0 0.25rem; }
-  .pagination > li:first-child {
-    padding-left: 0; }
+.hero-text {
+  background: #0074D9;
+  color: white;
+  width: calc(60%);
+  float: left;
+  margin-left: 0px; }
+  .hero-text .hero-text-container {
+    padding: 3rem; }
+    @media only screen and (min-width: 768px) {
+      .hero-text .hero-text-container {
+        padding: 3rem; } }
+    @media only screen and (min-width: 480px) {
+      .hero-text .hero-text-container {
+        padding: 5rem; } }
+    .hero-text .hero-text-container a {
+      color: #f2f2f2;
+      border-bottom: 1px solid #f2f2f2; }
+      .hero-text .hero-text-container a:hover {
+        color: white;
+        border-bottom: 1px solid white; }
