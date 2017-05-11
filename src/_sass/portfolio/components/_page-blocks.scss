@@ -3,9 +3,9 @@
   border-bottom: 1px solid #EEE;
 
   // Variants
-  &.-dark,
-  &.-red,
-  &.-blue {
+  &.-dark-block,
+  &.-red-block,
+  &.-blue-block {
     color: white;
 
     a {
@@ -16,9 +16,9 @@
       }
     }
   }
-  &.-dark { background-color: $brand-dark; }
-  &.-red { background-color: $brand-red; }
-  &.-blue { background-color: $brand-blue; }
+  &.-dark-block { background-color: $brand-dark; }
+  &.-red-block { background-color: $brand-red; }
+  &.-blue-block { background-color: $brand-blue; }
 }
 
 .page-block-container {

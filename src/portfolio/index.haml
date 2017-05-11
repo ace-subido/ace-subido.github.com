@@ -6,56 +6,153 @@ layout: portfolio
   .header-image
   .hero-text
     .hero-text-container
-      %h1
-        Hi, my name is Ace and I'm a software developer.
+      :markdown
+        # Hi, my name is Ace and I'm a software developer.
 
-      %p
-        I have been in the software engineering industry for 7 years.
+        I have been in the software engineering industry for 8 years.
         Leading software teams and working with multiple departments in designing,
         developing and scaling maintainable, documented and testable software.
-      %p
-        %a{href: "https://github.com/ace-subido"} I build open-source software and contribute to it.
+
+        Currently with **Bloom Solutions**, previously worked at Amihan Global Strategies, AELogica,
+        Orchestronix and CSS LivePOS.
+
+        [I build open-source software and contribute to it.](https://github.com/ace-subido)
         Website design and other user interface experiments found here:
-        %a{href: "https://codepen.io/ace-subido"} codepen.io/ace-subido
-        and at
-        %a{href: "https://wrapbootstrap.com/user/acesubido"} wrapbootstrap.com/user/acesubido
+        [codepen.io/ace-subido](https://codepen.io/ace-subido)
+        and at [wrapbootstrap.com/user/acesubido](https://wrapbootstrap.com/user/acesubido)
 
 .page-block
   .page-block-container
     %h2 Case Studies and Past Projects
-    These are a few of the things that I've worked on for companies and for other people.
+    %p These are a few of the things I've worked on that I can openly talk about
     .case-study
-      %h4
-      %span.project-type
-      %p
+      %h4 Yugto
+      %span.project-type Prototyping
+      %p Yugto was a mobile application prototype that was designed to help politicians mobilize their volunteers to help advance their campaigns
       %img{src: "{{ '/img/portfolio/ ' | prepend: site.baseurl }}"}
     .case-study
-      %h4
-      %span.project-type
+      %h4 Graphecode
+      %span.project-type Web Application Development
       %p
+        Graphecode is a website for making clean and simple diagrams. Providing YAML documents via an editor, it generates these diagrams.
+        %a{href: "https://graphecode.herokuapp.com"} (graphecode.herokuapp.com)
       %img{src: "{{ '/img/portfolio/ ' | prepend: site.baseurl }}"}
     .case-study
-      %h4
-      %span.project-type
-      %p
+      %h4 Coin Jobs - Job Board
+      %span.project-type Web Application Development
+      %p Coinjobs is a job board for the cryptocurrency industry.
       %img{src: "{{ '/img/portfolio/ ' | prepend: site.baseurl }}"}
+    .case-study
 
 .page-block.-dark-block
   .page-block-container
-    .service-item
-      .service-title
-        %h3 Web Application Development
-      .service-body
-        %p
-          Many teams follow practices described in “Extreme Programming Explained”, I follow the same more or less, depending on the setup.
-        %h4 Ruby / Rails
-        %p
-          Many companies use Ruby on Rails to quickly launch prototypes and scaling it into massive production applications. It’s a very productive web framework that focuses on convention over configuration. Large internet platforms have this as a their core framework such as Github, Twitter, TwitchTV and AirBNB.
-
-    .service-item
-      .service-title
-        %h3 Mobile Application Development
-      .service-body
+    %h2 Web Application and API Development Services
+    %p Many teams follow practices described in “Extreme Programming Explained”, I follow the same more or less, depending on the setup.
+    %h3 Ruby / Rails
+    %p Many companies use Ruby on Rails to quickly launch prototypes and scaling it into massive production applications. It’s a very productive web framework that focuses on convention over configuration. Large internet platforms have this as a their core framework such as Github, Twitter, TwitchTV and AirBNB.
+    %h3 Technologies
+    %p Aside from Ruby and Rails, here's a list of a few other technologies that I can work with:
+    %h4 Frameworks and Languages
+    %ul.technology-list
+      %li.technology-list-item
+        Javascript
+      %li.technology-list-item
+        React
+      %li.technology-list-item
+        SASS
+    %h4 Databases and Storage
+    %ul.technology-list
+      %li.technology-list-item
+        PostgreSQL
+      %li.technology-list-item
+        Redis
+    %h4 Infrastructure
+    %ul.technology-list
+      %li.technology-list-item
+        Heroku
+      %li.technology-list-item
+        Amazon Web Services
+      %li.technology-list-item
+        Google Cloud Platform
+      %li.technology-list-item
+        Digital Ocean
+    %small.muted * while I may not provide design and “brand establishing” related services, I have referrals on this aspect.
 
 .page-block
+  .page-block-container
+    :markdown
+      ## Development Process
+
+      I apply agile development in terms of how things are built. Without going into nitty gritty
+      details, here's a brief description of how this works:
+
+      ### Planning
+
+      First, we have a discussion on the 1) vision and ideas behind your project, and 2)
+      your target users. This is important, because I value what you value, and I value what
+      your users need from your product.
+
+      Then, we run a requirements gathering phase just to fill up the Product Backlog for your alpha version. Afterwhich, we proceed to run the sprints. A sprint is a timeboxed effort to work on a set of features, the duration is a week. At the start of each sprint we plan for these set of features based on the Product Backlog. The Product Backlog is the contract. We believe that priorities change as time goes, so smaller increments of your product out there means cleaner expectations will be set.
+
+      ### Active Development
+
+      Everyday, we engage in daily calls or standups, typically in the morning or in the evening.
+      We can do weekly instead if it's too tedious. We open up Trello or Pivotal Tracker, our task tracker
+      to see what has been done and what’s next in the pipeline. At the end of each sprint you get a working
+      version of your product released live, or depending on the product release cycles that was agreed upon.
+
+      After a sprint finishes, we go back and do a retrospective, then take on another sprint until your alpha
+      version is finished. This ensures working software over comprehensive documentation, you see your
+      project progress as each day goes along. You have direct access to the source code of your product
+      via Github or Bitbucket, based on your preference. You have a working version of your software by
+      the end of each sprint.
+
+.page-block
+  .page-block-container
+    :markdown
+      ## Project Engagement Process
+
+      I’m a developer, I want to design and develop software. Before I can do that, I need clients
+      to hire me. The following section details how my engagement process works and commonly answers
+      questions asked by potential clients. The overall process looks like this:
+
+      ### Contact
+
+      - Someone contacts me
+      - I get to understand a little detail of the project/product in mind before the meeting starts
+
+      ### Planning
+
+      - Understanding vision for the product/solution and current pain points the product is solving.
+      - Agree to the outcomes we're trying to achieve (write feature lists and initial wireframes).
+      - Estimate the iterations.
+      - Schedule when to work on the iterations.
+
+      ### Active Development and Commercials
+
+      - Signing the contract
+      - 50% Payment for the first iteration or to keep things going you can just pay for all the iterations
+      - Start working on the iteration
+      - 50% Payment on delivery of the first iteration
+
+.page-block.-red-block
+  .page-block-container
+    :markdown
+      ## Typical Project Engagements
+
+      ### Road to Alpha (Weekly Rate)
+
+      Typically we spend the first week planning, discussing and making wireframes. Then we
+      estimate iterations/sprints based on this. Each iteration gets you working software.
+      By the end of the iterations, you’ll have your minimum viable product based on the backlog.
+
+      ### Maintenance and Support (Retainer, Monthly Rate)
+
+      This is for you if you have a current product that's doing great, and you need someone
+      to maintain and build new features to keep it growing while you look for a permanent team.
+
+.page-block
+  .page-block-container
+    Want to start working with me to create something your target market will love?
+
 
