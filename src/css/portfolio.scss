@@ -13,8 +13,9 @@ layout: null
 @import "theme/base/hr";
 @import "portfolio/base/variables";
 @import "portfolio/base/mixins";
+@import "portfolio/base/hr";
 @import "portfolio/components/page-blocks";
 @import "portfolio/components/services-items";
-// @import "portfolio/components/case_study_blocks";
+@import "portfolio/components/case-study";
 // @import "portfolio/components/project_process_panels";
 @import "portfolio/components/hero";

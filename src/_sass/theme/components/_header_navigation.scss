@@ -16,6 +16,7 @@
   }
 
   .navigation-links-list {
+    margin: 0;
     @include inline-list;
 
     > li:first-child {

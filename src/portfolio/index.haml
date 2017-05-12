@@ -4,6 +4,7 @@ layout: portfolio
 
 .hero
   .header-image
+    %img{src: "{{ '/img/portfolio/header_hero.jpeg ' | prepend: site.baseurl }}"}
   .hero-text
     .hero-text-container
       :markdown
@@ -25,57 +26,98 @@ layout: portfolio
   .page-block-container
     %h2 Case Studies and Past Projects
     %p These are a few of the things I've worked on that I can openly talk about
+
     .case-study
-      %h4 Yugto
+      %h3 Yugto
       %span.project-type Prototyping
       %p Yugto was a mobile application prototype that was designed to help politicians mobilize their volunteers to help advance their campaigns
       %img{src: "{{ '/img/portfolio/ ' | prepend: site.baseurl }}"}
+
     .case-study
-      %h4 Graphecode
+      %h3 Graphecode
       %span.project-type Web Application Development
       %p
         Graphecode is a website for making clean and simple diagrams. Providing YAML documents via an editor, it generates these diagrams.
         %a{href: "https://graphecode.herokuapp.com"} (graphecode.herokuapp.com)
       %img{src: "{{ '/img/portfolio/ ' | prepend: site.baseurl }}"}
+
     .case-study
-      %h4 Coin Jobs - Job Board
+      %h3 Coin Jobs - Job Board
       %span.project-type Web Application Development
       %p Coinjobs is a job board for the cryptocurrency industry.
       %img{src: "{{ '/img/portfolio/ ' | prepend: site.baseurl }}"}
+
     .case-study
+      %h3 Whiteplane Business Theme
+      %span.project-type Prototyping
+      %p Whiteplane Business Theme was something that I was working on to place on wrapbootstrap.com
+      %img{src: "{{ '/img/portfolio/ ' | prepend: site.baseurl }}"}
 
 .page-block.-dark-block
   .page-block-container
-    %h2 Web Application and API Development Services
-    %p Many teams follow practices described in “Extreme Programming Explained”, I follow the same more or less, depending on the setup.
-    %h3 Ruby / Rails
-    %p Many companies use Ruby on Rails to quickly launch prototypes and scaling it into massive production applications. It’s a very productive web framework that focuses on convention over configuration. Large internet platforms have this as a their core framework such as Github, Twitter, TwitchTV and AirBNB.
-    %h3 Technologies
-    %p Aside from Ruby and Rails, here's a list of a few other technologies that I can work with:
-    %h4 Frameworks and Languages
-    %ul.technology-list
-      %li.technology-list-item
-        Javascript
-      %li.technology-list-item
-        React
-      %li.technology-list-item
-        SASS
-    %h4 Databases and Storage
-    %ul.technology-list
-      %li.technology-list-item
-        PostgreSQL
-      %li.technology-list-item
-        Redis
-    %h4 Infrastructure
-    %ul.technology-list
-      %li.technology-list-item
-        Heroku
-      %li.technology-list-item
-        Amazon Web Services
-      %li.technology-list-item
-        Google Cloud Platform
-      %li.technology-list-item
-        Digital Ocean
+    :markdown
+      ## Web Application and API Development Services
+
+      Many teams follow practices described in “Extreme Programming Explained”, I follow the same more or less, depending on the setup.
+
+      ### Ruby / Rails
+
+      Many companies use Ruby on Rails to quickly launch prototypes and scaling it into massive production applications. It’s a very productive web framework that focuses on convention over configuration. Large internet platforms have this as a their core framework such as Github, Twitter, TwitchTV and AirBNB.
+
+      ### Technologies
+
+      Aside from Ruby and Rails, here's a list of a few other technologies that I can work with:
+
+      #### Frameworks and Languages
+
+      <ul class="technology-list">
+        <li class="technology-list-item">
+          <img src="{{ '/img/portfolio/javascript-logo.png ' | prepend: site.baseurl }}"/>
+          Javascript
+        </li>
+        <li class="technology-list-item">
+          <img src="{{ '/img/portfolio/react-logo.png ' | prepend: site.baseurl }}"/>
+          React
+        </li>
+        <li class="technology-list-item">
+          <img src="{{ '/img/portfolio/sass-logo.png ' | prepend: site.baseurl }}"/>
+          SASS
+        </li>
+      </ul>
+
+      #### Databases and Storage
+
+      <ul class="technology-list">
+        <li class="technology-list-item">
+          <img src="{{ '/img/portfolio/postgresql-logo.png ' | prepend: site.baseurl }}"/>
+          PostgreSQL
+        </li>
+        <li class="technology-list-item">
+          <img src="{{ '/img/portfolio/redis-logo.png ' | prepend: site.baseurl }}"/>
+          Redis
+        </li>
+      </ul>
+
+      #### Infrastructure
+
+      <ul class="technology-list">
+        <li class="technology-list-item">
+          <img src="{{ '/img/portfolio/heroku-logo.png ' | prepend: site.baseurl }}"/>
+          Heroku
+        </li>
+        <li class="technology-list-item">
+          <img src="{{ '/img/portfolio/aws-logo.png ' | prepend: site.baseurl }}"/>
+          Amazon Web Services
+        </li>
+        <li class="technology-list-item">
+          <img src="{{ '/img/portfolio/gcp-logo.png ' | prepend: site.baseurl }}"/>
+          Google Cloud Platform
+        </li>
+        <li class="technology-list-item">
+          <img src="{{ '/img/portfolio/digital-ocean-logo.png ' | prepend: site.baseurl }}"/>
+          Digital Ocean
+        </li>
+      </ul>
     %small.muted * while I may not provide design and “brand establishing” related services, I have referrals on this aspect.
 
 .page-block
@@ -153,6 +195,7 @@ layout: portfolio
 
 .page-block
   .page-block-container
-    Want to start working with me to create something your target market will love?
+    :markdown
+      ### If you want to just meet up and talk about something
 
 
