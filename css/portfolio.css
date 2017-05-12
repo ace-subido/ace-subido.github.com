@@ -145,7 +145,7 @@ blockquote {
   border-left: 2px solid #c0e1ff;
   font-size: 1rem;
   padding-left: 1.5rem;
-  color: #6f6f6f;
+  color: #888888;
   margin: 3rem 0; }
   blockquote p:last-child {
     margin-bottom: 0; }
@@ -168,23 +168,35 @@ hr {
   border-left: none;
   border-right: none; }
 
+hr {
+  display: block;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 0;
+  margin-right: auto;
+  width: 20rem;
+  border-top: 2px solid #EEE;
+  border-bottom: none;
+  border-left: none;
+  border-right: none; }
+
 .page-block {
   border-bottom: 1px solid #EEE; }
   .page-block::after {
     clear: both;
     content: "";
     display: table; }
-  .page-block.-dark, .page-block.-red, .page-block.-blue {
+  .page-block.-dark-block, .page-block.-red-block, .page-block.-blue-block {
     color: white; }
-    .page-block.-dark a, .page-block.-red a, .page-block.-blue a {
+    .page-block.-dark-block a, .page-block.-red-block a, .page-block.-blue-block a {
       color: white; }
-      .page-block.-dark a:hover, .page-block.-red a:hover, .page-block.-blue a:hover {
+      .page-block.-dark-block a:hover, .page-block.-red-block a:hover, .page-block.-blue-block a:hover {
         color: #e6e6e6; }
-  .page-block.-dark {
+  .page-block.-dark-block {
     background-color: #444; }
-  .page-block.-red {
+  .page-block.-red-block {
     background-color: #D84A38; }
-  .page-block.-blue {
+  .page-block.-blue-block {
     background-color: #0074D9; }
 
 .page-block-container {
@@ -205,24 +217,60 @@ hr {
     .page-block-container {
       max-width: 768px; } }
 
+.technology-list {
+  padding-left: 0; }
+  .technology-list > li {
+    padding-left: 0;
+    list-style-type: none; }
+    @media only screen and (min-width: 480px) {
+      .technology-list > li {
+        display: inline-block;
+        padding: 0 0.5rem; } }
+  .technology-list > li {
+    display: block;
+    margin: 0 auto;
+    padding: 1rem 0; }
+    .technology-list > li img {
+      margin-right: auto;
+      margin-left: auto;
+      display: block; }
+    @media only screen and (min-width: 480px) {
+      .technology-list > li {
+        display: inline-block;
+        padding: 0 1rem; } }
+  .technology-list > li:first-child {
+    padding-left: 0; }
+
+.case-study .project-type {
+  text-transform: uppercase;
+  color: #AAA;
+  font-size: 90%;
+  display: block;
+  margin-bottom: 1rem; }
+
 .hero {
-  width: 100%; }
+  width: 100%;
+  background: url("../img/portfolio/header_hero.jpeg") no-repeat center center;
+  background-size: cover; }
   .hero::after {
     clear: both;
     content: "";
     display: block; }
 
 .header-image {
-  width: calc(40%);
-  float: left;
-  margin-left: 0px; }
+  display: block; }
+  .header-image img {
+    margin: 0; }
+  @media only screen and (min-width: 768px) {
+    .header-image {
+      display: none; } }
 
 .hero-text {
   background: #0074D9;
-  color: white;
-  width: calc(60%);
-  float: left;
-  margin-left: 0px; }
+  color: white; }
+  @media only screen and (min-width: 768px) {
+    .hero-text {
+      margin-left: calc(50% + 0px); } }
   .hero-text .hero-text-container {
     padding: 3rem; }
     @media only screen and (min-width: 768px) {
