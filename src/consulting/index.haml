@@ -2,13 +2,21 @@
 layout: consulting
 ---
 
+.page-block.-grey-block
+  .page-block-container
+    .intro
+      :markdown
+        ### You're here because you probably want to hire me to build software.
+
+        ### So this is a short page describing **who** I am, **what** I've worked on and **how** we would work together.
+
 .hero
   .header-image
     %img{src: "{{ '/img/consulting/header_hero.jpeg ' | prepend: site.baseurl }}"}
   .hero-text
     .hero-text-container
       :markdown
-        # Hi, my name is Ace and I'm a software developer.
+        # My name is Ace and I'm a software developer.
 
         I have been in the software engineering industry for 8 years.
         Leading software teams and working with multiple departments in designing,
@@ -22,36 +30,38 @@ layout: consulting
         [codepen.io/ace-subido](https://codepen.io/ace-subido)
         and at [wrapbootstrap.com/user/acesubido](https://wrapbootstrap.com/user/acesubido)
 
+
 .page-block
   .page-block-container
     %h2 Case Studies and Past Projects
     %p These are a few of the things I've worked on that I can openly talk about
 
-    .case-study
-      %h3 Yugto
-      %span.project-type Prototyping
-      %p Yugto was a mobile application prototype that was designed to help politicians mobilize their volunteers to help advance their campaigns
-      %img{src: "{{ '/img/consulting/ ' | prepend: site.baseurl }}"}
+    %h3 Yugto
+    %span.project-type Prototyping
+    %p Yugto was a mobile application prototype that was designed to help politicians mobilize their volunteers to help advance their campaigns
+    %img.-yugto{src: "{{ '/img/consulting/yugto_account.png' | prepend: site.baseurl }}"}
+    %img.-yugto{src: "{{ '/img/consulting/yugto_home.png' | prepend: site.baseurl }}"}
+    %img.-yugto{src: "{{ '/img/consulting/yugto_invite.png' | prepend: site.baseurl }}"}
 
-    .case-study
-      %h3 Graphecode
-      %span.project-type Web Application Development
-      %p
-        Graphecode is a website for making clean and simple diagrams. Providing YAML documents via an editor, it generates these diagrams.
-        %a{href: "https://graphecode.herokuapp.com"} (graphecode.herokuapp.com)
-      %img{src: "{{ '/img/consulting/ ' | prepend: site.baseurl }}"}
+    %hr
+    %h3 Graphecode
+    %span.project-type Web Application Development
+    %p
+      Graphecode is a website for making clean and simple diagrams. Providing YAML documents via an editor, it generates these diagrams.
+      %a{href: "https://graphecode.herokuapp.com"} (graphecode.herokuapp.com)
+    %img{src: "{{ '/img/consulting/graphecode.png' | prepend: site.baseurl }}"}
 
-    .case-study
-      %h3 Coin Jobs - Job Board
-      %span.project-type Web Application Development
-      %p Coinjobs is a job board for the cryptocurrency industry.
-      %img{src: "{{ '/img/consulting/ ' | prepend: site.baseurl }}"}
+    %hr
+    %h3 Coin Jobs - Job Board
+    %span.project-type Web Application Development
+    %p Coinjobs is a job board for the cryptocurrency industry.
+    %img{src: "{{ '/img/consulting/coinjobs.png' | prepend: site.baseurl }}"}
 
-    .case-study
-      %h3 Whiteplane Business Theme
-      %span.project-type Prototyping
-      %p Whiteplane Business Theme was something that I was working on to place on wrapbootstrap.com
-      %img{src: "{{ '/img/consulting/ ' | prepend: site.baseurl }}"}
+    %hr
+    %h3 Whiteplane Business Theme
+    %span.project-type Prototyping
+    %p Whiteplane Business Theme was something that I was working on to place on wrapbootstrap.com
+    %img{src: "{{ '/img/consulting/whiteplane-theme.png' | prepend: site.baseurl }}"}
 
 .page-block.-dark-block
   .page-block-container
@@ -70,54 +80,22 @@ layout: consulting
 
       #### Frameworks and Languages
 
-      <ul class="technology-list">
-        <li class="technology-list-item">
-          <img src="{{ '/img/consulting/javascript-logo.png ' | prepend: site.baseurl }}"/>
-          Javascript
-        </li>
-        <li class="technology-list-item">
-          <img src="{{ '/img/consulting/react-logo.png ' | prepend: site.baseurl }}"/>
-          React
-        </li>
-        <li class="technology-list-item">
-          <img src="{{ '/img/consulting/sass-logo.png ' | prepend: site.baseurl }}"/>
-          SASS
-        </li>
-      </ul>
+      - Javascript
+      - React
+      - SASS
 
       #### Databases and Storage
 
-      <ul class="technology-list">
-        <li class="technology-list-item">
-          <img src="{{ '/img/consulting/postgresql-logo.png ' | prepend: site.baseurl }}"/>
-          PostgreSQL
-        </li>
-        <li class="technology-list-item">
-          <img src="{{ '/img/consulting/redis-logo.png ' | prepend: site.baseurl }}"/>
-          Redis
-        </li>
-      </ul>
+      - PostgreSQL
+      - Redis
 
       #### Infrastructure
 
-      <ul class="technology-list">
-        <li class="technology-list-item">
-          <img src="{{ '/img/consulting/heroku-logo.png ' | prepend: site.baseurl }}"/>
-          Heroku
-        </li>
-        <li class="technology-list-item">
-          <img src="{{ '/img/consulting/aws-logo.png ' | prepend: site.baseurl }}"/>
-          Amazon Web Services
-        </li>
-        <li class="technology-list-item">
-          <img src="{{ '/img/consulting/gcp-logo.png ' | prepend: site.baseurl }}"/>
-          Google Cloud Platform
-        </li>
-        <li class="technology-list-item">
-          <img src="{{ '/img/consulting/digital-ocean-logo.png ' | prepend: site.baseurl }}"/>
-          Digital Ocean
-        </li>
-      </ul>
+      - Heroku
+      - Amazon Web Services
+      - Google Cloud Platform
+      - Digital Ocean
+
     %small.muted * while I may not provide design and “brand establishing” related services, I have referrals on this aspect.
 
 .page-block
@@ -182,6 +160,8 @@ layout: consulting
     :markdown
       ## Typical Project Engagements
 
+      Just so you'd have an idea, these are the typical project engagements I get into:
+
       ### Road to Alpha (Weekly Rate)
 
       Typically we spend the first week planning, discussing and making wireframes. Then we
@@ -194,8 +174,12 @@ layout: consulting
       to maintain and build new features to keep it growing while you look for a permanent team.
 
 .page-block
-  .page-block-container
+  .page-block-container.text-center
     :markdown
-      ### If you want to just meet up and talk about something
+      ### Hopefully, this is enough helpful information to get your interest.
+
+      ### So, let's get started?
+
+    %a.btn-cta{href: "mailto:hello@acesubido.com"} Contact Me
 
 

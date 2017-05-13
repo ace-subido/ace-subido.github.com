@@ -1,3 +1,11 @@
 $brand-dark: #444;
 $brand-blue: $brand-primary;
 $text-color: #444;
+
+$base-border-radius: 3px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+
+$base-duration: 150ms;
+$base-timing: ease;
+
