@@ -126,7 +126,7 @@ pre code {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
   font-weight: 500;
-  line-height: 1.3;
+  line-height: 1.5;
   margin: 0 0 1rem; }
 
 h1 {
@@ -168,6 +168,34 @@ hr {
   border-left: none;
   border-right: none; }
 
+.button {
+  background-color: #0074D9;
+  border: 1px solid #0074D9;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.95em 1.9em;
+  text-decoration: none;
+  transition: background-color 150ms ease;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap; }
+  .button:hover, .button:focus {
+    background-color: #005dae;
+    color: #fff;
+    border: 1px solid #005dae; }
+  .button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5; }
+    .button:disabled:hover {
+      background-color: #0074D9; }
+
 img.-yugto {
   margin: 3rem auto;
   width: auto; }
@@ -187,37 +215,8 @@ hr {
   border-left: none;
   border-right: none; }
 
-.btn-cta {
-  background-color: #0074D9;
-  border: 0;
-  border-radius: 3px;
-  color: #fff;
-  cursor: pointer;
-  display: inline-block;
-  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
-  font-size: 1rem;
-  -webkit-font-smoothing: antialiased;
-  font-weight: 600;
-  line-height: 1;
-  padding: 0.95em 1.9em;
-  text-decoration: none;
-  transition: background-color 150ms ease;
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
+.button {
   margin: 1rem 0; }
-  .btn-cta:hover, .btn-cta:focus {
-    background-color: #005dae;
-    color: #fff;
-    border-bottom: none; }
-  .btn-cta:disabled {
-    cursor: not-allowed;
-    opacity: 0.5; }
-    .btn-cta:disabled:hover {
-      background-color: #0074D9; }
-
-.btn-group {
-  display: inline-block; }
 
 .page-block {
   border-bottom: 1px solid #EEE; }

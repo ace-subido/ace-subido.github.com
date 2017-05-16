@@ -126,7 +126,7 @@ pre code {
 h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
   font-weight: 500;
-  line-height: 1.3;
+  line-height: 1.5;
   margin: 0 0 1rem; }
 
 h1 {
@@ -167,6 +167,34 @@ hr {
   border-bottom: none;
   border-left: none;
   border-right: none; }
+
+.button {
+  background-color: #0074D9;
+  border: 1px solid #0074D9;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
+  font-size: 1rem;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 600;
+  line-height: 1;
+  padding: 0.95em 1.9em;
+  text-decoration: none;
+  transition: background-color 150ms ease;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap; }
+  .button:hover, .button:focus {
+    background-color: #005dae;
+    color: #fff;
+    border: 1px solid #005dae; }
+  .button:disabled {
+    cursor: not-allowed;
+    opacity: 0.5; }
+    .button:disabled:hover {
+      background-color: #0074D9; }
 
 .container {
   padding: 0 1rem;
@@ -256,15 +284,20 @@ hr {
     color: #0059a6; }
 .posts-list .post-list-item {
   padding: 3rem 0;
-  border-bottom: 1px solid #ddd; }
+  border-bottom: 2px solid #EEE; }
   .posts-list .post-list-item:first-child {
     padding-top: 0; }
   .posts-list .post-list-item p:last-child {
     margin-bottom: 0; }
+.posts-list .post-list-item-button {
+  margin-top: 1.5rem; }
 
 .post-date {
   color: #959595; }
 
+.post-full .post-full-title {
+  line-height: 1.5;
+  font-size: 2rem; }
 .post-full .post-divider {
   width: 100%;
   margin: 2rem auto;
