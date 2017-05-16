@@ -11,7 +11,7 @@
 
   .post-list-item {
     padding: 3rem 0;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 2px solid #EEE;
 
     &:first-child {
       padding-top: 0;
@@ -20,6 +20,10 @@
     p:last-child {
       margin-bottom: 0;
     }
+  }
+
+  .post-list-item-button {
+    margin-top: 1.5rem;
   }
 }
 
