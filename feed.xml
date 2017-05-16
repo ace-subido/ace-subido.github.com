@@ -5,9 +5,56 @@
     <description></description>
     <link>http://acesubido.com/</link>
     <atom:link href="http://acesubido.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 15 May 2017 11:25:06 +0800</pubDate>
-    <lastBuildDate>Mon, 15 May 2017 11:25:06 +0800</lastBuildDate>
+    <pubDate>Wed, 17 May 2017 00:06:30 +0800</pubDate>
+    <lastBuildDate>Wed, 17 May 2017 00:06:30 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>BigDecimal vs. Float for anything related to finance</title>
+        <description>&lt;p&gt;There are countless blog posts and stack overflow explanations about this, figured I need to write this little note for myself. To start things off, check this example of computing PHPKRW using hypothetical gold as a go-between:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;require &quot;bigdecimal&quot;
+
+# Float
+php_gold_float = 0.00001144792038
+gold_krw_float = 1962165.41
+
+php_krw_float = php_gold_float * gold_krw_float
+
+puts &quot;#{php_krw_float.class} #{php_krw_float}&quot;
+
+# Big Decimal
+php_gold_bd = BigDecimal.new(&quot;0.00001144792038&quot;)
+gold_krw_bd = BigDecimal.new(&quot;1962165.41&quot;)
+
+php_krw_bd = php_gold_bd * gold_krw_bd
+
+puts &quot;#{php_krw_bd.class} #{php_krw_bd.to_s('F')}&quot;
+
+# Output
+Float 22.462713386070057
+BigDecimal 22.4627133860700558
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h4 id=&quot;thats-odd-its-rounded-up-or-something-why-does-this-happen&quot;&gt;That’s odd, it’s rounded up? Or something? Why does this happen?&lt;/h4&gt;
+
+&lt;p&gt;Long version, read up on &lt;a href=&quot;https://en.wikipedia.org/wiki/IEEE_floating_point#IEEE_754-2008&quot;&gt;IEEE specification to define floats&lt;/a&gt;. Short version: it stores a sign, a fraction and an exponent to represent a Float. It’s a scientific notation for binary, because of that it’s impossible to store exact numbers and decimal in Float.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;If you’re a bank, or if you’re supporting accounting software, or just computing compounding interests, you could potentially miscalculate thousands down the line when using Float for computing. So, make sure to use BigDecimal when you’re dealing with anything that requires a high-degree of “sureness”. With Ruby/Rails, you can use &lt;code&gt;:decimal&lt;/code&gt; for columns containing this type of information.&lt;/p&gt;
+
+&lt;p&gt;Money, accounting, computing compounding interests = needs high precision, then use BigDecimal. Other than that, just use float.&lt;/p&gt;
+
+&lt;p&gt;Some gotcha’s: With Ruby/Rails, when rendering an object with BigDecimal attributes as JSON, it will render the numbers as a String, instead of a Float. Part of the reasoning behind this change could be found in this &lt;a href=&quot;https://github.com/rails/rails/issues/25017&quot;&gt;discussion&lt;/a&gt;&lt;/p&gt;
+
+</description>
+        <pubDate>Tue, 16 May 2017 00:00:00 +0800</pubDate>
+        <link>http://acesubido.com/2017/05/16/bigdecimal-vs-float-for-anything-related-to-finance.html</link>
+        <guid isPermaLink="true">http://acesubido.com/2017/05/16/bigdecimal-vs-float-for-anything-related-to-finance.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Thoughts on the elections - everyone needs a savior</title>
@@ -515,25 +562,6 @@ What’s the best way para ma-save ko ang money ko at hindi ako bili ng bili ng 
         <guid isPermaLink="true">http://acesubido.com/2015/02/28/what-do-you-wish-you-had-known-before-you-turned.html</guid>
         
         <category>personal</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>&quot;What is your stack?&quot;</title>
-        <description>&lt;p&gt;Rails, and all the Ruby ecosystem has to offer, coupled with Postgres.&lt;/p&gt;
-
-&lt;p&gt;When a project becomes even more complicated and it looks as if Rails with Resque/Sidekiq won&amp;rsquo;t cut it, I go with what we (team on any project) all decide to use for certain parts of the stack. Whether that be Ember/Backbone/Angular on the front or Scala/Go for certain workers, Debian or CentOS on the server, etc. or what not.&lt;/p&gt;
-
-&lt;p&gt;My personal preference won&amp;rsquo;t mean anything if a project goes bigger than me. I value working with other people over technology choices, even if the collectively-decided pieces of the stack were a little different from my own stack.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=9122381&quot; target=&quot;_blank&quot;&gt;Discussion on HackerNews&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sat, 28 Feb 2015 12:49:57 +0800</pubDate>
-        <link>http://acesubido.com/2015/02/28/what-is-your-stack.html</link>
-        <guid isPermaLink="true">http://acesubido.com/2015/02/28/what-is-your-stack.html</guid>
-        
-        <category>work</category>
         
         
       </item>

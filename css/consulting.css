@@ -105,8 +105,8 @@ code {
 
 pre {
   display: block;
-  padding: 1rem;
-  margin: 0 0 1rem;
+  padding: 1.25rem 1.5rem;
+  margin: 0 0 1.5rem;
   font-size: 0.95rem;
   line-height: 1.5;
   color: #333;
