@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Just keeping this short (since I really find it awkward to write a bio of myself):
+Just keeping this short since I really find it awkward to write a bio of myself:
 
 - I'm a christian. This is who I am. I am a husband to a wonderful woman named [Elain](http://elainojeda.com) and a father to my first baby, Samuel Navi.
 - I make software. This is what I do. I currently work at [Bloom Solutions](https://bloom.solutions) as a Software Engineer.
