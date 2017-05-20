@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Speed up Ruby app bootup time</title>
+  <meta name="description" content="I frequently work with a large ruby application, and whenever I run rspec path/to/single_unit_test.rb in a Rails application, it takes 2-3 seconds before the...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://acesubido.com/2017/05/20/speed-up-ruby-app-bootup-time.html">
+  <link rel="alternate" type="application/rss+xml" title="acesubido" href="/feed.xml" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+</head>
+
+  <body>
+    <header class="site-header">
+  <div class="site-title">
+    <ul class="navigation-links-list">
+      <li>
+        acesubido
+        &mdash;
+      </li>
+      <li>
+        <a href="/">posts</a>
+      </li>
+      <li>
+        <a href="/about">about/contact</a>
+      </li>
+      <li>
+        <a href="/feed.xml">subscribe via rss</a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+    <div class="container">
+      <section class="post-full">
+  <header>
+    <h1 class="post-full-title">Speed up Ruby app bootup time</h1>
+    <span class="post-date">
+      May 20, 2017
+      
+      
+    </span>
+  </header>
+  <hr class="post-divider"/>
+  <article>
+    <p>I frequently work with a large ruby application, and whenever I run <code>rspec path/to/single_unit_test.rb</code> in a Rails application, it takes 2-3 seconds before the test starts. This is because of the amount of source files that are involved in the application. Fortunately, Shopify released a gem called <a href="https://github.com/shopify/bootsnap"><code>bootsnap</code></a>.</p>
+
+<ul>
+  <li>The short story: it speeds up ruby app boot time. Useful for large monolithic applications. Ruby apps slow down if you <code>require</code> a lot of source files, so it speeds things up by doing applying some optimizations (compilation caching, YAML optimzations, etc.)</li>
+  <li><a href="https://engineering.shopify.com/235340559-bootsnap-optimizing-ruby-app-boot-time">The long explanation, found here</a></li>
+</ul>
+
+<p>Simplest setup for a Rails 5.1.1 app (as of <code>bootsnap 0.2.14</code>).</p>
+
+<pre><code># Gemfile
+
+gem 'bootsnap'
+
+# bin/bundle
+
+require 'bootsnap'
+Bootsnap.setup(
+  cache_dir: 'tmp/cache',
+  development_mode: ENV['RAILS_ENV'] == 'development',
+  load_path_cache: true,
+  autoload_paths_cache: true,
+  disable_trace: false,
+  compile_cache_iseq: true,
+  compile_cache_yaml: true,
+)
+</code></pre>
+
+<p>It plays nicely with spring by speeding up the pre-fork and post-fork. Definitely a gem worth watching out for.</p>
+
+  </article>
+</section>
+
+    </div>
+    <footer class="site-footer">
+  <nav class="footer-links">
+    <ul class="navigation-links-list">
+      <li>
+        acesubido
+        &mdash;
+      </li>
+      <li>
+        <a href="/">posts</a>
+      </li>
+      <li>
+        <a href="/about">about/contact</a>
+      </li>
+      <li>
+        <a href="/feed.xml">subscribe via rss</a>
+      </li>
+    </ul>
+  </nav>
+</footer>
+
+<script type="text/javascript" src="/javascript/google-analytics.js"></script>
+
+  </body>
+
+</html>

@@ -5,9 +5,47 @@
     <description></description>
     <link>http://acesubido.com/</link>
     <atom:link href="http://acesubido.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 17 May 2017 18:38:01 +0800</pubDate>
-    <lastBuildDate>Wed, 17 May 2017 18:38:01 +0800</lastBuildDate>
+    <pubDate>Sat, 20 May 2017 17:42:12 +0800</pubDate>
+    <lastBuildDate>Sat, 20 May 2017 17:42:12 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>Speed up Ruby app bootup time</title>
+        <description>&lt;p&gt;I frequently work with a large ruby application, and whenever I run &lt;code&gt;rspec path/to/single_unit_test.rb&lt;/code&gt; in a Rails application, it takes 2-3 seconds before the test starts. This is because of the amount of source files that are involved in the application. Fortunately, Shopify released a gem called &lt;a href=&quot;https://github.com/shopify/bootsnap&quot;&gt;&lt;code&gt;bootsnap&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;The short story: it speeds up ruby app boot time. Useful for large monolithic applications. Ruby apps slow down if you &lt;code&gt;require&lt;/code&gt; a lot of source files, so it speeds things up by doing applying some optimizations (compilation caching, YAML optimzations, etc.)&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://engineering.shopify.com/235340559-bootsnap-optimizing-ruby-app-boot-time&quot;&gt;The long explanation, found here&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Simplest setup for a Rails 5.1.1 app (as of &lt;code&gt;bootsnap 0.2.14&lt;/code&gt;).&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# Gemfile
+
+gem 'bootsnap'
+
+# bin/bundle
+
+require 'bootsnap'
+Bootsnap.setup(
+  cache_dir: 'tmp/cache',
+  development_mode: ENV['RAILS_ENV'] == 'development',
+  load_path_cache: true,
+  autoload_paths_cache: true,
+  disable_trace: false,
+  compile_cache_iseq: true,
+  compile_cache_yaml: true,
+)
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It plays nicely with spring by speeding up the pre-fork and post-fork. Definitely a gem worth watching out for.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 20 May 2017 00:00:00 +0800</pubDate>
+        <link>http://acesubido.com/2017/05/20/speed-up-ruby-app-bootup-time.html</link>
+        <guid isPermaLink="true">http://acesubido.com/2017/05/20/speed-up-ruby-app-bootup-time.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>BigDecimal vs. Float for anything related to finance</title>
@@ -535,31 +573,6 @@ What’s the best way para ma-save ko ang money ko at hindi ako bili ng bili ng 
         <pubDate>Mon, 03 Aug 2015 22:00:08 +0800</pubDate>
         <link>http://acesubido.com/2015/08/03/making-a-home.html</link>
         <guid isPermaLink="true">http://acesubido.com/2015/08/03/making-a-home.html</guid>
-        
-        <category>personal</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>What do you wish you had known before you turned 40?</title>
-        <description>&lt;blockquote&gt;What do you wish you had known before you turned 40?&lt;/blockquote&gt;&amp;#8212;&lt;p&gt;&amp;ldquo;Practice is the key to getting better at everything. Ignore the concept of innate talent or gift. People who are good are good because they spent a lot of time practicing.&lt;/p&gt;
-
-&lt;p&gt;People who practice a lot usually do so because they’re interested in it. It’s not hard or homework for them. If there’s a gift, it’s the gift of interest.&lt;/p&gt;
-
-&lt;p&gt;Artists copy a lot. They don’t come up with stuff clear out of their heads. They look at a lot of things, keep a lot of references, and blend ideas together.&lt;/p&gt;
-
-&lt;p&gt;Most people who are famous are so not because they’re good, but because they’ve worked hard to become famous. It was important to them, so they did what it took to become famous. Being good at something is a small part of that, small enough that famous people aren’t usually all that good. Their time was better spent becoming famous. (This is the biggest lesson from this list. It basically implies that you can ignore people who have blogs and podcasts. Seek out the unknown experts in your field.)&lt;/p&gt;
-
-&lt;p&gt;Don’t make decisions based on money. Don’t stay at a job because the shares might be worth something, or because the company might get acquired. These things rarely happen and you can’t get your time back.&lt;/p&gt;
-
-&lt;p&gt;Everyone is totally winging it all the time. Confident people are just better at hiding it.&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://news.ycombinator.com/item?id=9092456&quot; target=&quot;_blank&quot;&gt;— lkesteloot&lt;/a&gt;, on &lt;a href=&quot;https://news.ycombinator.com/item?id=9092246&quot; target=&quot;_blank&quot;&gt;What do you wish you had known before you turned 40?&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sat, 28 Feb 2015 13:13:28 +0800</pubDate>
-        <link>http://acesubido.com/2015/02/28/what-do-you-wish-you-had-known-before-you-turned.html</link>
-        <guid isPermaLink="true">http://acesubido.com/2015/02/28/what-do-you-wish-you-had-known-before-you-turned.html</guid>
         
         <category>personal</category>
         
