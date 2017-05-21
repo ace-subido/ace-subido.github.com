@@ -51,9 +51,9 @@
 
 <p><img src="/img/blog/ourwifisetup.png" alt="" /></p>
 
-<p>“LinkSys Router” and “Wifi Repeater” are ours, we bought them at PC Express. You might have a similar one, here’s a few things I encountered while optimizing my network:</p>
+<p>“LinkSys Router” and “Wifi Repeater” are ours, we bought them at PC Express. You might have a similar one, here’s a few things I encountered while optimizing our wifi network:</p>
 
-<h3 id="for-the-main-router">For The Main Router</h3>
+<h4 id="for-the-main-router">For The Main Router</h4>
 
 <ul>
   <li>Depending on your ISP, it’s best to set some DNS Servers on the main router. Google (8.8.8.8 and 8.8.4.4) and OpenDNS Servers (208.67.222.222 and 208.67.220.220) are best. Personally, we use PLDT, so I leave this blank. Using Google or OpenDNS as your DNS Servers seems a good idea but not for us. Based on my experience, for PLDT MyDSL Home connections, PLDT optimizes their connections with PLDT’s DNS Servers. Otherwise, you get bogged down by a lot of “Resolving Host” issues. A minor compromise.</li>
@@ -61,14 +61,15 @@
   <li>Set your “Standard Channel” to some other channel that’s not common with other Wifi Signals in your area. Use a Wifi scanner (install one in your Android phone) and scan your area for other Wifi signals, there you’ll see the channels their using. If you set your “Standard Channel” to something uncommon, you’ll get better reception and network performance since you’re in a “less” crowded channel.</li>
 </ul>
 
-<h3 id="for-repeaters">For Repeaters</h3>
+<h4 id="for-repeaters">For Repeaters</h4>
 
 <ul>
   <li>Anything infrastructure related should have Static IP’s. So if you have Wifi repeaters in your home, set a static IP for them in the main router. This’ll prevent them from having to look for an IP everytime they’re booted, or their connection needs to be renewed. It makes resolving hosts faster as well. For Linksys routers just click on “DHCP Reservation” and you’ll find the repeater listed there. Check it and reserve an IP for it.</li>
   <li>Channel Width should be set as the same with the main router it’s connected to.</li>
-  <li>Try to give it a different name, so as not to litter SSID’s on each device.</li>
   <li>Double check that your repeater is also set on the same encryption.</li>
 </ul>
+
+<p>I bet there are a lot more settings I’ve missed, and this is a work in progress.</p>
 
   </article>
 </section>
