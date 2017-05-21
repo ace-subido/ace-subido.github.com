@@ -7,7 +7,16 @@ So, I'm in the process of trying to get the most of our internet setup at home. 
 
 ![](/img/blog/ourwifisetup.png)
 
-"LinkSys Router" and "Wifi Repeater" are ours, we bought them at PC Express. You might have a similar one, here's a few things I encountered while optimizing our wifi network:
+### What we bought and what we will buy
+
+"LinkSys Router" and "Wifi Repeater" are ours, we bought them at PC Express. The router and repeater we have are very old Linksys models, RE1000 for the Repeater and WRT120 for the router. RE1000 was purchased around 2012 and the WRT120N was purchased around 2010 model. What we plan to buy are the following:
+
+- [Router: TP-Link Archer C7 V2 (link for Lazada)](http://www.lazada.com.ph/tp-link-archer-c7-ac1750-1300mbps-dual-band-wireless-routerversion-2-6101453.html?ff=1). [An extensive review was made on it](http://thewirecutter.com/reviews/best-wi-fi-router/) and it's pretty cheap compared to the other options. It's also tested against a multi-room house like ours.
+- [Repeater: TP-Link RE580D WiFi Extender (link for Lazada)](http://www.lazada.com.ph/tp-link-re580d-ac1900-wi-fi-range-extender-5-gigabit-port-3616855.html?ff=1). [Review's are favorable](http://www.tomsguide.com/us/best-wifi-extenders,review-2225.html)
+
+### Optimizing the Network
+
+But before we purchase this, I'll have to optimize our network first and do a benchmark so here's a few things I encountered while optimizing our wifi network:
 
 #### For The Main Router
 

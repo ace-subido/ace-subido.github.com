@@ -12,7 +12,7 @@ Just keeping this short since I really find it awkward to write a bio of myself:
 
 ### Contact Details
 
-You can reach me at hello@acesubido.com
+You can reach me at hello@acesubido.com. I live in the Philippines, so replies might not come in your timezone.
 
 ### Other Things In This Site
 
