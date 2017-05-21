@@ -5,8 +5,8 @@
     <description></description>
     <link>http://acesubido.com/</link>
     <atom:link href="http://acesubido.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 21 May 2017 23:42:56 +0800</pubDate>
-    <lastBuildDate>Sun, 21 May 2017 23:42:56 +0800</lastBuildDate>
+    <pubDate>Sun, 21 May 2017 23:45:12 +0800</pubDate>
+    <lastBuildDate>Sun, 21 May 2017 23:45:12 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -28,7 +28,7 @@
 &lt;h3 id=&quot;for-repeaters&quot;&gt;For Repeaters&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Anything infrastructure related should have Static IP’s. So if you have Wifi repeaters in your home, set a static IP for them in the main router. This’ll prevent them from having to look for an IP everytime they’re booted, or their connection needs to be renewed. It makes resolving hosts faster as well. For Linksys routers&lt;/li&gt;
+  &lt;li&gt;Anything infrastructure related should have Static IP’s. So if you have Wifi repeaters in your home, set a static IP for them in the main router. This’ll prevent them from having to look for an IP everytime they’re booted, or their connection needs to be renewed. It makes resolving hosts faster as well. For Linksys routers just click on “DHCP Reservation” and you’ll find the repeater listed there. Check it and reserve an IP for it.&lt;/li&gt;
   &lt;li&gt;Channel Width should be set as the same with the main router it’s connected to.&lt;/li&gt;
   &lt;li&gt;Try to give it a different name, so as not to litter SSID’s on each device.&lt;/li&gt;
   &lt;li&gt;Double check that your repeater is also set on the same encryption.&lt;/li&gt;
