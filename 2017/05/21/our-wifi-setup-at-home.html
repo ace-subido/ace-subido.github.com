@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Our Wifi setup at home</title>
+  <meta name="description" content="So, I’m in the process of trying to get the most of our internet setup at home. I’ve worked with Network Architects and ansible’d network configurations for ...">
+
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://acesubido.com/2017/05/21/our-wifi-setup-at-home.html">
+  <link rel="alternate" type="application/rss+xml" title="acesubido" href="/feed.xml" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+</head>
+
+  <body>
+    <header class="site-header">
+  <div class="site-title">
+    <ul class="navigation-links-list">
+      <li>
+        acesubido
+        &mdash;
+      </li>
+      <li>
+        <a href="/">posts</a>
+      </li>
+      <li>
+        <a href="/about">about/contact</a>
+      </li>
+      <li>
+        <a href="/feed.xml">subscribe via rss</a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+    <div class="container">
+      <section class="post-full">
+  <header>
+    <h1 class="post-full-title">Our Wifi setup at home</h1>
+    <span class="post-date">
+      May 21, 2017
+      
+      
+    </span>
+  </header>
+  <hr class="post-divider"/>
+  <article>
+    <p>So, I’m in the process of trying to get the most of our internet setup at home. I’ve worked with Network Architects and ansible’d network configurations for large Hadoop clusters to pipe out petabytes, but sadly, I haven’t sat down and fixed our internet at home. I’m a software engineer, and no means a hardcore Cisco Certified Network Engineer, but here’s what I found out about tinkering with our routers and such. To give a short background, our current internet setup at home looks like this:</p>
+
+<p><img src="/img/blog/ourwifisetup.png" alt="" /></p>
+
+<p>“LinkSys Router” and “Wifi Repeater” are ours, we bought them at PC Express. You might have a similar one, here’s a few things I encountered while optimizing my network:</p>
+
+<h3 id="for-the-main-router">For The Main Router</h3>
+
+<ul>
+  <li>Depending on your ISP, it’s best to set some DNS Servers on the main router. Google (8.8.8.8 and 8.8.4.4) and OpenDNS Servers (208.67.222.222 and 208.67.220.220) are best. Personally, we use PLDT, so I leave this blank. Using Google or OpenDNS as your DNS Servers seems a good idea but not for us. Based on my experience, for PLDT MyDSL Home connections, PLDT optimizes their connections with PLDT’s DNS Servers. Otherwise, you get bogged down by a lot of “Resolving Host” issues. A minor compromise.</li>
+  <li>On “Channel Width”, as much as possible, set it to 40MHz wide channels. You get the best peformance out of it. But only use this if all of your devices support 802.11n. Otherwise, just use the 20MHz default.</li>
+  <li>Set your “Standard Channel” to some other channel that’s not common with other Wifi Signals in your area. Use a Wifi scanner (install one in your Android phone) and scan your area for other Wifi signals, there you’ll see the channels their using. If you set your “Standard Channel” to something uncommon, you’ll get better reception and network performance since you’re in a “less” crowded channel.</li>
+</ul>
+
+<h3 id="for-repeaters">For Repeaters</h3>
+
+<ul>
+  <li>Anything infrastructure related should have Static IP’s. So if you have Wifi repeaters in your home, set a static IP for them in the main router. This’ll prevent them from having to look for an IP everytime they’re booted, or their connection needs to be renewed. It makes resolving hosts faster as well. For Linksys routers</li>
+  <li>Channel Width should be set as the same with the main router it’s connected to.</li>
+  <li>Try to give it a different name, so as not to litter SSID’s on each device.</li>
+  <li>Double check that your repeater is also set on the same encryption.</li>
+</ul>
+
+  </article>
+</section>
+
+    </div>
+    <footer class="site-footer">
+  <nav class="footer-links">
+    <ul class="navigation-links-list">
+      <li>
+        acesubido
+        &mdash;
+      </li>
+      <li>
+        <a href="/">posts</a>
+      </li>
+      <li>
+        <a href="/about">about/contact</a>
+      </li>
+      <li>
+        <a href="/feed.xml">subscribe via rss</a>
+      </li>
+    </ul>
+  </nav>
+</footer>
+
+<script type="text/javascript" src="/javascript/google-analytics.js"></script>
+
+  </body>
+
+</html>

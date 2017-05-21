@@ -5,9 +5,41 @@
     <description></description>
     <link>http://acesubido.com/</link>
     <atom:link href="http://acesubido.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 20 May 2017 17:42:12 +0800</pubDate>
-    <lastBuildDate>Sat, 20 May 2017 17:42:12 +0800</lastBuildDate>
+    <pubDate>Sun, 21 May 2017 23:42:56 +0800</pubDate>
+    <lastBuildDate>Sun, 21 May 2017 23:42:56 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>Our Wifi setup at home</title>
+        <description>&lt;p&gt;So, I’m in the process of trying to get the most of our internet setup at home. I’ve worked with Network Architects and ansible’d network configurations for large Hadoop clusters to pipe out petabytes, but sadly, I haven’t sat down and fixed our internet at home. I’m a software engineer, and no means a hardcore Cisco Certified Network Engineer, but here’s what I found out about tinkering with our routers and such. To give a short background, our current internet setup at home looks like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/img/blog/ourwifisetup.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;“LinkSys Router” and “Wifi Repeater” are ours, we bought them at PC Express. You might have a similar one, here’s a few things I encountered while optimizing my network:&lt;/p&gt;
+
+&lt;h3 id=&quot;for-the-main-router&quot;&gt;For The Main Router&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Depending on your ISP, it’s best to set some DNS Servers on the main router. Google (8.8.8.8 and 8.8.4.4) and OpenDNS Servers (208.67.222.222 and 208.67.220.220) are best. Personally, we use PLDT, so I leave this blank. Using Google or OpenDNS as your DNS Servers seems a good idea but not for us. Based on my experience, for PLDT MyDSL Home connections, PLDT optimizes their connections with PLDT’s DNS Servers. Otherwise, you get bogged down by a lot of “Resolving Host” issues. A minor compromise.&lt;/li&gt;
+  &lt;li&gt;On “Channel Width”, as much as possible, set it to 40MHz wide channels. You get the best peformance out of it. But only use this if all of your devices support 802.11n. Otherwise, just use the 20MHz default.&lt;/li&gt;
+  &lt;li&gt;Set your “Standard Channel” to some other channel that’s not common with other Wifi Signals in your area. Use a Wifi scanner (install one in your Android phone) and scan your area for other Wifi signals, there you’ll see the channels their using. If you set your “Standard Channel” to something uncommon, you’ll get better reception and network performance since you’re in a “less” crowded channel.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;for-repeaters&quot;&gt;For Repeaters&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Anything infrastructure related should have Static IP’s. So if you have Wifi repeaters in your home, set a static IP for them in the main router. This’ll prevent them from having to look for an IP everytime they’re booted, or their connection needs to be renewed. It makes resolving hosts faster as well. For Linksys routers&lt;/li&gt;
+  &lt;li&gt;Channel Width should be set as the same with the main router it’s connected to.&lt;/li&gt;
+  &lt;li&gt;Try to give it a different name, so as not to litter SSID’s on each device.&lt;/li&gt;
+  &lt;li&gt;Double check that your repeater is also set on the same encryption.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Sun, 21 May 2017 00:00:00 +0800</pubDate>
+        <link>http://acesubido.com/2017/05/21/our-wifi-setup-at-home.html</link>
+        <guid isPermaLink="true">http://acesubido.com/2017/05/21/our-wifi-setup-at-home.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Speed up Ruby app bootup time</title>
@@ -517,7 +549,7 @@ What’s the best way para ma-save ko ang money ko at hindi ako bili ng bili ng 
       </item>
     
       <item>
-        <title>header navigation screenshot of a cryptocurrency</title>
+        <title>Header navigation screenshot of a cryptocurrency</title>
         <description>&lt;a href=&quot;/tumblr_files/tumblr_nv6v605ZXo1rxgz1ko1_1280.png&quot;&gt;
 &lt;img src=&quot;/tumblr_files/tumblr_nv6v605ZXo1rxgz1ko1_1280.png&quot;/&gt;
 &lt;/a&gt;&lt;ul&gt;&lt;li&gt;Header navigation screenshot of a Cryptocurrency Job Board I made with a friend. &lt;/li&gt;
@@ -536,7 +568,7 @@ What’s the best way para ma-save ko ang money ko at hindi ako bili ng bili ng 
       </item>
     
       <item>
-        <title>finally got around to launch the family business</title>
+        <title>Finally got around to launch the family business</title>
         <description>&lt;a href=&quot;/tumblr_files/tumblr_nsy3e6me0V1rxgz1ko1_1280.png&quot;&gt;
 &lt;img src=&quot;/tumblr_files/tumblr_nsy3e6me0V1rxgz1ko1_1280.png&quot;/&gt;
 &lt;/a&gt;&lt;p&gt;Finally got around to launch the family business website. Here&amp;rsquo;s a shot of content above the fold.&lt;/p&gt;
@@ -546,35 +578,6 @@ What’s the best way para ma-save ko ang money ko at hindi ako bili ng bili ng 
         <guid isPermaLink="true">http://acesubido.com/2015/08/12/finally-got-around-to-launch-the-family-business.html</guid>
         
         <category>work</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Making a home</title>
-        <description>&lt;p&gt;Recently I&amp;rsquo;ve been looking at &amp;ldquo;house and lot&amp;rdquo; real estate around the Metro. At most, the figure floating in our heads is around 8M-9M PHP. To loan that amount to a bank and to pay it off for 20 years I have to:&lt;/p&gt;
-
-&lt;ul&gt;&lt;li&gt;Have Annual 2.4M PHP Income (Around 160k PHP Monthly Income)&lt;/li&gt;
-&lt;li&gt;Pay 48,500 PHP in 20 years&lt;/li&gt;
-&lt;/ul&gt;&lt;p&gt;That&amp;rsquo;s a big number to hit, and to be honest, I get overwhelmed by it.&lt;/p&gt;
-
-&lt;p&gt;But I am reminded of one thing:&lt;/p&gt;
-
-&lt;p&gt;Aiming to &amp;ldquo;build a house&amp;rdquo; between &amp;ldquo;making a home&amp;rdquo; are two different things.&lt;/p&gt;
-
-&lt;p&gt;Keeping that in mind, strive to make happy memories instead of zoning out for the next 5-10 years trying to make more money.&lt;/p&gt;
-
-&lt;p&gt;Anxiously waiting to hit your financial goals, looking forward to pay days and stressing out to make more money will not &amp;ldquo;make a home&amp;rdquo;. The only memories you&amp;rsquo;ll imprint on your wife and children will be of a man who always arrived home thinking of business and cash.&lt;/p&gt;
-
-&lt;p&gt;&amp;ldquo;Building a house&amp;rdquo; is only part of &amp;ldquo;making a home&amp;rdquo;, not the other way around. Ask God to help you balance the emotions out, you don&amp;rsquo;t even need to ask Him for money. Have faith, He basically got your back already.&lt;/p&gt;
-
-&lt;p&gt;He already got you married right?&lt;/p&gt;
-</description>
-        <pubDate>Mon, 03 Aug 2015 22:00:08 +0800</pubDate>
-        <link>http://acesubido.com/2015/08/03/making-a-home.html</link>
-        <guid isPermaLink="true">http://acesubido.com/2015/08/03/making-a-home.html</guid>
-        
-        <category>personal</category>
         
         
       </item>
