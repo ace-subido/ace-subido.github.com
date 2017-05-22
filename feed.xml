@@ -5,8 +5,8 @@
     <description>my journal on work and life</description>
     <link>http://acesubido.com/</link>
     <atom:link href="http://acesubido.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 22 May 2017 13:19:52 +0800</pubDate>
-    <lastBuildDate>Mon, 22 May 2017 13:19:52 +0800</lastBuildDate>
+    <pubDate>Mon, 22 May 2017 13:21:06 +0800</pubDate>
+    <lastBuildDate>Mon, 22 May 2017 13:21:06 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -21,7 +21,7 @@
 
 &lt;p&gt;Almost everyone probably has this simple setup, unless you have a mansion and you need to cover every inch of your house, including your garden and pool.&lt;/p&gt;
 
-&lt;p&gt;So, I open up my terminal and do some tests. Initial tests revealed that network between 2 local IP addresses in our network is both slow and experiences packet loss. In layman’s terms: our wifi coverage and signal throughput generally suck. Beyond the terminal, it’s pretty apparent. A LAN game of “Starcraft: Brood War” between 2 laptops connected on the same network via Wifi, to the same router, is pretty laggy.&lt;/p&gt;
+&lt;p&gt;So, I open up terminals and do some &lt;code&gt;iperf&lt;/code&gt; and &lt;code&gt;nc&lt;/code&gt; tests. Initial results revealed that network between 2 local IP addresses in our network is both slow and experiences packet loss. In layman’s terms: our wifi coverage and signal throughput generally suck. Beyond the terminal, it’s pretty apparent. A LAN game of “Starcraft: Brood War” between 2 laptops connected on the same network via Wifi, to the same router, is pretty laggy.&lt;/p&gt;
 
 &lt;p&gt;So it’s time to really improve our WiFi coverage.&lt;/p&gt;
 
