@@ -1,5 +1,6 @@
 # Site settings
 title: acesubido
+description: "my journal on work and life"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://acesubido.com" # the base hostname & protocol for your site
 twitter_username: acesubido

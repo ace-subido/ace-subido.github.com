@@ -35,9 +35,9 @@
   {% endif %}
 
   {% if page.image %}
-    <meta content="/img/blog/{{ page.image }}" property="og:image">
+    <meta content="{{ '/img/blog/' + page.image | prepend: site.baseurl }}" property="og:image">
   {% else %}
-    <meta content="/img/logo-hires.png" property="og:image">
+    <meta content="{{ '/img/logo-hires.png' | prepend: site.baseurl }}" property="og:image">
   {% endif %}
 
   <meta name="twitter:title" content="European Travel Destinations ">
