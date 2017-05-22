@@ -5,8 +5,8 @@
     <description>my journal on work and life</description>
     <link>http://acesubido.com/</link>
     <atom:link href="http://acesubido.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 22 May 2017 13:23:40 +0800</pubDate>
-    <lastBuildDate>Mon, 22 May 2017 13:23:40 +0800</lastBuildDate>
+    <pubDate>Mon, 22 May 2017 13:27:27 +0800</pubDate>
+    <lastBuildDate>Mon, 22 May 2017 13:27:27 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -27,7 +27,7 @@
 
 &lt;h4 id=&quot;what-we-bought-and-what-we-will-buy&quot;&gt;What we bought and what we will buy&lt;/h4&gt;
 
-&lt;p&gt;From the earlier diagram, “LinkSys Router” and “LinkSys Wifi Repeater” are ours, we bought them at PC Express. The router and repeater we have are very old Linksys models, RE1000 for the Repeater and WRT120 for the router. RE1000 was purchased around 2012 and the WRT120N was purchased around 2010. We plan to buy new ones, but should be under a specific budget: 8,000PHP for a router, and 8,000PHP for a repeater. I know that’s sounds a lot, but I’m currently working from home and would need the internet at our house really worked up. What we plan to buy are the following:&lt;/p&gt;
+&lt;p&gt;From the earlier diagram, “Our Wifi Router” and “Our Repeater” we’re bought at PC Express. The router and repeater we have are very old Linksys models, RE1000 for the Repeater and WRT120 for the router. RE1000 was purchased around 2012 and the WRT120N was purchased around 2010. We plan to buy new ones, but should be under a specific budget: 8,000PHP for a router, and 8,000PHP for a repeater. I know that sounds a lot, but I’m currently working from home and would need the internet at our house really worked up. What we plan to buy are the following:&lt;/p&gt;
 
 &lt;h4 id=&quot;for-the-router-we-chose-the-tp-link-archer-c7-v2&quot;&gt;For the router we chose the TP-Link Archer C7 V2&lt;/h4&gt;
 
@@ -39,7 +39,7 @@
 
 &lt;p&gt;&lt;img src=&quot;/img/blog/ourwifisetup-re580d.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Looking for a counterpart to the router, it seems that Netgear Nighthawk EX7000 or EX6200 takes the cake. But there’s no way to purchase it that easily here in the Philippines, so I came across this TP-Link extender, and the &lt;a href=&quot;http://www.tomsguide.com/us/best-wifi-extenders,review-2225.html&quot;&gt;review’s are good&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Looking for a counterpart to the router, it seems that Netgear Nighthawk EX7000 or EX6200 takes the cake. But there’s no way to purchase it conveniently here in the Philippines, so I came across this TP-Link extender, and the &lt;a href=&quot;http://www.tomsguide.com/us/best-wifi-extenders,review-2225.html&quot;&gt;review’s are good&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;optimizing-the-network&quot;&gt;Optimizing the Network&lt;/h3&gt;
 
@@ -65,6 +65,7 @@
 
 &lt;ul&gt;
   &lt;li&gt;Unless you’re doing something out of the norm, like remote tunnels to datacenters, don’t set your DNS servers. Let the router supply them for you.&lt;/li&gt;
+  &lt;li&gt;If you’re using Google Chrome, flush your DNS cache. You can do this by typing this address at the chrome address bar: chrome://net-internals/#dns . Then click ‘Clear Host Cache’.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;what-do-you-use-to-test-internet-speeds&quot;&gt;“What do you use to test internet speeds?”&lt;/h4&gt;
