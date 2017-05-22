@@ -84,7 +84,7 @@
 
 <h3 id="what-we-bought-and-what-we-will-buy">What we bought and what we will buy</h3>
 
-<p>“LinkSys Router” and “Wifi Repeater” are ours, we bought them at PC Express. The router and repeater we have are very old Linksys models, RE1000 for the Repeater and WRT120 for the router. RE1000 was purchased around 2012 and the WRT120N was purchased around 2010 model. What we plan to buy are the following:</p>
+<p>“LinkSys Router” and “Wifi Repeater” are ours, we bought them at PC Express. The router and repeater we have are very old Linksys models, RE1000 for the Repeater and WRT120 for the router. RE1000 was purchased around 2012 and the WRT120N was purchased around 2010 model. We plan to buy new ones, but should be under a specific budget. 8,000PHP for a router, and 8,000PHP for a repeater. I know that’s sounds a lot, but I’m currently working from home and would need the internet at our house really worked up. What we plan to buy are the following:</p>
 
 <ul>
   <li><a href="http://www.lazada.com.ph/tp-link-archer-c7-ac1750-1300mbps-dual-band-wireless-routerversion-2-6101453.html?ff=1">Router: TP-Link Archer C7 V2 (link for Lazada)</a>. <a href="http://thewirecutter.com/reviews/best-wi-fi-router/">An extensive review was made on it</a> and it’s pretty cheap compared to the other options. It’s also tested against a multi-room house like ours.</li>
@@ -93,7 +93,7 @@
 
 <h3 id="optimizing-the-network">Optimizing the Network</h3>
 
-<p>But before we purchase this, I’ll have to optimize our network first and do a benchmark so here’s a few things I encountered while optimizing our wifi network:</p>
+<p>But before we purchase this, I’ll have to optimize our network first and do a benchmark. So here’s a few things I encountered while optimizing our wifi network:</p>
 
 <h4 id="for-the-main-router">For The Main Router</h4>
 
@@ -106,9 +106,15 @@
 <h4 id="for-repeaters">For Repeaters</h4>
 
 <ul>
-  <li>Anything infrastructure related should have Static IP’s. So if you have Wifi repeaters in your home, set a static IP for them in the main router. This’ll prevent them from having to look for an IP everytime they’re booted, or their connection needs to be renewed. It makes resolving hosts faster as well. For Linksys routers just click on “DHCP Reservation” and you’ll find the repeater listed there. Check it and reserve an IP for it.</li>
+  <li>Anything infrastructure related should have Static IP’s. So if you have Wifi repeaters in your home, set a static IP for them in the main router. This’ll prevent them from having to look for an IP everytime they’re booted, or their connection needs to be renewed. It makes resolving hosts faster as well. For Linksys routers just click on “DHCP Reservation” and look for your repeater repeater listed there. Check it and reserve an IP for it.</li>
   <li>Channel Width should be set as the same with the main router it’s connected to.</li>
-  <li>Double check that your repeater is also set on the same encryption.</li>
+  <li>Double check that your repeater is also set on the same encryption as the main router.</li>
+</ul>
+
+<h4 id="for-devices">For devices</h4>
+
+<ul>
+  <li>Unless you’re doing something out of the norm, like remote tunnels to datacenters, don’t set your DNS servers. Let the router supply them for you.</li>
 </ul>
 
 <p>I bet there are a lot more settings I’ve missed, and this is a work in progress.</p>

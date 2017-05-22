@@ -5,8 +5,8 @@
     <description>my journal on work and life</description>
     <link>http://acesubido.com/</link>
     <atom:link href="http://acesubido.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 22 May 2017 11:51:51 +0800</pubDate>
-    <lastBuildDate>Mon, 22 May 2017 11:51:51 +0800</lastBuildDate>
+    <pubDate>Mon, 22 May 2017 12:00:14 +0800</pubDate>
+    <lastBuildDate>Mon, 22 May 2017 12:00:14 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -17,7 +17,7 @@
 
 &lt;h3 id=&quot;what-we-bought-and-what-we-will-buy&quot;&gt;What we bought and what we will buy&lt;/h3&gt;
 
-&lt;p&gt;“LinkSys Router” and “Wifi Repeater” are ours, we bought them at PC Express. The router and repeater we have are very old Linksys models, RE1000 for the Repeater and WRT120 for the router. RE1000 was purchased around 2012 and the WRT120N was purchased around 2010 model. What we plan to buy are the following:&lt;/p&gt;
+&lt;p&gt;“LinkSys Router” and “Wifi Repeater” are ours, we bought them at PC Express. The router and repeater we have are very old Linksys models, RE1000 for the Repeater and WRT120 for the router. RE1000 was purchased around 2012 and the WRT120N was purchased around 2010 model. We plan to buy new ones, but should be under a specific budget. 8,000PHP for a router, and 8,000PHP for a repeater. I know that’s sounds a lot, but I’m currently working from home and would need the internet at our house really worked up. What we plan to buy are the following:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.lazada.com.ph/tp-link-archer-c7-ac1750-1300mbps-dual-band-wireless-routerversion-2-6101453.html?ff=1&quot;&gt;Router: TP-Link Archer C7 V2 (link for Lazada)&lt;/a&gt;. &lt;a href=&quot;http://thewirecutter.com/reviews/best-wi-fi-router/&quot;&gt;An extensive review was made on it&lt;/a&gt; and it’s pretty cheap compared to the other options. It’s also tested against a multi-room house like ours.&lt;/li&gt;
@@ -26,7 +26,7 @@
 
 &lt;h3 id=&quot;optimizing-the-network&quot;&gt;Optimizing the Network&lt;/h3&gt;
 
-&lt;p&gt;But before we purchase this, I’ll have to optimize our network first and do a benchmark so here’s a few things I encountered while optimizing our wifi network:&lt;/p&gt;
+&lt;p&gt;But before we purchase this, I’ll have to optimize our network first and do a benchmark. So here’s a few things I encountered while optimizing our wifi network:&lt;/p&gt;
 
 &lt;h4 id=&quot;for-the-main-router&quot;&gt;For The Main Router&lt;/h4&gt;
 
@@ -39,9 +39,15 @@
 &lt;h4 id=&quot;for-repeaters&quot;&gt;For Repeaters&lt;/h4&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Anything infrastructure related should have Static IP’s. So if you have Wifi repeaters in your home, set a static IP for them in the main router. This’ll prevent them from having to look for an IP everytime they’re booted, or their connection needs to be renewed. It makes resolving hosts faster as well. For Linksys routers just click on “DHCP Reservation” and you’ll find the repeater listed there. Check it and reserve an IP for it.&lt;/li&gt;
+  &lt;li&gt;Anything infrastructure related should have Static IP’s. So if you have Wifi repeaters in your home, set a static IP for them in the main router. This’ll prevent them from having to look for an IP everytime they’re booted, or their connection needs to be renewed. It makes resolving hosts faster as well. For Linksys routers just click on “DHCP Reservation” and look for your repeater repeater listed there. Check it and reserve an IP for it.&lt;/li&gt;
   &lt;li&gt;Channel Width should be set as the same with the main router it’s connected to.&lt;/li&gt;
-  &lt;li&gt;Double check that your repeater is also set on the same encryption.&lt;/li&gt;
+  &lt;li&gt;Double check that your repeater is also set on the same encryption as the main router.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;for-devices&quot;&gt;For devices&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Unless you’re doing something out of the norm, like remote tunnels to datacenters, don’t set your DNS servers. Let the router supply them for you.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;p&gt;I bet there are a lot more settings I’ve missed, and this is a work in progress.&lt;/p&gt;
