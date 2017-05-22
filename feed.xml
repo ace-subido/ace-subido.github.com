@@ -5,15 +5,15 @@
     <description>my journal on work and life</description>
     <link>http://acesubido.com/</link>
     <atom:link href="http://acesubido.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 22 May 2017 13:57:25 +0800</pubDate>
-    <lastBuildDate>Mon, 22 May 2017 13:57:25 +0800</lastBuildDate>
+    <pubDate>Mon, 22 May 2017 14:47:08 +0800</pubDate>
+    <lastBuildDate>Mon, 22 May 2017 14:47:08 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
         <title>Improving our WiFi at home</title>
-        <description>&lt;p&gt;So, I’m in the process of trying to get the best performance out of our internet setup at home. I’ve worked with Network Architects and ansible’d network configurations for large Hadoop clusters the frequently transfer terabytes, but sadly, I haven’t sat down and fixed our internet at home. I’m a software engineer, and no means a hardcore Cisco Certified Network Engineer, so I decided to sit on this problem and improve our situation.&lt;/p&gt;
+        <description>&lt;p&gt;So, I’m in the process of trying to get the best performance out of our internet setup at home. I’ve worked with Network Architects and ansible’d network configurations for large Hadoop clusters the frequently transfer terabytes, but sadly, I haven’t sat down and fixed our internet at home. I’m a software engineer, and no means a hardcore Cisco Certified Network Engineer, so I decided to sit on this problem and try to improve our situation.&lt;/p&gt;
 
-&lt;p&gt;If you have slow internet, you can’t just throwing money at the problem by upgrading your ISP subscription and shouting at customer service. You’ll have to check off problems one by one. For me, I sat down and thought: I’ll have to start by improving what I can improve on my side. Which means, the WiFi network within our home.&lt;/p&gt;
+&lt;p&gt;If you have slow internet, you can’t just keep throwing money at the problem by upgrading your ISP subscription. You’ll have to check off problems one by one. For me, I sat down and thought: I’ll have to start by improving what I can improve on my side. Which means, the WiFi network within our home.&lt;/p&gt;
 
 &lt;p&gt;To give a short background, our current internet setup at home looks like this:&lt;/p&gt;
 
