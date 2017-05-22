@@ -35,7 +35,7 @@
   {% endif %}
 
   {% if page.image %}
-    <meta content="{{ '/img/blog/' + page.image | prepend: site.baseurl }}" property="og:image">
+    <meta content="{{ '/img/blog/ | prepend: site.baseurl }}{{ page.image }}" property="og:image">
   {% else %}
     <meta content="{{ '/img/logo-hires.png' | prepend: site.baseurl }}" property="og:image">
   {% endif %}
