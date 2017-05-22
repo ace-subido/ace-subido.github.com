@@ -5,8 +5,8 @@
     <description></description>
     <link>http://acesubido.com/</link>
     <atom:link href="http://acesubido.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 22 May 2017 00:48:54 +0800</pubDate>
-    <lastBuildDate>Mon, 22 May 2017 00:48:54 +0800</lastBuildDate>
+    <pubDate>Mon, 22 May 2017 11:24:26 +0800</pubDate>
+    <lastBuildDate>Mon, 22 May 2017 11:24:26 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -15,7 +15,18 @@
 
 &lt;p&gt;&lt;img src=&quot;/img/blog/ourwifisetup.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;“LinkSys Router” and “Wifi Repeater” are ours, we bought them at PC Express. You might have a similar one, here’s a few things I encountered while optimizing our wifi network:&lt;/p&gt;
+&lt;h3 id=&quot;what-we-bought-and-what-we-will-buy&quot;&gt;What we bought and what we will buy&lt;/h3&gt;
+
+&lt;p&gt;“LinkSys Router” and “Wifi Repeater” are ours, we bought them at PC Express. The router and repeater we have are very old Linksys models, RE1000 for the Repeater and WRT120 for the router. RE1000 was purchased around 2012 and the WRT120N was purchased around 2010 model. What we plan to buy are the following:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.lazada.com.ph/tp-link-archer-c7-ac1750-1300mbps-dual-band-wireless-routerversion-2-6101453.html?ff=1&quot;&gt;Router: TP-Link Archer C7 V2 (link for Lazada)&lt;/a&gt;. &lt;a href=&quot;http://thewirecutter.com/reviews/best-wi-fi-router/&quot;&gt;An extensive review was made on it&lt;/a&gt; and it’s pretty cheap compared to the other options. It’s also tested against a multi-room house like ours.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.lazada.com.ph/tp-link-re580d-ac1900-wi-fi-range-extender-5-gigabit-port-3616855.html?ff=1&quot;&gt;Repeater: TP-Link RE580D WiFi Extender (link for Lazada)&lt;/a&gt;. &lt;a href=&quot;http://www.tomsguide.com/us/best-wifi-extenders,review-2225.html&quot;&gt;Review’s are favorable&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;optimizing-the-network&quot;&gt;Optimizing the Network&lt;/h3&gt;
+
+&lt;p&gt;But before we purchase this, I’ll have to optimize our network first and do a benchmark so here’s a few things I encountered while optimizing our wifi network:&lt;/p&gt;
 
 &lt;h4 id=&quot;for-the-main-router&quot;&gt;For The Main Router&lt;/h4&gt;
 
