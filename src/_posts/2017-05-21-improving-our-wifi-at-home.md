@@ -4,7 +4,7 @@ title: Improving our WiFi at home
 image: /img/blog/ourwifisetup-archer-c7.jpg
 ---
 
-So, I'm in the process of trying to get the most of our internet setup at home. I've worked with Network Architects and ansible'd network configurations for large Hadoop clusters the frequently transfer terabytes, but sadly, I haven't sat down and fixed our internet at home. I'm a software engineer, and no means a hardcore Cisco Certified Network Engineer, so I decided to sit on this problem and improve our situation.
+So, I'm in the process of trying to get the best performance out of our internet setup at home. I've worked with Network Architects and ansible'd network configurations for large Hadoop clusters the frequently transfer terabytes, but sadly, I haven't sat down and fixed our internet at home. I'm a software engineer, and no means a hardcore Cisco Certified Network Engineer, so I decided to sit on this problem and improve our situation.
 
 If you have slow internet, you can't just throwing money at the problem by upgrading your ISP subscription and shouting at customer service. You'll have to check off problems one by one. For me, I sat down and thought: I'll have to start by improving what I can improve on my side. Which means, the WiFi network within our home.
 
@@ -14,13 +14,13 @@ To give a short background, our current internet setup at home looks like this:
 
 Almost everyone probably has this simple setup, unless you have a mansion and you need to cover every inch of your house, including your garden and pool.
 
-So, I open up my terminal and do some tests. Initial tests revealed that network between 2 local IP addresses in our network is both slow and experiences packet loss. In layman's terms: our wifi coverage and signal throughput generally suck. Beyond the terminal, it's pretty apparent. A LAN game of "Starcraft: Brood War" between 2 laptops connected on the same network via Wifi, to the same router, is pretty laggy.
+So, I open up terminals and do some `iperf` and `nc` tests. Initial results revealed that network between 2 local IP addresses in our network is both slow and experiences packet loss. In layman's terms: our wifi coverage and network throughput generally suck. Beyond the terminal, it's pretty apparent. A LAN game of "Starcraft: Brood War" between 2 laptops connected on the same network via Wifi, to the same router, is pretty laggy.
 
 So it's time to really improve our WiFi coverage.
 
 #### What we bought and what we will buy
 
-From the earlier diagram, "LinkSys Router" and "LinkSys Wifi Repeater" are ours, we bought them at PC Express. The router and repeater we have are very old Linksys models, RE1000 for the Repeater and WRT120 for the router. RE1000 was purchased around 2012 and the WRT120N was purchased around 2010. We plan to buy new ones, but should be under a specific budget: 8,000PHP for a router, and 8,000PHP for a repeater. I know that's sounds a lot, but I'm currently working from home and would need the internet at our house really worked up. What we plan to buy are the following:
+From the earlier diagram, "Our Wifi Router" and "Our Repeater" we're bought at PC Express. The router and repeater we have are very old Linksys models, RE1000 for the Repeater and WRT120 for the router. RE1000 was purchased around 2012 and the WRT120N was purchased around 2010. We plan to buy new ones, but should be under a specific budget: 8,000PHP for a router, and 8,000PHP for a repeater. I know that sounds a lot, but I'm currently working from home and would need the internet at our house really worked up. What we plan to buy are the following:
 
 #### For the router we chose the TP-Link Archer C7 V2
 
@@ -32,7 +32,7 @@ From the earlier diagram, "LinkSys Router" and "LinkSys Wifi Repeater" are ours,
 
 ![](/img/blog/ourwifisetup-re580d.jpg)
 
-Looking for a counterpart to the router, it seems that Netgear Nighthawk EX7000 or EX6200 takes the cake. But there's no way to purchase it that easily here in the Philippines, so I came across this TP-Link extender, and the [review's are good](http://www.tomsguide.com/us/best-wifi-extenders,review-2225.html)
+Looking for a counterpart to the router, it seems that Netgear Nighthawk EX7000 or EX6200 takes the cake. But there's no way to purchase it conveniently here in the Philippines, so I came across this TP-Link extender, and the [review's are good](http://www.tomsguide.com/us/best-wifi-extenders,review-2225.html)
 
 ### Optimizing the Network
 
@@ -53,6 +53,7 @@ But before we purchase this, I'll have to optimize our network first and do a be
 #### For devices
 
 - Unless you're doing something out of the norm, like remote tunnels to datacenters, don't set your DNS servers. Let the router supply them for you.
+- If you're using Google Chrome, flush your DNS cache. You can do this by typing this address at the chrome address bar: chrome://net-internals/#dns . Then click 'Clear Host Cache'.
 
 #### "What do you use to test internet speeds?"
 
