@@ -5,8 +5,8 @@
     <description>my journal on work and life</description>
     <link>http://acesubido.com/</link>
     <atom:link href="http://acesubido.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 22 May 2017 13:34:44 +0800</pubDate>
-    <lastBuildDate>Mon, 22 May 2017 13:34:44 +0800</lastBuildDate>
+    <pubDate>Mon, 22 May 2017 13:53:37 +0800</pubDate>
+    <lastBuildDate>Mon, 22 May 2017 13:53:37 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -71,14 +71,6 @@
 &lt;h4 id=&quot;what-do-you-use-to-test-internet-speeds&quot;&gt;“What do you use to test internet speeds?”&lt;/h4&gt;
 
 &lt;p&gt;I found Netflix’s &lt;a href=&quot;https://fast.com&quot;&gt;fast.com&lt;/a&gt; to be much better in terms of UX and sensible defaults. It tries to simulate a download from Netflix’s Global CDN, which is probably the use case for most of the sites I visit (google, youtube, reddit, facebook, hacker news, github, etc.). &lt;a href=&quot;https://speedtest.net&quot;&gt;Speedtest.net&lt;/a&gt; is great if you’re testing specifics, but for the majority of the use-cases, it’s too granular. The defaults assume I’m connecting to a local server. My browser is downloading a Dota 2 video from Youtube.com and my laptop is pushing a repo at Github.com, I’m not accessing some web page in Globe Makati.&lt;/p&gt;
-
-&lt;p&gt;Here’s a general report of my benchmarks, averaging result over 5 runs. This is on our PLDT Plan 1699:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;12nn: 210Kbps top, 65Kbps average&lt;/li&gt;
-  &lt;li&gt;9pm: 410Kbps top, 214Kbps average&lt;/li&gt;
-  &lt;li&gt;12mn: 820Kbps top, 349Kbps average&lt;/li&gt;
-&lt;/ul&gt;
 
 &lt;p&gt;I bet there are a lot more settings I’ve missed, and this is a work in progress. I’ll post a part 2 once we get the new hardware.&lt;/p&gt;
 </description>
