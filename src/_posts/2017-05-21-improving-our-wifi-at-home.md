@@ -4,9 +4,9 @@ title: Improving our WiFi at home
 image: /img/blog/ourwifisetup-archer-c7.jpg
 ---
 
-So, I'm in the process of trying to get the best performance out of our internet setup at home. I've worked with Network Architects and ansible'd network configurations for large Hadoop clusters the frequently transfer terabytes, but sadly, I haven't sat down and fixed our internet at home. I'm a software engineer, and no means a hardcore Cisco Certified Network Engineer, so I decided to sit on this problem and improve our situation.
+So, I'm in the process of trying to get the best performance out of our internet setup at home. I've worked with Network Architects and ansible'd network configurations for large Hadoop clusters that transfer terabytes, but sadly, I haven't sat down and fixed our internet at home. I'm a software engineer, and no means a hardcore Cisco Certified Network Engineer, so I decided to sit on this problem and try to improve our situation.
 
-If you have slow internet, you can't just throwing money at the problem by upgrading your ISP subscription and shouting at customer service. You'll have to check off problems one by one. For me, I sat down and thought: I'll have to start by improving what I can improve on my side. Which means, the WiFi network within our home.
+If you have slow internet, you can't just keep throwing money at the problem by upgrading your ISP subscription. You'll have to check off problems one by one. For me, I sat down and thought: I'll have to start by improving what I can improve on my side. Which means, the WiFi network within our home.
 
 To give a short background, our current internet setup at home looks like this:
 
@@ -58,11 +58,5 @@ But before we purchase this, I'll have to optimize our network first and do a be
 #### "What do you use to test internet speeds?"
 
 I found Netflix's [fast.com](https://fast.com) to be much better in terms of UX and sensible defaults. It tries to simulate a download from Netflix's Global CDN, which is probably the use case for most of the sites I visit (google, youtube, reddit, facebook, hacker news, github, etc.). [Speedtest.net](https://speedtest.net) is great if you're testing specifics, but for the majority of the use-cases, it's too granular. The defaults assume I'm connecting to a local server. My browser is downloading a Dota 2 video from Youtube.com and my laptop is pushing a repo at Github.com, I'm not accessing some web page in Globe Makati. 
-
-Here's a general report of my benchmarks, averaging result over 5 runs. This is on our PLDT Plan 1699:
-
-- 12nn: 210Kbps top, 65Kbps average
-- 9pm: 410Kbps top, 214Kbps average
-- 12mn: 820Kbps top, 349Kbps average
 
 I bet there are a lot more settings I've missed, and this is a work in progress. I'll post a part 2 once we get the new hardware.

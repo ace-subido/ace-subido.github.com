@@ -41,8 +41,8 @@
   {% endif %}
 
   {% if page.image %}
-    <meta content="{{ '/img/blog/' | prepend: site.url }}{{ page.image }}" property="og:image">
-    <meta content="{{ '/img/blog/' | prepend: site.url }}{{ page.image }}" property="twitter:image">
+    <meta content="{{ page.image | prepend: site.url }}" property="og:image">
+    <meta content="{{ page.image | prepend: site.url }}" property="twitter:image">
   {% else %}
     <meta content="{{ '/img/logo-hires.png' | prepend: site.url }}" property="og:image">
     <meta content="{{ '/img/logo-hires.png' | prepend: site.url }}" property="twitter:image">
