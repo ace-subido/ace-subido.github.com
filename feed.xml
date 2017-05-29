@@ -5,9 +5,28 @@
     <description>my journal on work and life</description>
     <link>http://acesubido.com/</link>
     <atom:link href="http://acesubido.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 23 May 2017 11:43:30 +0800</pubDate>
-    <lastBuildDate>Tue, 23 May 2017 11:43:30 +0800</lastBuildDate>
+    <pubDate>Mon, 29 May 2017 14:18:12 +0800</pubDate>
+    <lastBuildDate>Mon, 29 May 2017 14:18:12 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>Encountering Production Bugs</title>
+        <description>&lt;p&gt;This week I encountered some features that I engineered which broke in production, it kept me on my toes, but it was worth it to ship the feature properly. A little collection of things I noted down:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Time pressure is real. Writing something to make something work is different from writing to make it trustworthy, balance them both by keeping the feature scope to be smaller relative to what the feature requirement.&lt;/li&gt;
+  &lt;li&gt;When you encounter a bug, don’t just fix it and it’s unit test, write an integration test for it too.&lt;/li&gt;
+  &lt;li&gt;When using Ruby, you might be tempted to metaprogram a lot of stuff to make things lean, don’t abuse it keep things readable, not too verbose but understandable.&lt;/li&gt;
+  &lt;li&gt;Don’t abuse dynamic typing and &lt;code&gt;.try&lt;/code&gt; you might get hurt with nil classes.&lt;/li&gt;
+  &lt;li&gt;A very big no no when something is silently failing. Make sure error handling is top notch, especially for background workers. Lift errors up as much as you can to the user.&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+        <pubDate>Mon, 29 May 2017 00:00:00 +0800</pubDate>
+        <link>http://acesubido.com/2017/05/29/encountering-production-bugs.html</link>
+        <guid isPermaLink="true">http://acesubido.com/2017/05/29/encountering-production-bugs.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Improving our WiFi at home</title>
@@ -601,21 +620,6 @@ What’s the best way para ma-save ko ang money ko at hindi ako bili ng bili ng 
         <pubDate>Fri, 25 Sep 2015 00:01:12 +0800</pubDate>
         <link>http://acesubido.com/2015/09/25/header-navigation-screenshot-of-a-cryptocurrency.html</link>
         <guid isPermaLink="true">http://acesubido.com/2015/09/25/header-navigation-screenshot-of-a-cryptocurrency.html</guid>
-        
-        <category>work</category>
-        
-        
-      </item>
-    
-      <item>
-        <title>Finally got around to launch the family business</title>
-        <description>&lt;a href=&quot;/tumblr_files/tumblr_nsy3e6me0V1rxgz1ko1_1280.png&quot;&gt;
-&lt;img src=&quot;/tumblr_files/tumblr_nsy3e6me0V1rxgz1ko1_1280.png&quot;/&gt;
-&lt;/a&gt;&lt;p&gt;Finally got around to launch the family business website. Here&amp;rsquo;s a shot of content above the fold.&lt;/p&gt;
-</description>
-        <pubDate>Wed, 12 Aug 2015 09:13:18 +0800</pubDate>
-        <link>http://acesubido.com/2015/08/12/finally-got-around-to-launch-the-family-business.html</link>
-        <guid isPermaLink="true">http://acesubido.com/2015/08/12/finally-got-around-to-launch-the-family-business.html</guid>
         
         <category>work</category>
         

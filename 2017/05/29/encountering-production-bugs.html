@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Encountering Production Bugs</title>
+  <meta name="description" content="This week I encountered some features that I engineered which broke in production, it kept me on my toes, but it was worth it to ship the feature properly. A...">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta content="acesubido" property="og:site_name">
+
+  
+    <meta content="Encountering Production Bugs" property="og:title">
+    <meta content="Encountering Production Bugs" property="twitter:title">
+  
+
+  
+    <meta content="article" property="og:type">
+  
+
+  
+    <meta content="This week I encountered some features that I engineered which broke in production, it kept me on my toes, but it was worth it to ship the feature properly. A..." property="og:description">
+    <meta content="This week I encountered some features that I engineered which broke in production, it kept me on my toes, but it was worth it to ship the feature properly. A..." property="twitter:description">
+  
+
+  
+    <meta content="http://acesubido.com/2017/05/29/encountering-production-bugs.html" property="og:url">
+  
+
+  
+    <meta content="2017-05-29T00:00:00+08:00" property="article:published_time">
+    <meta content="http://acesubido.com/about/" property="article:author">
+  
+
+  
+    <meta content="http://acesubido.com/img/logo-hires.png" property="og:image">
+    <meta content="http://acesubido.com/img/logo-hires.png" property="twitter:image">
+  
+
+  <link rel="stylesheet" href="http://acesubido.com/css/main.css">
+  <link rel="canonical" href="http://acesubido.com/2017/05/29/encountering-production-bugs.html">
+  <link rel="alternate" type="application/rss+xml" title="acesubido" href="/feed.xml" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+</head>
+
+  <body>
+    <header class="site-header">
+  <div class="site-title">
+    <ul class="navigation-links-list">
+      <li>
+        acesubido
+        &mdash;
+      </li>
+      <li>
+        <a href="/">posts</a>
+      </li>
+      <li>
+        <a href="/about">about/contact</a>
+      </li>
+      <li>
+        <a href="/feed.xml">rss feed</a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+    <div class="container">
+      <section class="post-full">
+  <header>
+    <h1 class="post-full-title">Encountering Production Bugs</h1>
+    <span class="post-date">
+      May 29, 2017
+      
+      
+    </span>
+  </header>
+  <hr class="post-divider"/>
+  <article>
+    <p>This week I encountered some features that I engineered which broke in production, it kept me on my toes, but it was worth it to ship the feature properly. A little collection of things I noted down:</p>
+
+<ul>
+  <li>Time pressure is real. Writing something to make something work is different from writing to make it trustworthy, balance them both by keeping the feature scope to be smaller relative to what the feature requirement.</li>
+  <li>When you encounter a bug, don’t just fix it and it’s unit test, write an integration test for it too.</li>
+  <li>When using Ruby, you might be tempted to metaprogram a lot of stuff to make things lean, don’t abuse it keep things readable, not too verbose but understandable.</li>
+  <li>Don’t abuse dynamic typing and <code>.try</code> you might get hurt with nil classes.</li>
+  <li>A very big no no when something is silently failing. Make sure error handling is top notch, especially for background workers. Lift errors up as much as you can to the user.</li>
+</ul>
+
+  </article>
+</section>
+
+    </div>
+    <footer class="site-footer">
+  <nav class="footer-links">
+    <ul class="navigation-links-list">
+      <li>
+        acesubido
+        &mdash;
+      </li>
+      <li>
+        <a href="/">posts</a>
+      </li>
+      <li>
+        <a href="/about">about/contact</a>
+      </li>
+      <li>
+        <a href="/feed.xml">rss feed</a>
+      </li>
+    </ul>
+  </nav>
+</footer>
+
+<script type="text/javascript" src="/javascript/google-analytics.js"></script>
+
+  </body>
+
+</html>
