@@ -5,8 +5,8 @@
     <description>my journal on work and life</description>
     <link>http://acesubido.com/</link>
     <atom:link href="http://acesubido.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 29 May 2017 14:18:12 +0800</pubDate>
-    <lastBuildDate>Mon, 29 May 2017 14:18:12 +0800</lastBuildDate>
+    <pubDate>Mon, 29 May 2017 14:19:36 +0800</pubDate>
+    <lastBuildDate>Mon, 29 May 2017 14:19:36 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -14,7 +14,7 @@
         <description>&lt;p&gt;This week I encountered some features that I engineered which broke in production, it kept me on my toes, but it was worth it to ship the feature properly. A little collection of things I noted down:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Time pressure is real. Writing something to make something work is different from writing to make it trustworthy, balance them both by keeping the feature scope to be smaller relative to what the feature requirement.&lt;/li&gt;
+  &lt;li&gt;Time pressure is real. Writing something to make something work is different from writing to make it trustworthy, balance them both by keeping the feature scope to be smaller relative to the feature requirement.&lt;/li&gt;
   &lt;li&gt;When you encounter a bug, don’t just fix it and it’s unit test, write an integration test for it too.&lt;/li&gt;
   &lt;li&gt;When using Ruby, you might be tempted to metaprogram a lot of stuff to make things lean, don’t abuse it keep things readable, not too verbose but understandable.&lt;/li&gt;
   &lt;li&gt;Don’t abuse dynamic typing and &lt;code&gt;.try&lt;/code&gt; you might get hurt with nil classes.&lt;/li&gt;
