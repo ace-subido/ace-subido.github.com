@@ -2,7 +2,7 @@
 title: acesubido
 description: "my journal on work and life"
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://acesubido.com" # the base hostname & protocol for your site
+url: "https://ace-subido.github.io" # the base hostname & protocol for your site
 twitter_username: acesubido
 github_username: ace-subido
 paginate: 10
