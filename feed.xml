@@ -3,11 +3,63 @@
   <channel>
     <title>acesubido</title>
     <description>my journal on work and life</description>
-    <link>http://acesubido.com/</link>
-    <atom:link href="http://acesubido.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 29 May 2017 14:19:36 +0800</pubDate>
-    <lastBuildDate>Mon, 29 May 2017 14:19:36 +0800</lastBuildDate>
+    <link>https://ace-subido.github.io/</link>
+    <atom:link href="https://ace-subido.github.io/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 11 Jul 2018 15:21:21 +0800</pubDate>
+    <lastBuildDate>Wed, 11 Jul 2018 15:21:21 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
+    
+      <item>
+        <title>What's it like to work from home?</title>
+        <description>&lt;p&gt;It’s been 8 months since I started working from home. I’m with a company called Bloom Solutions, it’s a fintech startup based in the Philippines. Everyone works remotely, we meet face-to-face once or every other a week. Sometimes a few people meet up together on a coffee shop if some work needs to be tightly done together. Other than that, under normal circumstances, most of the work being punched out is done at home.&lt;/p&gt;
+
+&lt;h3 id=&quot;benefits&quot;&gt;Benefits&lt;/h3&gt;
+&lt;p&gt;“Working from home” certainly has it’s benefits:&lt;/p&gt;
+
+&lt;h4 id=&quot;time-efficiency&quot;&gt;Time efficiency&lt;/h4&gt;
+&lt;p&gt;Probably the most valuable benefit. No more 1 1/2 hour one-way commutes, it saves me 3 hours of being on the road. When it rains, make that 4 hours + 400PHP for getting Uber or Grab. Computing that on a back of the napkin, that’s 15 hours a week spent on the road. Which is 60 hours a month, equivalent to 2.5 days a month. If you compute that over a year, it’s equivalent to 30 days being the road. A month where I could’ve spent somewhere else. I now spend more time with my newborn, help out my wife around the house, exercise, hobbies and time for other things.&lt;/p&gt;
+
+&lt;h4 id=&quot;minimal-personal-expenses&quot;&gt;Minimal personal expenses&lt;/h4&gt;
+&lt;p&gt;No parking expense. No commute expense. No gas expense. No “lunch money” expense. Cook food and eat at home.&lt;/p&gt;
+
+&lt;h4 id=&quot;work-not-scoped-to-location&quot;&gt;Work not scoped to location&lt;/h4&gt;
+&lt;p&gt;I go out of the country, go to Tagaytay, go to a beach. It’s all okay, just sync timezones and schedules with the team and make sure that you have no client-facing meetings scheduled.&lt;/p&gt;
+
+&lt;h4 id=&quot;flexible-schedule&quot;&gt;Flexible schedule&lt;/h4&gt;
+&lt;p&gt;As long as I sync with the team and not miss out any important meetings, I can do errands and still put out the work needed. Gone are the days that you’ll have to take a leave to get your VISA or Driver’s License.&lt;/p&gt;
+
+&lt;h4 id=&quot;environment-fosters-tangible-results-for-creativesknowledge-workers&quot;&gt;Environment fosters tangible results for Creatives/Knowledge-workers&lt;/h4&gt;
+&lt;p&gt;Work from home can be one of those ways to leave little place for programmers to operate in a “body shop” mentality. “Body shop” mentality is a certain mindset where “number of hours being inside the office” is the subconscious metric to measure productivity. Working from home however can provide a setup for people to produce tangible value instead of just waiting for 5pm to arrive. Most people get this feeling that when co-workers are around, you subconsciously feel the need to make it look like you’re always working on something. Always. Always working on something. Typing something. Boss is around? Display that busy IDE. Make random meetings. When you’re working at home, you’re by yourself, it’s just between you and that task list. Just get those done. Sit down, write down the details of what you’re working on, work on a task, ship it, and check that task off the list. Make sure your co-workers can pick up, understand what you wrote, see what’s done and what’s not. Otherwise, nothing will happen, and the company will feel the missing pieces of the work coming from you. Take note that this isn’t applicable to certain industries, and culture dictates how people operate in a self-sustaining manner more than a “remote work” setup.&lt;/p&gt;
+
+&lt;h4 id=&quot;productive-meetings&quot;&gt;Productive meetings&lt;/h4&gt;
+&lt;p&gt;The meetings revolve around strategy, direction, and design decisions. No 1-hour meeting discussing status updates or doing follow ups.&lt;/p&gt;
+
+&lt;h3 id=&quot;disadvantages&quot;&gt;Disadvantages&lt;/h3&gt;
+&lt;p&gt;Though it certainly has it’s disadvantages:&lt;/p&gt;
+
+&lt;h4 id=&quot;distraction-from-friends-and-relatives&quot;&gt;Distraction from Friends and Relatives&lt;/h4&gt;
+&lt;p&gt;When friends and relatives are visiting, this is how it usually goes when my wife mentions to them I work from home: “Oh! He works from home? That sounds great! Hey Ace, how’s working from home? Anyway, have you watched the new season of Stranger Things?”. “Umm, it’s great!”. As much as I want not to offend you, please let me focus. This applies to people in the office, the difference with working from home is: the people around you aren’t working. Your lack of interactivity would sometimes come across wrongly to relatives and friends. To some, because you’re in your PJ’s, it doesn’t have much visual weight as someone in the office, you may come across as someone being available for chit-chat.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt; - Smile and gently tell them that you’re currently working and they won’t bother you as much instead of just deflecting their chit chat.&lt;/p&gt;
+
+&lt;h4 id=&quot;blurring-lines-between-life-and-work&quot;&gt;Blurring Lines between Life and Work&lt;/h4&gt;
+&lt;p&gt;The first few weeks, you wouldn’t know that it’s already at the weekend. Life and work are blurred together. I try to place some distance between them. Before I face my laptop, I take a bath, brush my teeth, wear something else aside from my PJ’s, have my breakfast and then “go” to work. Which involves me going a place in the house where my “office chair” and “table” resides. Then there’s your wife and your children. They know they shouldn’t bother you, so they don’t, but really, they’re there. It’s hard not to talk to Elain and play with Navi when I’m just a tap away.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt; - We’ve established a group of hours where I can help out in chores or hold/play with Navi. Mainly breakfast, lunch and afternoon snack time. Elain also asks first if I’m on a pomodoro break, or if I’m waiting for CI to pass and build images so that she can ask for help and small favors.&lt;/p&gt;
+
+&lt;h4 id=&quot;personal-rhythm&quot;&gt;Personal Rhythm&lt;/h4&gt;
+&lt;p&gt;Being at home may make you fall into the temptation of just binge watching videos, surfing social media or looking at HackerNews. Just make sure to maintain discipline, focus and be systematic with how your spend your time.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt; - I have my personal time tracker, Harvest, and keep track of what I’m working on and my time. This rhythm gets me going.&lt;/p&gt;
+
+&lt;p&gt;I’ll probably update this post as time goes by, it’s certainly a life-changing on-going experience.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 28 Nov 2017 00:00:00 +0800</pubDate>
+        <link>https://ace-subido.github.io/2017/11/28/what-s-it-like-to-work-from-home.html</link>
+        <guid isPermaLink="true">https://ace-subido.github.io/2017/11/28/what-s-it-like-to-work-from-home.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Encountering Production Bugs</title>
@@ -22,8 +74,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 29 May 2017 00:00:00 +0800</pubDate>
-        <link>http://acesubido.com/2017/05/29/encountering-production-bugs.html</link>
-        <guid isPermaLink="true">http://acesubido.com/2017/05/29/encountering-production-bugs.html</guid>
+        <link>https://ace-subido.github.io/2017/05/29/encountering-production-bugs.html</link>
+        <guid isPermaLink="true">https://ace-subido.github.io/2017/05/29/encountering-production-bugs.html</guid>
         
         
       </item>
@@ -94,8 +146,8 @@
 &lt;p&gt;I bet there are a lot more settings I’ve missed, and this is a work in progress. I’ll post a part 2 once we get the new hardware.&lt;/p&gt;
 </description>
         <pubDate>Sun, 21 May 2017 00:00:00 +0800</pubDate>
-        <link>http://acesubido.com/2017/05/21/improving-our-wifi-at-home.html</link>
-        <guid isPermaLink="true">http://acesubido.com/2017/05/21/improving-our-wifi-at-home.html</guid>
+        <link>https://ace-subido.github.io/2017/05/21/improving-our-wifi-at-home.html</link>
+        <guid isPermaLink="true">https://ace-subido.github.io/2017/05/21/improving-our-wifi-at-home.html</guid>
         
         
       </item>
@@ -132,8 +184,8 @@ Bootsnap.setup(
 &lt;p&gt;It plays nicely with spring by speeding up the pre-fork and post-fork. Definitely a gem worth watching out for.&lt;/p&gt;
 </description>
         <pubDate>Sat, 20 May 2017 00:00:00 +0800</pubDate>
-        <link>http://acesubido.com/2017/05/20/speed-up-ruby-app-bootup-time.html</link>
-        <guid isPermaLink="true">http://acesubido.com/2017/05/20/speed-up-ruby-app-bootup-time.html</guid>
+        <link>https://ace-subido.github.io/2017/05/20/speed-up-ruby-app-bootup-time.html</link>
+        <guid isPermaLink="true">https://ace-subido.github.io/2017/05/20/speed-up-ruby-app-bootup-time.html</guid>
         
         
       </item>
@@ -179,8 +231,8 @@ BigDecimal 22.4627133860700558
 
 </description>
         <pubDate>Tue, 16 May 2017 00:00:00 +0800</pubDate>
-        <link>http://acesubido.com/2017/05/16/bigdecimal-vs-float-for-anything-related-to-finance.html</link>
-        <guid isPermaLink="true">http://acesubido.com/2017/05/16/bigdecimal-vs-float-for-anything-related-to-finance.html</guid>
+        <link>https://ace-subido.github.io/2017/05/16/bigdecimal-vs-float-for-anything-related-to-finance.html</link>
+        <guid isPermaLink="true">https://ace-subido.github.io/2017/05/16/bigdecimal-vs-float-for-anything-related-to-finance.html</guid>
         
         
       </item>
@@ -236,8 +288,8 @@ BigDecimal 22.4627133860700558
 &lt;p&gt;Regardless of who wins in the coming elections, the president does not hold your future, God does.&lt;/p&gt;
 </description>
         <pubDate>Tue, 03 May 2016 00:00:00 +0800</pubDate>
-        <link>http://acesubido.com/2016/05/03/election-revelation-everyone-needs-a-savior.html</link>
-        <guid isPermaLink="true">http://acesubido.com/2016/05/03/election-revelation-everyone-needs-a-savior.html</guid>
+        <link>https://ace-subido.github.io/2016/05/03/election-revelation-everyone-needs-a-savior.html</link>
+        <guid isPermaLink="true">https://ace-subido.github.io/2016/05/03/election-revelation-everyone-needs-a-savior.html</guid>
         
         
       </item>
@@ -409,8 +461,8 @@ BigDecimal 22.4627133860700558
 &lt;p&gt;Besides the idea of “stealing” is a “pessimists” view. Viewing this in an optimistic perspective, I may actually get in contact with people who definitely need someone to technically implement any of these ideas.&lt;/p&gt;
 </description>
         <pubDate>Thu, 21 Jan 2016 00:00:00 +0800</pubDate>
-        <link>http://acesubido.com/2016/01/21/my-useful-secret-projects-and-business-ideas.html</link>
-        <guid isPermaLink="true">http://acesubido.com/2016/01/21/my-useful-secret-projects-and-business-ideas.html</guid>
+        <link>https://ace-subido.github.io/2016/01/21/my-useful-secret-projects-and-business-ideas.html</link>
+        <guid isPermaLink="true">https://ace-subido.github.io/2016/01/21/my-useful-secret-projects-and-business-ideas.html</guid>
         
         
       </item>
@@ -448,8 +500,8 @@ BigDecimal 22.4627133860700558
 &lt;p&gt;Disclaimer: My thoughts written here are not of my employers. These are solely my opinions and they’re not tied to what AGSX stands for.&lt;/p&gt;
 </description>
         <pubDate>Thu, 21 Jan 2016 00:00:00 +0800</pubDate>
-        <link>http://acesubido.com/2016/01/21/how-can-executives-appreciate-big-data-technologies.html</link>
-        <guid isPermaLink="true">http://acesubido.com/2016/01/21/how-can-executives-appreciate-big-data-technologies.html</guid>
+        <link>https://ace-subido.github.io/2016/01/21/how-can-executives-appreciate-big-data-technologies.html</link>
+        <guid isPermaLink="true">https://ace-subido.github.io/2016/01/21/how-can-executives-appreciate-big-data-technologies.html</guid>
         
         
       </item>
@@ -529,8 +581,8 @@ What’s the best way para ma-save ko ang money ko at hindi ako bili ng bili ng 
 &lt;/ol&gt;
 </description>
         <pubDate>Sat, 14 Nov 2015 00:00:00 +0800</pubDate>
-        <link>http://acesubido.com/2015/11/14/where-to-invest-my-money-i-m-17-years-old.html</link>
-        <guid isPermaLink="true">http://acesubido.com/2015/11/14/where-to-invest-my-money-i-m-17-years-old.html</guid>
+        <link>https://ace-subido.github.io/2015/11/14/where-to-invest-my-money-i-m-17-years-old.html</link>
+        <guid isPermaLink="true">https://ace-subido.github.io/2015/11/14/where-to-invest-my-money-i-m-17-years-old.html</guid>
         
         
       </item>
@@ -601,27 +653,8 @@ What’s the best way para ma-save ko ang money ko at hindi ako bili ng bili ng 
 &lt;p&gt;Personally, I won’t endorse anything. Acquiring something that would solve something complex without knowing what really needs to be done will end badly. Ask the tech team first, they’d probably know.&lt;/p&gt;
 </description>
         <pubDate>Sat, 24 Oct 2015 00:00:00 +0800</pubDate>
-        <link>http://acesubido.com/2015/10/24/what-is-a-real-time-analytics-platform.html</link>
-        <guid isPermaLink="true">http://acesubido.com/2015/10/24/what-is-a-real-time-analytics-platform.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Header navigation screenshot of a cryptocurrency</title>
-        <description>&lt;a href=&quot;/tumblr_files/tumblr_nv6v605ZXo1rxgz1ko1_1280.png&quot;&gt;
-&lt;img src=&quot;/tumblr_files/tumblr_nv6v605ZXo1rxgz1ko1_1280.png&quot;/&gt;
-&lt;/a&gt;&lt;ul&gt;&lt;li&gt;Header navigation screenshot of a Cryptocurrency Job Board I made with a friend. &lt;/li&gt;
-&lt;li&gt;Played with Black and Gold to bring out the feel of &amp;ldquo;premium&amp;rdquo; and &amp;ldquo;luxury&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;Didn&amp;rsquo;t over-design and add gratitious animations or transitions.&lt;/li&gt;
-&lt;li&gt;Built it with Rails :)&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-        <pubDate>Fri, 25 Sep 2015 00:01:12 +0800</pubDate>
-        <link>http://acesubido.com/2015/09/25/header-navigation-screenshot-of-a-cryptocurrency.html</link>
-        <guid isPermaLink="true">http://acesubido.com/2015/09/25/header-navigation-screenshot-of-a-cryptocurrency.html</guid>
-        
-        <category>work</category>
+        <link>https://ace-subido.github.io/2015/10/24/what-is-a-real-time-analytics-platform.html</link>
+        <guid isPermaLink="true">https://ace-subido.github.io/2015/10/24/what-is-a-real-time-analytics-platform.html</guid>
         
         
       </item>
