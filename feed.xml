@@ -3,10 +3,10 @@
   <channel>
     <title>acesubido</title>
     <description>my journal on work and life</description>
-    <link>https://ace-subido.github.io/</link>
-    <atom:link href="https://ace-subido.github.io/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 05 Sep 2018 02:42:36 +0800</pubDate>
-    <lastBuildDate>Wed, 05 Sep 2018 02:42:36 +0800</lastBuildDate>
+    <link>https://acesubido.net/</link>
+    <atom:link href="https://acesubido.net/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 05 Sep 2018 02:50:25 +0800</pubDate>
+    <lastBuildDate>Wed, 05 Sep 2018 02:50:25 +0800</lastBuildDate>
     <generator>Jekyll v3.4.3</generator>
     
       <item>
@@ -55,8 +55,8 @@
 &lt;p&gt;I’ll probably update this post as time goes by, it’s certainly a life-changing on-going experience.&lt;/p&gt;
 </description>
         <pubDate>Tue, 28 Nov 2017 00:00:00 +0800</pubDate>
-        <link>https://ace-subido.github.io/2017/11/28/what-s-it-like-to-work-from-home.html</link>
-        <guid isPermaLink="true">https://ace-subido.github.io/2017/11/28/what-s-it-like-to-work-from-home.html</guid>
+        <link>https://acesubido.net/2017/11/28/what-s-it-like-to-work-from-home.html</link>
+        <guid isPermaLink="true">https://acesubido.net/2017/11/28/what-s-it-like-to-work-from-home.html</guid>
         
         
       </item>
@@ -74,8 +74,8 @@
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 29 May 2017 00:00:00 +0800</pubDate>
-        <link>https://ace-subido.github.io/2017/05/29/encountering-production-bugs.html</link>
-        <guid isPermaLink="true">https://ace-subido.github.io/2017/05/29/encountering-production-bugs.html</guid>
+        <link>https://acesubido.net/2017/05/29/encountering-production-bugs.html</link>
+        <guid isPermaLink="true">https://acesubido.net/2017/05/29/encountering-production-bugs.html</guid>
         
         
       </item>
@@ -146,8 +146,8 @@
 &lt;p&gt;I bet there are a lot more settings I’ve missed, and this is a work in progress. I’ll post a part 2 once we get the new hardware.&lt;/p&gt;
 </description>
         <pubDate>Sun, 21 May 2017 00:00:00 +0800</pubDate>
-        <link>https://ace-subido.github.io/2017/05/21/improving-our-wifi-at-home.html</link>
-        <guid isPermaLink="true">https://ace-subido.github.io/2017/05/21/improving-our-wifi-at-home.html</guid>
+        <link>https://acesubido.net/2017/05/21/improving-our-wifi-at-home.html</link>
+        <guid isPermaLink="true">https://acesubido.net/2017/05/21/improving-our-wifi-at-home.html</guid>
         
         
       </item>
@@ -184,8 +184,8 @@ Bootsnap.setup(
 &lt;p&gt;It plays nicely with spring by speeding up the pre-fork and post-fork. Definitely a gem worth watching out for.&lt;/p&gt;
 </description>
         <pubDate>Sat, 20 May 2017 00:00:00 +0800</pubDate>
-        <link>https://ace-subido.github.io/2017/05/20/speed-up-ruby-app-bootup-time.html</link>
-        <guid isPermaLink="true">https://ace-subido.github.io/2017/05/20/speed-up-ruby-app-bootup-time.html</guid>
+        <link>https://acesubido.net/2017/05/20/speed-up-ruby-app-bootup-time.html</link>
+        <guid isPermaLink="true">https://acesubido.net/2017/05/20/speed-up-ruby-app-bootup-time.html</guid>
         
         
       </item>
@@ -231,8 +231,8 @@ BigDecimal 22.4627133860700558
 
 </description>
         <pubDate>Tue, 16 May 2017 00:00:00 +0800</pubDate>
-        <link>https://ace-subido.github.io/2017/05/16/bigdecimal-vs-float-for-anything-related-to-finance.html</link>
-        <guid isPermaLink="true">https://ace-subido.github.io/2017/05/16/bigdecimal-vs-float-for-anything-related-to-finance.html</guid>
+        <link>https://acesubido.net/2017/05/16/bigdecimal-vs-float-for-anything-related-to-finance.html</link>
+        <guid isPermaLink="true">https://acesubido.net/2017/05/16/bigdecimal-vs-float-for-anything-related-to-finance.html</guid>
         
         
       </item>
@@ -288,8 +288,8 @@ BigDecimal 22.4627133860700558
 &lt;p&gt;Regardless of who wins in the coming elections, the president does not hold your future, God does.&lt;/p&gt;
 </description>
         <pubDate>Tue, 03 May 2016 00:00:00 +0800</pubDate>
-        <link>https://ace-subido.github.io/2016/05/03/election-revelation-everyone-needs-a-savior.html</link>
-        <guid isPermaLink="true">https://ace-subido.github.io/2016/05/03/election-revelation-everyone-needs-a-savior.html</guid>
+        <link>https://acesubido.net/2016/05/03/election-revelation-everyone-needs-a-savior.html</link>
+        <guid isPermaLink="true">https://acesubido.net/2016/05/03/election-revelation-everyone-needs-a-savior.html</guid>
         
         
       </item>
@@ -461,8 +461,8 @@ BigDecimal 22.4627133860700558
 &lt;p&gt;Besides the idea of “stealing” is a “pessimists” view. Viewing this in an optimistic perspective, I may actually get in contact with people who definitely need someone to technically implement any of these ideas.&lt;/p&gt;
 </description>
         <pubDate>Thu, 21 Jan 2016 00:00:00 +0800</pubDate>
-        <link>https://ace-subido.github.io/2016/01/21/my-useful-secret-projects-and-business-ideas.html</link>
-        <guid isPermaLink="true">https://ace-subido.github.io/2016/01/21/my-useful-secret-projects-and-business-ideas.html</guid>
+        <link>https://acesubido.net/2016/01/21/my-useful-secret-projects-and-business-ideas.html</link>
+        <guid isPermaLink="true">https://acesubido.net/2016/01/21/my-useful-secret-projects-and-business-ideas.html</guid>
         
         
       </item>
@@ -500,8 +500,8 @@ BigDecimal 22.4627133860700558
 &lt;p&gt;Disclaimer: My thoughts written here are not of my employers. These are solely my opinions and they’re not tied to what AGSX stands for.&lt;/p&gt;
 </description>
         <pubDate>Thu, 21 Jan 2016 00:00:00 +0800</pubDate>
-        <link>https://ace-subido.github.io/2016/01/21/how-can-executives-appreciate-big-data-technologies.html</link>
-        <guid isPermaLink="true">https://ace-subido.github.io/2016/01/21/how-can-executives-appreciate-big-data-technologies.html</guid>
+        <link>https://acesubido.net/2016/01/21/how-can-executives-appreciate-big-data-technologies.html</link>
+        <guid isPermaLink="true">https://acesubido.net/2016/01/21/how-can-executives-appreciate-big-data-technologies.html</guid>
         
         
       </item>
@@ -581,8 +581,8 @@ What’s the best way para ma-save ko ang money ko at hindi ako bili ng bili ng 
 &lt;/ol&gt;
 </description>
         <pubDate>Sat, 14 Nov 2015 00:00:00 +0800</pubDate>
-        <link>https://ace-subido.github.io/2015/11/14/where-to-invest-my-money-i-m-17-years-old.html</link>
-        <guid isPermaLink="true">https://ace-subido.github.io/2015/11/14/where-to-invest-my-money-i-m-17-years-old.html</guid>
+        <link>https://acesubido.net/2015/11/14/where-to-invest-my-money-i-m-17-years-old.html</link>
+        <guid isPermaLink="true">https://acesubido.net/2015/11/14/where-to-invest-my-money-i-m-17-years-old.html</guid>
         
         
       </item>
@@ -653,8 +653,8 @@ What’s the best way para ma-save ko ang money ko at hindi ako bili ng bili ng 
 &lt;p&gt;Personally, I won’t endorse anything. Acquiring something that would solve something complex without knowing what really needs to be done will end badly. Ask the tech team first, they’d probably know.&lt;/p&gt;
 </description>
         <pubDate>Sat, 24 Oct 2015 00:00:00 +0800</pubDate>
-        <link>https://ace-subido.github.io/2015/10/24/what-is-a-real-time-analytics-platform.html</link>
-        <guid isPermaLink="true">https://ace-subido.github.io/2015/10/24/what-is-a-real-time-analytics-platform.html</guid>
+        <link>https://acesubido.net/2015/10/24/what-is-a-real-time-analytics-platform.html</link>
+        <guid isPermaLink="true">https://acesubido.net/2015/10/24/what-is-a-real-time-analytics-platform.html</guid>
         
         
       </item>
