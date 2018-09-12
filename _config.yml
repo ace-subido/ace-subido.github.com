@@ -1,21 +1,28 @@
 # Site settings
-title: acesubido
-description: "my journal on work and life"
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://acesubido.net" # the base hostname & protocol for your site
-twitter_username: acesubido
-github_username: ace-subido
-paginate: 10
-paginate_path: "/page/:num/"
 source: "src/"
 destination: "_site/"
+
+title: acesubido
+description: ""
+
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://acesubido.net" # the base hostname & protocol for your site
+
+twitter_username: acesubido
+github_username: ace-subido
+
 plugins_dir: "src/_plugins"
-gems: [jekyll-paginate, jekyll-compose, jekyll-haml]
+plugins: [
+  jekyll-paginate,
+  jekyll-compose,
+  jekyll-haml,
+  bourbon,
+  neat
+]
 
 # Build settings
 markdown: kramdown
-gems: [bourbon, neat]
 highlighter: pygments
-slim:
-  pretty: true
-  format: html5
+
+paginate: 10
+paginate_path: "/page/:num/"
