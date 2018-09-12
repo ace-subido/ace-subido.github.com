@@ -1,15 +1,21 @@
 # acesubido.com
 
+## Development
+
 ```
-Development Mode
-$ bundle exec jekyll s
+$ brew install direnv
+$ direnv allow
 
-Release Mode
-$ bundle exec rake publish
+# Development Mode
+$ jekyll s
 
-Write a draft
-$ bundle exec jekyll draft "<title>"
+# Release Mode
+$ rake publish
 
-Publish a draft
-$ bundle exec jekyll publish "_drafts/<title>"
+# Write a draft
+$ jekyll draft "<title>"
+
+# Publish a draft
+$ jekyll publish "_drafts/<title>"
 ```
+
