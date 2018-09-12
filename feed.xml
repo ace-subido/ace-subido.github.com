@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>acesubido</title>
-    <description>my journal on work and life</description>
+    <description></description>
     <link>https://acesubido.net/</link>
     <atom:link href="https://acesubido.net/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 05 Sep 2018 02:50:25 +0800</pubDate>
-    <lastBuildDate>Wed, 05 Sep 2018 02:50:25 +0800</lastBuildDate>
-    <generator>Jekyll v3.4.3</generator>
+    <pubDate>Thu, 13 Sep 2018 02:29:13 +0800</pubDate>
+    <lastBuildDate>Thu, 13 Sep 2018 02:29:13 +0800</lastBuildDate>
+    <generator>Jekyll v3.8.3</generator>
     
       <item>
         <title>What's it like to work from home?</title>
@@ -69,7 +69,7 @@
   &lt;li&gt;Time pressure is real. Writing something to make something work is different from writing to make it trustworthy, balance them both by keeping the feature scope to be smaller relative to the feature requirement.&lt;/li&gt;
   &lt;li&gt;When you encounter a bug, don’t just fix it and it’s unit test, write an integration test for it too.&lt;/li&gt;
   &lt;li&gt;When using Ruby, you might be tempted to metaprogram a lot of stuff to make things lean, don’t abuse it keep things readable, not too verbose but understandable.&lt;/li&gt;
-  &lt;li&gt;Don’t abuse dynamic typing and &lt;code&gt;.try&lt;/code&gt; you might get hurt with nil classes.&lt;/li&gt;
+  &lt;li&gt;Don’t abuse dynamic typing and &lt;code class=&quot;highlighter-rouge&quot;&gt;.try&lt;/code&gt; you might get hurt with nil classes.&lt;/li&gt;
   &lt;li&gt;A very big no no when something is silently failing. Make sure error handling is top notch, especially for background workers. Lift errors up as much as you can to the user.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
@@ -92,7 +92,7 @@
 
 &lt;p&gt;Almost everyone probably has this simple setup, unless you have a mansion and you need to cover every inch of your house, including your garden and pool.&lt;/p&gt;
 
-&lt;p&gt;So, I open up terminals and do some &lt;code&gt;iperf&lt;/code&gt; and &lt;code&gt;nc&lt;/code&gt; tests. Initial results revealed that network between 2 local IP addresses in our network is both slow and experiences packet loss. In layman’s terms: our wifi coverage and network throughput generally suck. Beyond the terminal, it’s pretty apparent. A LAN game of “Starcraft: Brood War” between 2 laptops connected on the same network via Wifi, to the same router, is pretty laggy.&lt;/p&gt;
+&lt;p&gt;So, I open up terminals and do some &lt;code class=&quot;highlighter-rouge&quot;&gt;iperf&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;nc&lt;/code&gt; tests. Initial results revealed that network between 2 local IP addresses in our network is both slow and experiences packet loss. In layman’s terms: our wifi coverage and network throughput generally suck. Beyond the terminal, it’s pretty apparent. A LAN game of “Starcraft: Brood War” between 2 laptops connected on the same network via Wifi, to the same router, is pretty laggy.&lt;/p&gt;
 
 &lt;p&gt;So it’s time to really improve our WiFi coverage.&lt;/p&gt;
 
@@ -154,32 +154,32 @@
     
       <item>
         <title>Speed up Ruby app bootup time</title>
-        <description>&lt;p&gt;I frequently work with a large ruby application, and whenever I run &lt;code&gt;rspec path/to/single_unit_test.rb&lt;/code&gt; in a Rails application, it takes 2-3 seconds before the test starts. This is because of the amount of source files that are involved in the application. Fortunately, Shopify released a gem called &lt;a href=&quot;https://github.com/shopify/bootsnap&quot;&gt;&lt;code&gt;bootsnap&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+        <description>&lt;p&gt;I frequently work with a large ruby application, and whenever I run &lt;code class=&quot;highlighter-rouge&quot;&gt;rspec path/to/single_unit_test.rb&lt;/code&gt; in a Rails application, it takes 2-3 seconds before the test starts. This is because of the amount of source files that are involved in the application. Fortunately, Shopify released a gem called &lt;a href=&quot;https://github.com/shopify/bootsnap&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;bootsnap&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;The short story: it speeds up ruby app boot time. Useful for large monolithic applications. Ruby apps slow down if you &lt;code&gt;require&lt;/code&gt; a lot of source files, so it speeds things up by doing applying some optimizations (compilation caching, YAML optimzations, etc.)&lt;/li&gt;
+  &lt;li&gt;The short story: it speeds up ruby app boot time. Useful for large monolithic applications. Ruby apps slow down if you &lt;code class=&quot;highlighter-rouge&quot;&gt;require&lt;/code&gt; a lot of source files, so it speeds things up by doing applying some optimizations (compilation caching, YAML optimzations, etc.)&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://engineering.shopify.com/235340559-bootsnap-optimizing-ruby-app-boot-time&quot;&gt;The long explanation, found here&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Simplest setup for a Rails 5.1.1 app (as of &lt;code&gt;bootsnap 0.2.14&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Simplest setup for a Rails 5.1.1 app (as of &lt;code class=&quot;highlighter-rouge&quot;&gt;bootsnap 0.2.14&lt;/code&gt;).&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;# Gemfile
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Gemfile&lt;/span&gt;
 
-gem 'bootsnap'
+&lt;span class=&quot;n&quot;&gt;gem&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'bootsnap'&lt;/span&gt;
 
-# bin/bundle
+&lt;span class=&quot;c1&quot;&gt;# bin/bundle&lt;/span&gt;
 
-require 'bootsnap'
-Bootsnap.setup(
-  cache_dir: 'tmp/cache',
-  development_mode: ENV['RAILS_ENV'] == 'development',
-  load_path_cache: true,
-  autoload_paths_cache: true,
-  disable_trace: false,
-  compile_cache_iseq: true,
-  compile_cache_yaml: true,
-)
-&lt;/code&gt;&lt;/pre&gt;
+&lt;span class=&quot;nb&quot;&gt;require&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'bootsnap'&lt;/span&gt;
+&lt;span class=&quot;no&quot;&gt;Bootsnap&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;setup&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;cache_dir: &lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'tmp/cache'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;development_mode: &lt;/span&gt;&lt;span class=&quot;no&quot;&gt;ENV&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'RAILS_ENV'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'development'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;load_path_cache: &lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;autoload_paths_cache: &lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;disable_trace: &lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;compile_cache_iseq: &lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+  &lt;span class=&quot;ss&quot;&gt;compile_cache_yaml: &lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;It plays nicely with spring by speeding up the pre-fork and post-fork. Definitely a gem worth watching out for.&lt;/p&gt;
 </description>
@@ -194,7 +194,7 @@ Bootsnap.setup(
         <title>BigDecimal vs. Float for anything related to finance</title>
         <description>&lt;p&gt;There are countless blog posts and stack overflow explanations about this, figured I need to write this little note for myself. To start things off, check this example of computing PHPKRW using hypothetical gold as a go-between:&lt;/p&gt;
 
-&lt;pre&gt;&lt;code&gt;require &quot;bigdecimal&quot;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;require &quot;bigdecimal&quot;
 
 # Float
 php_gold_float = 0.00001144792038
@@ -215,7 +215,7 @@ puts &quot;#{php_krw_bd.class} #{php_krw_bd.to_s('F')}&quot;
 # Output
 Float 22.462713386070057
 BigDecimal 22.4627133860700558
-&lt;/code&gt;&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;thats-odd-its-rounded-up-or-something-why-does-this-happen&quot;&gt;That’s odd, it’s rounded up? Or something? Why does this happen?&lt;/h4&gt;
 
@@ -223,7 +223,7 @@ BigDecimal 22.4627133860700558
 
 &lt;hr /&gt;
 
-&lt;p&gt;If you’re a bank, or if you’re supporting accounting software, or just computing compounding interests, you could potentially miscalculate thousands down the line when using Float for computing. So, make sure to use BigDecimal when you’re dealing with anything that requires a high-degree of “sureness”. With Ruby/Rails, you can use &lt;code&gt;:decimal&lt;/code&gt; for columns containing this type of information.&lt;/p&gt;
+&lt;p&gt;If you’re a bank, or if you’re supporting accounting software, or just computing compounding interests, you could potentially miscalculate thousands down the line when using Float for computing. So, make sure to use BigDecimal when you’re dealing with anything that requires a high-degree of “sureness”. With Ruby/Rails, you can use &lt;code class=&quot;highlighter-rouge&quot;&gt;:decimal&lt;/code&gt; for columns containing this type of information.&lt;/p&gt;
 
 &lt;p&gt;Money, accounting, computing compounding interests = needs high precision, then use BigDecimal. Other than that, just use float.&lt;/p&gt;
 

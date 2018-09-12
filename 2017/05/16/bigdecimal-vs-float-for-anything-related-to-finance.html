@@ -80,7 +80,7 @@
   <article>
     <p>There are countless blog posts and stack overflow explanations about this, figured I need to write this little note for myself. To start things off, check this example of computing PHPKRW using hypothetical gold as a go-between:</p>
 
-<pre><code>require "bigdecimal"
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>require "bigdecimal"
 
 # Float
 php_gold_float = 0.00001144792038
@@ -101,7 +101,7 @@ puts "#{php_krw_bd.class} #{php_krw_bd.to_s('F')}"
 # Output
 Float 22.462713386070057
 BigDecimal 22.4627133860700558
-</code></pre>
+</code></pre></div></div>
 
 <h4 id="thats-odd-its-rounded-up-or-something-why-does-this-happen">That’s odd, it’s rounded up? Or something? Why does this happen?</h4>
 
@@ -109,7 +109,7 @@ BigDecimal 22.4627133860700558
 
 <hr />
 
-<p>If you’re a bank, or if you’re supporting accounting software, or just computing compounding interests, you could potentially miscalculate thousands down the line when using Float for computing. So, make sure to use BigDecimal when you’re dealing with anything that requires a high-degree of “sureness”. With Ruby/Rails, you can use <code>:decimal</code> for columns containing this type of information.</p>
+<p>If you’re a bank, or if you’re supporting accounting software, or just computing compounding interests, you could potentially miscalculate thousands down the line when using Float for computing. So, make sure to use BigDecimal when you’re dealing with anything that requires a high-degree of “sureness”. With Ruby/Rails, you can use <code class="highlighter-rouge">:decimal</code> for columns containing this type of information.</p>
 
 <p>Money, accounting, computing compounding interests = needs high precision, then use BigDecimal. Other than that, just use float.</p>
 

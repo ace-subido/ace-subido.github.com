@@ -112,7 +112,7 @@ pre {
   color: #333;
   word-break: break-all;
   word-wrap: break-word;
-  background-color: #f5f5f5;
+  background-color: #002B36;
   border-radius: 4px;
   font-family: "Monaco", "Consolas", "Lucida Sans Typewriter", "Lucida Typewriter", monospace; }
 
@@ -223,7 +223,7 @@ hr {
   .page-block::after {
     clear: both;
     content: "";
-    display: table; }
+    display: block; }
   .page-block.-dark-block, .page-block.-red-block, .page-block.-blue-block {
     color: white; }
     .page-block.-dark-block a, .page-block.-red-block a, .page-block.-blue-block a {
