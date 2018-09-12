@@ -1,4 +1,11 @@
-# acesubido.com
+# acesubido.net
+
+My personal website, portfolio and wiki. Uses:
+
+- `jekyll` for building the site
+- `sass` for building the CSS
+- `kramdown` for markdown
+- `rouge` for syntax highlighting
 
 ## Development
 

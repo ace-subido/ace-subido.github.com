@@ -1,11 +1,13 @@
+# frozen_string_literal: true
+
 require 'fileutils'
 
 def remote_name
-  ENV.fetch("REMOTE_NAME", "origin")
+  ENV.fetch('REMOTE_NAME', 'origin')
 end
 
 PROJECT_ROOT = `git rev-parse --show-toplevel`.strip
-BUILD_DIR    = File.join(PROJECT_ROOT, "_site")
+BUILD_DIR = File.join(PROJECT_ROOT, '_site')
 USER_PAGE_REF = File.join(BUILD_DIR, ".git/refs/remotes/#{remote_name}/master")
 
 directory BUILD_DIR
@@ -18,23 +20,23 @@ file USER_PAGE_REF => BUILD_DIR do
   end
 
   cd BUILD_DIR do
-    sh "git init"
+    sh 'git init'
     sh "git remote add #{remote_name} #{repo_url}"
     sh "git fetch #{remote_name}"
 
-    if `git branch -r` =~ /master/
-      sh "git checkout master"
+    if /master/.match?(`git branch -r`)
+      sh 'git checkout master'
     else
-      sh "git checkout --orphan master"
-      sh "touch index.html"
-      sh "git add ."
+      sh 'git checkout --orphan master'
+      sh 'touch index.html'
+      sh 'git add .'
       sh "git commit -m 'initial master commit'"
       sh "git push #{remote_name} master"
     end
   end
 end
 
-task :prepare_git_remote_in_build_dir => USER_PAGE_REF
+task prepare_git_remote_in_build_dir: USER_PAGE_REF
 
 task :sync do
   cd BUILD_DIR do
@@ -45,23 +47,20 @@ end
 
 # Prevent accidental publishing before committing changes
 task :not_dirty do
-  puts "***#{ENV['ALLOW_DIRTY']}***"
-  unless ENV['ALLOW_DIRTY']
-    fail "Directory not clean" if /nothing to commit/ !~ `git status`
-  end
+  raise 'Directory not clean' if /nothing to commit/ !~ `git status`
 end
 
-desc "Compile all files into the build directory"
+desc 'Compile all files into the build directory'
 task :build do
   cd PROJECT_ROOT do
-    sh "bundle exec jekyll build"
+    sh 'bundle exec jekyll build'
   end
 end
 
-desc "Build and publish to Github User Page"
-task :publish => [:not_dirty, :prepare_git_remote_in_build_dir, :sync, :build] do
+desc 'Build and publish to Github User Page'
+task publish: %i[not_dirty prepare_git_remote_in_build_dir sync build] do
   message = nil
-  suffix = ENV["COMMIT_MESSAGE_SUFFIX"]
+  suffix = ENV['COMMIT_MESSAGE_SUFFIX']
 
   cd PROJECT_ROOT do
     head = `git log --pretty="%h" -n1`.strip
@@ -70,12 +69,11 @@ task :publish => [:not_dirty, :prepare_git_remote_in_build_dir, :sync, :build] d
 
   cd BUILD_DIR do
     sh 'git add --all'
-    if /nothing to commit/ =~ `git status`
-      puts "No changes to commit."
+    if /nothing to commit/.match?(`git status`)
+      puts 'No changes to commit.'
     else
       sh "git commit -m \"#{message}\""
     end
     sh "git push #{remote_name} master -f"
   end
 end
-
