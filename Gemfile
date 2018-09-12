@@ -3,6 +3,8 @@ source 'https://rubygems.org'
 gem 'jekyll', '~> 3.8'
 gem 'bourbon', '~> 5.1'
 gem 'neat', '~> 3.0'
+gem 'rouge', '~> 3.2'
+gem 'kramdown',  '~> 1.17'
 
 group :jekyll_plugins do
   gem 'jekyll-paginate', '~> 1.1'

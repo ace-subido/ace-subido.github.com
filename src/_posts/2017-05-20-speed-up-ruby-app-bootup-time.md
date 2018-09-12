@@ -10,7 +10,7 @@ I frequently work with a large ruby application, and whenever I run `rspec path/
 
 Simplest setup for a Rails 5.1.1 app (as of `bootsnap 0.2.14`).
 
-```
+```ruby
 # Gemfile
 
 gem 'bootsnap'

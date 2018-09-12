@@ -22,7 +22,7 @@ plugins: [
 
 # Build settings
 markdown: kramdown
-highlighter: pygments
+highlighter: rouge
 
 paginate: 10
 paginate_path: "/page/:num/"

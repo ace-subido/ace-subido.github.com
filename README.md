@@ -19,3 +19,8 @@ $ jekyll draft "<title>"
 $ jekyll publish "_drafts/<title>"
 ```
 
+## Syntax Highlighting
+
+```
+$ rougify style base16.solarized.dark > src/_sass/theme/vendors/_rougify_solarized.scss
+```
