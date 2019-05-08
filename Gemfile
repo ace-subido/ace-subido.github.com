@@ -12,5 +12,7 @@ gem 'rouge', '~> 3.2'
 group :jekyll_plugins do
   gem 'jekyll-compose', '0.8.0'
   gem 'jekyll-haml', '0.1.6'
-  gem 'jekyll-paginate', '~> 1.1'
+  gem 'jekyll-paginate'
 end
+
+gem "pry-byebug"
