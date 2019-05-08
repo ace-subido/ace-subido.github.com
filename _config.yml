@@ -1,28 +1,21 @@
-# Site settings
+---
 source: "src/"
 destination: "_site/"
-
 title: acesubido
 description: ""
-
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://acesubido.net" # the base hostname & protocol for your site
-
 twitter_username: acesubido
 github_username: ace-subido
-
 plugins_dir: "src/_plugins"
-plugins: [
-  jekyll-paginate,
-  jekyll-compose,
-  jekyll-haml,
-  bourbon,
-  neat
-]
-
-# Build settings
+plugins:
+  - jekyll-paginate-v2
+  - jekyll-compose
+  - jekyll-haml
 markdown: kramdown
 highlighter: rouge
-
-paginate: 10
-paginate_path: "/page/:num/"
+pagination:
+  enabled: true
+  permalink: "/page/:num/"
+  per_page: 10
+  sort_reverse: true
