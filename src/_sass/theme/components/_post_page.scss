@@ -1,11 +1,14 @@
 .post-full {
   .post-full-title {
     line-height: 1.5;
-    font-size: 2rem;
+    margin-top: 0.25rem;
   }
   .post-divider {
     width: 100%;
     margin: 2rem auto;
     border-top: 1px solid #EEE;
+  }
+  .post-date {
+    color: lighten($text-color, 25%);
   }
 }

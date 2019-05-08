@@ -1,0 +1,12 @@
+.landing {
+  padding: 2rem 0;
+  border-bottom: 2px solid #EEE;
+  margin-bottom: 3rem;
+
+  h3 {
+    font-weight: 400;
+    color: lighten($text-color, 10%);
+    line-height: 1.7;
+    margin-top: 2rem;
+  }
+}

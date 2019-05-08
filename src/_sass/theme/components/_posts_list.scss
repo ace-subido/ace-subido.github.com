@@ -1,17 +1,7 @@
 .posts-list {
-  .post-link {
-    display: block;
-    color: $brand-primary;
-    border-bottom: none;
-
-    &:hover {
-      color: darken($brand-primary, 10%);
-    }
-  }
-
   .post-list-item {
-    padding: 3rem 0;
-    border-bottom: 2px solid #EEE;
+    display: flex;
+    padding: 1rem 0;
 
     &:first-child {
       padding-top: 0;
@@ -20,14 +10,31 @@
     p:last-child {
       margin-bottom: 0;
     }
-  }
 
-  .post-list-item-button {
-    margin-top: 1.5rem;
   }
 }
 
-.post-date {
-  color: lighten($text-color, 25%);
+.post-date-column {
+  width: 128px;
+  padding-right: 1rem;
+
+  .post-date {
+    color: lighten($text-color, 25%);
+  }
 }
 
+.post-item-details {
+  width: 95%;
+
+  .post-item-link {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: $brand-primary;
+    font-weight: 500;
+    border-bottom: none;
+
+    &:hover {
+      color: darken($brand-primary, 10%);
+    }
+  }
+}

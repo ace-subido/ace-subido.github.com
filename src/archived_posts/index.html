@@ -3,14 +3,21 @@ layout: default
 pagination:
   enabled: true
 ---
+
+<p>
+  I don't write here anymore, I write mostly at <a href="https://medium.com/@acesubido">Medium</a>
+</p>
+<hr>
 <div class="posts-list">
   {% for post in paginator.posts %}
     <article class="post-list-item">
-      <h2><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h2>
-      <p>
+      <div class="post-date-column">
         <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-      </p>
-      {{ post.excerpt }}
+      </div>
+      <div class="post-item-details">
+        <a class="post-item-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        {{ post.excerpt }}
+      </div>
     </article>
   {% endfor %}
 </div>
