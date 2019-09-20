@@ -290,8 +290,7 @@ hr {
       padding-right: 0; }
 
 .posts-list .post-list-item {
-  display: flex;
-  padding: 1rem 0; }
+  display: flex; }
   .posts-list .post-list-item:first-child {
     padding-top: 0; }
   .posts-list .post-list-item p:last-child {
