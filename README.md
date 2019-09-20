@@ -16,8 +16,8 @@ $ direnv allow
 # Development Mode
 $ jekyll s
 
-# Release Mode
-$ rake publish
+# Update production site
+$ rake deploy
 
 # Write a draft
 $ jekyll draft "<title>"
