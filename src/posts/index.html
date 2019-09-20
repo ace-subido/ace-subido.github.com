@@ -4,10 +4,6 @@ pagination:
   enabled: true
 ---
 
-<p>
-  I don't write here anymore, I write mostly at <a href="https://medium.com/@acesubido">Medium</a>
-</p>
-<hr>
 <div class="posts-list">
   {% for post in paginator.posts %}
     <article class="post-list-item">
@@ -16,7 +12,6 @@ pagination:
       </div>
       <div class="post-item-details">
         <a class="post-item-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        {{ post.excerpt }}
       </div>
     </article>
   {% endfor %}
