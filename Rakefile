@@ -58,7 +58,7 @@ task :build do
 end
 
 desc 'Build and publish to Github User Page'
-task publish: %i[not_dirty prepare_git_remote_in_build_dir sync build] do
+task deploy: %i[not_dirty prepare_git_remote_in_build_dir sync build] do
   message = nil
   suffix = ENV['COMMIT_MESSAGE_SUFFIX']
 
