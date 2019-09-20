@@ -13,3 +13,5 @@ Rework is one of the more opinionated and interesting books I've read
 
 This book gave me a higher perspective in technology overall.
 
+# Thinking Fast and Slow
+
