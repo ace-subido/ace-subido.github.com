@@ -1,6 +1,7 @@
 ---
 layout: post
 title: 'Napkin math: Owning a yacht'
+image: /img/blog/napkin-app.png
 ---
 
 When I used to do the Daily UI challenge, I worked on a challenge where I designed a yacht chartering app:
@@ -16,7 +17,7 @@ Before making that design, I had to do research first:
 
 Otherwise, the end design would look so out of touch and unconvincing.
 
-As I dove deeper, I found my Youtube feed immersed with yacht related videos]. I learned how:
+As I dove deeper, I found my Youtube feed immersed with yacht related videos. I learned how:
 
 - Yacht maintenance, as a rule of thumb, usually costs ~10% of its boat value per year. So if you have a 5MUSD yacht, expect 500kUSD/year in costs.
 - It's a fast depreciating asset (10% p.a.).
