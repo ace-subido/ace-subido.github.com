@@ -22,6 +22,7 @@ As I dove deeper, I found my Youtube feed immersed with yacht related videos. I 
 - Yacht maintenance, as a rule of thumb, usually costs ~10% of its boat value per year. So if you have a 5MUSD yacht, expect 500kUSD/year in costs.
 - It's a fast depreciating asset (10% p.a.).
 - People buy yachts for fun.
+- If you rent out a yacht, that's called "chartering". Charter price isn't determined alone on how good the yacht is. The food, service and crew also contributes to this. Crew should be top notch, polite, can communicate clearly and be good at service.
 - Italian and Turkish ship building brands are super popular.
 - Monaco is the super yacht capital of the world.
 - Online Yacht listings are usually outdated, so you'll need a yacht broker to find a yacht, and a yacht surveyor (with an engineering background) to check it out if it's good.
@@ -53,6 +54,7 @@ This is just some random dude having fun with numbers. So here's what the financ
 Notes:
 
 - **Charter** means to rent out your yacht to a group of people/friends/family. They'll have a crew of 6, and they can go island/beach hopping, snorkeling, and paddleboarding, etc. Inclusive of food, drink, and accommodation. The yacht has rooms for 8 people, and 8 berths (sleeping areas).
+- Of course we want to pay high wages for the crew to get the best talent.
 - Based on the Philippine Port Authority website: to park a boat in the dock, it costs 0.020USD per GRT (internal volume, not ship weight) per day. So if our yacht has a volume of 80 tons, you can park it for 1.6USD/day.
 - At 120 days left for personal use, that’s 4 months worth of personal vacations.
 - You'll get your 2.5MUSD back (break-even) in 29 years at 67% usage (33% for personal use).
