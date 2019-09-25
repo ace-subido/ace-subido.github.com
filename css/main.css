@@ -42,7 +42,7 @@ table {
   border-spacing: 0; }
 
 body {
-  color: #555;
+  color: #222;
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
   font-size: 14px;
   line-height: 1.9;
@@ -148,16 +148,19 @@ h6 {
   font-size: 1rem; }
 
 blockquote {
-  border-left: 2px solid #c0e1ff;
+  border-left: 2px solid #D84A38;
   font-size: 1rem;
   padding-left: 1.5rem;
-  color: #888888;
+  color: #626262;
   margin: 2rem 0; }
   blockquote p:last-child {
     margin-bottom: 0; }
 
 em, i {
   font-style: italic; }
+
+.text-muted {
+  color: #626262; }
 
 img {
   display: block;
@@ -228,7 +231,7 @@ hr {
   max-width: 768px;
   margin: 0 auto 0 0;
   display: block;
-  color: #555; }
+  color: #222; }
   .footer-links::after {
     clear: both;
     content: "";
@@ -255,7 +258,7 @@ hr {
   margin-bottom: 3rem; }
   .landing h3 {
     font-weight: 400;
-    color: #6f6f6f;
+    color: #3c3c3c;
     line-height: 1.7;
     margin-top: 2rem; }
 
@@ -267,7 +270,7 @@ hr {
   border-bottom: 1px solid #EEE; }
 
 .site-title {
-  color: #555;
+  color: #222;
   padding: 0 2rem;
   max-width: 768px;
   margin: 0 auto 0 0;
@@ -292,6 +295,11 @@ hr {
       padding-left: 0;
       padding-right: 0; }
 
+.posts-list-page {
+  display: flex; }
+  .posts-list-page .posts-list-column {
+    flex-grow: 3; }
+
 .posts-list .post-list-item {
   display: flex; }
   .posts-list .post-list-item:first-child {
@@ -300,29 +308,21 @@ hr {
     margin-bottom: 0; }
 
 .post-date-column {
-  width: 128px;
-  padding-right: 1rem; }
-  .post-date-column .post-date {
-    color: #959595; }
+  padding-right: 0.5rem;
+  flex: 0 0 116px; }
 
 .post-item-details {
-  width: 95%; }
-  .post-item-details .post-item-link {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: #0074D9;
-    font-weight: 500;
-    border-bottom: none; }
-    .post-item-details .post-item-link:hover {
-      color: #0059a6; }
+  display: block;
+  flex: 1;
+  margin-bottom: 0.5rem; }
 
 .post-full header {
   margin-bottom: 1.5rem; }
 .post-full .post-full-title {
   line-height: 1.5;
   margin-top: 0.125rem; }
-.post-full .post-date {
-  color: #959595; }
+.post-full article img {
+  max-width: 75%; }
 
 .pagination {
   margin: 3rem 0;

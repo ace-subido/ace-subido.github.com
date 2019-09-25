@@ -42,7 +42,7 @@ table {
   border-spacing: 0; }
 
 body {
-  color: #555;
+  color: #222;
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
   font-size: 14px;
   line-height: 1.9;
@@ -148,16 +148,19 @@ h6 {
   font-size: 1rem; }
 
 blockquote {
-  border-left: 2px solid #c0e1ff;
+  border-left: 2px solid #D84A38;
   font-size: 1rem;
   padding-left: 1.5rem;
-  color: #888888;
+  color: #626262;
   margin: 2rem 0; }
   blockquote p:last-child {
     margin-bottom: 0; }
 
 em, i {
   font-style: italic; }
+
+.text-muted {
+  color: #626262; }
 
 img {
   display: block;
