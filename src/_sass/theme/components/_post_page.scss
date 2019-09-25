@@ -1,12 +1,10 @@
 .post-full {
+  header {
+    margin-bottom: 1.5rem;
+  }
   .post-full-title {
     line-height: 1.5;
-    margin-top: 0.25rem;
-  }
-  .post-divider {
-    width: 100%;
-    margin: 2rem auto;
-    border-top: 1px solid #EEE;
+    margin-top: 0.125rem;
   }
   .post-date {
     color: lighten($text-color, 25%);
