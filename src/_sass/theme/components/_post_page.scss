@@ -9,4 +9,10 @@
   .post-date {
     color: lighten($text-color, 25%);
   }
+
+  article {
+    img {
+      max-width: 75%;
+    }
+  }
 }
