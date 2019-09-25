@@ -1,3 +1,14 @@
+
+.posts-list-page {
+  display: flex;
+
+  .posts-list-column {
+    flex-grow: 3;
+  }
+
+  .category-list-column {
+  }
+}
 .posts-list {
   .post-list-item {
     display: flex;
@@ -14,26 +25,12 @@
 }
 
 .post-date-column {
-  width: 128px;
-  padding-right: 1rem;
-
-  .post-date {
-    color: lighten($text-color, 25%);
-  }
+  padding-right: 0.5rem;
+  flex: 0 0 116px;
 }
 
 .post-item-details {
-  width: 95%;
-
-  .post-item-link {
-    display: block;
-    margin-bottom: 0.5rem;
-    color: $brand-primary;
-    font-weight: 500;
-    border-bottom: none;
-
-    &:hover {
-      color: darken($brand-primary, 10%);
-    }
-  }
+  display: block;
+  flex: 1;
+  margin-bottom: 0.5rem;
 }

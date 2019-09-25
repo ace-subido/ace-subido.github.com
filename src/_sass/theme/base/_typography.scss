@@ -108,10 +108,10 @@ h6 {
 }
 
 blockquote {
-  border-left: 2px solid lighten($brand-primary, 45%);
+  border-left: 2px solid $brand-red;
   font-size: 1rem;
   padding-left: 1.5rem;
-  color: lighten($text-color, 20%);
+  color: lighten($text-color, 25%);
   margin: 2rem 0;
 
   p:last-child {
@@ -121,4 +121,8 @@ blockquote {
 
 em, i {
   font-style: italic;
+}
+
+.text-muted {
+  color: lighten($text-color, 25%);
 }
