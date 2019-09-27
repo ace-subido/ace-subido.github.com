@@ -3,6 +3,8 @@ layout: default
 pagination:
   enabled: true
 ---
+
+<h3>Latest</h3>
 <div class="posts-list">
   {% for post in paginator.posts %}
     <article class="post-list-item">
@@ -18,32 +20,37 @@ pagination:
 
 <ul class="pagination">
   <li>
-    <a href="{{ "/posts" | prepend: site.baseurl }}" class="previous">First</a>
+    <a href="{{ "/posts" | prepend: site.baseurl }}">&laquo;</a>
   </li>
   {% if paginator.previous_page %}
     <li>
-      <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+      <a href="{{ paginator.previous_page_path }}">Previous</a>
     </li>
   {% else %}
     <li>
-      <span class="previous">Previous</span>
+      <span class="text-muted">Previous</span>
     </li>
   {% endif %}
     <li>&middot;</li>
     <li>
-      <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+      <span class="text-muted ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
     </li>
     <li>&middot;</li>
   {% if paginator.next_page %}
     <li>
-      <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+      <a href="{{ paginator.next_page_path }}">Next</a>
     </li>
   {% else %}
     <li>
-      <span class="next ">Next</span>
+      <span class="text-muted">Next</span>
     </li>
   {% endif %}
   <li>
-    <a href="{{ paginator.last_page_path }}" class="next">Last</a>
+    <a href="{{ paginator.last_page_path }}">&raquo;</a>
   </li>
 </ul>
+
+<hr/>
+
+{% capture blog_footer %}{% include blog/footer.md %}{% endcapture %}
+{{ blog_footer | markdownify }}

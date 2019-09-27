@@ -1,0 +1,18 @@
+.container {
+  @include grid-container;
+  @include site-column;
+  padding-bottom: 12rem;
+
+  @media only screen and (min-width: 480px) {
+    padding-bottom: 6rem;
+  }
+
+  &.-landing {
+    padding-bottom: 0;
+
+    @media only screen and (min-width: 480px) {
+      padding-bottom: 0;
+    }
+  }
+}
+

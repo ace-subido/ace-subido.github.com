@@ -17,5 +17,5 @@ highlighter: rouge
 pagination:
   enabled: true
   permalink: "/page/:num/"
-  per_page: 20
+  per_page: 5
   sort_reverse: true
