@@ -42,7 +42,7 @@ table {
   border-spacing: 0; }
 
 body {
-  color: #222;
+  color: #444;
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
   font-size: 14px;
   line-height: 1.9;
@@ -66,11 +66,9 @@ html {
 a {
   text-decoration: none;
   color: #0074D9;
-  border-bottom: 1px solid #0074D9;
   transition: color 200ms ease-in-out; }
   a:hover {
-    color: #0059a6;
-    border-bottom: 1px solid #0059a6; }
+    color: #0059a6; }
 
 p {
   display: block;
@@ -125,33 +123,43 @@ pre code {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
-  font-weight: 500;
   line-height: 1.5;
-  margin: 0 0 1rem; }
+  margin: 1.25rem 0 0.5rem;
+  color: #111; }
+
+h1, h2, h3 {
+  font-weight: 700; }
+
+h4, h5, h6 {
+  font-weight: 500; }
 
 h1 {
-  font-size: 1.75rem; }
-
-h2 {
   font-size: 1.5rem; }
 
-h3 {
+h2 {
   font-size: 1.375rem; }
 
-h4 {
+h3 {
   font-size: 1.25rem; }
 
-h5 {
+h4 {
   font-size: 1.125rem; }
 
-h6 {
+h5, h6 {
+  font-weight: 700;
+  text-transform: uppercase; }
+
+h5 {
   font-size: 1rem; }
+
+h6 {
+  font-size: 0.85rem; }
 
 blockquote {
   border-left: 2px solid #D84A38;
   font-size: 1rem;
   padding-left: 1.5rem;
-  color: #626262;
+  color: #848484;
   margin: 2rem 0; }
   blockquote p:last-child {
     margin-bottom: 0; }
@@ -160,7 +168,16 @@ em, i {
   font-style: italic; }
 
 .text-muted {
-  color: #626262; }
+  color: #9d9d9d; }
+
+dl dt {
+  font-weight: 700;
+  color: #111; }
+dl dd {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem; }
+  dl dd p:first-child {
+    margin-top: 1rem; }
 
 img {
   display: block;

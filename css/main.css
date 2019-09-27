@@ -42,7 +42,7 @@ table {
   border-spacing: 0; }
 
 body {
-  color: #222;
+  color: #444;
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
   font-size: 14px;
   line-height: 1.9;
@@ -66,11 +66,9 @@ html {
 a {
   text-decoration: none;
   color: #0074D9;
-  border-bottom: 1px solid #0074D9;
   transition: color 200ms ease-in-out; }
   a:hover {
-    color: #0059a6;
-    border-bottom: 1px solid #0059a6; }
+    color: #0059a6; }
 
 p {
   display: block;
@@ -125,33 +123,43 @@ pre code {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif;
-  font-weight: 500;
   line-height: 1.5;
-  margin: 0 0 1rem; }
+  margin: 1.25rem 0 0.5rem;
+  color: #111; }
+
+h1, h2, h3 {
+  font-weight: 700; }
+
+h4, h5, h6 {
+  font-weight: 500; }
 
 h1 {
-  font-size: 1.75rem; }
-
-h2 {
   font-size: 1.5rem; }
 
-h3 {
+h2 {
   font-size: 1.375rem; }
 
-h4 {
+h3 {
   font-size: 1.25rem; }
 
-h5 {
+h4 {
   font-size: 1.125rem; }
 
-h6 {
+h5, h6 {
+  font-weight: 700;
+  text-transform: uppercase; }
+
+h5 {
   font-size: 1rem; }
+
+h6 {
+  font-size: 0.85rem; }
 
 blockquote {
   border-left: 2px solid #D84A38;
   font-size: 1rem;
   padding-left: 1.5rem;
-  color: #626262;
+  color: #848484;
   margin: 2rem 0; }
   blockquote p:last-child {
     margin-bottom: 0; }
@@ -160,7 +168,16 @@ em, i {
   font-style: italic; }
 
 .text-muted {
-  color: #626262; }
+  color: #9d9d9d; }
+
+dl dt {
+  font-weight: 700;
+  color: #111; }
+dl dd {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem; }
+  dl dd p:first-child {
+    margin-top: 1rem; }
 
 img {
   display: block;
@@ -210,20 +227,26 @@ hr {
   max-width: 768px;
   margin: 0 auto 0 0;
   display: block;
-  margin-bottom: 12rem; }
+  padding-bottom: 12rem; }
   .container::after {
     clear: both;
     content: "";
     display: block; }
   @media only screen and (min-width: 480px) {
     .container {
-      margin-bottom: 6rem; } }
+      padding-bottom: 6rem; } }
+  .container.-landing {
+    padding-bottom: 0; }
+    @media only screen and (min-width: 480px) {
+      .container.-landing {
+        padding-bottom: 0; } }
 
 .site-footer {
   position: absolute;
   bottom: 0;
   width: 100%;
   padding: 1rem 0;
+  background-color: white;
   border-top: 1px solid #EEE; }
 
 .footer-links {
@@ -231,7 +254,7 @@ hr {
   max-width: 768px;
   margin: 0 auto 0 0;
   display: block;
-  color: #222; }
+  color: #444; }
   .footer-links::after {
     clear: both;
     content: "";
@@ -252,15 +275,8 @@ hr {
       padding-left: 0;
       padding-right: 0; }
 
-.landing {
-  padding: 2rem 0;
-  border-bottom: 2px solid #EEE;
-  margin-bottom: 3rem; }
-  .landing h3 {
-    font-weight: 400;
-    color: #3c3c3c;
-    line-height: 1.7;
-    margin-top: 2rem; }
+.footnotes p {
+  margin-bottom: 0.25rem; }
 
 .site-header {
   display: block;
@@ -270,7 +286,7 @@ hr {
   border-bottom: 1px solid #EEE; }
 
 .site-title {
-  color: #222;
+  color: #444;
   padding: 0 2rem;
   max-width: 768px;
   margin: 0 auto 0 0;
@@ -295,26 +311,27 @@ hr {
       padding-left: 0;
       padding-right: 0; }
 
-.posts-list-page {
-  display: flex; }
-  .posts-list-page .posts-list-column {
-    flex-grow: 3; }
+.landing {
+  padding: 1rem 0; }
+  .landing h1 {
+    font-size: 1.75rem; }
+  .landing h3 {
+    font-weight: 400;
+    font-size: 1.375rem;
+    color: #5e5e5e;
+    line-height: 1.7;
+    margin-top: 2rem; }
 
-.posts-list .post-list-item {
-  display: flex; }
-  .posts-list .post-list-item:first-child {
-    padding-top: 0; }
-  .posts-list .post-list-item p:last-child {
-    margin-bottom: 0; }
-
-.post-date-column {
-  padding-right: 0.5rem;
-  flex: 0 0 116px; }
-
-.post-item-details {
-  display: block;
-  flex: 1;
-  margin-bottom: 0.5rem; }
+.pagination {
+  margin: 1rem 0;
+  padding-left: 0; }
+  .pagination > li {
+    font-size: 0.95rem;
+    list-style-type: none;
+    display: inline-block;
+    padding: 0 0.25rem; }
+  .pagination > li:first-child {
+    padding-left: 0; }
 
 .post-full header {
   margin-bottom: 1.5rem; }
@@ -324,15 +341,28 @@ hr {
 .post-full article img {
   max-width: 75%; }
 
-.pagination {
-  margin: 3rem 0;
-  padding-left: 0; }
-  .pagination > li {
-    list-style-type: none;
-    display: inline-block;
-    padding: 0 0.25rem; }
-  .pagination > li:first-child {
-    padding-left: 0; }
+.posts-list-page {
+  display: flex; }
+  .posts-list-page .posts-list-column {
+    flex-grow: 3; }
+
+.posts-list {
+  margin-top: 1.5rem; }
+  .posts-list .post-list-item {
+    display: flex; }
+    .posts-list .post-list-item:first-child {
+      padding-top: 0; }
+    .posts-list .post-list-item p:last-child {
+      margin-bottom: 0; }
+
+.post-date-column {
+  padding-right: 0.5rem;
+  flex: 0 0 116px; }
+
+.post-item-details {
+  display: block;
+  flex: 1;
+  margin-bottom: 0.5rem; }
 
 .highlight table td {
   padding: 5px; }
