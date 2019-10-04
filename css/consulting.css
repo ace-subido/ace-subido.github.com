@@ -172,10 +172,12 @@ em, i {
 
 dl dt {
   font-weight: 700;
+  font-size: 1rem;
   color: #111; }
 dl dd {
   padding-left: 1.5rem;
-  margin-bottom: 1rem; }
+  margin-bottom: 1rem;
+  font-size: 1rem; }
   dl dd p:first-child {
     margin-top: 1rem; }
 
