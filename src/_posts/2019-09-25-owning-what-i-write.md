@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Owning what I write
-category: Personal
 ---
 
 I've been writing on different platforms for most of my online life. I've blogged on:
