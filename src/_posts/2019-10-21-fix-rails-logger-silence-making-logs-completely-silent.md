@@ -15,11 +15,11 @@ end
 
 This is called by a library called `message_bus`. MessageBus is a simple gem that allows your rails server to publish messages to subscribers.
 
-#### Problem
+### Problem
 
 We introduced this silence block lately to avoid logging sensitive information such as tokens. The problem was, after a while we noticed that the server wasn't logging anything at all!
 
-#### Debugging
+### Debugging
 
 Checking out the logs we noticed that the logs always stop after it tries running that `user_id_lookup` block. We quickly tried removing that `Rails.logger.silence` block and the logs went about on its way.
 
