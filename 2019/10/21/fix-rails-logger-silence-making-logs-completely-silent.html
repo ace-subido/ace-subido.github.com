@@ -86,7 +86,7 @@
   Rails.logger.silence do
     # Code for selecting a UserID based on an access token
   end
-end 
+end
 </code></pre></div></div>
 
 <p>This is called by a library called <code class="highlighter-rouge">message_bus</code>. MessageBus is a simple gem that allows your rails server to publish messages to subscribers.</p>
@@ -119,7 +119,7 @@ Thread 2 finishes                                (level 0)
 
 <p>Temporarily, instead of using <code class="highlighter-rouge">Rails.logger.silence</code> we did this:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>old_logger = Rails.logger 
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>old_logger = Rails.logger
 Rails.logger = nil
 
 # Code here
@@ -131,7 +131,7 @@ Rails.logger = old_logger
 def mute_log
   old_logger = Rails.logger
   Rails.logger = nil
-  yield 
+  yield
 ensure
   Rails.logger = old_logger
 end

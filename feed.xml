@@ -5,9 +5,9 @@
     <description></description>
     <link>https://acesubido.net/</link>
     <atom:link href="https://acesubido.net/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 21 Oct 2019 19:35:22 +0800</pubDate>
-    <lastBuildDate>Mon, 21 Oct 2019 19:35:22 +0800</lastBuildDate>
-    <generator>Jekyll v3.8.5</generator>
+    <pubDate>Mon, 21 Oct 2019 23:59:32 +0800</pubDate>
+    <lastBuildDate>Mon, 21 Oct 2019 23:59:32 +0800</lastBuildDate>
+    <generator>Jekyll v4.0.0</generator>
     
       <item>
         <title>Fix: Rails.logger.silence making logs completely silent</title>
@@ -17,7 +17,7 @@
   Rails.logger.silence do
     # Code for selecting a UserID based on an access token
   end
-end 
+end
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;This is called by a library called &lt;code class=&quot;highlighter-rouge&quot;&gt;message_bus&lt;/code&gt;. MessageBus is a simple gem that allows your rails server to publish messages to subscribers.&lt;/p&gt;
@@ -50,7 +50,7 @@ Thread 2 finishes                                (level 0)
 
 &lt;p&gt;Temporarily, instead of using &lt;code class=&quot;highlighter-rouge&quot;&gt;Rails.logger.silence&lt;/code&gt; we did this:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;old_logger = Rails.logger 
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;old_logger = Rails.logger
 Rails.logger = nil
 
 # Code here
@@ -62,7 +62,7 @@ Rails.logger = old_logger
 def mute_log
   old_logger = Rails.logger
   Rails.logger = nil
-  yield 
+  yield
 ensure
   Rails.logger = old_logger
 end
@@ -79,6 +79,10 @@ end
         <pubDate>Mon, 21 Oct 2019 00:00:00 +0800</pubDate>
         <link>https://acesubido.net/2019/10/21/fix-rails-logger-silence-making-logs-completely-silent.html</link>
         <guid isPermaLink="true">https://acesubido.net/2019/10/21/fix-rails-logger-silence-making-logs-completely-silent.html</guid>
+        
+        <category>ruby</category>
+        
+        <category>work</category>
         
         
       </item>
@@ -112,6 +116,10 @@ end
         <pubDate>Fri, 11 Oct 2019 00:00:00 +0800</pubDate>
         <link>https://acesubido.net/2019/10/11/circuit-breaking-in-ruby.html</link>
         <guid isPermaLink="true">https://acesubido.net/2019/10/11/circuit-breaking-in-ruby.html</guid>
+        
+        <category>ruby</category>
+        
+        <category>work</category>
         
         
       </item>
@@ -244,6 +252,8 @@ end
         <link>https://acesubido.net/2019/09/27/part-2-napkin-math-owning-a-yacht.html</link>
         <guid isPermaLink="true">https://acesubido.net/2019/09/27/part-2-napkin-math-owning-a-yacht.html</guid>
         
+        <category>napkin math</category>
+        
         
       </item>
     
@@ -268,6 +278,8 @@ end
         <pubDate>Wed, 25 Sep 2019 00:00:00 +0800</pubDate>
         <link>https://acesubido.net/2019/09/25/owning-what-i-write.html</link>
         <guid isPermaLink="true">https://acesubido.net/2019/09/25/owning-what-i-write.html</guid>
+        
+        <category>personal</category>
         
         
       </item>
@@ -370,6 +382,8 @@ end
         <pubDate>Fri, 20 Sep 2019 00:00:00 +0800</pubDate>
         <link>https://acesubido.net/2019/09/20/napkin-math-owning-a-yacht.html</link>
         <guid isPermaLink="true">https://acesubido.net/2019/09/20/napkin-math-owning-a-yacht.html</guid>
+        
+        <category>napkin math</category>
         
         
       </item>
