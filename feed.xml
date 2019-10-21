@@ -5,8 +5,8 @@
     <description></description>
     <link>https://acesubido.net/</link>
     <atom:link href="https://acesubido.net/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 21 Oct 2019 19:08:44 +0800</pubDate>
-    <lastBuildDate>Mon, 21 Oct 2019 19:08:44 +0800</lastBuildDate>
+    <pubDate>Mon, 21 Oct 2019 19:10:51 +0800</pubDate>
+    <lastBuildDate>Mon, 21 Oct 2019 19:10:51 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -22,11 +22,11 @@ end
 
 &lt;p&gt;This is called by a library called &lt;code class=&quot;highlighter-rouge&quot;&gt;message_bus&lt;/code&gt;. MessageBus is a simple gem that allows your rails server to publish messages to subscribers.&lt;/p&gt;
 
-&lt;h4 id=&quot;problem&quot;&gt;Problem&lt;/h4&gt;
+&lt;h3 id=&quot;problem&quot;&gt;Problem&lt;/h3&gt;
 
 &lt;p&gt;We introduced this silence block lately to avoid logging sensitive information such as tokens. The problem was, after a while we noticed that the server wasn’t logging anything at all!&lt;/p&gt;
 
-&lt;h4 id=&quot;debugging&quot;&gt;Debugging&lt;/h4&gt;
+&lt;h3 id=&quot;debugging&quot;&gt;Debugging&lt;/h3&gt;
 
 &lt;p&gt;Checking out the logs we noticed that the logs always stop after it tries running that &lt;code class=&quot;highlighter-rouge&quot;&gt;user_id_lookup&lt;/code&gt; block. We quickly tried removing that &lt;code class=&quot;highlighter-rouge&quot;&gt;Rails.logger.silence&lt;/code&gt; block and the logs went about on its way.&lt;/p&gt;
 
