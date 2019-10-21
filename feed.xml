@@ -5,8 +5,8 @@
     <description></description>
     <link>https://acesubido.net/</link>
     <atom:link href="https://acesubido.net/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 21 Oct 2019 19:10:51 +0800</pubDate>
-    <lastBuildDate>Mon, 21 Oct 2019 19:10:51 +0800</lastBuildDate>
+    <pubDate>Mon, 21 Oct 2019 19:35:22 +0800</pubDate>
+    <lastBuildDate>Mon, 21 Oct 2019 19:35:22 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
     
       <item>
@@ -73,6 +73,8 @@ end
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;p&gt;This allows the block to ensure that where not mutating the state of some singleton &lt;code class=&quot;highlighter-rouge&quot;&gt;Logger&lt;/code&gt; but we’re just reassigning instances instead. It’s not pretty but it’s a band-aid solution right now as we’re working on thinking of other ways to solve this problem.&lt;/p&gt;
+
+&lt;p&gt;The problems that will arise from this is that we will be missing certain log entries during the time that the logger is swapped out for &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt;. Which is pretty dangerous.&lt;/p&gt;
 </description>
         <pubDate>Mon, 21 Oct 2019 00:00:00 +0800</pubDate>
         <link>https://acesubido.net/2019/10/21/fix-rails-logger-silence-making-logs-completely-silent.html</link>

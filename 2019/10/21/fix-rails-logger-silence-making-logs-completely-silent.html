@@ -143,7 +143,19 @@ end
 
 <p>This allows the block to ensure that where not mutating the state of some singleton <code class="highlighter-rouge">Logger</code> but we’re just reassigning instances instead. It’s not pretty but it’s a band-aid solution right now as we’re working on thinking of other ways to solve this problem.</p>
 
+<p>The problems that will arise from this is that we will be missing certain log entries during the time that the logger is swapped out for <code class="highlighter-rouge">nil</code>. Which is pretty dangerous.</p>
+
   </article>
+  <hr>
+  <div class="post-navigation">
+    
+      <a class="prev" href="/2019/10/11/circuit-breaking-in-ruby.html">
+        <strong>Previous</strong><br>
+        Circuit Breaking in Ruby
+      </a>
+    
+    
+  </div>
 </section>
 
     </div>

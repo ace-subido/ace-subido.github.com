@@ -342,6 +342,12 @@ hr {
   margin-top: 0.125rem; }
 .post-full article img {
   max-width: 95%; }
+.post-full .post-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; }
+  .post-full .post-navigation .prev, .post-full .post-navigation .next {
+    width: 40%; }
 
 .posts-list-page {
   display: flex; }
