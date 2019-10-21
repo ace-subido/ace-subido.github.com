@@ -12,4 +12,14 @@
       max-width: 95%;
     }
   }
+
+  .post-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    .prev, .next {
+      width: 40%;
+    }
+  }
 }

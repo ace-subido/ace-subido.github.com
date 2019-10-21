@@ -15,4 +15,19 @@ layout: default
   <article>
     {{ content }}
   </article>
+  <hr>
+  <div class="post-navigation">
+    {% if page.previous.url %}
+      <a class="prev" href="{{page.previous.url}}">
+        <strong>Previous</strong><br>
+        {{page.previous.title}}
+      </a>
+    {% endif %}
+    {% if page.next.url %}
+      <a class="next" href="{{page.next.url}}">
+        <strong>Next</strong><br>
+        {{page.next.title}}
+      </a>
+    {% endif %}
+  </div>
 </section>
