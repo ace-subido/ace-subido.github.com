@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Fix: Rails.logger.silence making logs completely silent</title>
+  <meta name="description" content="So we have a this block inside an initializer:">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta content="acesubido" property="og:site_name">
+
+  
+    <meta content="Fix: Rails.logger.silence making logs completely silent" property="og:title">
+    <meta content="Fix: Rails.logger.silence making logs completely silent" property="twitter:title">
+  
+
+  
+    <meta content="article" property="og:type">
+  
+
+  
+    <meta content="So we have a this block inside an initializer:" property="og:description">
+    <meta content="So we have a this block inside an initializer:" property="twitter:description">
+  
+
+  
+    <meta content="https://acesubido.net/2019/10/21/fix-rails-logger-silence-making-logs-completely-silent.html" property="og:url">
+  
+
+  
+    <meta content="2019-10-21T00:00:00+08:00" property="article:published_time">
+    <meta content="https://acesubido.net/about/" property="article:author">
+  
+
+  
+    <meta content="https://acesubido.net/img/logo-hires.png" property="og:image">
+    <meta content="https://acesubido.net/img/logo-hires.png" property="twitter:image">
+  
+
+  <link rel="stylesheet" href="https://acesubido.net/css/main.css">
+  <link rel="canonical" href="https://acesubido.net/2019/10/21/fix-rails-logger-silence-making-logs-completely-silent.html">
+  <link rel="alternate" type="application/rss+xml" title="acesubido" href="/feed.xml" />
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
+</head>
+
+  <body>
+    <header class="site-header">
+  <div class="site-title">
+    <ul class="navigation-links-list">
+      <li>
+        acesubido
+        &mdash;
+      </li>
+      <li>
+        <a href="/">home</a>
+      </li>
+      <li>
+        <a href="/posts">blog</a>
+      </li>
+      <li>
+        <a href="/contact">contact</a>
+      </li>
+      <li>
+        <a href="/feed.xml">rss feed</a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+    <div class="container">
+      <section class="post-full">
+  <header>
+    <span class="post-date text-muted">
+      Oct 21, 2019
+      
+      
+    </span>
+    <h1 class="post-full-title">Fix: Rails.logger.silence making logs completely silent</h1>
+  </header>
+  <article>
+    <p>So we have a this block inside an initializer:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>user_id_lookup: proc do |env|
+  Rails.logger.silence do
+    # Code for selecting a UserID based on an access token
+  end
+end 
+</code></pre></div></div>
+
+<p>This is called by a library called <code class="highlighter-rouge">message_bus</code>. MessageBus is a simple gem that allows your rails server to publish messages to subscribers.</p>
+
+<h4 id="problem">Problem</h4>
+
+<p>We introduced this silence block lately to avoid logging sensitive information such as tokens. The problem was, after a while we noticed that the server wasn’t logging anything at all!</p>
+
+<h4 id="debugging">Debugging</h4>
+
+<p>Checking out the logs we noticed that the logs always stop after it tries running that <code class="highlighter-rouge">user_id_lookup</code> block. We quickly tried removing that <code class="highlighter-rouge">Rails.logger.silence</code> block and the logs went about on its way.</p>
+
+<p>After much reading it looks like <code class="highlighter-rouge">Rails.logger.silence</code> actually replaces the <code class="highlighter-rouge">log_level</code> of the <code class="highlighter-rouge">logger</code> during that block. Seeing that <code class="highlighter-rouge">message_bus</code> runs these <code class="highlighter-rouge">proc</code>’s in different threads, reassigning that <code class="highlighter-rouge">log_level</code> to a singleton like <code class="highlighter-rouge">Rails.logger</code> feels like entering a cave of dragons fighting over the same gold stash.</p>
+
+<p>Example:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Thread 1 starts
+Thread 1 gets the current Rails.logger level     (level 1)
+Thread 1 silences the current Rails.logger       (level 0)
+Thread 2 starts
+Thread 2 gets the current Rails.logger level     (level 0)
+Thread 1 returns back the old Rails.logger level (level 1)
+Thread 1 finishes                                (level 1)
+Thread 2 silences the current Rails.logger       (level 0)
+Thread 2 returns back the old Rails.logger level (level 0)
+Thread 2 finishes                                (level 0)
+</code></pre></div></div>
+
+<p><strong>Solution</strong></p>
+
+<p>Temporarily, instead of using <code class="highlighter-rouge">Rails.logger.silence</code> we did this:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>old_logger = Rails.logger 
+Rails.logger = nil
+
+# Code here
+
+Rails.logger = old_logger
+
+# We can even refactor this into a handy function
+
+def mute_log
+  old_logger = Rails.logger
+  Rails.logger = nil
+  yield 
+ensure
+  Rails.logger = old_logger
+end
+
+mute_log do
+  # ActiveRecord Code here
+end
+</code></pre></div></div>
+
+<p>This allows the block to ensure that where not mutating the state of some singleton <code class="highlighter-rouge">Logger</code> but we’re just reassigning instances instead. It’s not pretty but it’s a band-aid solution right now as we’re working on thinking of other ways to solve this problem.</p>
+
+  </article>
+</section>
+
+    </div>
+    <footer class="site-footer">
+  <nav class="footer-links">
+    <ul class="navigation-links-list">
+      <li>
+        acesubido
+        &mdash;
+      </li>
+      <li>
+        <a href="/">home</a>
+      </li>
+      <li>
+        <a href="/posts">blog</a>
+      </li>
+      <li>
+        <a href="/contact">contact</a>
+      </li>
+      <li>
+        <a href="/feed.xml">rss feed</a>
+      </li>
+    </ul>
+  </nav>
+</footer>
+
+<script type="text/javascript" src="/javascript/google-analytics.js"></script>
+
+  </body>
+
+</html>

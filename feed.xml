@@ -5,9 +5,81 @@
     <description></description>
     <link>https://acesubido.net/</link>
     <atom:link href="https://acesubido.net/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 11 Oct 2019 23:00:44 +0800</pubDate>
-    <lastBuildDate>Fri, 11 Oct 2019 23:00:44 +0800</lastBuildDate>
+    <pubDate>Mon, 21 Oct 2019 19:08:44 +0800</pubDate>
+    <lastBuildDate>Mon, 21 Oct 2019 19:08:44 +0800</lastBuildDate>
     <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Fix: Rails.logger.silence making logs completely silent</title>
+        <description>&lt;p&gt;So we have a this block inside an initializer:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;user_id_lookup: proc do |env|
+  Rails.logger.silence do
+    # Code for selecting a UserID based on an access token
+  end
+end 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This is called by a library called &lt;code class=&quot;highlighter-rouge&quot;&gt;message_bus&lt;/code&gt;. MessageBus is a simple gem that allows your rails server to publish messages to subscribers.&lt;/p&gt;
+
+&lt;h4 id=&quot;problem&quot;&gt;Problem&lt;/h4&gt;
+
+&lt;p&gt;We introduced this silence block lately to avoid logging sensitive information such as tokens. The problem was, after a while we noticed that the server wasn’t logging anything at all!&lt;/p&gt;
+
+&lt;h4 id=&quot;debugging&quot;&gt;Debugging&lt;/h4&gt;
+
+&lt;p&gt;Checking out the logs we noticed that the logs always stop after it tries running that &lt;code class=&quot;highlighter-rouge&quot;&gt;user_id_lookup&lt;/code&gt; block. We quickly tried removing that &lt;code class=&quot;highlighter-rouge&quot;&gt;Rails.logger.silence&lt;/code&gt; block and the logs went about on its way.&lt;/p&gt;
+
+&lt;p&gt;After much reading it looks like &lt;code class=&quot;highlighter-rouge&quot;&gt;Rails.logger.silence&lt;/code&gt; actually replaces the &lt;code class=&quot;highlighter-rouge&quot;&gt;log_level&lt;/code&gt; of the &lt;code class=&quot;highlighter-rouge&quot;&gt;logger&lt;/code&gt; during that block. Seeing that &lt;code class=&quot;highlighter-rouge&quot;&gt;message_bus&lt;/code&gt; runs these &lt;code class=&quot;highlighter-rouge&quot;&gt;proc&lt;/code&gt;’s in different threads, reassigning that &lt;code class=&quot;highlighter-rouge&quot;&gt;log_level&lt;/code&gt; to a singleton like &lt;code class=&quot;highlighter-rouge&quot;&gt;Rails.logger&lt;/code&gt; feels like entering a cave of dragons fighting over the same gold stash.&lt;/p&gt;
+
+&lt;p&gt;Example:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Thread 1 starts
+Thread 1 gets the current Rails.logger level     (level 1)
+Thread 1 silences the current Rails.logger       (level 0)
+Thread 2 starts
+Thread 2 gets the current Rails.logger level     (level 0)
+Thread 1 returns back the old Rails.logger level (level 1)
+Thread 1 finishes                                (level 1)
+Thread 2 silences the current Rails.logger       (level 0)
+Thread 2 returns back the old Rails.logger level (level 0)
+Thread 2 finishes                                (level 0)
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Temporarily, instead of using &lt;code class=&quot;highlighter-rouge&quot;&gt;Rails.logger.silence&lt;/code&gt; we did this:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;old_logger = Rails.logger 
+Rails.logger = nil
+
+# Code here
+
+Rails.logger = old_logger
+
+# We can even refactor this into a handy function
+
+def mute_log
+  old_logger = Rails.logger
+  Rails.logger = nil
+  yield 
+ensure
+  Rails.logger = old_logger
+end
+
+mute_log do
+  # ActiveRecord Code here
+end
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;This allows the block to ensure that where not mutating the state of some singleton &lt;code class=&quot;highlighter-rouge&quot;&gt;Logger&lt;/code&gt; but we’re just reassigning instances instead. It’s not pretty but it’s a band-aid solution right now as we’re working on thinking of other ways to solve this problem.&lt;/p&gt;
+</description>
+        <pubDate>Mon, 21 Oct 2019 00:00:00 +0800</pubDate>
+        <link>https://acesubido.net/2019/10/21/fix-rails-logger-silence-making-logs-completely-silent.html</link>
+        <guid isPermaLink="true">https://acesubido.net/2019/10/21/fix-rails-logger-silence-making-logs-completely-silent.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>Circuit Breaking in Ruby</title>
@@ -524,63 +596,6 @@ BigDecimal 22.4627133860700558
         <pubDate>Tue, 16 May 2017 00:00:00 +0800</pubDate>
         <link>https://acesubido.net/2017/05/16/bigdecimal-vs-float-for-anything-related-to-finance.html</link>
         <guid isPermaLink="true">https://acesubido.net/2017/05/16/bigdecimal-vs-float-for-anything-related-to-finance.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>Thoughts on the elections - everyone needs a savior</title>
-        <description>&lt;p&gt;Elections is coming, and to be honest, I had to install a chrome filter to block out my feeds from certain keywords. Visiting CNN Philippines and Rappler, the past few weeks had me realizing one thing: everyone needs a savior.&lt;/p&gt;
-
-&lt;h3 id=&quot;israelites&quot;&gt;Israelites&lt;/h3&gt;
-
-&lt;p&gt;If you look closely, in the Bible, the Israelites went through a bunch of phases in their history as a nation 1) where they had leaders and 2) where they didn’t have leaders.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Old Testament depicts a nation of not having a leader, then transitioning to having Moses and Joshua as a leader.&lt;/li&gt;
-  &lt;li&gt;The Israelites then went through a phase of having a bunch of Judges leading&lt;/li&gt;
-  &lt;li&gt;They clamored at Samuel because they wanted a king, it would make things perfect and in order if they would get one, so they get King Saul, then King David and King Solomon&lt;/li&gt;
-  &lt;li&gt;The Israelites liked King Saul because at that time, their main issue was the imminent threat of invaders. King Saul was the human embodiment of might, charisma and stability they could run under, that’s why they liked him. It turns out one of their best periods as a nation was with someone opposite of his stature: David.&lt;/li&gt;
-  &lt;li&gt;Psalms sing about a relationship with God&lt;/li&gt;
-  &lt;li&gt;Majority of the Old Testament depicts being under rule of invaders.&lt;/li&gt;
-  &lt;li&gt;Shadrach, Meshach and Abednego lived under King Nebuchadnezzar’s rule.&lt;/li&gt;
-  &lt;li&gt;New Testament depicts a society where they all wanted a king that would fix their current problem: being ruled over by the Romans. Instead they get Jesus.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Despite having a king, no king, prophets, or no prophets there was a common theme: once their hearts turned away from God it lead to ruin, poverty, shame and exile.&lt;/p&gt;
-
-&lt;h3 id=&quot;better-citizens&quot;&gt;Better citizens&lt;/h3&gt;
-
-&lt;p&gt;You see it in social media and the news across the country: the cries of change and the cries for rescue. The Filipinos and the Israelites of the Bible share a common thing: we want a savior, we want change, we want rescue, and we think if we get a better king/president it will fix everything.&lt;/p&gt;
-
-&lt;p&gt;But it won’t.&lt;/p&gt;
-
-&lt;p&gt;Let me get straight to the point: the Philippines doesn’t need a better president, it needs better citizens. No matter how good our president is, if our hearts are not aligned with God, then the things we value are skewed.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;We will objectify women&lt;/li&gt;
-  &lt;li&gt;We will do shortcuts (fixers, not falling in line properly, spitting on the ground, throwing trash everywhere)&lt;/li&gt;
-  &lt;li&gt;We will be selfish&lt;/li&gt;
-  &lt;li&gt;We will not trust authority&lt;/li&gt;
-  &lt;li&gt;We will not respect our followers&lt;/li&gt;
-  &lt;li&gt;We will be easily bought&lt;/li&gt;
-  &lt;li&gt;We will curse our fellow man (putting down others, crab-mentality)&lt;/li&gt;
-  &lt;li&gt;We will envy&lt;/li&gt;
-  &lt;li&gt;We will murder&lt;/li&gt;
-  &lt;li&gt;We will steal&lt;/li&gt;
-  &lt;li&gt;We will be insecure&lt;/li&gt;
-  &lt;li&gt;We will not care about being competent (excellence in service, research and production)&lt;/li&gt;
-  &lt;li&gt;We will not respect and learn about God’s creation (science, education, environmentalism)&lt;/li&gt;
-  &lt;li&gt;The list goes on.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;The saying “change is coming” is true, but it can come tomorrow, or right now; because change should come from within you.&lt;/p&gt;
-
-&lt;p&gt;Regardless of who wins in the coming elections, the president does not hold your future, God does.&lt;/p&gt;
-</description>
-        <pubDate>Tue, 03 May 2016 00:00:00 +0800</pubDate>
-        <link>https://acesubido.net/2016/05/03/election-revelation-everyone-needs-a-savior.html</link>
-        <guid isPermaLink="true">https://acesubido.net/2016/05/03/election-revelation-everyone-needs-a-savior.html</guid>
         
         
       </item>
