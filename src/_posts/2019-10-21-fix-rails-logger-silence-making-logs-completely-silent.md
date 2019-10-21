@@ -68,3 +68,5 @@ end
 ```
 
 This allows the block to ensure that where not mutating the state of some singleton `Logger` but we're just reassigning instances instead. It's not pretty but it's a band-aid solution right now as we're working on thinking of other ways to solve this problem.
+
+The problems that will arise from this is that we will be missing certain log entries during the time that the logger is swapped out for `nil`. Which is pretty dangerous.
