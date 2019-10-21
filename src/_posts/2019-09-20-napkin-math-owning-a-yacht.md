@@ -2,6 +2,8 @@
 layout: post
 title: 'Napkin math: Owning a yacht'
 image: /img/blog/napkin-app.png
+tags:
+- napkin math
 ---
 
 [Update: Part 2](/2019/09/27/part-2-napkin-math-owning-a-yacht.html)

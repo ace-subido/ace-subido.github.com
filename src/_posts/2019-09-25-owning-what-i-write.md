@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Owning what I write
+tags:
+- personal
 ---
 
 I've been writing on different platforms for most of my online life. I've blogged on:

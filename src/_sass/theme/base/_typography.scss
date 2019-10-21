@@ -33,6 +33,13 @@ ul {
   li {
     list-style-type: disc;
   }
+
+  &.unstyled {
+    padding-left: 0;
+    li {
+      list-style-type: none;
+    }
+  }
 }
 
 ol {

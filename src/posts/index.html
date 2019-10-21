@@ -12,7 +12,7 @@ pagination:
         <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
       </div>
       <div class="post-item-details">
-        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        <a href="{{ post.url }}">{{ post.title }}</a>
       </div>
     </article>
   {% endfor %}
@@ -49,6 +49,11 @@ pagination:
     <a href="{{ paginator.last_page_path }}">&raquo;</a>
   </li>
 </ul>
+
+<h4>Tags</h4>
+{% for tag in site.tags %}
+  <a href="/tag/{{tag[0]}}">{{ tag[0] }} ({{ tag[1].size }})</a>&nbsp;&nbsp;
+{% endfor %}
 
 <hr/>
 

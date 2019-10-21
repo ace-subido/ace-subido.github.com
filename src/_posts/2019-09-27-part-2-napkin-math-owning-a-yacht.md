@@ -1,6 +1,8 @@
 ---
 layout: post
 title: "Part 2 - Napkin Math: Owning a yacht"
+tags:
+- napkin math
 ---
 
 [Ever since Part 1](/2019/09/20/napkin-math-owning-a-yacht.html), I've gone down the rabbit hole. The rabbit hole of yachting. After much research and some helpful DM’s in twitter, here’s some stuff I learned:

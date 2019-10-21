@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Circuit Breaking in Ruby
+tags:
+- ruby
+- work
 ---
 
 ### What is Circuit Breaking?
