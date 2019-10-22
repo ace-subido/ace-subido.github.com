@@ -5,8 +5,8 @@
     <description></description>
     <link>https://acesubido.net/</link>
     <atom:link href="https://acesubido.net/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 21 Oct 2019 23:59:32 +0800</pubDate>
-    <lastBuildDate>Mon, 21 Oct 2019 23:59:32 +0800</lastBuildDate>
+    <pubDate>Tue, 22 Oct 2019 12:34:28 +0800</pubDate>
+    <lastBuildDate>Tue, 22 Oct 2019 12:34:28 +0800</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
@@ -45,36 +45,6 @@ Thread 2 silences the current Rails.logger       (level 0)
 Thread 2 returns back the old Rails.logger level (level 0)
 Thread 2 finishes                                (level 0)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Temporarily, instead of using &lt;code class=&quot;highlighter-rouge&quot;&gt;Rails.logger.silence&lt;/code&gt; we did this:&lt;/p&gt;
-
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;old_logger = Rails.logger
-Rails.logger = nil
-
-# Code here
-
-Rails.logger = old_logger
-
-# We can even refactor this into a handy function
-
-def mute_log
-  old_logger = Rails.logger
-  Rails.logger = nil
-  yield
-ensure
-  Rails.logger = old_logger
-end
-
-mute_log do
-  # ActiveRecord Code here
-end
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;This allows the block to ensure that where not mutating the state of some singleton &lt;code class=&quot;highlighter-rouge&quot;&gt;Logger&lt;/code&gt; but we’re just reassigning instances instead. It’s not pretty but it’s a band-aid solution right now as we’re working on thinking of other ways to solve this problem.&lt;/p&gt;
-
-&lt;p&gt;The problems that will arise from this is that we will be missing certain log entries during the time that the logger is swapped out for &lt;code class=&quot;highlighter-rouge&quot;&gt;nil&lt;/code&gt;. Which is pretty dangerous.&lt;/p&gt;
 </description>
         <pubDate>Mon, 21 Oct 2019 00:00:00 +0800</pubDate>
         <link>https://acesubido.net/2019/10/21/fix-rails-logger-silence-making-logs-completely-silent.html</link>
