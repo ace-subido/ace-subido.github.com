@@ -42,3 +42,5 @@ Thread 2 silences the current Rails.logger       (level 0)
 Thread 2 returns back the old Rails.logger level (level 0)
 Thread 2 finishes                                (level 0)
 ```
+
+The way to solve this would be to instantiate use new Logger instead of mutating a singleton Logger.
