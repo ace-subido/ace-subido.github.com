@@ -5,8 +5,8 @@
     <description></description>
     <link>https://acesubido.net/</link>
     <atom:link href="https://acesubido.net/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 22 Oct 2019 12:34:28 +0800</pubDate>
-    <lastBuildDate>Tue, 22 Oct 2019 12:34:28 +0800</lastBuildDate>
+    <pubDate>Wed, 23 Oct 2019 14:13:14 +0800</pubDate>
+    <lastBuildDate>Wed, 23 Oct 2019 14:13:14 +0800</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
@@ -45,6 +45,8 @@ Thread 2 silences the current Rails.logger       (level 0)
 Thread 2 returns back the old Rails.logger level (level 0)
 Thread 2 finishes                                (level 0)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;The way to solve this would be to instantiate use new Logger instead of mutating a singleton Logger.&lt;/p&gt;
 </description>
         <pubDate>Mon, 21 Oct 2019 00:00:00 +0800</pubDate>
         <link>https://acesubido.net/2019/10/21/fix-rails-logger-silence-making-logs-completely-silent.html</link>
