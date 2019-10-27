@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Fix: Rails.logger.silence making logs completely silent'
+title: 'Rails.logger.silence making logs completely silent'
 tags:
 - ruby
 - work
@@ -43,4 +43,4 @@ Thread 2 returns back the old Rails.logger level (level 0)
 Thread 2 finishes                                (level 0)
 ```
 
-The way to solve this would be to instantiate use new Logger instead of mutating a singleton Logger.
+The way to solve this would be to instantiate use new Logger instead of mutating a singleton Logger. Or to use something like blouson to filter out logs if it's that important
