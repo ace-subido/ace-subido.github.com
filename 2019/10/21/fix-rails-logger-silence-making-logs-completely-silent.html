@@ -5,15 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Fix: Rails.logger.silence making logs completely silent</title>
+  <title>Rails.logger.silence making logs completely silent</title>
   <meta name="description" content="So we have a this block inside an initializer:">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta content="acesubido" property="og:site_name">
 
   
-    <meta content="Fix: Rails.logger.silence making logs completely silent" property="og:title">
-    <meta content="Fix: Rails.logger.silence making logs completely silent" property="twitter:title">
+    <meta content="Rails.logger.silence making logs completely silent" property="og:title">
+    <meta content="Rails.logger.silence making logs completely silent" property="twitter:title">
   
 
   
@@ -77,7 +77,7 @@
       
       
     </span>
-    <h1 class="post-full-title">Fix: Rails.logger.silence making logs completely silent</h1>
+    <h1 class="post-full-title">Rails.logger.silence making logs completely silent</h1>
   </header>
   <article>
     <p>So we have a this block inside an initializer:</p>
@@ -115,7 +115,7 @@ Thread 2 returns back the old Rails.logger level (level 0)
 Thread 2 finishes                                (level 0)
 </code></pre></div></div>
 
-<p>The way to solve this would be to instantiate use new Logger instead of mutating a singleton Logger.</p>
+<p>The way to solve this would be to instantiate use new Logger instead of mutating a singleton Logger. Or to use something like blouson to filter out logs if it’s that important</p>
 
   </article>
   <hr>

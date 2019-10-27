@@ -5,12 +5,12 @@
     <description></description>
     <link>https://acesubido.net/</link>
     <atom:link href="https://acesubido.net/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 23 Oct 2019 14:13:14 +0800</pubDate>
-    <lastBuildDate>Wed, 23 Oct 2019 14:13:14 +0800</lastBuildDate>
+    <pubDate>Sun, 27 Oct 2019 22:52:03 +0800</pubDate>
+    <lastBuildDate>Sun, 27 Oct 2019 22:52:03 +0800</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
-        <title>Fix: Rails.logger.silence making logs completely silent</title>
+        <title>Rails.logger.silence making logs completely silent</title>
         <description>&lt;p&gt;So we have a this block inside an initializer:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;user_id_lookup: proc do |env|
@@ -46,7 +46,7 @@ Thread 2 returns back the old Rails.logger level (level 0)
 Thread 2 finishes                                (level 0)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;The way to solve this would be to instantiate use new Logger instead of mutating a singleton Logger.&lt;/p&gt;
+&lt;p&gt;The way to solve this would be to instantiate use new Logger instead of mutating a singleton Logger. Or to use something like blouson to filter out logs if it’s that important&lt;/p&gt;
 </description>
         <pubDate>Mon, 21 Oct 2019 00:00:00 +0800</pubDate>
         <link>https://acesubido.net/2019/10/21/fix-rails-logger-silence-making-logs-completely-silent.html</link>
