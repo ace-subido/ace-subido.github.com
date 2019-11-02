@@ -5,15 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Rails.logger.silence making logs completely silent</title>
-  <meta name="description" content="So we have a this block inside an initializer:">
+  <title>Rails.logger.silence and threading</title>
+  <meta name="description" content="So we have this block inside an initializer:">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta content="acesubido" property="og:site_name">
 
   
-    <meta content="Rails.logger.silence making logs completely silent" property="og:title">
-    <meta content="Rails.logger.silence making logs completely silent" property="twitter:title">
+    <meta content="Rails.logger.silence and threading" property="og:title">
+    <meta content="Rails.logger.silence and threading" property="twitter:title">
   
 
   
@@ -21,12 +21,12 @@
   
 
   
-    <meta content="So we have a this block inside an initializer:" property="og:description">
-    <meta content="So we have a this block inside an initializer:" property="twitter:description">
+    <meta content="So we have this block inside an initializer:" property="og:description">
+    <meta content="So we have this block inside an initializer:" property="twitter:description">
   
 
   
-    <meta content="https://acesubido.net/2019/10/21/fix-rails-logger-silence-making-logs-completely-silent.html" property="og:url">
+    <meta content="https://acesubido.net/2019/10/21/rails-logger-silence-and-threading.html" property="og:url">
   
 
   
@@ -40,7 +40,7 @@
   
 
   <link rel="stylesheet" href="https://acesubido.net/css/main.css">
-  <link rel="canonical" href="https://acesubido.net/2019/10/21/fix-rails-logger-silence-making-logs-completely-silent.html">
+  <link rel="canonical" href="https://acesubido.net/2019/10/21/rails-logger-silence-and-threading.html">
   <link rel="alternate" type="application/rss+xml" title="acesubido" href="/feed.xml" />
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
 </head>
@@ -77,10 +77,10 @@
       
       
     </span>
-    <h1 class="post-full-title">Rails.logger.silence making logs completely silent</h1>
+    <h1 class="post-full-title">Rails.logger.silence and threading</h1>
   </header>
   <article>
-    <p>So we have a this block inside an initializer:</p>
+    <p>So we have this block inside an initializer:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>user_id_lookup: proc do |env|
   Rails.logger.silence do
@@ -89,17 +89,17 @@
 end
 </code></pre></div></div>
 
-<p>This is called by a library called <code class="highlighter-rouge">message_bus</code>. MessageBus is a simple gem that allows your rails server to publish messages to subscribers.</p>
+<p>This is executed by a library called <code class="highlighter-rouge">message_bus</code>. MessageBus is a simple gem that allows your rails server to publish messages to subscribers.</p>
 
 <h3 id="problem">Problem</h3>
 
-<p>We introduced this silence block lately to avoid logging sensitive information such as tokens. The problem was, after a while we noticed that the server wasn’t logging anything at all!</p>
+<p>We introduced this silence block lately to avoid logging sensitive information such as tokens. The problem was, after a while, we noticed that the server wasn’t logging anything at all!</p>
 
 <h3 id="debugging">Debugging</h3>
 
-<p>Checking out the logs we noticed that the logs always stop after it tries running that <code class="highlighter-rouge">user_id_lookup</code> block. We quickly tried removing that <code class="highlighter-rouge">Rails.logger.silence</code> block and the logs went about on its way.</p>
+<p>Checking out the logs, we noticed that the logs always stop after it tries running that <code class="highlighter-rouge">user_id_lookup</code> block. We quickly tried removing that <code class="highlighter-rouge">Rails.logger.silence</code> block, and the logs went about on its way.</p>
 
-<p>After much reading it looks like <code class="highlighter-rouge">Rails.logger.silence</code> actually replaces the <code class="highlighter-rouge">log_level</code> of the <code class="highlighter-rouge">logger</code> during that block. Seeing that <code class="highlighter-rouge">message_bus</code> runs these <code class="highlighter-rouge">proc</code>’s in different threads, reassigning that <code class="highlighter-rouge">log_level</code> to a singleton like <code class="highlighter-rouge">Rails.logger</code> feels like entering a cave of dragons fighting over the same gold stash.</p>
+<p>After much reading, it looks like <code class="highlighter-rouge">Rails.logger.silence</code> actually replaces the <code class="highlighter-rouge">log_level</code> of the <code class="highlighter-rouge">logger</code> during that block. Seeing that <code class="highlighter-rouge">message_bus</code> runs these <code class="highlighter-rouge">proc</code>’s in different threads, reassigning that <code class="highlighter-rouge">log_level</code> to a singleton like <code class="highlighter-rouge">Rails.logger</code> feels like entering a cave of dragons fighting over the same gold stash.</p>
 
 <p>Example:</p>
 
@@ -115,7 +115,7 @@ Thread 2 returns back the old Rails.logger level (level 0)
 Thread 2 finishes                                (level 0)
 </code></pre></div></div>
 
-<p>The way to solve this would be to instantiate use new Logger instead of mutating a singleton Logger. Or to use something like blouson to filter out logs if it’s that important</p>
+<p>The way to solve this would be to instantiate a new <code class="highlighter-rouge">Logger</code> for that thread, instead of mutating the singleton <code class="highlighter-rouge">Rails.logger</code>. Another way would be to override <code class="highlighter-rouge">ActiveRecord::LogSubscriber#debug</code>, this makes me think of coding up a gem that can filter the params of a <code class="highlighter-rouge">WHERE</code> clause.</p>
 
   </article>
   <hr>

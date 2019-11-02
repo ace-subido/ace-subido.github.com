@@ -82,13 +82,13 @@
   <article>
     <h3 id="what-is-circuit-breaking">What is Circuit Breaking?</h3>
 
-<p>Imagine you’ve got a piece of code making multiple remote calls. Some 3rd party, some internal. Then out of nowhere, you get a timeout error. Your whole stack collapses and you get a raise exception in Bugsnag. Of course, we’d want our application to degrade gracefully. If it’s network related issue, one way to make it degrade gracefully is to keep retrying the call instead of blowing up in the first sight of a network related exception like <code class="highlighter-rouge">TimeoutError</code>.</p>
+<p>Imagine you’ve got a piece of code making multiple remote calls: some 3rd party, some internal. Then out of nowhere, you get a timeout error. Your whole stack collapses, and you get a raise exception in Bugsnag. Of course, we’d want our application to degrade gracefully. If it’s network related issue, one way to make it degrade gracefully is to keep retrying the call instead of blowing up in the first sight of a network-related exception like <code class="highlighter-rouge">TimeoutError</code>.</p>
 
 <p>Michael Nygard popularized the Circuit Breaker pattern to prevent this kind of catastrophic cascade. It’s a pattern where you wrap those calls in a loop where it keeps retrying once it rescues a network-related exception.</p>
 
 <p>Here’s what it looks like using Ruby:</p>
 
-<p>Use either <code class="highlighter-rouge">yammer/circuitbox</code> or the simpler <code class="highlighter-rouge">ooyala/retries</code>. Here’s what it looks like with the  <code class="highlighter-rouge">retries</code> gem</p>
+<p>Use either <code class="highlighter-rouge">yammer/circuitbox</code> or the more straightforward <code class="highlighter-rouge">ooyala/retries</code>. Here’s what it looks like with the <code class="highlighter-rouge">retries</code> gem:</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>exception_list = [
   HTTPClient::ReceiveTimeoutError,
@@ -100,9 +100,8 @@ with_retries(max_tries: 3, rescue: exception_list) do |attempt_number|
 end
 </code></pre></div></div>
 
-<p>This’ll keep retrying that block of code for 3 times, in a randomized interval. Even if it encounters raise errors in that exception list.</p>
+<p>That’ll keep retrying that block of code 3 times in a randomized interval. Even if it encounters raised errors in that exception list — a simple pattern to make your application work a little smoother.</p>
 
-<p>Simple pattern to make your application work a little smoother.</p>
 
   </article>
   <hr>
@@ -114,9 +113,9 @@ end
       </a>
     
     
-      <a class="next" href="/2019/10/21/fix-rails-logger-silence-making-logs-completely-silent.html">
+      <a class="next" href="/2019/10/21/rails-logger-silence-and-threading.html">
         <strong>Next</strong><br>
-        Rails.logger.silence making logs completely silent
+        Rails.logger.silence and threading
       </a>
     
   </div>

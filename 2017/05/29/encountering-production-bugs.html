@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <title>Encountering Production Bugs</title>
-  <meta name="description" content="This week I encountered some features that I engineered which broke in production, it kept me on my toes, but it was worth it to ship the feature properly. A...">
+  <meta name="description" content="This week I encountered some features that I engineered, which broke in production, it kept me on my toes, but it was worth it to ship the feature correctly....">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta content="acesubido" property="og:site_name">
@@ -21,8 +21,8 @@
   
 
   
-    <meta content="This week I encountered some features that I engineered which broke in production, it kept me on my toes, but it was worth it to ship the feature properly. A..." property="og:description">
-    <meta content="This week I encountered some features that I engineered which broke in production, it kept me on my toes, but it was worth it to ship the feature properly. A..." property="twitter:description">
+    <meta content="This week I encountered some features that I engineered, which broke in production, it kept me on my toes, but it was worth it to ship the feature correctly...." property="og:description">
+    <meta content="This week I encountered some features that I engineered, which broke in production, it kept me on my toes, but it was worth it to ship the feature correctly...." property="twitter:description">
   
 
   
@@ -80,14 +80,14 @@
     <h1 class="post-full-title">Encountering Production Bugs</h1>
   </header>
   <article>
-    <p>This week I encountered some features that I engineered which broke in production, it kept me on my toes, but it was worth it to ship the feature properly. A little collection of things I noted down:</p>
+    <p>This week I encountered some features that I engineered, which broke in production, it kept me on my toes, but it was worth it to ship the feature correctly. A little collection of things I noted down:</p>
 
 <ul>
   <li>Time pressure is real. Writing something to make something work is different from writing to make it trustworthy, balance them both by keeping the feature scope to be smaller relative to the feature requirement.</li>
-  <li>When you encounter a bug, don’t just fix it and it’s unit test, write an integration test for it too.</li>
+  <li>When you encounter a bug, don’t just fix it, and it’s unit test, write an integration test for it too.</li>
   <li>When using Ruby, you might be tempted to metaprogram a lot of stuff to make things lean, don’t abuse it keep things readable, not too verbose but understandable.</li>
   <li>Don’t abuse dynamic typing and <code class="highlighter-rouge">.try</code> you might get hurt with nil classes.</li>
-  <li>A very big no no when something is silently failing. Make sure error handling is top notch, especially for background workers. Lift errors up as much as you can to the user.</li>
+  <li>A huge no-no when something is silently failing. Make sure error handling is top-notch, especially for background workers. Lift errors as much as you can to the user.</li>
 </ul>
 
   </article>

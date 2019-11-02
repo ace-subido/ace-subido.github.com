@@ -5,13 +5,13 @@
     <description></description>
     <link>https://acesubido.net/</link>
     <atom:link href="https://acesubido.net/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 27 Oct 2019 22:52:03 +0800</pubDate>
-    <lastBuildDate>Sun, 27 Oct 2019 22:52:03 +0800</lastBuildDate>
+    <pubDate>Sat, 02 Nov 2019 23:34:11 +0800</pubDate>
+    <lastBuildDate>Sat, 02 Nov 2019 23:34:11 +0800</lastBuildDate>
     <generator>Jekyll v4.0.0</generator>
     
       <item>
-        <title>Rails.logger.silence making logs completely silent</title>
-        <description>&lt;p&gt;So we have a this block inside an initializer:&lt;/p&gt;
+        <title>Rails.logger.silence and threading</title>
+        <description>&lt;p&gt;So we have this block inside an initializer:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;user_id_lookup: proc do |env|
   Rails.logger.silence do
@@ -20,17 +20,17 @@
 end
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;This is called by a library called &lt;code class=&quot;highlighter-rouge&quot;&gt;message_bus&lt;/code&gt;. MessageBus is a simple gem that allows your rails server to publish messages to subscribers.&lt;/p&gt;
+&lt;p&gt;This is executed by a library called &lt;code class=&quot;highlighter-rouge&quot;&gt;message_bus&lt;/code&gt;. MessageBus is a simple gem that allows your rails server to publish messages to subscribers.&lt;/p&gt;
 
 &lt;h3 id=&quot;problem&quot;&gt;Problem&lt;/h3&gt;
 
-&lt;p&gt;We introduced this silence block lately to avoid logging sensitive information such as tokens. The problem was, after a while we noticed that the server wasn’t logging anything at all!&lt;/p&gt;
+&lt;p&gt;We introduced this silence block lately to avoid logging sensitive information such as tokens. The problem was, after a while, we noticed that the server wasn’t logging anything at all!&lt;/p&gt;
 
 &lt;h3 id=&quot;debugging&quot;&gt;Debugging&lt;/h3&gt;
 
-&lt;p&gt;Checking out the logs we noticed that the logs always stop after it tries running that &lt;code class=&quot;highlighter-rouge&quot;&gt;user_id_lookup&lt;/code&gt; block. We quickly tried removing that &lt;code class=&quot;highlighter-rouge&quot;&gt;Rails.logger.silence&lt;/code&gt; block and the logs went about on its way.&lt;/p&gt;
+&lt;p&gt;Checking out the logs, we noticed that the logs always stop after it tries running that &lt;code class=&quot;highlighter-rouge&quot;&gt;user_id_lookup&lt;/code&gt; block. We quickly tried removing that &lt;code class=&quot;highlighter-rouge&quot;&gt;Rails.logger.silence&lt;/code&gt; block, and the logs went about on its way.&lt;/p&gt;
 
-&lt;p&gt;After much reading it looks like &lt;code class=&quot;highlighter-rouge&quot;&gt;Rails.logger.silence&lt;/code&gt; actually replaces the &lt;code class=&quot;highlighter-rouge&quot;&gt;log_level&lt;/code&gt; of the &lt;code class=&quot;highlighter-rouge&quot;&gt;logger&lt;/code&gt; during that block. Seeing that &lt;code class=&quot;highlighter-rouge&quot;&gt;message_bus&lt;/code&gt; runs these &lt;code class=&quot;highlighter-rouge&quot;&gt;proc&lt;/code&gt;’s in different threads, reassigning that &lt;code class=&quot;highlighter-rouge&quot;&gt;log_level&lt;/code&gt; to a singleton like &lt;code class=&quot;highlighter-rouge&quot;&gt;Rails.logger&lt;/code&gt; feels like entering a cave of dragons fighting over the same gold stash.&lt;/p&gt;
+&lt;p&gt;After much reading, it looks like &lt;code class=&quot;highlighter-rouge&quot;&gt;Rails.logger.silence&lt;/code&gt; actually replaces the &lt;code class=&quot;highlighter-rouge&quot;&gt;log_level&lt;/code&gt; of the &lt;code class=&quot;highlighter-rouge&quot;&gt;logger&lt;/code&gt; during that block. Seeing that &lt;code class=&quot;highlighter-rouge&quot;&gt;message_bus&lt;/code&gt; runs these &lt;code class=&quot;highlighter-rouge&quot;&gt;proc&lt;/code&gt;’s in different threads, reassigning that &lt;code class=&quot;highlighter-rouge&quot;&gt;log_level&lt;/code&gt; to a singleton like &lt;code class=&quot;highlighter-rouge&quot;&gt;Rails.logger&lt;/code&gt; feels like entering a cave of dragons fighting over the same gold stash.&lt;/p&gt;
 
 &lt;p&gt;Example:&lt;/p&gt;
 
@@ -46,11 +46,11 @@ Thread 2 returns back the old Rails.logger level (level 0)
 Thread 2 finishes                                (level 0)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;The way to solve this would be to instantiate use new Logger instead of mutating a singleton Logger. Or to use something like blouson to filter out logs if it’s that important&lt;/p&gt;
+&lt;p&gt;The way to solve this would be to instantiate a new &lt;code class=&quot;highlighter-rouge&quot;&gt;Logger&lt;/code&gt; for that thread, instead of mutating the singleton &lt;code class=&quot;highlighter-rouge&quot;&gt;Rails.logger&lt;/code&gt;. Another way would be to override &lt;code class=&quot;highlighter-rouge&quot;&gt;ActiveRecord::LogSubscriber#debug&lt;/code&gt;, this makes me think of coding up a gem that can filter the params of a &lt;code class=&quot;highlighter-rouge&quot;&gt;WHERE&lt;/code&gt; clause.&lt;/p&gt;
 </description>
         <pubDate>Mon, 21 Oct 2019 00:00:00 +0800</pubDate>
-        <link>https://acesubido.net/2019/10/21/fix-rails-logger-silence-making-logs-completely-silent.html</link>
-        <guid isPermaLink="true">https://acesubido.net/2019/10/21/fix-rails-logger-silence-making-logs-completely-silent.html</guid>
+        <link>https://acesubido.net/2019/10/21/rails-logger-silence-and-threading.html</link>
+        <guid isPermaLink="true">https://acesubido.net/2019/10/21/rails-logger-silence-and-threading.html</guid>
         
         <category>ruby</category>
         
@@ -63,13 +63,13 @@ Thread 2 finishes                                (level 0)
         <title>Circuit Breaking in Ruby</title>
         <description>&lt;h3 id=&quot;what-is-circuit-breaking&quot;&gt;What is Circuit Breaking?&lt;/h3&gt;
 
-&lt;p&gt;Imagine you’ve got a piece of code making multiple remote calls. Some 3rd party, some internal. Then out of nowhere, you get a timeout error. Your whole stack collapses and you get a raise exception in Bugsnag. Of course, we’d want our application to degrade gracefully. If it’s network related issue, one way to make it degrade gracefully is to keep retrying the call instead of blowing up in the first sight of a network related exception like &lt;code class=&quot;highlighter-rouge&quot;&gt;TimeoutError&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Imagine you’ve got a piece of code making multiple remote calls: some 3rd party, some internal. Then out of nowhere, you get a timeout error. Your whole stack collapses, and you get a raise exception in Bugsnag. Of course, we’d want our application to degrade gracefully. If it’s network related issue, one way to make it degrade gracefully is to keep retrying the call instead of blowing up in the first sight of a network-related exception like &lt;code class=&quot;highlighter-rouge&quot;&gt;TimeoutError&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Michael Nygard popularized the Circuit Breaker pattern to prevent this kind of catastrophic cascade. It’s a pattern where you wrap those calls in a loop where it keeps retrying once it rescues a network-related exception.&lt;/p&gt;
 
 &lt;p&gt;Here’s what it looks like using Ruby:&lt;/p&gt;
 
-&lt;p&gt;Use either &lt;code class=&quot;highlighter-rouge&quot;&gt;yammer/circuitbox&lt;/code&gt; or the simpler &lt;code class=&quot;highlighter-rouge&quot;&gt;ooyala/retries&lt;/code&gt;. Here’s what it looks like with the  &lt;code class=&quot;highlighter-rouge&quot;&gt;retries&lt;/code&gt; gem&lt;/p&gt;
+&lt;p&gt;Use either &lt;code class=&quot;highlighter-rouge&quot;&gt;yammer/circuitbox&lt;/code&gt; or the more straightforward &lt;code class=&quot;highlighter-rouge&quot;&gt;ooyala/retries&lt;/code&gt;. Here’s what it looks like with the &lt;code class=&quot;highlighter-rouge&quot;&gt;retries&lt;/code&gt; gem:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;exception_list = [
   HTTPClient::ReceiveTimeoutError,
@@ -81,9 +81,8 @@ with_retries(max_tries: 3, rescue: exception_list) do |attempt_number|
 end
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;This’ll keep retrying that block of code for 3 times, in a randomized interval. Even if it encounters raise errors in that exception list.&lt;/p&gt;
+&lt;p&gt;That’ll keep retrying that block of code 3 times in a randomized interval. Even if it encounters raised errors in that exception list — a simple pattern to make your application work a little smoother.&lt;/p&gt;
 
-&lt;p&gt;Simple pattern to make your application work a little smoother.&lt;/p&gt;
 </description>
         <pubDate>Fri, 11 Oct 2019 00:00:00 +0800</pubDate>
         <link>https://acesubido.net/2019/10/11/circuit-breaking-in-ruby.html</link>
@@ -108,28 +107,28 @@ end
   &lt;dt&gt;Marinas&lt;/dt&gt;
   &lt;dd&gt;Marina’s are the lifeblood of the maritime industry. They offer water, fuel, electricity (shore power), sewage disposal, local maintenance shops/services, and shelter from storms (typhoon breakers).
 
-    &lt;p&gt;I’ve underestimated the expenses from mooring (to secure to a buoy) and berthing (parking on a dock) yachts. Usually a marina has a yacht club, for example, Subic Bay’s membership is 250,000PHP. &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+    &lt;p&gt;I’ve underestimated the expenses from mooring (to secure to a buoy) and berthing (parking on a dock) yachts. Usually, a marina has a yacht club; for example, Subic Bay’s membership is 250,000PHP. &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
     &lt;p&gt;Expensive? Well, if you want to berth your 40ft. yacht on Subic Bay, they charge 45,000PHP/month for non-members, and 15,000PHP/month for members &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. In the long run, getting that membership is a sweeter deal.&lt;/p&gt;
 
-    &lt;p&gt;Want to moor off of Coron? It’s 250PHP/day. &lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; Thinking about where your homeport should be is key to what your yacht can offer, if you decide to start making it into a business.&lt;/p&gt;
+    &lt;p&gt;Want to moor off of Coron? It’s 250PHP/day. &lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; Thinking about where your homeport should be is critical to what your yacht can offer if you decide to start making it into a business.&lt;/p&gt;
   &lt;/dd&gt;
   &lt;dt&gt;Price&lt;/dt&gt;
-  &lt;dd&gt;Of course, to purchase a Yacht made overseas, you’ll have to import it. The Philippines has a 20% tax on top of Yachts as they are “recreational”, along with sports cars (Ferrari, Lamborghini). On top of that, there’s 12% VAT and 0%-65% CIF based on it’s value.
+  &lt;dd&gt;Of course, to purchase a Yacht made overseas, you’ll have to import it. The Philippines has a 20% tax on top of Yachts as they are “recreational”, along with sports cars (Ferrari, Lamborghini). On top of that, there’s 12% VAT and 0%-65% CIF based on its value.
 
-    &lt;p&gt;That high entrypoint makes locally made boats and second-hand boats from the PH (or the ASEAN region, 0% import tariffs) very economical. You’ll get way cheaper yachts compared to importing a boat from an international manufacturer.&lt;/p&gt;
+    &lt;p&gt;That high entry point makes locally made boats and second-hand boats from the PH (or the ASEAN region, 0% import tariffs) very economical. You’ll get way cheaper yachts compared to importing a boat from an international manufacturer.&lt;/p&gt;
   &lt;/dd&gt;
   &lt;dt&gt;Maintenance&lt;/dt&gt;
-  &lt;dd&gt;Maintaining a small yacht is easier, just pick a popular brand as well and you’ll have an easier time getting parts. Popular brands that have dealers in the Philippines are Princess, Azimut, Sunseeker, Searay, Lagoon and Beneteau.&lt;/dd&gt;
+  &lt;dd&gt;Maintaining a small yacht is more manageable, pick a famous brand as well, and you’ll have an easier time getting parts. Popular brands that have dealers in the Philippines are Princess, Azimut, Sunseeker, Searay, Lagoon, and Beneteau.&lt;/dd&gt;
   &lt;dt&gt;Certifications&lt;/dt&gt;
-  &lt;dd&gt;If you plan to use your yacht for commercial purposes, you’ll need to get the proper licenses and certifications from the Maritime Authority of the Philippines. After getting the proper registration, your commercial yacht will be subject to inspections.&lt;/dd&gt;
+  &lt;dd&gt;If you plan to use your yacht for commercial purposes, you’ll need to get the proper licenses and certifications from the Maritime Authority of the Philippines. After getting the appropriate registration, your commercial yacht will be subject to inspections.&lt;/dd&gt;
   &lt;dt&gt;Yacht Characteristics&lt;/dt&gt;
   &lt;dd&gt;
     &lt;h6 id=&quot;sail-or-power&quot;&gt;Sail or Power&lt;/h6&gt;
 
-    &lt;p&gt;For price, Sailboats and Catamarans (sail) are very economical. Usually lists for half the price of what a motor yacht, and the fuel consumption is a fraction of what a motor yacht uses.&lt;/p&gt;
+    &lt;p&gt;For the price, Sailboats and Catamarans (sail) are cheaper than Motor Yachts. Usually lists for half the price of what a motor yacht and the fuel consumption is a fraction of what a motor yacht uses.&lt;/p&gt;
 
-    &lt;p&gt;For speed, a 40ft family cruising sailboat can top 8-11 knots, a motor yacht can do double or triple that. It depends if your passengers like the journey, or the destination.&lt;/p&gt;
+    &lt;p&gt;For speed, a 40ft family cruising sailboat can top 8-11 knots. A motor yacht can do double or triple that. It depends if your passengers like the journey or the destination.&lt;/p&gt;
 
     &lt;h6 id=&quot;fuel-consumption&quot;&gt;Fuel consumption&lt;/h6&gt;
 
@@ -139,7 +138,7 @@ end
 
     &lt;h6 id=&quot;motor-boat-types&quot;&gt;Motor Boat Types&lt;/h6&gt;
 
-    &lt;p&gt;Cruisers are fast because their hulls are meant to skip on top of the water. Recreational Trawlers have full or semi displacement hulls, meaning they’re designed to cut through the water. This makes them slower than cruisers. Recreational Trawlers are also meant for lower speeds, but it gives them exceptional range in one tank of fuel. This means majority of them are designed to be a little more livable and seaworthy (rolls less with swelling waves, and can handle bad weather).&lt;/p&gt;
+    &lt;p&gt;Cruisers are fast because their hulls are meant to skip on top of the water. Recreational Trawlers have full or semi-displacement hulls, meaning they’re designed to cut through the water; this makes them slower than cruisers. Recreational Trawlers run at lower speeds, but it gives them exceptional range in one tank of fuel; this means the majority of them are designed to be a little more livable and seaworthy (rolls less with swelling waves and can handle bad weather).&lt;/p&gt;
   &lt;/dd&gt;
 &lt;/dl&gt;
 
@@ -151,11 +150,11 @@ end
   &lt;li&gt;Size: I’m just starting out, I want something under 40ft.&lt;/li&gt;
   &lt;li&gt;Engines: I want 2 engines, just in case 1 fails, I can limp back to port.&lt;/li&gt;
   &lt;li&gt;Speed: I want to to cruise at around 11-13kts consuming at least 7-9gal/hr. I’d rather trade speed for fuel efficiency.&lt;/li&gt;
-  &lt;li&gt;Charter: I don’t need something bluewater, just for coastal cruising, hopping islands, no more than 25NM away from shore. Trawlers make an ideal boat for this. I can imagine starting out by just cruising and having dinner near MOA for the Fireworks Olympics and New Year’s Eve celebrations, then go up and do day trips to Corregidor from Manila Bay.&lt;/li&gt;
-  &lt;li&gt;Accomodations: Sleeps at least 2-3 couples.&lt;/li&gt;
+  &lt;li&gt;Charter: I don’t need something bluewater, just for coastal cruising, hopping islands, no more than 25NM away from shore. Trawlers make an ideal boat for this. I can imagine starting by just cruising and having dinner near MOA for the Fireworks Olympics and New Year’s Eve celebrations, then go up and make day trips to Corregidor from Manila Bay.&lt;/li&gt;
+  &lt;li&gt;Accomodations: Sleeps at least 4-6 adults.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Based on this, if I was to buy a brand new yacht, I can safely say that these are my contenders:&lt;/p&gt;
+&lt;p&gt;Based on this, if I were to buy a brand new yacht, I can safely say that these are my contenders:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.beneteau.com/en/swift-trawler/swift-trawler-35&quot;&gt;Beneteau Swift Trawler 35&lt;/a&gt;. (Can go for the 41 Sedan, because I can install Solar Panels).&lt;/li&gt;
@@ -176,28 +175,35 @@ end
 &lt;h4 id=&quot;expense&quot;&gt;Expense&lt;/h4&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;This is assuming our homeport is Puerto Galera or Laiya Beach.&lt;/li&gt;
+  &lt;li&gt;This plan assumes our homeport is Puerto Galera or Laiya Beach.&lt;/li&gt;
   &lt;li&gt;Opted to hire a part-time engineer that will keep after the yacht and act as a deckhand/skipper.&lt;/li&gt;
-  &lt;li&gt;I’m making the number up with Marine Hull Insurance, I don’t know if that’s even the right premium.&lt;/li&gt;
-  &lt;li&gt;Rule of thumb is that expenses for a yacht is 10%-20% of the purchase price. At 3.3M PHP annual expenses, we’re around 15%, we might even be underestimating maintenance.&lt;/li&gt;
+  &lt;li&gt;I’m making the number up with Marine Hull Insurance. I don’t know if that’s even the right premium.&lt;/li&gt;
+  &lt;li&gt;Rule of thumb is that expenses for a yacht are 10%-20% of the purchase price. At 3.3M PHP annual expenses, we’re around 15%, and we might even be underestimating maintenance.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;revenue&quot;&gt;Revenue&lt;/h4&gt;
 
 &lt;ul&gt;
   &lt;li&gt;At this 56% utilization, you’ll get back your CapEx in 16 years.&lt;/li&gt;
-  &lt;li&gt;Use a Sailboat or Catamaran. You can definitely offer cheaper rates since you’re burning less fuel.&lt;/li&gt;
+  &lt;li&gt;Use a Sailboat or Catamaran. You can offer cheaper rates since you’re burning less fuel.&lt;/li&gt;
   &lt;li&gt;The real problem with a yacht is marketing your yacht and planning where your yacht should be to maximize charters.&lt;/li&gt;
-  &lt;li&gt;You can probably lease out your yacht, since you’re part of a yacht club. That’s extra cash. You can also offer day-trips to Corregidor or Subic.&lt;/li&gt;
-  &lt;li&gt;Some couples upload videos on Youtube channels and get on Patreon as well. A couple even lets their Patreon subscribers do a 1 day cruise with them for free.&lt;/li&gt;
+  &lt;li&gt;You can probably lease out your yacht since you’re part of a yacht club. That’s extra cash. You can also offer day-trips to Corregidor or Subic.&lt;/li&gt;
+  &lt;li&gt;Some couples upload videos on Youtube channels and get on Patreon as well. A couple even lets their Patreon subscribers do a 1-day cruise with them for free.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h3 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h3&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;Annual yacht profits would win over putting your CapEx in 3% government bonds. Although, with bonds you’d retain your cash, only inflation devalues it. With a yacht, a yacht depreciates 10% of it’s value per year.&lt;/li&gt;
+  &lt;li&gt;At this 56% utilization, you’ll get back your CapEx in 16 years.&lt;/li&gt;
+  &lt;li&gt;Use a Sailboat or Catamaran. You can offer cheaper rates since you’re burning less fuel.&lt;/li&gt;
+  &lt;li&gt;The real problem with a yacht is marketing your yacht and planning where your yacht should be to maximize charters.&lt;/li&gt;
+  &lt;li&gt;You can probably lease out your yacht since you’re part of a yacht club. That’s extra cash. You can also offer day-trips to Corregidor or Subic.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Some couples upload videos on Youtube channels and get on Patreon as well. A couple even lets their Patreon subscribers do a 1-day cruise with them for free.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Annual yacht profits would win over putting your CapEx in 3% government bonds. Although, with bonds, you’d retain your cash, only inflation devalues it. With a yacht, a yacht depreciates 10% of its value per year.&lt;/li&gt;
   &lt;li&gt;In the end, 28M is a lot of money. You could buy a lot of real estate and even beach resorts with that kind of money.&lt;/li&gt;
-  &lt;li&gt;Yacht’s are for the rich, and they’re all about having fun doing this.&lt;/li&gt;
+  &lt;li&gt;Yachts are for the rich, and they’re all about having fun doing this.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
@@ -243,9 +249,9 @@ end
 
 &lt;p&gt;and the latest is Medium.&lt;/p&gt;
 
-&lt;p&gt;Lately, I’ve been thinking: “what if Medium also goes down, or stops being relevant?” Then I thought, maybe it’s just time for me to own my content. For starters, I’ll just start writing back here and keep my Medium.com inactive. That’s the first thing I’ll be doing.&lt;/p&gt;
+&lt;p&gt;Lately, I’ve been thinking: “what if Medium also goes down, or stops being relevant?” Then I thought, maybe it’s just time for me to own my content. For starters, I’ll start writing back here and keep my Medium.com inactive. That’s the first thing I’ll be doing.&lt;/p&gt;
 
-&lt;p&gt;I’ve mulled around the idea of paying for blog hosting, like svbtle or posthaven to ensure that it stays online. I think I’ll just opt for this git repo for now.&lt;/p&gt;
+&lt;p&gt;I’ve mulled around the idea of paying for blog hosting, like svbtle or posthaven to ensure that it stays online. I think I’ll opt for this git repo for now.&lt;/p&gt;
 </description>
         <pubDate>Wed, 25 Sep 2019 00:00:00 +0800</pubDate>
         <link>https://acesubido.net/2019/09/25/owning-what-i-write.html</link>
@@ -271,23 +277,23 @@ end
   &lt;li&gt;How were they sold? (brokering, direct sales, etc.)&lt;/li&gt;
   &lt;li&gt;What brands are popular?&lt;/li&gt;
   &lt;li&gt;What market do they serve?&lt;/li&gt;
-  &lt;li&gt;How much is the maintenance cost?&lt;/li&gt;
+  &lt;li&gt;How much does the maintenance cost?&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;If I didn’t learn that, the end design would look so out of touch and unconvincing. As I dove deeper, I found my Youtube feed immersed with yacht related videos. I learned how:&lt;/p&gt;
+&lt;p&gt;If I didn’t learn that, the end design would look so out of touch and unconvincing. As I dove more in-depth, I found my Youtube feed immersed with yacht related videos. I learned how:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Yacht maintenance, as a rule of thumb, usually costs ~10% of its boat value per year. So if you have a 5MUSD yacht, expect 500kUSD/year in costs.&lt;/li&gt;
   &lt;li&gt;It’s a fast depreciating asset (10% p.a.).&lt;/li&gt;
   &lt;li&gt;People buy yachts for fun.&lt;/li&gt;
-  &lt;li&gt;If you rent out a yacht, that’s called “chartering”. Charter price isn’t determined alone on how good the yacht is. The food, service and crew also contributes to this. Crew should be top notch, polite, can communicate clearly and be good at service.&lt;/li&gt;
-  &lt;li&gt;To fully book your yacht, you’ll need to market a specific niche. You can market your yacht for snorkeling, or water sports like jet skiing and kite surfing. Some yachts are marketed for scuba diving, and others are just meant for slow cruises and island hopping.&lt;/li&gt;
-  &lt;li&gt;Italian and Turkish ship building brands are super popular.&lt;/li&gt;
-  &lt;li&gt;Monaco is the super yacht capital of the world.&lt;/li&gt;
-  &lt;li&gt;Online Yacht listings are usually outdated, so you’ll need a yacht broker to find a yacht, and a yacht surveyor (with an engineering background) to check it out if it’s good.&lt;/li&gt;
+  &lt;li&gt;If you rent out a yacht, that’s called “chartering”. Charter price isn’t determined alone on how good the yacht is. The food, service, and crew also contribute to this. Crew should be top-notch, polite, can communicate clearly, and be good at service.&lt;/li&gt;
+  &lt;li&gt;To fully book your yacht, you’ll need to market a specific niche. You can market your yacht for snorkeling or water sports like jet skiing and kite surfing. Others market their yachts for scuba diving, some for slow cruises and island hopping.&lt;/li&gt;
+  &lt;li&gt;Italian and Turkish shipbuilding brands are super popular.&lt;/li&gt;
+  &lt;li&gt;Monaco is the superyacht capital of the world.&lt;/li&gt;
+  &lt;li&gt;Online Yacht listings are usually outdated, so you’ll need a yacht broker to find a yacht, and a yacht surveyor (with an engineering background) to check it out if it’s okay.&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/user/YachtsForSaleCNI&quot;&gt;Youtube has an excellent channel called “YachtsforSale” that really gets you a sneak peek of the yacht world.&lt;/a&gt;. That same youtube channel, endorsed a website called Yatco.com, despite not being sponsored and being it’s competitor. So I checked it out, and &lt;a href=&quot;https://www.yatco.com/buy-a-yacht/detail/242458/2010-princess-yachts-motor-yacht-main-category/&quot;&gt;I saw this 2.5MUSD yacht&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://www.youtube.com/user/YachtsForSaleCNI&quot;&gt;Youtube has an excellent channel called “YachtsforSale” that gets you a sneak peek of the yachting world.&lt;/a&gt;. That same youtube channel, endorsed a website called Yatco.com, despite not being sponsored and being its competitor. So I checked it out, and &lt;a href=&quot;https://www.yatco.com/buy-a-yacht/detail/242458/2010-princess-yachts-motor-yacht-main-category/&quot;&gt;I saw this 2.5MUSD yacht&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/blog/napkin-princess-yacht.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
@@ -297,13 +303,13 @@ end
   &lt;p&gt;“Hmmm, since we’ve already binged 1 hour of yacht videos. We’re already here: let’s take another 30 minutes, and do napkin math.”&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;Personally, I like doing “back of a napkin” math. Maybe because it’s a strategic exercise, and I love strategy games like Starcraft and Dune. It’s also a role-playing exercise, and I love RPG’s:&lt;/p&gt;
+&lt;p&gt;I like doing “back of a napkin” math. Maybe because it’s a strategic exercise, and I love strategy games like Starcraft and Dune. It’s also a role-playing exercise, and I love RPG’s:&lt;/p&gt;
 
 &lt;blockquote&gt;
   &lt;p&gt;&lt;a href=&quot;https://en.wikipedia.org/wiki/Back-of-the-envelope_calculation&quot;&gt;The defining characteristic of back-of-the-envelope calculations is the use of simplified assumptions. A similar phrase in the U.S. is “back of a napkin”, also used in the business world to describe sketching out a quick, rough idea of a business or product.&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;p&gt;This may sound defeatist, but I think I will never live long enough to have money for a 2.5M USD yacht. If I ever do get the money to buy one, by some stroke of luck or genius, my conservative personality will keep me at bay from purchasing one. By all means, I am not an authority on yachts, nor have I owned one, so don’t take this next image as:&lt;/p&gt;
+&lt;p&gt;This statement may sound defeatist, but I think I will never live long enough to have money for a 2.5M USD yacht. If I ever do get the money to buy one, by some stroke of luck or genius, my conservative personality will keep me at bay from purchasing one. By all means, I am not an authority on yachts, nor have I owned one, so don’t take this next image as:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Business advice&lt;/li&gt;
@@ -311,35 +317,35 @@ end
   &lt;li&gt;Investment advice&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;This is just some random dude having fun with numbers. So here’s what the finances might look like, if you ever bought a 2.5M USD yacht:&lt;/p&gt;
+&lt;p&gt;This business plan is just some random guy having fun with numbers. So here’s what the finances might look like if you ever bought a 2.5M USD yacht:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;/img/blog/napkin-math-yacht-plan.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Notes:&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Charter&lt;/strong&gt; means to rent out your yacht to a group of people for a chartered course (ex: Day trip to Bataan, 4 days in Coron). They’ll have a crew of 6, and they can go island/beach hopping, snorkeling, and paddleboarding, etc. Inclusive of food, drink, and accommodation. The yacht has rooms for 8 people, and 8 berths (sleeping areas).&lt;/li&gt;
-  &lt;li&gt;We want to offer high wages for the crew/chef/waitress to get the best talent. We’re basically offering a private resort in the middle of the sea.&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Charter&lt;/strong&gt; means to rent out your yacht to a group of people for a chartered course (ex: Day trip to Bataan, four days in Coron). They’ll have a crew of 6, and they can go island/beach hopping, snorkeling, and paddleboarding, etc. Inclusive of food, drink, and accommodation. The yacht has rooms for eight people, and eight berths (sleeping areas).&lt;/li&gt;
+  &lt;li&gt;We want to offer high wages for the crew/chef/waitress to get the best talent. We’re offering a private resort in the middle of the sea.&lt;/li&gt;
   &lt;li&gt;To earn more cash during a charter, you can do what hotels and cruise liners do: have a mini-bar that charges extra margin (150PHP for a can of pringles, 100PHP for a can of beer consumed out of the usual dinner service, etc.)&lt;/li&gt;
   &lt;li&gt;Based on the Philippine Port Authority website: to park a boat in the dock, it costs 0.020USD per GRT (internal volume, not ship weight) per day. So if our yacht has a volume of 80 tons, you can park it for 1.6USD/day.&lt;/li&gt;
-  &lt;li&gt;At 120 days left for personal use, that’s 4 months worth of personal vacations.&lt;/li&gt;
+  &lt;li&gt;At 120 days left for personal use, that’s 4 months worth of own vacations.&lt;/li&gt;
   &lt;li&gt;You’ll get your 2.5MUSD back (break-even) in 29 years at 67% usage (33% for personal use).&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;conclusion&quot;&gt;Conclusion&lt;/h4&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;If you put your CapEx into bonds, you’d retain your 120M and increase it at the same rate of the yacht’s annual profit. Whereas a yacht is a depreciating asset, around 10% p.a. (5M purchase price, 4.5M the next year, 4.05M the next, and so on). So you if you sold the yacht after 10 years, it might be less than 50% of its value.&lt;/li&gt;
+  &lt;li&gt;If you put your CapEx into bonds, you’d retain your 120M and increase it at the same rate as the yacht’s annual profit. Whereas a yacht is a depreciating asset, around 10% p.a. (5M purchase price, 4.5M the next year, 4.05M, and so on). So if you sold the yacht after ten years, it might be less than 50% of its value.&lt;/li&gt;
   &lt;li&gt;You can even use your CapEx for real-estate, it will win out in the end instead of buying a yacht.&lt;/li&gt;
-  &lt;li&gt;Yachts are not a good investment nor a store of value. Based on the napkin math, it’s a money sink. People really buy yachts for fun and love of the sea.&lt;/li&gt;
-  &lt;li&gt;For people who can afford a yacht, it’s their way to do family/friends vacations, New Year’s Eve or Christmas Parties. They skip the traffic, having to pay for hotel rooms, beach/island hopping, dining-out or purchasing plane tickets. It might cost the same or a little bit more expensive than spending for a family vacation in Monaco or a cruise in the Carribean, but for the extra price, they get privacy and exclusivity. To put this into perspective for us average people; this is a rich person’s annual travel/vacation budget. It’s their equivalent of your budget for a trip to Bohol, road trip to La Union, etc.&lt;/li&gt;
-  &lt;li&gt;Sample travel times: Batangas to Palawan in 7 hours. MNL to HK in 3 days.&lt;/li&gt;
-  &lt;li&gt;A 2.5MUSD yacht is comparable to buying a 5 bedroom home in SF (2.75MUSD in Zillow). Except that a yacht costs a lot to maintain, ~10% of its value per year. There are some cases of non-billionaire yacht owners often living in a simpler home than their yachts. They own a yacht to travel, have fun and occasionally charter out to cover costs.&lt;/li&gt;
+  &lt;li&gt;Yachts are not a good investment nor a store of value. Based on the napkin math, it’s a money sink. People buy yachts for fun and love of the sea.&lt;/li&gt;
+  &lt;li&gt;For people who can afford a yacht, it’s their way to do family/friends vacations, New Year’s Eve or Christmas Parties. They skip the traffic, having to pay for hotel rooms, beach/island hopping, dining-out, or purchasing plane tickets. It might cost the same or a little bit more expensive than spending on a family vacation in Monaco or a cruise in the Carribean, but for the extra price, they get privacy and exclusivity. To put this into perspective for us, average people, this is a rich person’s annual travel/vacation budget. It’s their equivalent of your budget for a trip to Bohol, a road trip to La Union, etc.&lt;/li&gt;
+  &lt;li&gt;Sample travel times: Batangas to Palawan in 7 hours. MNL to H.K. in 3 days.&lt;/li&gt;
+  &lt;li&gt;A 2.5MUSD yacht is comparable to buying a five-bedroom home in S.F. (2.75MUSD in Zillow). Except that a yacht costs a lot to maintain, ~10% of its value per year. There are some cases of non-billionaire yacht owners often living in a more straightforward home than their yachts. They own a yacht to travel, have fun, and occasionally charter out to cover costs.&lt;/li&gt;
   &lt;li&gt;A 2.5MUSD yacht has more utility than a Bugatti Chiron sports car (2.75MUSD) or a Mercedes-AMG One (2.5MUSD).&lt;/li&gt;
-  &lt;li&gt;If you’re really into it to for the business you could buy a Sail-type yacht. The capex and fuel costs will definitely be cheaper. Sail yachts usually costs half of a motor-based yacht or less. Catamaran Sail Yachts are comparable to the price of motor-based yachts.&lt;/li&gt;
+  &lt;li&gt;If you’re really into it for the business, you could buy a Sail-type yacht. Capex and fuel costs will be cheaper. Sail yachts usually cost half of a motor-based yacht or less. Catamaran Sail Yachts are comparable to the price of motor-based yachts.&lt;/li&gt;
   &lt;li&gt;There’s also an upcoming market of solar-diesel hybrid yachts for, what they call, eco-friendly millionaires.&lt;/li&gt;
-  &lt;li&gt;In the PH, you can also have locally-made yachts that might be a fraction of what it costs to purchase an Azimut, Sunseeker or AB motor-based yacht.&lt;/li&gt;
-  &lt;li&gt;Manny Pacquiao’s 2011 Yacht costed P25M. Willie Revillame has 2 yachts in Subic. Gretchen Barretto also has 2 yachts. Chavit Singson’s P600M super yacht was used to transport Miss World candidates for island-hopping.&lt;/li&gt;
+  &lt;li&gt;In the P.H., you can also have locally-made yachts that might be a fraction of what it costs to purchase an Azimut, Sunseeker, or A.B. motor-based yacht.&lt;/li&gt;
+  &lt;li&gt;Manny Pacquiao’s 2011 Yacht costed P25M. Willie Revillame has 2 yachts in Subic. Gretchen Barretto also has two yachts. Chavit Singson’s P600M superyacht was used to transport Miss World candidates for island-hopping.&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;h4 id=&quot;resources&quot;&gt;Resources&lt;/h4&gt;
@@ -362,48 +368,51 @@ end
     
       <item>
         <title>What's it like to work from home?</title>
-        <description>&lt;p&gt;It’s been 8 months since I started working from home. I’m with a company called Bloom Solutions, it’s a fintech startup based in the Philippines. Everyone works remotely, we meet face-to-face once or every other a week. Sometimes a few people meet up together on a coffee shop if some work needs to be tightly done together. Other than that, under normal circumstances, most of the work being punched out is done at home.&lt;/p&gt;
+        <description>&lt;p&gt;It’s been eight months since I started working from home. I’m with a company called Bloom Solutions; it’s a fintech startup based in the Philippines. Everyone works remotely; we meet face-to-face once or every other a week. Sometimes a few people meet up together in a coffee shop for tightly done work. Other than that, under normal circumstances, most of the work being punched out is done at home.&lt;/p&gt;
 
 &lt;h3 id=&quot;benefits&quot;&gt;Benefits&lt;/h3&gt;
-&lt;p&gt;“Working from home” certainly has it’s benefits:&lt;/p&gt;
+&lt;p&gt;“Working from home” certainly has its benefits:&lt;/p&gt;
 
 &lt;h4 id=&quot;time-efficiency&quot;&gt;Time efficiency&lt;/h4&gt;
-&lt;p&gt;Probably the most valuable benefit. No more 1 1/2 hour one-way commutes, it saves me 3 hours of being on the road. When it rains, make that 4 hours + 400PHP for getting Uber or Grab. Computing that on a back of the napkin, that’s 15 hours a week spent on the road. Which is 60 hours a month, equivalent to 2.5 days a month. If you compute that over a year, it’s equivalent to 30 days being the road. A month where I could’ve spent somewhere else. I now spend more time with my newborn, help out my wife around the house, exercise, hobbies and time for other things.&lt;/p&gt;
+&lt;p&gt;Probably the most valuable benefit. No more 1 1/2 hour one-way commutes, it saves me 3 hours of being on the road. When it rains, make that 4 hours + 400PHP for getting Uber or Grab. Computing that on the back of the napkin, that’s 15 hours a week spent on the road. Its 60 hours a month, equivalent to 2.5 days a month. If you compute that over a year, it’s equivalent to 30 days being the road. A month where I could’ve spent somewhere else. I now spend more time with my newborn, help out my wife around the house, exercise, hobbies, and time for other things.&lt;/p&gt;
 
 &lt;h4 id=&quot;minimal-personal-expenses&quot;&gt;Minimal personal expenses&lt;/h4&gt;
 &lt;p&gt;No parking expense. No commute expense. No gas expense. No “lunch money” expense. Cook food and eat at home.&lt;/p&gt;
 
 &lt;h4 id=&quot;work-not-scoped-to-location&quot;&gt;Work not scoped to location&lt;/h4&gt;
-&lt;p&gt;I go out of the country, go to Tagaytay, go to a beach. It’s all okay, just sync timezones and schedules with the team and make sure that you have no client-facing meetings scheduled.&lt;/p&gt;
+&lt;p&gt;I go out of the country, go to Tagaytay, go to a beach. It’s all okay; just sync timezones and schedules with the team and make sure that you have no client-facing meetings scheduled.&lt;/p&gt;
 
 &lt;h4 id=&quot;flexible-schedule&quot;&gt;Flexible schedule&lt;/h4&gt;
-&lt;p&gt;As long as I sync with the team and not miss out any important meetings, I can do errands and still put out the work needed. Gone are the days that you’ll have to take a leave to get your VISA or Driver’s License.&lt;/p&gt;
+&lt;p&gt;As long as I sync with the team and not miss out on any important meetings, I can do errands and still put out the work needed. Gone are the days that you’ll have to take a leave to get your VISA or Driver’s License.&lt;/p&gt;
 
 &lt;h4 id=&quot;environment-fosters-tangible-results-for-creativesknowledge-workers&quot;&gt;Environment fosters tangible results for Creatives/Knowledge-workers&lt;/h4&gt;
-&lt;p&gt;Work from home can be one of those ways to leave little place for programmers to operate in a “body shop” mentality. “Body shop” mentality is a certain mindset where “number of hours being inside the office” is the subconscious metric to measure productivity. Working from home however can provide a setup for people to produce tangible value instead of just waiting for 5pm to arrive. Most people get this feeling that when co-workers are around, you subconsciously feel the need to make it look like you’re always working on something. Always. Always working on something. Typing something. Boss is around? Display that busy IDE. Make random meetings. When you’re working at home, you’re by yourself, it’s just between you and that task list. Just get those done. Sit down, write down the details of what you’re working on, work on a task, ship it, and check that task off the list. Make sure your co-workers can pick up, understand what you wrote, see what’s done and what’s not. Otherwise, nothing will happen, and the company will feel the missing pieces of the work coming from you. Take note that this isn’t applicable to certain industries, and culture dictates how people operate in a self-sustaining manner more than a “remote work” setup.&lt;/p&gt;
+&lt;p&gt;Work from home can be one of those ways to leave little place for programmers to operate in a “body shop” mentality. “Body shop” mentality is a certain mindset where “number of hours being inside the office” is the subconscious metric to measure productivity. Working from home, however, can provide a setup for people to produce tangible value instead of just waiting for 5 pm to arrive. Most people get this feeling that when co-workers are around, you subconsciously feel the need to make it look like you’re always working on something. Always. Still working on something. Typing something. Is the boss in the office? Display that busy IDE. Make random meetings.&lt;/p&gt;
+
+&lt;p&gt;When you’re working at home, you’re by yourself; it’s just between you and that task list. Just get those done. Sit down, write down the details of what you’re working on, work on a task, ship it, and check that task off the list. Make sure your co-workers can pick up, understand what you wrote, see what’s finished and what’s not. Otherwise, nothing will happen, and the company will feel the missing pieces of the work coming from you. Take note that this doesn’t apply to specific industries, and culture dictates how people operate in a self-sustaining manner more than a “remote work” setup.&lt;/p&gt;
 
 &lt;h4 id=&quot;productive-meetings&quot;&gt;Productive meetings&lt;/h4&gt;
-&lt;p&gt;The meetings revolve around strategy, direction, and design decisions. No 1-hour meeting discussing status updates or doing follow ups.&lt;/p&gt;
+&lt;p&gt;The meetings revolve around strategy, direction, and design decisions. No 1-hour meetings discussing status updates or doing follow-ups.&lt;/p&gt;
 
 &lt;h3 id=&quot;disadvantages&quot;&gt;Disadvantages&lt;/h3&gt;
 &lt;p&gt;Though it certainly has it’s disadvantages:&lt;/p&gt;
 
 &lt;h4 id=&quot;distraction-from-friends-and-relatives&quot;&gt;Distraction from Friends and Relatives&lt;/h4&gt;
-&lt;p&gt;When friends and relatives are visiting, this is how it usually goes when my wife mentions to them I work from home: “Oh! He works from home? That sounds great! Hey Ace, how’s working from home? Anyway, have you watched the new season of Stranger Things?”. “Umm, it’s great!”. As much as I want not to offend you, please let me focus. This applies to people in the office, the difference with working from home is: the people around you aren’t working. Your lack of interactivity would sometimes come across wrongly to relatives and friends. To some, because you’re in your PJ’s, it doesn’t have much visual weight as someone in the office, you may come across as someone being available for chit-chat.&lt;/p&gt;
+&lt;p&gt;When friends and relatives are visiting, this is how it usually goes when my wife mentions to them I work from home: “Oh! Does he work from home? That sounds great! Hey Ace, how’s working from home? Anyway, have you watched the new season of Stranger Things?”. “Umm, it’s great!”. As much as I want not to offend you, please let me focus. This same situation applies to people in the office; the difference between working from home is: the people around you aren’t working. Your lack of interactivity would sometimes come across wrongly to relatives and friends. To some, because you’re in your PJ’s, it doesn’t have much visual weight as someone in the office, you may come across as someone being available for chit-chat.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt; - Smile and gently tell them that you’re currently working and they won’t bother you as much instead of just deflecting their chit chat.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt; - Smile and gently tell them that you’re currently working, and they won’t bother you as much instead of just deflecting their chit chat.&lt;/p&gt;
 
 &lt;h4 id=&quot;blurring-lines-between-life-and-work&quot;&gt;Blurring Lines between Life and Work&lt;/h4&gt;
-&lt;p&gt;The first few weeks, you wouldn’t know that it’s already at the weekend. Life and work are blurred together. I try to place some distance between them. Before I face my laptop, I take a bath, brush my teeth, wear something else aside from my PJ’s, have my breakfast and then “go” to work. Which involves me going a place in the house where my “office chair” and “table” resides. Then there’s your wife and your children. They know they shouldn’t bother you, so they don’t, but really, they’re there. It’s hard not to talk to Elain and play with Navi when I’m just a tap away.&lt;/p&gt;
+&lt;p&gt;In the first few weeks, you wouldn’t know that it’s already at the weekend. Life and work are blurred together. I try to place some distance between them. Before I face my laptop, I take a bath, brush my teeth, wear something else aside from my PJs, have my breakfast, and then “go” to work. This “distance” involves going to a place in the house where my “office chair” and “table” resides. Then there’s your wife and your children. They know you shouldn’t be bothered, so they don’t, but really, they’re there. It’s hard not to talk to Elain and play with Navi when I’m just a tap away.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt; - We’ve established a group of hours where I can help out in chores or hold/play with Navi. Mainly breakfast, lunch and afternoon snack time. Elain also asks first if I’m on a pomodoro break, or if I’m waiting for CI to pass and build images so that she can ask for help and small favors.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt; - We’ve established a group of hours where I can help out in chores or hold/play with Navi. Mainly breakfast, lunch, and afternoon snack time. Elain also asks first if I’m on a Pomodoro break, or if I’m waiting for CI to pass and build images so that she can ask for help and small favors.&lt;/p&gt;
 
 &lt;h4 id=&quot;personal-rhythm&quot;&gt;Personal Rhythm&lt;/h4&gt;
-&lt;p&gt;Being at home may make you fall into the temptation of just binge watching videos, surfing social media or looking at HackerNews. Just make sure to maintain discipline, focus and be systematic with how your spend your time.&lt;/p&gt;
+&lt;p&gt;Being at home may make you fall into the temptation of just binge-watching videos, surfing social media, or looking at HackerNews. Just make sure to maintain discipline, focus, and be systematic with how you spend your time.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt; - I have my personal time tracker, Harvest, and keep track of what I’m working on and my time. This rhythm gets me going.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Solution&lt;/strong&gt; - I have my time tracker, Harvest, and keep track of what I’m working on and my time. This rhythm gets me going.&lt;/p&gt;
 
-&lt;p&gt;I’ll probably update this post as time goes by, it’s certainly a life-changing on-going experience.&lt;/p&gt;
+&lt;p&gt;I’ll probably update this post as time goes by, it’s undoubtedly a life-changing on-going experience.&lt;/p&gt;
+
 </description>
         <pubDate>Tue, 28 Nov 2017 00:00:00 +0800</pubDate>
         <link>https://acesubido.net/2017/11/28/what-s-it-like-to-work-from-home.html</link>
@@ -414,14 +423,14 @@ end
     
       <item>
         <title>Encountering Production Bugs</title>
-        <description>&lt;p&gt;This week I encountered some features that I engineered which broke in production, it kept me on my toes, but it was worth it to ship the feature properly. A little collection of things I noted down:&lt;/p&gt;
+        <description>&lt;p&gt;This week I encountered some features that I engineered, which broke in production, it kept me on my toes, but it was worth it to ship the feature correctly. A little collection of things I noted down:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Time pressure is real. Writing something to make something work is different from writing to make it trustworthy, balance them both by keeping the feature scope to be smaller relative to the feature requirement.&lt;/li&gt;
-  &lt;li&gt;When you encounter a bug, don’t just fix it and it’s unit test, write an integration test for it too.&lt;/li&gt;
+  &lt;li&gt;When you encounter a bug, don’t just fix it, and it’s unit test, write an integration test for it too.&lt;/li&gt;
   &lt;li&gt;When using Ruby, you might be tempted to metaprogram a lot of stuff to make things lean, don’t abuse it keep things readable, not too verbose but understandable.&lt;/li&gt;
   &lt;li&gt;Don’t abuse dynamic typing and &lt;code class=&quot;highlighter-rouge&quot;&gt;.try&lt;/code&gt; you might get hurt with nil classes.&lt;/li&gt;
-  &lt;li&gt;A very big no no when something is silently failing. Make sure error handling is top notch, especially for background workers. Lift errors up as much as you can to the user.&lt;/li&gt;
+  &lt;li&gt;A huge no-no when something is silently failing. Make sure error handling is top-notch, especially for background workers. Lift errors as much as you can to the user.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Mon, 29 May 2017 00:00:00 +0800</pubDate>
