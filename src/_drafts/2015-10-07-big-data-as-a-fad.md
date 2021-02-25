@@ -5,7 +5,7 @@ tags:
 - work
 ---
 
-> For one, I could think of Big Data/ Hadoop. In the past one year, at least ten "coaching institutes" have sprang up in the area I live (in Bangalore) claiming to teach Hadoop and promising high paying jobs. I went in there for a "demo session", and they are like "you can learn Hadoop and get a high paying job with absolutely no programming experience".
+> For one, I could think of Big Data/Hadoop. In the past one year, at least ten "coaching institutes" have sprang up in the area I live (in Bangalore) claiming to teach Hadoop and promising high paying jobs. I went in there for a "demo session", and they are like "you can learn Hadoop and get a high paying job with absolutely no programming experience".
 Anyway, these places always get some kind of gullible people.
 I think this is a fad, and it will die down soon. What do you think about this? Do you think there are any other fads like this ? I think this is a fad, and it will die down soon. What do you think about this?
 

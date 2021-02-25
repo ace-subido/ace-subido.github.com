@@ -11,7 +11,6 @@ plugins_dir: "src/_plugins"
 plugins:
   - jekyll-paginate-v2
   - jekyll-compose
-  - jekyll-haml
 markdown: kramdown
 highlighter: rouge
 pagination:
@@ -19,3 +18,5 @@ pagination:
   permalink: "/page/:num/"
   per_page: 10
   sort_reverse: true
+sass:
+  style: compact
