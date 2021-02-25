@@ -15,3 +15,4 @@ This book gave me a higher perspective in technology overall.
 
 # Thinking Fast and Slow
 
+# by Yuval
