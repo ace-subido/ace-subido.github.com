@@ -14,7 +14,7 @@ $ brew install direnv
 $ direnv allow
 
 # Development Mode
-$ jekyll s
+$ bin/dev.sh
 
 # Update production site
 $ rake deploy
