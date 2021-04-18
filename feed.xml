@@ -5,22 +5,22 @@
     <description></description>
     <link>https://acesubido.net/</link>
     <atom:link href="https://acesubido.net/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 02 Nov 2019 23:34:11 +0800</pubDate>
-    <lastBuildDate>Sat, 02 Nov 2019 23:34:11 +0800</lastBuildDate>
-    <generator>Jekyll v4.0.0</generator>
+    <pubDate>Sat, 17 Apr 2021 20:56:03 -0400</pubDate>
+    <lastBuildDate>Sat, 17 Apr 2021 20:56:03 -0400</lastBuildDate>
+    <generator>Jekyll v4.2.0</generator>
     
       <item>
         <title>Rails.logger.silence and threading</title>
         <description>&lt;p&gt;So we have this block inside an initializer:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;user_id_lookup: proc do |env|
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;user_id_lookup: proc do |env|
   Rails.logger.silence do
     # Code for selecting a UserID based on an access token
   end
 end
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;This is executed by a library called &lt;code class=&quot;highlighter-rouge&quot;&gt;message_bus&lt;/code&gt;. MessageBus is a simple gem that allows your rails server to publish messages to subscribers.&lt;/p&gt;
+&lt;p&gt;This is executed by a library called &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;message_bus&lt;/code&gt;. MessageBus is a simple gem that allows your rails server to publish messages to subscribers.&lt;/p&gt;
 
 &lt;h3 id=&quot;problem&quot;&gt;Problem&lt;/h3&gt;
 
@@ -28,13 +28,13 @@ end
 
 &lt;h3 id=&quot;debugging&quot;&gt;Debugging&lt;/h3&gt;
 
-&lt;p&gt;Checking out the logs, we noticed that the logs always stop after it tries running that &lt;code class=&quot;highlighter-rouge&quot;&gt;user_id_lookup&lt;/code&gt; block. We quickly tried removing that &lt;code class=&quot;highlighter-rouge&quot;&gt;Rails.logger.silence&lt;/code&gt; block, and the logs went about on its way.&lt;/p&gt;
+&lt;p&gt;Checking out the logs, we noticed that the logs always stop after it tries running that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;user_id_lookup&lt;/code&gt; block. We quickly tried removing that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Rails.logger.silence&lt;/code&gt; block, and the logs went about on its way.&lt;/p&gt;
 
-&lt;p&gt;After much reading, it looks like &lt;code class=&quot;highlighter-rouge&quot;&gt;Rails.logger.silence&lt;/code&gt; actually replaces the &lt;code class=&quot;highlighter-rouge&quot;&gt;log_level&lt;/code&gt; of the &lt;code class=&quot;highlighter-rouge&quot;&gt;logger&lt;/code&gt; during that block. Seeing that &lt;code class=&quot;highlighter-rouge&quot;&gt;message_bus&lt;/code&gt; runs these &lt;code class=&quot;highlighter-rouge&quot;&gt;proc&lt;/code&gt;’s in different threads, reassigning that &lt;code class=&quot;highlighter-rouge&quot;&gt;log_level&lt;/code&gt; to a singleton like &lt;code class=&quot;highlighter-rouge&quot;&gt;Rails.logger&lt;/code&gt; feels like entering a cave of dragons fighting over the same gold stash.&lt;/p&gt;
+&lt;p&gt;After much reading, it looks like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Rails.logger.silence&lt;/code&gt; actually replaces the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;log_level&lt;/code&gt; of the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;logger&lt;/code&gt; during that block. Seeing that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;message_bus&lt;/code&gt; runs these &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;proc&lt;/code&gt;’s in different threads, reassigning that &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;log_level&lt;/code&gt; to a singleton like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Rails.logger&lt;/code&gt; feels like entering a cave of dragons fighting over the same gold stash.&lt;/p&gt;
 
 &lt;p&gt;Example:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Thread 1 starts
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Thread 1 starts
 Thread 1 gets the current Rails.logger level     (level 1)
 Thread 1 silences the current Rails.logger       (level 0)
 Thread 2 starts
@@ -46,9 +46,9 @@ Thread 2 returns back the old Rails.logger level (level 0)
 Thread 2 finishes                                (level 0)
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;The way to solve this would be to instantiate a new &lt;code class=&quot;highlighter-rouge&quot;&gt;Logger&lt;/code&gt; for that thread, instead of mutating the singleton &lt;code class=&quot;highlighter-rouge&quot;&gt;Rails.logger&lt;/code&gt;. Another way would be to override &lt;code class=&quot;highlighter-rouge&quot;&gt;ActiveRecord::LogSubscriber#debug&lt;/code&gt;, this makes me think of coding up a gem that can filter the params of a &lt;code class=&quot;highlighter-rouge&quot;&gt;WHERE&lt;/code&gt; clause.&lt;/p&gt;
+&lt;p&gt;The way to solve this would be to instantiate a new &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Logger&lt;/code&gt; for that thread, instead of mutating the singleton &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Rails.logger&lt;/code&gt;. Another way would be to override &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ActiveRecord::LogSubscriber#debug&lt;/code&gt;, this makes me think of coding up a gem that can filter the params of a &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;WHERE&lt;/code&gt; clause.&lt;/p&gt;
 </description>
-        <pubDate>Mon, 21 Oct 2019 00:00:00 +0800</pubDate>
+        <pubDate>Mon, 21 Oct 2019 00:00:00 -0400</pubDate>
         <link>https://acesubido.net/2019/10/21/rails-logger-silence-and-threading.html</link>
         <guid isPermaLink="true">https://acesubido.net/2019/10/21/rails-logger-silence-and-threading.html</guid>
         
@@ -63,15 +63,15 @@ Thread 2 finishes                                (level 0)
         <title>Circuit Breaking in Ruby</title>
         <description>&lt;h3 id=&quot;what-is-circuit-breaking&quot;&gt;What is Circuit Breaking?&lt;/h3&gt;
 
-&lt;p&gt;Imagine you’ve got a piece of code making multiple remote calls: some 3rd party, some internal. Then out of nowhere, you get a timeout error. Your whole stack collapses, and you get a raise exception in Bugsnag. Of course, we’d want our application to degrade gracefully. If it’s network related issue, one way to make it degrade gracefully is to keep retrying the call instead of blowing up in the first sight of a network-related exception like &lt;code class=&quot;highlighter-rouge&quot;&gt;TimeoutError&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;Imagine you’ve got a piece of code making multiple remote calls: some 3rd party, some internal. Then out of nowhere, you get a timeout error. Your whole stack collapses, and you get a raise exception in Bugsnag. Of course, we’d want our application to degrade gracefully. If it’s network related issue, one way to make it degrade gracefully is to keep retrying the call instead of blowing up in the first sight of a network-related exception like &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;TimeoutError&lt;/code&gt;.&lt;/p&gt;
 
 &lt;p&gt;Michael Nygard popularized the Circuit Breaker pattern to prevent this kind of catastrophic cascade. It’s a pattern where you wrap those calls in a loop where it keeps retrying once it rescues a network-related exception.&lt;/p&gt;
 
 &lt;p&gt;Here’s what it looks like using Ruby:&lt;/p&gt;
 
-&lt;p&gt;Use either &lt;code class=&quot;highlighter-rouge&quot;&gt;yammer/circuitbox&lt;/code&gt; or the more straightforward &lt;code class=&quot;highlighter-rouge&quot;&gt;ooyala/retries&lt;/code&gt;. Here’s what it looks like with the &lt;code class=&quot;highlighter-rouge&quot;&gt;retries&lt;/code&gt; gem:&lt;/p&gt;
+&lt;p&gt;Use either &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;yammer/circuitbox&lt;/code&gt; or the more straightforward &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;ooyala/retries&lt;/code&gt;. Here’s what it looks like with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;retries&lt;/code&gt; gem:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;exception_list = [
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;exception_list = [
   HTTPClient::ReceiveTimeoutError,
   # etc.
 ]
@@ -84,7 +84,7 @@ end
 &lt;p&gt;That’ll keep retrying that block of code 3 times in a randomized interval. Even if it encounters raised errors in that exception list — a simple pattern to make your application work a little smoother.&lt;/p&gt;
 
 </description>
-        <pubDate>Fri, 11 Oct 2019 00:00:00 +0800</pubDate>
+        <pubDate>Fri, 11 Oct 2019 00:00:00 -0400</pubDate>
         <link>https://acesubido.net/2019/10/11/circuit-breaking-in-ruby.html</link>
         <guid isPermaLink="true">https://acesubido.net/2019/10/11/circuit-breaking-in-ruby.html</guid>
         
@@ -107,11 +107,11 @@ end
   &lt;dt&gt;Marinas&lt;/dt&gt;
   &lt;dd&gt;Marina’s are the lifeblood of the maritime industry. They offer water, fuel, electricity (shore power), sewage disposal, local maintenance shops/services, and shelter from storms (typhoon breakers).
 
-    &lt;p&gt;I’ve underestimated the expenses from mooring (to secure to a buoy) and berthing (parking on a dock) yachts. Usually, a marina has a yacht club; for example, Subic Bay’s membership is 250,000PHP. &lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+    &lt;p&gt;I’ve underestimated the expenses from mooring (to secure to a buoy) and berthing (parking on a dock) yachts. Usually, a marina has a yacht club; for example, Subic Bay’s membership is 250,000PHP. &lt;sup id=&quot;fnref:1&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
-    &lt;p&gt;Expensive? Well, if you want to berth your 40ft. yacht on Subic Bay, they charge 45,000PHP/month for non-members, and 15,000PHP/month for members &lt;sup id=&quot;fnref:2&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. In the long run, getting that membership is a sweeter deal.&lt;/p&gt;
+    &lt;p&gt;Expensive? Well, if you want to berth your 40ft. yacht on Subic Bay, they charge 45,000PHP/month for non-members, and 15,000PHP/month for members &lt;sup id=&quot;fnref:2&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:2&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;2&lt;/a&gt;&lt;/sup&gt;. In the long run, getting that membership is a sweeter deal.&lt;/p&gt;
 
-    &lt;p&gt;Want to moor off of Coron? It’s 250PHP/day. &lt;sup id=&quot;fnref:3&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; Thinking about where your homeport should be is critical to what your yacht can offer if you decide to start making it into a business.&lt;/p&gt;
+    &lt;p&gt;Want to moor off of Coron? It’s 250PHP/day. &lt;sup id=&quot;fnref:3&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:3&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;3&lt;/a&gt;&lt;/sup&gt; Thinking about where your homeport should be is critical to what your yacht can offer if you decide to start making it into a business.&lt;/p&gt;
   &lt;/dd&gt;
   &lt;dt&gt;Price&lt;/dt&gt;
   &lt;dd&gt;Of course, to purchase a Yacht made overseas, you’ll have to import it. The Philippines has a 20% tax on top of Yachts as they are “recreational”, along with sports cars (Ferrari, Lamborghini). On top of that, there’s 12% VAT and 0%-65% CIF based on its value.
@@ -132,7 +132,7 @@ end
 
     &lt;h6 id=&quot;fuel-consumption&quot;&gt;Fuel consumption&lt;/h6&gt;
 
-    &lt;p&gt;I’ve grossly underestimated fuel consumption on a motor yacht.  A 40ft 2016 Beneteau Gran Turismo 40 can consume &lt;strong&gt;17gal/hr (64liters/hr) at 23.6kts (43kph)&lt;/strong&gt;. &lt;sup id=&quot;fnref:4&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+    &lt;p&gt;I’ve grossly underestimated fuel consumption on a motor yacht.  A 40ft 2016 Beneteau Gran Turismo 40 can consume &lt;strong&gt;17gal/hr (64liters/hr) at 23.6kts (43kph)&lt;/strong&gt;. &lt;sup id=&quot;fnref:4&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:4&quot; class=&quot;footnote&quot; rel=&quot;footnote&quot;&gt;4&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
 
     &lt;p&gt;The previous yacht, which is around 76ft., could eat up way way more than 4 gallons/hr. Depending on the speed of the cruise, the size/number of engine(s), the electricity usage and the hull. 200kPHP/month is way too low for a yacht that size.&lt;/p&gt;
 
@@ -209,24 +209,24 @@ end
 &lt;hr /&gt;
 &lt;h4 id=&quot;references&quot;&gt;References&lt;/h4&gt;
 
-&lt;div class=&quot;footnotes&quot;&gt;
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
   &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;http://www.gwclubshares.com/ &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;li id=&quot;fn:1&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;http://www.gwclubshares.com/ &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
-    &lt;li id=&quot;fn:2&quot;&gt;
-      &lt;p&gt;http://subicbayyachtclub.ph/marina-berthingrates.html &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;li id=&quot;fn:2&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;http://subicbayyachtclub.ph/marina-berthingrates.html &lt;a href=&quot;#fnref:2&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
-    &lt;li id=&quot;fn:3&quot;&gt;
-      &lt;p&gt;https://www.philippineyachtcharter.com/busuanga_coron_moorings.php &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;li id=&quot;fn:3&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://www.philippineyachtcharter.com/busuanga_coron_moorings.php &lt;a href=&quot;#fnref:3&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
-    &lt;li id=&quot;fn:4&quot;&gt;
-      &lt;p&gt;https://www.youtube.com/watch?v=OyrKAljjk6U &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;li id=&quot;fn:4&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;https://www.youtube.com/watch?v=OyrKAljjk6U &lt;a href=&quot;#fnref:4&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
     &lt;/li&gt;
   &lt;/ol&gt;
 &lt;/div&gt;
 </description>
-        <pubDate>Fri, 27 Sep 2019 00:00:00 +0800</pubDate>
+        <pubDate>Fri, 27 Sep 2019 00:00:00 -0400</pubDate>
         <link>https://acesubido.net/2019/09/27/part-2-napkin-math-owning-a-yacht.html</link>
         <guid isPermaLink="true">https://acesubido.net/2019/09/27/part-2-napkin-math-owning-a-yacht.html</guid>
         
@@ -253,7 +253,7 @@ end
 
 &lt;p&gt;I’ve mulled around the idea of paying for blog hosting, like svbtle or posthaven to ensure that it stays online. I think I’ll opt for this git repo for now.&lt;/p&gt;
 </description>
-        <pubDate>Wed, 25 Sep 2019 00:00:00 +0800</pubDate>
+        <pubDate>Wed, 25 Sep 2019 00:00:00 -0400</pubDate>
         <link>https://acesubido.net/2019/09/25/owning-what-i-write.html</link>
         <guid isPermaLink="true">https://acesubido.net/2019/09/25/owning-what-i-write.html</guid>
         
@@ -357,7 +357,7 @@ end
   &lt;li&gt;https://www.youtube.com/user/YachtsForSaleCNI - lots of good content about the yacht industry, finances, thought processes&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Fri, 20 Sep 2019 00:00:00 +0800</pubDate>
+        <pubDate>Fri, 20 Sep 2019 00:00:00 -0400</pubDate>
         <link>https://acesubido.net/2019/09/20/napkin-math-owning-a-yacht.html</link>
         <guid isPermaLink="true">https://acesubido.net/2019/09/20/napkin-math-owning-a-yacht.html</guid>
         
@@ -414,7 +414,7 @@ end
 &lt;p&gt;I’ll probably update this post as time goes by, it’s undoubtedly a life-changing on-going experience.&lt;/p&gt;
 
 </description>
-        <pubDate>Tue, 28 Nov 2017 00:00:00 +0800</pubDate>
+        <pubDate>Tue, 28 Nov 2017 00:00:00 -0500</pubDate>
         <link>https://acesubido.net/2017/11/28/what-s-it-like-to-work-from-home.html</link>
         <guid isPermaLink="true">https://acesubido.net/2017/11/28/what-s-it-like-to-work-from-home.html</guid>
         
@@ -429,11 +429,11 @@ end
   &lt;li&gt;Time pressure is real. Writing something to make something work is different from writing to make it trustworthy, balance them both by keeping the feature scope to be smaller relative to the feature requirement.&lt;/li&gt;
   &lt;li&gt;When you encounter a bug, don’t just fix it, and it’s unit test, write an integration test for it too.&lt;/li&gt;
   &lt;li&gt;When using Ruby, you might be tempted to metaprogram a lot of stuff to make things lean, don’t abuse it keep things readable, not too verbose but understandable.&lt;/li&gt;
-  &lt;li&gt;Don’t abuse dynamic typing and &lt;code class=&quot;highlighter-rouge&quot;&gt;.try&lt;/code&gt; you might get hurt with nil classes.&lt;/li&gt;
+  &lt;li&gt;Don’t abuse dynamic typing and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;.try&lt;/code&gt; you might get hurt with nil classes.&lt;/li&gt;
   &lt;li&gt;A huge no-no when something is silently failing. Make sure error handling is top-notch, especially for background workers. Lift errors as much as you can to the user.&lt;/li&gt;
 &lt;/ul&gt;
 </description>
-        <pubDate>Mon, 29 May 2017 00:00:00 +0800</pubDate>
+        <pubDate>Mon, 29 May 2017 00:00:00 -0400</pubDate>
         <link>https://acesubido.net/2017/05/29/encountering-production-bugs.html</link>
         <guid isPermaLink="true">https://acesubido.net/2017/05/29/encountering-production-bugs.html</guid>
         
@@ -452,7 +452,7 @@ end
 
 &lt;p&gt;Almost everyone probably has this simple setup, unless you have a mansion and you need to cover every inch of your house, including your garden and pool.&lt;/p&gt;
 
-&lt;p&gt;So, I open up terminals and do some &lt;code class=&quot;highlighter-rouge&quot;&gt;iperf&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;nc&lt;/code&gt; tests. Initial results revealed that network between 2 local IP addresses in our network is both slow and experiences packet loss. In layman’s terms: our wifi coverage and network throughput generally suck. Beyond the terminal, it’s pretty apparent. A LAN game of “Starcraft: Brood War” between 2 laptops connected on the same network via Wifi, to the same router, is pretty laggy.&lt;/p&gt;
+&lt;p&gt;So, I open up terminals and do some &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;iperf&lt;/code&gt; and &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;nc&lt;/code&gt; tests. Initial results revealed that network between 2 local IP addresses in our network is both slow and experiences packet loss. In layman’s terms: our wifi coverage and network throughput generally suck. Beyond the terminal, it’s pretty apparent. A LAN game of “Starcraft: Brood War” between 2 laptops connected on the same network via Wifi, to the same router, is pretty laggy.&lt;/p&gt;
 
 &lt;p&gt;So it’s time to really improve our WiFi coverage.&lt;/p&gt;
 
@@ -505,7 +505,7 @@ end
 
 &lt;p&gt;I bet there are a lot more settings I’ve missed, and this is a work in progress. I’ll post a part 2 once we get the new hardware.&lt;/p&gt;
 </description>
-        <pubDate>Sun, 21 May 2017 00:00:00 +0800</pubDate>
+        <pubDate>Sun, 21 May 2017 00:00:00 -0400</pubDate>
         <link>https://acesubido.net/2017/05/21/improving-our-wifi-at-home.html</link>
         <guid isPermaLink="true">https://acesubido.net/2017/05/21/improving-our-wifi-at-home.html</guid>
         
@@ -514,14 +514,14 @@ end
     
       <item>
         <title>Speed up Ruby app bootup time</title>
-        <description>&lt;p&gt;I frequently work with a large ruby application, and whenever I run &lt;code class=&quot;highlighter-rouge&quot;&gt;rspec path/to/single_unit_test.rb&lt;/code&gt; in a Rails application, it takes 2-3 seconds before the test starts. This is because of the amount of source files that are involved in the application. Fortunately, Shopify released a gem called &lt;a href=&quot;https://github.com/shopify/bootsnap&quot;&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;bootsnap&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
+        <description>&lt;p&gt;I frequently work with a large ruby application, and whenever I run &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rspec path/to/single_unit_test.rb&lt;/code&gt; in a Rails application, it takes 2-3 seconds before the test starts. This is because of the amount of source files that are involved in the application. Fortunately, Shopify released a gem called &lt;a href=&quot;https://github.com/shopify/bootsnap&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bootsnap&lt;/code&gt;&lt;/a&gt;.&lt;/p&gt;
 
 &lt;ul&gt;
-  &lt;li&gt;The short story: it speeds up ruby app boot time. Useful for large monolithic applications. Ruby apps slow down if you &lt;code class=&quot;highlighter-rouge&quot;&gt;require&lt;/code&gt; a lot of source files, so it speeds things up by doing applying some optimizations (compilation caching, YAML optimzations, etc.)&lt;/li&gt;
+  &lt;li&gt;The short story: it speeds up ruby app boot time. Useful for large monolithic applications. Ruby apps slow down if you &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;require&lt;/code&gt; a lot of source files, so it speeds things up by doing applying some optimizations (compilation caching, YAML optimzations, etc.)&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://engineering.shopify.com/235340559-bootsnap-optimizing-ruby-app-boot-time&quot;&gt;The long explanation, found here&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;Simplest setup for a Rails 5.1.1 app (as of &lt;code class=&quot;highlighter-rouge&quot;&gt;bootsnap 0.2.14&lt;/code&gt;).&lt;/p&gt;
+&lt;p&gt;Simplest setup for a Rails 5.1.1 app (as of &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;bootsnap 0.2.14&lt;/code&gt;).&lt;/p&gt;
 
 &lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# Gemfile&lt;/span&gt;
 
@@ -543,7 +543,7 @@ end
 
 &lt;p&gt;It plays nicely with spring by speeding up the pre-fork and post-fork. Definitely a gem worth watching out for.&lt;/p&gt;
 </description>
-        <pubDate>Sat, 20 May 2017 00:00:00 +0800</pubDate>
+        <pubDate>Sat, 20 May 2017 00:00:00 -0400</pubDate>
         <link>https://acesubido.net/2017/05/20/speed-up-ruby-app-bootup-time.html</link>
         <guid isPermaLink="true">https://acesubido.net/2017/05/20/speed-up-ruby-app-bootup-time.html</guid>
         
@@ -554,7 +554,7 @@ end
         <title>BigDecimal vs. Float for anything related to finance</title>
         <description>&lt;p&gt;There are countless blog posts and stack overflow explanations about this, figured I need to write this little note for myself. To start things off, check this example of computing PHPKRW using hypothetical gold as a go-between:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;require &quot;bigdecimal&quot;
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;require &quot;bigdecimal&quot;
 
 # Float
 php_gold_float = 0.00001144792038
@@ -583,14 +583,14 @@ BigDecimal 22.4627133860700558
 
 &lt;hr /&gt;
 
-&lt;p&gt;If you’re a bank, or if you’re supporting accounting software, or just computing compounding interests, you could potentially miscalculate thousands down the line when using Float for computing. So, make sure to use BigDecimal when you’re dealing with anything that requires a high-degree of “sureness”. With Ruby/Rails, you can use &lt;code class=&quot;highlighter-rouge&quot;&gt;:decimal&lt;/code&gt; for columns containing this type of information.&lt;/p&gt;
+&lt;p&gt;If you’re a bank, or if you’re supporting accounting software, or just computing compounding interests, you could potentially miscalculate thousands down the line when using Float for computing. So, make sure to use BigDecimal when you’re dealing with anything that requires a high-degree of “sureness”. With Ruby/Rails, you can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:decimal&lt;/code&gt; for columns containing this type of information.&lt;/p&gt;
 
 &lt;p&gt;Money, accounting, computing compounding interests = needs high precision, then use BigDecimal. Other than that, just use float.&lt;/p&gt;
 
 &lt;p&gt;Some gotcha’s: With Ruby/Rails, when rendering an object with BigDecimal attributes as JSON, it will render the numbers as a String, instead of a Float. Part of the reasoning behind this change could be found in this &lt;a href=&quot;https://github.com/rails/rails/issues/25017&quot;&gt;discussion&lt;/a&gt;&lt;/p&gt;
 
 </description>
-        <pubDate>Tue, 16 May 2017 00:00:00 +0800</pubDate>
+        <pubDate>Tue, 16 May 2017 00:00:00 -0400</pubDate>
         <link>https://acesubido.net/2017/05/16/bigdecimal-vs-float-for-anything-related-to-finance.html</link>
         <guid isPermaLink="true">https://acesubido.net/2017/05/16/bigdecimal-vs-float-for-anything-related-to-finance.html</guid>
         

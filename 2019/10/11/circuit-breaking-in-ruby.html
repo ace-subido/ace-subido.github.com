@@ -30,7 +30,7 @@
   
 
   
-    <meta content="2019-10-11T00:00:00+08:00" property="article:published_time">
+    <meta content="2019-10-11T00:00:00-04:00" property="article:published_time">
     <meta content="https://acesubido.net/about/" property="article:author">
   
 
@@ -39,7 +39,7 @@
     <meta content="https://acesubido.net/img/logo-hires.png" property="twitter:image">
   
 
-  <link rel="stylesheet" href="https://acesubido.net/css/main.css">
+  <link rel="stylesheet" href="https://acesubido.net/assets/css/main.css">
   <link rel="canonical" href="https://acesubido.net/2019/10/11/circuit-breaking-in-ruby.html">
   <link rel="alternate" type="application/rss+xml" title="acesubido" href="/feed.xml" />
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
@@ -82,15 +82,15 @@
   <article>
     <h3 id="what-is-circuit-breaking">What is Circuit Breaking?</h3>
 
-<p>Imagine you’ve got a piece of code making multiple remote calls: some 3rd party, some internal. Then out of nowhere, you get a timeout error. Your whole stack collapses, and you get a raise exception in Bugsnag. Of course, we’d want our application to degrade gracefully. If it’s network related issue, one way to make it degrade gracefully is to keep retrying the call instead of blowing up in the first sight of a network-related exception like <code class="highlighter-rouge">TimeoutError</code>.</p>
+<p>Imagine you’ve got a piece of code making multiple remote calls: some 3rd party, some internal. Then out of nowhere, you get a timeout error. Your whole stack collapses, and you get a raise exception in Bugsnag. Of course, we’d want our application to degrade gracefully. If it’s network related issue, one way to make it degrade gracefully is to keep retrying the call instead of blowing up in the first sight of a network-related exception like <code class="language-plaintext highlighter-rouge">TimeoutError</code>.</p>
 
 <p>Michael Nygard popularized the Circuit Breaker pattern to prevent this kind of catastrophic cascade. It’s a pattern where you wrap those calls in a loop where it keeps retrying once it rescues a network-related exception.</p>
 
 <p>Here’s what it looks like using Ruby:</p>
 
-<p>Use either <code class="highlighter-rouge">yammer/circuitbox</code> or the more straightforward <code class="highlighter-rouge">ooyala/retries</code>. Here’s what it looks like with the <code class="highlighter-rouge">retries</code> gem:</p>
+<p>Use either <code class="language-plaintext highlighter-rouge">yammer/circuitbox</code> or the more straightforward <code class="language-plaintext highlighter-rouge">ooyala/retries</code>. Here’s what it looks like with the <code class="language-plaintext highlighter-rouge">retries</code> gem:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>exception_list = [
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>exception_list = [
   HTTPClient::ReceiveTimeoutError,
   # etc.
 ]
@@ -145,7 +145,7 @@ end
   </nav>
 </footer>
 
-<script type="text/javascript" src="/javascript/google-analytics.js"></script>
+<script type="text/javascript" src="/assets/js/google-analytics.js"></script>
 
   </body>
 

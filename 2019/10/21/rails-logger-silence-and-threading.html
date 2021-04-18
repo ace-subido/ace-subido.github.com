@@ -30,7 +30,7 @@
   
 
   
-    <meta content="2019-10-21T00:00:00+08:00" property="article:published_time">
+    <meta content="2019-10-21T00:00:00-04:00" property="article:published_time">
     <meta content="https://acesubido.net/about/" property="article:author">
   
 
@@ -39,7 +39,7 @@
     <meta content="https://acesubido.net/img/logo-hires.png" property="twitter:image">
   
 
-  <link rel="stylesheet" href="https://acesubido.net/css/main.css">
+  <link rel="stylesheet" href="https://acesubido.net/assets/css/main.css">
   <link rel="canonical" href="https://acesubido.net/2019/10/21/rails-logger-silence-and-threading.html">
   <link rel="alternate" type="application/rss+xml" title="acesubido" href="/feed.xml" />
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
@@ -82,14 +82,14 @@
   <article>
     <p>So we have this block inside an initializer:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>user_id_lookup: proc do |env|
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>user_id_lookup: proc do |env|
   Rails.logger.silence do
     # Code for selecting a UserID based on an access token
   end
 end
 </code></pre></div></div>
 
-<p>This is executed by a library called <code class="highlighter-rouge">message_bus</code>. MessageBus is a simple gem that allows your rails server to publish messages to subscribers.</p>
+<p>This is executed by a library called <code class="language-plaintext highlighter-rouge">message_bus</code>. MessageBus is a simple gem that allows your rails server to publish messages to subscribers.</p>
 
 <h3 id="problem">Problem</h3>
 
@@ -97,13 +97,13 @@ end
 
 <h3 id="debugging">Debugging</h3>
 
-<p>Checking out the logs, we noticed that the logs always stop after it tries running that <code class="highlighter-rouge">user_id_lookup</code> block. We quickly tried removing that <code class="highlighter-rouge">Rails.logger.silence</code> block, and the logs went about on its way.</p>
+<p>Checking out the logs, we noticed that the logs always stop after it tries running that <code class="language-plaintext highlighter-rouge">user_id_lookup</code> block. We quickly tried removing that <code class="language-plaintext highlighter-rouge">Rails.logger.silence</code> block, and the logs went about on its way.</p>
 
-<p>After much reading, it looks like <code class="highlighter-rouge">Rails.logger.silence</code> actually replaces the <code class="highlighter-rouge">log_level</code> of the <code class="highlighter-rouge">logger</code> during that block. Seeing that <code class="highlighter-rouge">message_bus</code> runs these <code class="highlighter-rouge">proc</code>’s in different threads, reassigning that <code class="highlighter-rouge">log_level</code> to a singleton like <code class="highlighter-rouge">Rails.logger</code> feels like entering a cave of dragons fighting over the same gold stash.</p>
+<p>After much reading, it looks like <code class="language-plaintext highlighter-rouge">Rails.logger.silence</code> actually replaces the <code class="language-plaintext highlighter-rouge">log_level</code> of the <code class="language-plaintext highlighter-rouge">logger</code> during that block. Seeing that <code class="language-plaintext highlighter-rouge">message_bus</code> runs these <code class="language-plaintext highlighter-rouge">proc</code>’s in different threads, reassigning that <code class="language-plaintext highlighter-rouge">log_level</code> to a singleton like <code class="language-plaintext highlighter-rouge">Rails.logger</code> feels like entering a cave of dragons fighting over the same gold stash.</p>
 
 <p>Example:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Thread 1 starts
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Thread 1 starts
 Thread 1 gets the current Rails.logger level     (level 1)
 Thread 1 silences the current Rails.logger       (level 0)
 Thread 2 starts
@@ -115,7 +115,7 @@ Thread 2 returns back the old Rails.logger level (level 0)
 Thread 2 finishes                                (level 0)
 </code></pre></div></div>
 
-<p>The way to solve this would be to instantiate a new <code class="highlighter-rouge">Logger</code> for that thread, instead of mutating the singleton <code class="highlighter-rouge">Rails.logger</code>. Another way would be to override <code class="highlighter-rouge">ActiveRecord::LogSubscriber#debug</code>, this makes me think of coding up a gem that can filter the params of a <code class="highlighter-rouge">WHERE</code> clause.</p>
+<p>The way to solve this would be to instantiate a new <code class="language-plaintext highlighter-rouge">Logger</code> for that thread, instead of mutating the singleton <code class="language-plaintext highlighter-rouge">Rails.logger</code>. Another way would be to override <code class="language-plaintext highlighter-rouge">ActiveRecord::LogSubscriber#debug</code>, this makes me think of coding up a gem that can filter the params of a <code class="language-plaintext highlighter-rouge">WHERE</code> clause.</p>
 
   </article>
   <hr>
@@ -154,7 +154,7 @@ Thread 2 finishes                                (level 0)
   </nav>
 </footer>
 
-<script type="text/javascript" src="/javascript/google-analytics.js"></script>
+<script type="text/javascript" src="/assets/js/google-analytics.js"></script>
 
   </body>
 

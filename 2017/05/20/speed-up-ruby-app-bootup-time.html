@@ -30,7 +30,7 @@
   
 
   
-    <meta content="2017-05-20T00:00:00+08:00" property="article:published_time">
+    <meta content="2017-05-20T00:00:00-04:00" property="article:published_time">
     <meta content="https://acesubido.net/about/" property="article:author">
   
 
@@ -39,7 +39,7 @@
     <meta content="https://acesubido.net/img/logo-hires.png" property="twitter:image">
   
 
-  <link rel="stylesheet" href="https://acesubido.net/css/main.css">
+  <link rel="stylesheet" href="https://acesubido.net/assets/css/main.css">
   <link rel="canonical" href="https://acesubido.net/2017/05/20/speed-up-ruby-app-bootup-time.html">
   <link rel="alternate" type="application/rss+xml" title="acesubido" href="/feed.xml" />
   <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"/>
@@ -80,14 +80,14 @@
     <h1 class="post-full-title">Speed up Ruby app bootup time</h1>
   </header>
   <article>
-    <p>I frequently work with a large ruby application, and whenever I run <code class="highlighter-rouge">rspec path/to/single_unit_test.rb</code> in a Rails application, it takes 2-3 seconds before the test starts. This is because of the amount of source files that are involved in the application. Fortunately, Shopify released a gem called <a href="https://github.com/shopify/bootsnap"><code class="highlighter-rouge">bootsnap</code></a>.</p>
+    <p>I frequently work with a large ruby application, and whenever I run <code class="language-plaintext highlighter-rouge">rspec path/to/single_unit_test.rb</code> in a Rails application, it takes 2-3 seconds before the test starts. This is because of the amount of source files that are involved in the application. Fortunately, Shopify released a gem called <a href="https://github.com/shopify/bootsnap"><code class="language-plaintext highlighter-rouge">bootsnap</code></a>.</p>
 
 <ul>
-  <li>The short story: it speeds up ruby app boot time. Useful for large monolithic applications. Ruby apps slow down if you <code class="highlighter-rouge">require</code> a lot of source files, so it speeds things up by doing applying some optimizations (compilation caching, YAML optimzations, etc.)</li>
+  <li>The short story: it speeds up ruby app boot time. Useful for large monolithic applications. Ruby apps slow down if you <code class="language-plaintext highlighter-rouge">require</code> a lot of source files, so it speeds things up by doing applying some optimizations (compilation caching, YAML optimzations, etc.)</li>
   <li><a href="https://engineering.shopify.com/235340559-bootsnap-optimizing-ruby-app-boot-time">The long explanation, found here</a></li>
 </ul>
 
-<p>Simplest setup for a Rails 5.1.1 app (as of <code class="highlighter-rouge">bootsnap 0.2.14</code>).</p>
+<p>Simplest setup for a Rails 5.1.1 app (as of <code class="language-plaintext highlighter-rouge">bootsnap 0.2.14</code>).</p>
 
 <div class="language-ruby highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1"># Gemfile</span>
 
@@ -151,7 +151,7 @@
   </nav>
 </footer>
 
-<script type="text/javascript" src="/javascript/google-analytics.js"></script>
+<script type="text/javascript" src="/assets/js/google-analytics.js"></script>
 
   </body>
 
