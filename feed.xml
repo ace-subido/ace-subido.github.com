@@ -5,9 +5,77 @@
     <description></description>
     <link>https://acesubido.net/</link>
     <atom:link href="https://acesubido.net/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 17 Apr 2021 20:56:03 -0400</pubDate>
-    <lastBuildDate>Sat, 17 Apr 2021 20:56:03 -0400</lastBuildDate>
+    <pubDate>Tue, 03 Aug 2021 12:52:21 -0400</pubDate>
+    <lastBuildDate>Tue, 03 Aug 2021 12:52:21 -0400</lastBuildDate>
     <generator>Jekyll v4.2.0</generator>
+    
+      <item>
+        <title>Why I leased a brand new car instead of financed?</title>
+        <description>&lt;p&gt;Recently leased a 2021 Civic.&lt;/p&gt;
+
+&lt;p&gt;For background:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;I’m a newcomer, arrived March 2021. 0 credit history. But I have work.&lt;/li&gt;
+  &lt;li&gt;I drove a used 2008 Vios (Toyota) back in my home country. Bought that Vios in 2014, so I know how to buy and scope out a used car. I roughly have an idea of what maintenance items I have to watch out for.&lt;/li&gt;
+  &lt;li&gt;Before leasing the Civic, I was renting a car for $800/mo. Enterprise up’d their rates last month to $1K so I was in a hurry to get a car.&lt;/li&gt;
+  &lt;li&gt;Live in Stittsville. Not exactly a commute-friendly city so a car is needed for most errands.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I want a Civic/Corolla, because that’s what I’m used to. Here’s what I found out looking for used Civics/Corollas in Ottawa:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Looked through 4-5 dealerships looking for a used car.&lt;/li&gt;
+  &lt;li&gt;2017/2018 Certified Pre-owned reaches into 18K-20K (tax included).&lt;/li&gt;
+  &lt;li&gt;I’m already at Full G. Car insurance and Interest rates are absurdly high for a newcomer, regardless if it’s new or not. Interest rates at 4.99%-6.99%. Insurance at $270-$390 per month. Looked through Sonnet, TDInsurance, Scotia, Economical, and BelAir. TD gave me the lowest.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Brand New Car:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Warranty for 3 years. 0.99% interest rate.&lt;/li&gt;
+  &lt;li&gt;Used car payments are almost the same due to the interest rates I get being a newcomer.&lt;/li&gt;
+  &lt;li&gt;Looked into getting a new car instead.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Went for a new car instead:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;I know how much it costs to maintain a used car in my country, but I don’t know how much it costs here. &lt;/li&gt;
+  &lt;li&gt;I can have coolant tanks and fans replaced for CAD$300 back in my home country, but I don’t know if the income-expense ratio for car repairs are the same here. &lt;/li&gt;
+  &lt;li&gt;I also have little idea on winters. &lt;/li&gt;
+  &lt;li&gt;I’m dealing with so much right now just settling, paying rent/utilities, and moving, might as well save myself the maintenance headache and go for the new car if the difference in monthly payments is small due to 2 things as a newcomer: high interest rates and high insurance payments. &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So onto thinking about Financing vs. Leasing:&lt;/p&gt;
+
+&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;Finance 0.99%
+DP: CAD$5000
+Payments: CAD$385.5 x 60mos = 23,130
+Total Out: CAD$28,130
+
+Lease 0.99%
+DP: CAD$2500
+Payments: CAD$285 x 48mos = 13,680
+Buy out after 4 years: $10,330.
+Total w/ Buy out: CAD$26,510
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;p&gt;Here’s why I went for Leasing (I got approved for 4 years):&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;If I finance, I’m gonna DP a large amount of capital and monthly payments to a car during a time where my settlement isn’t final yet. It doesn’t sound right. I’m not fully settled yet and don’t have enough breathing room to have $5,000 and $100 more per month stuck at a utility. I don’t know the unexpected expenses and premiums as an immigrant.&lt;/li&gt;
+  &lt;li&gt;“Lease and Buy out” vs. “Finance Total Out” roughly costs the same due to these low interest rates. I have more $100 cashflow per month if I lease.&lt;/li&gt;
+  &lt;li&gt;For context. A 2017 lease return sells for $17K at current market rates in Ottawa. My buy out is $10,330 by 2025, I’m pretty sure by then I can sell my 2021 Civic for around $12K-$15K (depending on the popularity of ICE vehicles at a rapidly electrifying automobile industry).&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;This might be different for other cars (Corolla, Elantra, etc.). As far as all my calculations go, leasing the heavily discounted 2021 Civic from a newcomer’s perspective is a better financial decision than financing it.&lt;/p&gt;
+</description>
+        <pubDate>Tue, 03 Aug 2021 12:51:00 -0400</pubDate>
+        <link>https://acesubido.net/2021/08/03/why-i-leased-instead-of-financed.html</link>
+        <guid isPermaLink="true">https://acesubido.net/2021/08/03/why-i-leased-instead-of-financed.html</guid>
+        
+        <category>personal</category>
+        
+        <category>napkin math</category>
+        
+        
+      </item>
     
       <item>
         <title>Rails.logger.silence and threading</title>
@@ -546,53 +614,6 @@ end
         <pubDate>Sat, 20 May 2017 00:00:00 -0400</pubDate>
         <link>https://acesubido.net/2017/05/20/speed-up-ruby-app-bootup-time.html</link>
         <guid isPermaLink="true">https://acesubido.net/2017/05/20/speed-up-ruby-app-bootup-time.html</guid>
-        
-        
-      </item>
-    
-      <item>
-        <title>BigDecimal vs. Float for anything related to finance</title>
-        <description>&lt;p&gt;There are countless blog posts and stack overflow explanations about this, figured I need to write this little note for myself. To start things off, check this example of computing PHPKRW using hypothetical gold as a go-between:&lt;/p&gt;
-
-&lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;require &quot;bigdecimal&quot;
-
-# Float
-php_gold_float = 0.00001144792038
-gold_krw_float = 1962165.41
-
-php_krw_float = php_gold_float * gold_krw_float
-
-puts &quot;#{php_krw_float.class} #{php_krw_float}&quot;
-
-# Big Decimal
-php_gold_bd = BigDecimal.new(&quot;0.00001144792038&quot;)
-gold_krw_bd = BigDecimal.new(&quot;1962165.41&quot;)
-
-php_krw_bd = php_gold_bd * gold_krw_bd
-
-puts &quot;#{php_krw_bd.class} #{php_krw_bd.to_s('F')}&quot;
-
-# Output
-Float 22.462713386070057
-BigDecimal 22.4627133860700558
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h4 id=&quot;thats-odd-its-rounded-up-or-something-why-does-this-happen&quot;&gt;That’s odd, it’s rounded up? Or something? Why does this happen?&lt;/h4&gt;
-
-&lt;p&gt;Long version, read up on &lt;a href=&quot;https://en.wikipedia.org/wiki/IEEE_floating_point#IEEE_754-2008&quot;&gt;IEEE specification to define floats&lt;/a&gt;. Short version: it stores a sign, a fraction and an exponent to represent a Float. It’s a scientific notation for binary, because of that it’s impossible to store exact numbers and decimal in Float.&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;If you’re a bank, or if you’re supporting accounting software, or just computing compounding interests, you could potentially miscalculate thousands down the line when using Float for computing. So, make sure to use BigDecimal when you’re dealing with anything that requires a high-degree of “sureness”. With Ruby/Rails, you can use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;:decimal&lt;/code&gt; for columns containing this type of information.&lt;/p&gt;
-
-&lt;p&gt;Money, accounting, computing compounding interests = needs high precision, then use BigDecimal. Other than that, just use float.&lt;/p&gt;
-
-&lt;p&gt;Some gotcha’s: With Ruby/Rails, when rendering an object with BigDecimal attributes as JSON, it will render the numbers as a String, instead of a Float. Part of the reasoning behind this change could be found in this &lt;a href=&quot;https://github.com/rails/rails/issues/25017&quot;&gt;discussion&lt;/a&gt;&lt;/p&gt;
-
-</description>
-        <pubDate>Tue, 16 May 2017 00:00:00 -0400</pubDate>
-        <link>https://acesubido.net/2017/05/16/bigdecimal-vs-float-for-anything-related-to-finance.html</link>
-        <guid isPermaLink="true">https://acesubido.net/2017/05/16/bigdecimal-vs-float-for-anything-related-to-finance.html</guid>
         
         
       </item>
