@@ -4,6 +4,9 @@ pagination:
   enabled: true
 ---
 
+{% capture blog_header %}{% include blog/header.md %}{% endcapture %}
+{{ blog_header | markdownify }}
+
 <h3>Latest</h3>
 <div class="posts-list">
   {% for post in paginator.posts %}
